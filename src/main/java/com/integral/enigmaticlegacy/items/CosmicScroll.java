@@ -67,7 +67,7 @@ public class CosmicScroll extends ItemBaseCurio {
 
 		deathProtectionCooldown = builder
 				.comment("Cooldown of death protection ability of The Architect's Favor. Measured in seconds.")
-				.getInt("DeathProtectionCooldown", 600);
+				.getInt("DeathProtectionCooldown", 300);
 
 		builder.popPrefix();
 	}
