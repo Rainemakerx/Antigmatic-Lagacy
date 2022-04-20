@@ -2870,8 +2870,9 @@ public class EnigmaticEventHandler {
 		if (!(event.getPlayer() instanceof ServerPlayer))
 			return;
 
-		SuperpositionHandler.doChecks();
-
+		//superpositionHandler.doChecks();
+		
+		
 		if (!OmniconfigWrapper.syncAllToPlayer((ServerPlayer) event.getPlayer())) {
 			OmniconfigWrapper.onRemoteServer = false;
 			EnigmaticLegacy.logger.info("Logging in to local integrated server; no synchronization is required.");
