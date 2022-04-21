@@ -1,0 +1,30 @@
+{
+  "display": {
+    "icon": {
+      "item": "anticlimacticlagacy:etherium_ingot"
+    },
+    "title": {
+      "translate": "advancement.anticlimacticlagacy:smeltEtherium"
+    },
+    "description": {
+      "translate": "advancement.anticlimacticlagacy:smeltEtherium.desc"
+    },
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false,
+	"frame": "task"
+  },
+  "parent": "anticlimacticlagacy:main/astral_dust",
+  "criteria": {
+    "etherium": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+             "items": ["anticlimacticlagacy:etherium_ingot"]
+          }
+        ]
+      }
+    }
+  }
+}

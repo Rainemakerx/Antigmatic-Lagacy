@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "anticlimacticlagacy:items/compass_25"
+  }
+}

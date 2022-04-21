@@ -1,0 +1,31 @@
+{
+    "name": "book.anticlimacticlagacy.entry.unholy_grail.name",
+    "icon": "anticlimacticlagacy:unholy_grail",
+    "category": "anticlimacticlagacy:relics",
+	"advancement": "anticlimacticlagacy:book/relics/unholy_grail",
+    "secret": false,
+    "priority": false,
+    "read_by_default": false,
+    "sortnum": 10,
+    "pages": [
+        {
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.unholy_grail.page.1"
+        },
+		{
+            "type": "spotlight",
+			"item": "anticlimacticlagacy:unholy_grail",
+			"link_recipe": true,
+			"title": "book.anticlimacticlagacy.entry.unholy_grail.heading.1",
+            "text": "book.anticlimacticlagacy.entry.unholy_grail.page.2"
+        },
+		{
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.unholy_grail.page.3"
+        },
+		{
+            "type": "empty",
+            "draw_filler": false
+        }
+    ]
+}

@@ -1,0 +1,34 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "conditions": [
+    {
+      "type": "anticlimacticlagacy:is_enabled",
+      "item": "anticlimacticlagacy:curse_transposer"
+    }
+  ],
+  "pattern": [
+    "RTR",
+    "PXP",
+    "RER"
+  ],
+  "key": {
+    "X": {
+      "item": "anticlimacticlagacy:enchantment_transposer"
+    },
+    "E": {
+      "item": "anticlimacticlagacy:evil_essence"
+    },
+	"T": {
+      "item": "minecraft:ghast_tear"
+    },
+	"P": {
+      "item": "minecraft:phantom_membrane"
+    },
+	"R": {
+      "item": "minecraft:redstone"
+    }
+  },
+  "result": {
+    "item": "anticlimacticlagacy:curse_transposer"
+  }
+}

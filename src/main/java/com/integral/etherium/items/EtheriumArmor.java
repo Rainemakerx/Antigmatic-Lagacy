@@ -5,8 +5,8 @@ import java.util.List;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
-import com.integral.enigmaticlegacy.helpers.ItemLoreHelper;
-import com.integral.enigmaticlegacy.helpers.ItemNBTHelper;
+import com.integral.anticlimacticlagacy.helpers.ItemLoreHelper;
+import com.integral.anticlimacticlagacy.helpers.ItemNBTHelper;
 import com.integral.etherium.core.EtheriumUtil;
 import com.integral.etherium.core.IEtheriumConfig;
 
@@ -37,12 +37,12 @@ public class EtheriumArmor extends ArmorItem {
 
 	@Override
 	public String getDescriptionId() {
-		return config.isStandalone() ? "item.enigmaticlegacy." + this.getRegistryName().getPath() : super.getDescriptionId();
+		return config.isStandalone() ? "item.anticlimacticlagacy." + this.getRegistryName().getPath() : super.getDescriptionId();
 	}
 
 	@Override
 	public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-		return "enigmaticlegacy:textures/models/armor/unseen_armor.png";
+		return "anticlimacticlagacy:textures/models/armor/unseen_armor.png";
 	}
 
 	public static IEtheriumConfig getConfig() {
@@ -75,31 +75,31 @@ public class EtheriumArmor extends ArmorItem {
 		if (Screen.hasShiftDown()) {
 			EtheriumArmor armor = (EtheriumArmor) stack.getItem();
 			if (armor.getSlot() == EquipmentSlot.HEAD) {
-				ItemLoreHelper.addLocalizedString(list, "tooltip.enigmaticlegacy.etheriumHelmet1");
+				ItemLoreHelper.addLocalizedString(list, "tooltip.anticlimacticlagacy.etheriumHelmet1");
 			} else if (armor.getSlot() == EquipmentSlot.CHEST) {
-				ItemLoreHelper.addLocalizedString(list, "tooltip.enigmaticlegacy.etheriumChestplate1");
+				ItemLoreHelper.addLocalizedString(list, "tooltip.anticlimacticlagacy.etheriumChestplate1");
 			} else if (armor.getSlot() == EquipmentSlot.LEGS) {
-				ItemLoreHelper.addLocalizedString(list, "tooltip.enigmaticlegacy.etheriumLeggings1");
+				ItemLoreHelper.addLocalizedString(list, "tooltip.anticlimacticlagacy.etheriumLeggings1");
 			} else if (armor.getSlot() == EquipmentSlot.FEET) {
-				ItemLoreHelper.addLocalizedString(list, "tooltip.enigmaticlegacy.etheriumBoots1");
+				ItemLoreHelper.addLocalizedString(list, "tooltip.anticlimacticlagacy.etheriumBoots1");
 			}
 		} else {
-			ItemLoreHelper.addLocalizedString(list, "tooltip.enigmaticlegacy.holdShift");
+			ItemLoreHelper.addLocalizedString(list, "tooltip.anticlimacticlagacy.holdShift");
 		}
 
 		if (hasFullSet(Minecraft.getInstance().player) || (ItemNBTHelper.verifyExistance(stack, "forceDisplaySetBonus") && ItemNBTHelper.getBoolean(stack, "forceDisplaySetBonus", false))) {
-			ItemLoreHelper.addLocalizedString(list, "tooltip.enigmaticlegacy.void");
-			ItemLoreHelper.addLocalizedString(list, "tooltip.enigmaticlegacy.etheriumArmorSetBonus1");
-			ItemLoreHelper.addLocalizedString(list, "tooltip.enigmaticlegacy.etheriumArmorSetBonus2", ChatFormatting.GOLD, config.getShieldThreshold(Minecraft.getInstance().player).asPercentage() + "%");
-			ItemLoreHelper.addLocalizedString(list, "tooltip.enigmaticlegacy.etheriumArmorSetBonus3");
-			ItemLoreHelper.addLocalizedString(list, "tooltip.enigmaticlegacy.etheriumArmorSetBonus4", ChatFormatting.GOLD, config.getShieldReduction().asPercentage() + "%");
-			ItemLoreHelper.addLocalizedString(list, "tooltip.enigmaticlegacy.etheriumArmorSetBonus5");
+			ItemLoreHelper.addLocalizedString(list, "tooltip.anticlimacticlagacy.void");
+			ItemLoreHelper.addLocalizedString(list, "tooltip.anticlimacticlagacy.etheriumArmorSetBonus1");
+			ItemLoreHelper.addLocalizedString(list, "tooltip.anticlimacticlagacy.etheriumArmorSetBonus2", ChatFormatting.GOLD, config.getShieldThreshold(Minecraft.getInstance().player).asPercentage() + "%");
+			ItemLoreHelper.addLocalizedString(list, "tooltip.anticlimacticlagacy.etheriumArmorSetBonus3");
+			ItemLoreHelper.addLocalizedString(list, "tooltip.anticlimacticlagacy.etheriumArmorSetBonus4", ChatFormatting.GOLD, config.getShieldReduction().asPercentage() + "%");
+			ItemLoreHelper.addLocalizedString(list, "tooltip.anticlimacticlagacy.etheriumArmorSetBonus5");
 
-			//ItemLoreHelper.addLocalizedString(list, "tooltip.enigmaticlegacy.etheriumArmorSetBonus6");
+			//ItemLoreHelper.addLocalizedString(list, "tooltip.anticlimacticlagacy.etheriumArmorSetBonus6");
 		}
 
 		if (stack.isEnchanted()) {
-			ItemLoreHelper.addLocalizedString(list, "tooltip.enigmaticlegacy.void");
+			ItemLoreHelper.addLocalizedString(list, "tooltip.anticlimacticlagacy.void");
 		}
 
 	}

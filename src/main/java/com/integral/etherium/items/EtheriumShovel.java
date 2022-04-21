@@ -8,8 +8,8 @@ import javax.annotation.Nullable;
 
 import com.google.common.collect.Sets;
 
-import com.integral.enigmaticlegacy.helpers.AOEMiningHelper;
-import com.integral.enigmaticlegacy.helpers.ItemLoreHelper;
+import com.integral.anticlimacticlagacy.helpers.AOEMiningHelper;
+import com.integral.anticlimacticlagacy.helpers.ItemLoreHelper;
 import com.integral.etherium.core.EtheriumUtil;
 import com.integral.etherium.core.IEtheriumConfig;
 import com.integral.etherium.items.generic.ItemEtheriumTool;
@@ -67,7 +67,7 @@ public class EtheriumShovel extends ItemEtheriumTool {
 
 	@Override
 	public String getDescriptionId() {
-		return this.config.isStandalone() ? "item.enigmaticlegacy." + this.getRegistryName().getPath() : super.getDescriptionId();
+		return this.config.isStandalone() ? "item.anticlimacticlagacy." + this.getRegistryName().getPath() : super.getDescriptionId();
 	}
 
 	@Override
@@ -77,20 +77,20 @@ public class EtheriumShovel extends ItemEtheriumTool {
 			return;
 
 		if (Screen.hasShiftDown()) {
-			ItemLoreHelper.addLocalizedString(list, "tooltip.enigmaticlegacy.etheriumShovel1", ChatFormatting.GOLD, this.config.getShovelMiningRadius() + this.config.getAOEBoost(Minecraft.getInstance().player), this.config.getShovelMiningDepth());
-			ItemLoreHelper.addLocalizedString(list, "tooltip.enigmaticlegacy.void");
+			ItemLoreHelper.addLocalizedString(list, "tooltip.anticlimacticlagacy.etheriumShovel1", ChatFormatting.GOLD, this.config.getShovelMiningRadius() + this.config.getAOEBoost(Minecraft.getInstance().player), this.config.getShovelMiningDepth());
+			ItemLoreHelper.addLocalizedString(list, "tooltip.anticlimacticlagacy.void");
 
 			if (!this.config.disableAOEShiftInhibition()) {
-				ItemLoreHelper.addLocalizedString(list, "tooltip.enigmaticlegacy.etheriumShovel2");
+				ItemLoreHelper.addLocalizedString(list, "tooltip.anticlimacticlagacy.etheriumShovel2");
 			}
-			ItemLoreHelper.addLocalizedString(list, "tooltip.enigmaticlegacy.etheriumShovel3");
+			ItemLoreHelper.addLocalizedString(list, "tooltip.anticlimacticlagacy.etheriumShovel3");
 		} else {
-			ItemLoreHelper.addLocalizedString(list, "tooltip.enigmaticlegacy.holdShift");
+			ItemLoreHelper.addLocalizedString(list, "tooltip.anticlimacticlagacy.holdShift");
 		}
 
 		if (!this.areaEffectsAllowed(stack)) {
-			ItemLoreHelper.addLocalizedString(list, "tooltip.enigmaticlegacy.void");
-			ItemLoreHelper.addLocalizedString(list, "tooltip.enigmaticlegacy.aoeDisabled");
+			ItemLoreHelper.addLocalizedString(list, "tooltip.anticlimacticlagacy.void");
+			ItemLoreHelper.addLocalizedString(list, "tooltip.anticlimacticlagacy.aoeDisabled");
 		}
 	}
 

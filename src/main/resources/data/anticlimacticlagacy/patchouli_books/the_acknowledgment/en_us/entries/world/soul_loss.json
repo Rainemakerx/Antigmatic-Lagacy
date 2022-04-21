@@ -1,0 +1,28 @@
+{
+    "name": "book.anticlimacticlagacy.entry.soul_loss.name",
+    "icon": "anticlimacticlagacy:soul_crystal",
+    "category": "anticlimacticlagacy:world",
+    "priority": false,
+    "advancement": "anticlimacticlagacy:book/soul_loss",
+    "sortnum": 10,
+    "pages": [
+        {
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.soul_loss.page.1"
+        },
+        {
+            "type": "spotlight",
+            "item": "anticlimacticlagacy:soul_crystal",
+            "title": "book.anticlimacticlagacy.entry.soul_loss.heading.1",
+            "text": "book.anticlimacticlagacy.entry.soul_loss.page.2"
+        },
+        {
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.soul_loss.page.3"
+        },
+        {
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.soul_loss.page.4"
+        }
+    ]
+}

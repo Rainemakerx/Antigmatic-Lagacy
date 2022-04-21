@@ -1,0 +1,31 @@
+{
+    "name": "book.anticlimacticlagacy.entry.astral_fruit.name",
+    "icon": "anticlimacticlagacy:astral_fruit",
+    "category": "anticlimacticlagacy:relics",
+	"advancement": "anticlimacticlagacy:book/relics/astral_fruit",
+    "secret": false,
+    "priority": false,
+    "read_by_default": false,
+    "sortnum": 160,
+    "pages": [
+        {
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.astral_fruit.page.1"
+        },
+		{
+            "type": "spotlight",
+			"item": "anticlimacticlagacy:astral_fruit",
+			"link_recipe": true,
+			"title": "book.anticlimacticlagacy.entry.astral_fruit.heading.1",
+            "text": "book.anticlimacticlagacy.entry.astral_fruit.page.2"
+        },
+		{
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.astral_fruit.page.3"
+        },
+		{
+            "type": "empty",
+            "draw_filler": false
+        }
+    ]
+}

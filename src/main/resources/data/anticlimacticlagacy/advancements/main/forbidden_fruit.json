@@ -1,0 +1,22 @@
+{
+  "display": {
+    "icon": {
+      "item": "anticlimacticlagacy:forbidden_fruit"
+    },
+    "title": {
+      "translate": "advancement.anticlimacticlagacy:forbiddenFruit"
+    },
+    "description": {
+      "translate": "advancement.anticlimacticlagacy:forbiddenFruit.desc"
+    },
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "parent": "anticlimacticlagacy:main/root",
+  "criteria": {
+    "fruit": {
+      "trigger": "anticlimacticlagacy:consume_forbidden_fruit"
+    }
+  }
+}

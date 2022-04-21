@@ -1,0 +1,27 @@
+{
+  "display": {
+    "icon": {
+      "item": "anticlimacticlagacy:desolation_ring"
+    },
+    "title": {
+      "translate": "advancement.anticlimacticlagacy:desolationRing"
+    },
+    "description": {
+      "translate": "advancement.anticlimacticlagacy:desolationRing.desc"
+    },
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "anticlimacticlagacy:main/abyssal_heart",
+  "criteria": {
+    "infinitum": {
+      "trigger": "curios:equip_curio",
+      "conditions": {
+        "item": {
+			"items": ["anticlimacticlagacy:desolation_ring"]
+		}
+      }
+    }
+  }
+}

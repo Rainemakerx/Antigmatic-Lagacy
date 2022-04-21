@@ -1,6 +1,6 @@
 package com.integral.etherium.core;
 
-import com.integral.enigmaticlegacy.helpers.ItemNBTHelper;
+import com.integral.anticlimacticlagacy.helpers.ItemNBTHelper;
 
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;

@@ -1,0 +1,22 @@
+{
+    "name": "book.anticlimacticlagacy.entry.cosmic_scroll.name",
+    "icon": "anticlimacticlagacy:cosmic_scroll",
+    "category": "anticlimacticlagacy:accessories",
+	"advancement": "anticlimacticlagacy:book/accessories/cosmic_scroll",
+    "secret": false,
+    "priority": false,
+    "read_by_default": false,
+    "sortnum": 180,
+    "pages": [
+        {
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.cosmic_scroll.page.1"
+        },
+		{
+            "type": "crafting",
+			"recipe": "anticlimacticlagacy:cosmic_scroll",
+            "title": " ",
+            "text": "book.anticlimacticlagacy.entry.cosmic_scroll.page.2"
+        }
+    ]
+}

@@ -1,0 +1,7 @@
+{
+	"name": "book.anticlimacticlagacy.category.misc.name",
+	"description": "book.anticlimacticlagacy.category.misc.desc",
+	"icon": "anticlimacticlagacy:enchantment_transposer",
+	"sortnum": 80,
+	"secret": false
+}

@@ -1,0 +1,30 @@
+{
+    "name": "book.anticlimacticlagacy.entry.mega_sponge.name",
+    "icon": "anticlimacticlagacy:mega_sponge",
+    "category": "anticlimacticlagacy:misc",
+	"advancement": "anticlimacticlagacy:book/misc/mega_sponge",
+    "secret": false,
+    "priority": false,
+    "read_by_default": false,
+    "sortnum": 20,
+    "pages": [
+        {
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.mega_sponge.page.1"
+        },
+		{
+            "type": "crafting",
+			"recipe": "anticlimacticlagacy:mega_sponge",
+			"title": " ",
+            "text": "book.anticlimacticlagacy.entry.mega_sponge.page.2"
+        },
+		{
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.mega_sponge.page.3"
+        },
+		{
+            "type": "empty",
+            "draw_filler": false
+        }
+    ]
+}

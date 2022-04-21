@@ -1,0 +1,6 @@
+{
+    "parent": "anticlimacticlagacy:item/anticlimactic_amulet",
+    "textures": {
+        "layer0": "anticlimacticlagacy:items/anticlimactic_amulet_green"
+    }
+}

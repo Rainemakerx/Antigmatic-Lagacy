@@ -1,0 +1,30 @@
+{
+    "name": "book.anticlimacticlagacy.entry.enchantment_transposer.name",
+    "icon": "anticlimacticlagacy:enchantment_transposer",
+    "category": "anticlimacticlagacy:misc",
+	"advancement": "anticlimacticlagacy:book/misc/enchantment_transposer",
+    "secret": false,
+    "priority": false,
+    "read_by_default": false,
+    "sortnum": 0,
+    "pages": [
+        {
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.enchantment_transposer.page.1"
+        },
+		{
+            "type": "crafting",
+			"recipe": "anticlimacticlagacy:enchantment_transposer",
+			"title": " ",
+            "text": "book.anticlimacticlagacy.entry.enchantment_transposer.page.2"
+        },
+		{
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.enchantment_transposer.page.3"
+        },
+		{
+            "type": "empty",
+            "draw_filler": false
+        }
+    ]
+}

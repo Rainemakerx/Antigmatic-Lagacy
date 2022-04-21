@@ -3,7 +3,7 @@ package com.integral.etherium.blocks;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.integral.enigmaticlegacy.EnigmaticLegacy;
+import com.integral.anticlimacticlagacy.AnticlimacticLagacy;
 import com.integral.etherium.core.IEtheriumConfig;
 
 import net.minecraft.core.BlockPos;
@@ -44,7 +44,7 @@ public class BlockEtherium extends Block {
 
 	@Override
 	public String getDescriptionId() {
-		return this.config.isStandalone() ? "block.enigmaticlegacy." + this.getRegistryName().getPath() : super.getDescriptionId();
+		return this.config.isStandalone() ? "block.anticlimacticlagacy." + this.getRegistryName().getPath() : super.getDescriptionId();
 	}
 
 }

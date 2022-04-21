@@ -1,0 +1,30 @@
+{
+  "display": {
+    "icon": {
+      "item": "anticlimacticlagacy:mending_mixture"
+    },
+    "title": {
+      "translate": "advancement.anticlimacticlagacy:mendingMixture"
+    },
+    "description": {
+      "translate": "advancement.anticlimacticlagacy:mendingMixture.desc"
+    },
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false,
+	"frame": "goal"
+  },
+  "parent": "anticlimacticlagacy:main/recall_potion",
+  "criteria": {
+    "spellstone": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+             "items": ["anticlimacticlagacy:mending_mixture"]
+          }
+        ]
+      }
+    }
+  }
+}

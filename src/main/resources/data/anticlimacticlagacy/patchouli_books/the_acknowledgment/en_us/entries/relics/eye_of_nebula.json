@@ -1,0 +1,23 @@
+{
+    "name": "book.anticlimacticlagacy.entry.eye_of_nebula.name",
+    "icon": "anticlimacticlagacy:eye_of_nebula",
+    "category": "anticlimacticlagacy:relics",
+	"advancement": "anticlimacticlagacy:book/relics/eye_of_nebula",
+    "secret": false,
+    "priority": false,
+    "read_by_default": false,
+    "sortnum": 90,
+    "pages": [
+        {
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.eye_of_nebula.page.1"
+        },
+		{
+            "type": "spotlight",
+			"item": "anticlimacticlagacy:eye_of_nebula",
+			"link_recipe": true,
+			"title": "book.anticlimacticlagacy.entry.eye_of_nebula.heading.1",
+            "text": "book.anticlimacticlagacy.entry.eye_of_nebula.page.2"
+        }
+    ]
+}

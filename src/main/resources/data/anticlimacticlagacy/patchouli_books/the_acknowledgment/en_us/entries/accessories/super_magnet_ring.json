@@ -1,0 +1,22 @@
+{
+    "name": "book.anticlimacticlagacy.entry.super_magnet_ring.name",
+    "icon": "anticlimacticlagacy:super_magnet_ring",
+    "category": "anticlimacticlagacy:accessories",
+	"advancement": "anticlimacticlagacy:book/accessories/super_magnet_ring",
+    "secret": false,
+    "priority": false,
+    "read_by_default": false,
+    "sortnum": 20,
+    "pages": [
+        {
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.super_magnet_ring.page.1"
+        },
+		{
+            "type": "crafting",
+            "title": " ",
+			"recipe": "anticlimacticlagacy:super_magnet_ring",
+            "text": "book.anticlimacticlagacy.entry.super_magnet_ring.page.2"
+        }
+    ]
+}

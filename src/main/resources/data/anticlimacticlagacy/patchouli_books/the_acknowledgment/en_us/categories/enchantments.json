@@ -1,0 +1,7 @@
+{
+	"name": "book.anticlimacticlagacy.category.enchantments.name",
+	"description": "book.anticlimacticlagacy.category.enchantments.desc",
+	"icon": "anticlimacticlagacy:textures/gui/flip_the_tables.png",
+	"sortnum": 80,
+	"secret": false
+}

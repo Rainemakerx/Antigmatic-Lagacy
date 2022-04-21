@@ -1,0 +1,33 @@
+{
+  "display": {
+    "icon": {
+      "item": "anticlimacticlagacy:infernal_shield"
+    },
+    "title": {
+      "translate": "advancement.anticlimacticlagacy:infernalShield"
+    },
+    "description": {
+      "translate": "advancement.anticlimacticlagacy:infernalShield.desc"
+    },
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false,
+	"frame": "goal"
+  },
+  "rewards": {
+    "experience": 300
+  },
+  "parent": "anticlimacticlagacy:main/twisted_heart",
+  "criteria": {
+    "shield": {
+      "trigger": "anticlimacticlagacy:cursed_inventory_changed",
+      "conditions": {
+        "items": [
+          {
+             "items": ["anticlimacticlagacy:infernal_shield"]
+          }
+        ]
+      }
+    }
+  }
+}

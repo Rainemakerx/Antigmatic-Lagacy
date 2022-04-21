@@ -1,7 +1,7 @@
 package com.integral.omniconfig.wrappers;
 
-import com.integral.enigmaticlegacy.EnigmaticLegacy;
-import com.integral.enigmaticlegacy.objects.Perhaps;
+import com.integral.anticlimacticlagacy.AnticlimacticLagacy;
+import com.integral.anticlimacticlagacy.objects.Perhaps;
 import com.integral.omniconfig.Configuration;
 
 import net.minecraftforge.common.ForgeConfigSpec;
@@ -66,7 +66,7 @@ public class Omniconfig {
 		}
 
 		protected void logGenericParserError(String value) {
-			EnigmaticLegacy.logger.error("Error when parsing value of '" + this.name + "' in '" + this.category + "': " + value);
+			AnticlimacticLagacy.logger.error("Error when parsing value of '" + this.name + "' in '" + this.category + "': " + value);
 		}
 
 		public abstract String valueToString();

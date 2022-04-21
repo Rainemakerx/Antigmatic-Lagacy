@@ -1,0 +1,43 @@
+{
+  "parent": "anticlimacticlagacy:recipes/root",
+  "rewards": {
+    "recipes": [
+      "anticlimacticlagacy:monster_charm"
+    ]
+  },
+  "criteria": {
+    "has_items": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["minecraft:netherite_ingot"]
+          }
+        ]
+      }
+    },
+	"has_recipe_result": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["anticlimacticlagacy:monster_charm"]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "anticlimacticlagacy:monster_charm"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_items",
+      "has_recipe_result",
+      "has_the_recipe"
+    ]
+  ]
+}

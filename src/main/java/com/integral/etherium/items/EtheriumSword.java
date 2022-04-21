@@ -4,9 +4,9 @@ import java.util.List;
 
 import javax.annotation.Nullable;
 
-import com.integral.enigmaticlegacy.helpers.ItemLoreHelper;
-import com.integral.enigmaticlegacy.objects.CooldownMap;
-import com.integral.enigmaticlegacy.objects.Vector3;
+import com.integral.anticlimacticlagacy.helpers.ItemLoreHelper;
+import com.integral.anticlimacticlagacy.objects.CooldownMap;
+import com.integral.anticlimacticlagacy.objects.Vector3;
 import com.integral.etherium.core.EtheriumUtil;
 import com.integral.etherium.core.IEtheriumConfig;
 import com.integral.etherium.core.IEtheriumTool;
@@ -46,7 +46,7 @@ public class EtheriumSword extends SwordItem implements IEtheriumTool {
 
 	@Override
 	public String getDescriptionId() {
-		return this.config.isStandalone() ? "item.enigmaticlegacy." + this.getRegistryName().getPath() : super.getDescriptionId();
+		return this.config.isStandalone() ? "item.anticlimacticlagacy." + this.getRegistryName().getPath() : super.getDescriptionId();
 	}
 
 	@Override
@@ -58,19 +58,19 @@ public class EtheriumSword extends SwordItem implements IEtheriumTool {
 	@OnlyIn(Dist.CLIENT)
 	public void appendHoverText(ItemStack stack, @Nullable Level worldIn, List<Component> list, TooltipFlag flagIn) {
 		if (Screen.hasShiftDown()) {
-			ItemLoreHelper.addLocalizedString(list, "tooltip.enigmaticlegacy.etheriumSword1");
-			ItemLoreHelper.addLocalizedString(list, "tooltip.enigmaticlegacy.etheriumSword2");
-			ItemLoreHelper.addLocalizedString(list, "tooltip.enigmaticlegacy.etheriumSword3");
-			ItemLoreHelper.addLocalizedString(list, "tooltip.enigmaticlegacy.void");
-			ItemLoreHelper.addLocalizedString(list, "tooltip.enigmaticlegacy.etheriumSword4", ChatFormatting.GOLD, this.config.getSwordCooldown() / 20F);
-			ItemLoreHelper.addLocalizedString(list, "tooltip.enigmaticlegacy.etheriumSword5");
+			ItemLoreHelper.addLocalizedString(list, "tooltip.anticlimacticlagacy.etheriumSword1");
+			ItemLoreHelper.addLocalizedString(list, "tooltip.anticlimacticlagacy.etheriumSword2");
+			ItemLoreHelper.addLocalizedString(list, "tooltip.anticlimacticlagacy.etheriumSword3");
+			ItemLoreHelper.addLocalizedString(list, "tooltip.anticlimacticlagacy.void");
+			ItemLoreHelper.addLocalizedString(list, "tooltip.anticlimacticlagacy.etheriumSword4", ChatFormatting.GOLD, this.config.getSwordCooldown() / 20F);
+			ItemLoreHelper.addLocalizedString(list, "tooltip.anticlimacticlagacy.etheriumSword5");
 		} else {
-			ItemLoreHelper.addLocalizedString(list, "tooltip.enigmaticlegacy.holdShift");
+			ItemLoreHelper.addLocalizedString(list, "tooltip.anticlimacticlagacy.holdShift");
 		}
 
 		if (!this.areaEffectsAllowed(stack)) {
-			ItemLoreHelper.addLocalizedString(list, "tooltip.enigmaticlegacy.void");
-			ItemLoreHelper.addLocalizedString(list, "tooltip.enigmaticlegacy.abilityDisabled");
+			ItemLoreHelper.addLocalizedString(list, "tooltip.anticlimacticlagacy.void");
+			ItemLoreHelper.addLocalizedString(list, "tooltip.anticlimacticlagacy.abilityDisabled");
 		}
 	}
 

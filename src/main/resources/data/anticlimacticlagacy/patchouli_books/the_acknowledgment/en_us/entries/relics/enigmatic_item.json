@@ -1,0 +1,31 @@
+{
+    "name": "book.anticlimacticlagacy.entry.anticlimactic_item.name",
+    "icon": "anticlimacticlagacy:anticlimactic_item",
+    "category": "anticlimacticlagacy:relics",
+	"advancement": "anticlimacticlagacy:book/relics/anticlimactic_item",
+    "secret": true,
+    "priority": false,
+    "read_by_default": false,
+    "sortnum": 110,
+    "pages": [
+        {
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.anticlimactic_item.page.1"
+        },
+		{
+            "type": "spotlight",
+			"item": "anticlimacticlagacy:anticlimactic_item",
+			"link_recipe": true,
+			"title": "book.anticlimacticlagacy.entry.anticlimactic_item.heading.1",
+            "text": "book.anticlimacticlagacy.entry.anticlimactic_item.page.2"
+        },
+		{
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.anticlimactic_item.page.3"
+        },
+		{
+            "type": "empty",
+            "draw_filler": false
+        }
+    ]
+}

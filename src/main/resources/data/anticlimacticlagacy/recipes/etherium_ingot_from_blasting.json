@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "anticlimacticlagacy:etherium_ore"
+  },
+  "result": "anticlimacticlagacy:etherium_ingot",
+  "experience": 8.0,
+  "cookingtime": 200
+}

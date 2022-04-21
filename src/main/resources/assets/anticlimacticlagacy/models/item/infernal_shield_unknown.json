@@ -1,0 +1,24 @@
+{
+  "loader": "forge:separate-perspective",
+  "gui_light": "front",
+  "base": {
+    "parent": "anticlimacticlagacy:item/infernal_shield_item"
+  },
+  "perspectives": {
+    "first_person_right_hand": {
+      "parent": "anticlimacticlagacy:item/infernal_shield_idle"
+    },
+    "first_person_left_hand": {
+      "parent": "anticlimacticlagacy:item/infernal_shield_idle"
+    },
+    "third_person_right_hand": {
+      "parent": "anticlimacticlagacy:item/infernal_shield_idle"
+    },
+    "third_person_left_hand": {
+      "parent": "anticlimacticlagacy:item/infernal_shield_idle"
+    },
+    "head": {
+      "parent": "anticlimacticlagacy:item/infernal_shield_idle"
+    }
+  }
+}

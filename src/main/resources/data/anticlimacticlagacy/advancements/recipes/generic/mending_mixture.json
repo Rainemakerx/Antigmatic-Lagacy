@@ -1,0 +1,43 @@
+{
+  "parent": "anticlimacticlagacy:recipes/root",
+  "rewards": {
+    "recipes": [
+      "anticlimacticlagacy:mending_mixture"
+    ]
+  },
+  "criteria": {
+    "has_items": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["minecraft:dragon_breath"]
+          }
+        ]
+      }
+    },
+	"has_recipe_result": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["anticlimacticlagacy:mending_mixture"]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "anticlimacticlagacy:mending_mixture"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_items",
+      "has_recipe_result",
+      "has_the_recipe"
+    ]
+  ]
+}

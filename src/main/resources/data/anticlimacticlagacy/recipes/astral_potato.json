@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "NPN",
+    "PAP",
+    "NPN"
+  ],
+  "key": {
+    "P": {
+      "item": "minecraft:baked_potato"
+    },
+	"N": {
+      "item": "minecraft:gold_nugget"
+    },
+	"A": {
+      "item": "anticlimacticlagacy:astral_dust"
+    }
+  },
+  "result": {
+    "item": "anticlimacticlagacy:astral_potato",
+    "count": 4
+  }
+}

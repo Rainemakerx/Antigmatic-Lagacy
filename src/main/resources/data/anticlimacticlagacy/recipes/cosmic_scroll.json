@@ -1,0 +1,34 @@
+{
+  "type": "anticlimacticlagacy:crafting_shaped_blessed",
+  "conditions": [
+    {
+      "type": "anticlimacticlagacy:is_enabled",
+      "item": "anticlimacticlagacy:cosmic_scroll"
+    }
+  ],
+  "pattern": [
+    "DAD",
+    "EXE",
+    "DHD"
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:enchanted_golden_apple"
+    },
+	"D": {
+      "item": "anticlimacticlagacy:astral_dust"
+    },
+	"E": {
+      "item": "anticlimacticlagacy:etherium_ingot"
+    },
+	"H": {
+      "item": "anticlimacticlagacy:cosmic_heart"
+    },
+	"X": {
+      "item": "anticlimacticlagacy:darkest_scroll"
+    }
+  },
+  "result": {
+    "item": "anticlimacticlagacy:cosmic_scroll"
+  }
+}

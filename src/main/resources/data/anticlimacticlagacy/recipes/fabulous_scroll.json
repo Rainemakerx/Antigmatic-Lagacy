@@ -1,0 +1,34 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "conditions": [
+    {
+      "type": "anticlimacticlagacy:is_enabled",
+      "item": "anticlimacticlagacy:fabulous_scroll"
+    }
+  ],
+  "pattern": [
+    "IAI",
+    "AXA",
+    "BEB"
+  ],
+  "key": {
+    "X": {
+      "item": "anticlimacticlagacy:heaven_scroll"
+    },
+	"I": {
+      "item": "anticlimacticlagacy:etherium_ingot"
+    },
+	"A": {
+      "item": "anticlimacticlagacy:astral_dust"
+    },
+	"B": {
+      "item": "minecraft:dragon_breath"
+    },
+	"E": {
+      "item": "minecraft:elytra"
+    }
+  },
+  "result": {
+    "item": "anticlimacticlagacy:fabulous_scroll"
+  }
+}

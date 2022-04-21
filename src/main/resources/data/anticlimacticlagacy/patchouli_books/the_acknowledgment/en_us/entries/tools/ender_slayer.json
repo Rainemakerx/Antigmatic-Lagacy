@@ -1,0 +1,38 @@
+{
+    "name": "book.anticlimacticlagacy.entry.ender_slayer.name",
+    "icon": "anticlimacticlagacy:ender_slayer",
+    "category": "anticlimacticlagacy:tools",
+	"advancement": "anticlimacticlagacy:book/tools/ender_slayer",
+    "secret": false,
+    "priority": false,
+    "read_by_default": false,
+    "sortnum": 100,
+    "pages": [
+        {
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.ender_slayer.page.1"
+        },
+		{
+            "type": "crafting",
+			"recipe": "anticlimacticlagacy:ender_slayer",
+            "title": " ",
+            "text": "book.anticlimacticlagacy.entry.ender_slayer.page.2"
+        },
+		{
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.ender_slayer.page.3"
+        },
+		{
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.ender_slayer.page.4"
+        },
+		{
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.ender_slayer.page.5"
+        },
+		{
+            "type": "empty",
+            "draw_filler": false
+        }
+    ]
+}

@@ -1,0 +1,30 @@
+{
+    "name": "book.anticlimacticlagacy.entry.etherium_axe.name",
+    "icon": "anticlimacticlagacy:etherium_axe",
+    "category": "anticlimacticlagacy:tools",
+	"advancement": "anticlimacticlagacy:book/tools/etherium_axe",
+    "secret": false,
+    "priority": false,
+    "read_by_default": false,
+    "sortnum": 20,
+    "pages": [
+        {
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.etherium_axe.page.1"
+        },
+		{
+            "type": "crafting",
+			"recipe": "anticlimacticlagacy:etherium_axe",
+            "title": " ",
+            "text": "book.anticlimacticlagacy.entry.etherium_axe.page.2"
+        },
+		{
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.etherium_axe.page.3"
+        },
+		{
+            "type": "empty",
+            "draw_filler": false
+        }
+    ]
+}

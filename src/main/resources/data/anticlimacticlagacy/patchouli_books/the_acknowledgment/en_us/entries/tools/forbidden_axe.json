@@ -1,0 +1,30 @@
+{
+    "name": "book.anticlimacticlagacy.entry.forbidden_axe.name",
+    "icon": "anticlimacticlagacy:forbidden_axe",
+    "category": "anticlimacticlagacy:tools",
+	"advancement": "anticlimacticlagacy:book/tools/forbidden_axe",
+    "secret": false,
+    "priority": false,
+    "read_by_default": false,
+    "sortnum": 0,
+    "pages": [
+        {
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.forbidden_axe.page.1"
+        },
+		{
+            "type": "crafting",
+			"recipe": "anticlimacticlagacy:forbidden_axe",
+            "title": " ",
+            "text": "book.anticlimacticlagacy.entry.forbidden_axe.page.2"
+        },
+		{
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.forbidden_axe.page.3"
+        },
+		{
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.forbidden_axe.page.4"
+        }
+    ]
+}

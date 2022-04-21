@@ -1,0 +1,7 @@
+{
+	"name": "book.anticlimacticlagacy.category.relics.name",
+	"description": "book.anticlimacticlagacy.category.relics.desc",
+	"icon": "anticlimacticlagacy:unholy_grail",
+	"sortnum": 60,
+	"secret": false
+}

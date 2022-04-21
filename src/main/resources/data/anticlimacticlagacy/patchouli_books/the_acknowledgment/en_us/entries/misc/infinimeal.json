@@ -1,0 +1,26 @@
+{
+    "name": "book.anticlimacticlagacy.entry.infinimeal.name",
+    "icon": "anticlimacticlagacy:infinimeal",
+    "category": "anticlimacticlagacy:misc",
+	"advancement": "anticlimacticlagacy:book/misc/infinimeal",
+    "secret": false,
+    "priority": false,
+    "read_by_default": false,
+    "sortnum": 100,
+    "pages": [
+        {
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.infinimeal.page.1"
+        },
+		{
+            "type": "crafting",
+			"recipe": "anticlimacticlagacy:infinimeal",
+			"title": " ",
+            "text": "book.anticlimacticlagacy.entry.infinimeal.page.2"
+        },
+        {
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.infinimeal.page.3"
+        }
+    ]
+}

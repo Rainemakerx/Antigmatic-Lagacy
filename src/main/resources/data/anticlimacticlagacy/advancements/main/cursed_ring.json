@@ -1,0 +1,22 @@
+{
+  "display": {
+    "icon": {
+      "item": "anticlimacticlagacy:cursed_ring"
+    },
+    "title": {
+      "translate": "advancement.anticlimacticlagacy:cursedRing"
+    },
+    "description": {
+      "translate": "advancement.anticlimacticlagacy:cursedRing.desc"
+    },
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "parent": "anticlimacticlagacy:main/root",
+  "criteria": {
+    "fruit": {
+      "trigger": "anticlimacticlagacy:equip_cursed_ring"
+    }
+  }
+}

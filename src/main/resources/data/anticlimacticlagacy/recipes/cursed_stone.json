@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "conditions": [
+    {
+      "type": "anticlimacticlagacy:is_enabled",
+      "item": "anticlimacticlagacy:cursed_stone"
+    }
+  ],
+  "pattern": [
+    "LXL",
+    "ERE",
+    "CSC"
+  ],
+  "key": {
+    "R": {
+      "item": "minecraft:stone"
+    },
+	"L": {
+      "item": "minecraft:lava_bucket"
+    },
+	"C": {
+      "item": "minecraft:prismarine_crystals"
+    },
+	"S": {
+      "item": "minecraft:nether_star"
+    },
+	"E": {
+      "item": "anticlimacticlagacy:evil_essence"
+    },
+	"X": {
+      "item": "anticlimacticlagacy:twisted_core"
+    }
+  },
+  "result": {
+    "item": "anticlimacticlagacy:cursed_stone"
+  }
+}

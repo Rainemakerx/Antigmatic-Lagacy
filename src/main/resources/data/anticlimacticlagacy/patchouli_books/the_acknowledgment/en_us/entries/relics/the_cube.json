@@ -1,0 +1,33 @@
+{
+    "name": "book.anticlimacticlagacy.entry.the_cube.name",
+    "icon": "anticlimacticlagacy:the_cube",
+    "category": "anticlimacticlagacy:relics",
+	"advancement": "anticlimacticlagacy:book/relics/the_cube",
+    "secret": true,
+    "priority": false,
+    "read_by_default": false,
+    "sortnum": 170,
+	"extra_recipe_mappings": {
+			"anticlimacticlagacy:the_cube": 1
+		},
+    "pages": [
+        {
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.the_cube.page.1"
+        },
+		{
+            "type": "anticlimacticlagacy:hidden_crafting",
+			"recipe": "anticlimacticlagacy:the_cube",
+            "heading": " ",
+            "text": "book.anticlimacticlagacy.entry.the_cube.page.2"
+        },
+		{
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.the_cube.page.3"
+        },
+		{
+            "type": "empty",
+            "draw_filler": false
+        }
+    ]
+}

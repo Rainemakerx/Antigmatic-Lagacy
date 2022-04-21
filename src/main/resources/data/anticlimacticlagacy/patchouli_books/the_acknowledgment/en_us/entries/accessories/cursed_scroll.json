@@ -1,0 +1,30 @@
+{
+    "name": "book.anticlimacticlagacy.entry.cursed_scroll.name",
+    "icon": "anticlimacticlagacy:cursed_scroll",
+    "category": "anticlimacticlagacy:accessories",
+	"advancement": "anticlimacticlagacy:book/accessories/cursed_scroll",
+    "secret": false,
+    "priority": false,
+    "read_by_default": false,
+    "sortnum": 120,
+    "pages": [
+        {
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.cursed_scroll.page.1"
+        },
+		{
+            "type": "crafting",
+			"recipe": "anticlimacticlagacy:cursed_scroll",
+            "title": " ",
+            "text": "book.anticlimacticlagacy.entry.cursed_scroll.page.2"
+        },
+		{
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.cursed_scroll.page.3"
+        },
+		{
+            "type": "text",
+			"text": "book.anticlimacticlagacy.entry.cursed_scroll.page.4"
+		}
+    ]
+}

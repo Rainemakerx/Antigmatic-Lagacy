@@ -2,7 +2,7 @@ package com.integral.etherium.core;
 
 import javax.annotation.Nullable;
 
-import com.integral.enigmaticlegacy.objects.Vector3;
+import com.integral.anticlimacticlagacy.objects.Vector3;
 import com.integral.etherium.items.EtheriumArmor;
 
 import net.minecraft.world.entity.LivingEntity;

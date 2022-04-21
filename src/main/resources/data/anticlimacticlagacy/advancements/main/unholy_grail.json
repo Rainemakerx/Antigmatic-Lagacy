@@ -1,0 +1,22 @@
+{
+  "display": {
+    "icon": {
+      "item": "anticlimacticlagacy:unholy_grail"
+    },
+    "title": {
+      "translate": "advancement.anticlimacticlagacy:unholyGrail"
+    },
+    "description": {
+      "translate": "advancement.anticlimacticlagacy:unholyGrail.desc"
+    },
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "parent": "anticlimacticlagacy:main/megasponge",
+  "criteria": {
+    "spellstone": {
+      "trigger": "anticlimacticlagacy:unholy_grail_drink"
+    }
+  }
+}

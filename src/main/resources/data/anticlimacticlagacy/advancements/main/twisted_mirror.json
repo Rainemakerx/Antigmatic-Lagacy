@@ -1,0 +1,30 @@
+{
+  "display": {
+    "icon": {
+      "item": "anticlimacticlagacy:dark_mirror"
+    },
+    "title": {
+      "translate": "advancement.anticlimacticlagacy:twistedMirror"
+    },
+    "description": {
+      "translate": "advancement.anticlimacticlagacy:twistedMirror.desc"
+    },
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false,
+	"frame": "goal"
+  },
+  "parent": "anticlimacticlagacy:main/twisted_heart",
+  "criteria": {
+    "mirror": {
+      "trigger": "anticlimacticlagacy:cursed_inventory_changed",
+      "conditions": {
+        "items": [
+          {
+             "items": ["anticlimacticlagacy:dark_mirror"]
+          }
+        ]
+      }
+    }
+  }
+}

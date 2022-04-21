@@ -1,0 +1,50 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "anticlimacticlagacy:items/anticlimactic_amulet"
+    },
+    "overrides": [
+        {
+            "predicate": {
+                "anticlimacticlagacy:anticlimactic_amulet_color": 0.1
+            },
+            "model": "anticlimacticlagacy:item/anticlimactic_amulet_01"
+        },
+		{
+            "predicate": {
+                "anticlimacticlagacy:anticlimactic_amulet_color": 0.2
+            },
+            "model": "anticlimacticlagacy:item/anticlimactic_amulet_02"
+        },
+		{
+            "predicate": {
+                "anticlimacticlagacy:anticlimactic_amulet_color": 0.3
+            },
+            "model": "anticlimacticlagacy:item/anticlimactic_amulet_03"
+        },
+		{
+            "predicate": {
+                "anticlimacticlagacy:anticlimactic_amulet_color": 0.4
+            },
+            "model": "anticlimacticlagacy:item/anticlimactic_amulet_04"
+        },
+		{
+            "predicate": {
+                "anticlimacticlagacy:anticlimactic_amulet_color": 0.5
+            },
+            "model": "anticlimacticlagacy:item/anticlimactic_amulet_05"
+        },
+		{
+            "predicate": {
+                "anticlimacticlagacy:anticlimactic_amulet_color": 0.6
+            },
+            "model": "anticlimacticlagacy:item/anticlimactic_amulet_06"
+        },
+		{
+            "predicate": {
+                "anticlimacticlagacy:anticlimactic_amulet_color": 0.7
+            },
+            "model": "anticlimacticlagacy:item/anticlimactic_amulet_07"
+        }
+    ]
+}

@@ -1,0 +1,56 @@
+{
+    "name": "book.anticlimacticlagacy.entry.advanced_brewing.name",
+    "icon": "anticlimacticlagacy:ultimate_potion#1{AnticlimacticPotion:'ultimate_healing'}",
+    "category": "anticlimacticlagacy:brewing",
+	"advancement": "anticlimacticlagacy:book/brewing/advanced_brewing",
+    "secret": false,
+    "priority": false,
+    "read_by_default": false,
+	"extra_recipe_mappings": {
+		"anticlimacticlagacy:ultimate_potion": 1,
+		"anticlimacticlagacy:ultimate_potion_splash": 1,
+		"anticlimacticlagacy:ultimate_potion_lingering": 1
+	},
+    "sortnum": 0,
+    "pages": [
+        {
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.advanced_brewing.page.1"
+        },
+		{
+            "type": "anticlimacticlagacy:brewing",
+			"recipe": "anticlimacticlagacy:ultimate_leaping",
+			"index": 0,
+            "heading": "book.anticlimacticlagacy.entry.advanced_brewing.heading.1",
+            "text": "book.anticlimacticlagacy.entry.advanced_brewing.page.2"
+        },
+		{
+            "type": "anticlimacticlagacy:brewing",
+			"recipe": "anticlimacticlagacy:ultimate_strength",
+			"index": 0,
+            "heading": "book.anticlimacticlagacy.entry.advanced_brewing.heading.2",
+            "text": "book.anticlimacticlagacy.entry.advanced_brewing.page.3"
+        },
+		{
+            "type": "anticlimacticlagacy:brewing",
+			"recipe": "anticlimacticlagacy:ultimate_invisibility",
+			"index": 0,
+            "heading": "book.anticlimacticlagacy.entry.advanced_brewing.heading.3",
+            "text": "book.anticlimacticlagacy.entry.advanced_brewing.page.4"
+        },
+		{
+            "type": "anticlimacticlagacy:brewing",
+			"recipe": "anticlimacticlagacy:ultimate_healing",
+			"index": 0,
+            "heading": "book.anticlimacticlagacy.entry.advanced_brewing.heading.4",
+            "text": "book.anticlimacticlagacy.entry.advanced_brewing.page.5"
+        },
+		{
+            "type": "anticlimacticlagacy:brewing",
+			"recipe": "anticlimacticlagacy:ultimate_poison",
+			"index": 1,
+            "heading": "book.anticlimacticlagacy.entry.advanced_brewing.heading.5",
+            "text": "book.anticlimacticlagacy.entry.advanced_brewing.page.6"
+        }
+    ]
+}

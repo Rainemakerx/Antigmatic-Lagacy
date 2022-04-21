@@ -1,0 +1,9 @@
+{
+  "parent": "anticlimacticlagacy:block/massive_lamp_template",
+  "textures": {
+		"casing": "block/glass",
+		"metalplate": "anticlimacticlagacy:blocks/plate",
+		"lampcore": "anticlimacticlagacy:blocks/the_lamp",
+		"particle": "anticlimacticlagacy:blocks/plate"
+	}
+}

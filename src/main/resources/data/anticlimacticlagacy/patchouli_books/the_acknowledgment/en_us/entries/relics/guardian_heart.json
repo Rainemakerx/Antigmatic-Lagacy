@@ -1,0 +1,51 @@
+{
+    "name": "book.anticlimacticlagacy.entry.guardian_heart.name",
+    "icon": "anticlimacticlagacy:guardian_heart",
+    "category": "anticlimacticlagacy:relics",
+	"advancement": "anticlimacticlagacy:book/relics/guardian_heart",
+    "secret": false,
+    "priority": false,
+    "read_by_default": false,
+    "sortnum": 25,
+    "pages": [
+        {
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.guardian_heart.page.1"
+        },
+		{
+            "type": "spotlight",
+			"item": "anticlimacticlagacy:guardian_heart",
+			"link_recipe": true,
+			"title": "book.anticlimacticlagacy.entry.guardian_heart.heading.1",
+            "text": "book.anticlimacticlagacy.entry.guardian_heart.page.2"
+        },
+		{
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.guardian_heart.page.3"
+        },
+		{
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.guardian_heart.page.4"
+        },
+		{
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.guardian_heart.page.5"
+        },
+		{
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.guardian_heart.page.6"
+        },
+		{
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.guardian_heart.page.7"
+        },
+		{
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.guardian_heart.page.8"
+        },
+		{
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.guardian_heart.page.9"
+        }
+    ]
+}

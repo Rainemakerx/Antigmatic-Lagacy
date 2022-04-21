@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "hanging=false": {
+      "model": "anticlimacticlagacy:block/the_lamp/big_redstonelamp"
+    },
+    "hanging=true": {
+      "model": "anticlimacticlagacy:block/the_lamp/big_hanging_redstonelamp"
+    }
+  }
+}

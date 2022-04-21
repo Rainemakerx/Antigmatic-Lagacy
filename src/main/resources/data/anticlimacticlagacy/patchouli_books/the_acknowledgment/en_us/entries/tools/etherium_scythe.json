@@ -1,0 +1,30 @@
+{
+    "name": "book.anticlimacticlagacy.entry.etherium_scythe.name",
+    "icon": "anticlimacticlagacy:etherium_scythe",
+    "category": "anticlimacticlagacy:tools",
+	"advancement": "anticlimacticlagacy:book/tools/etherium_scythe",
+    "secret": false,
+    "priority": false,
+    "read_by_default": false,
+    "sortnum": 40,
+    "pages": [
+        {
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.etherium_scythe.page.1"
+        },
+		{
+            "type": "crafting",
+			"recipe": "anticlimacticlagacy:etherium_scythe",
+            "title": " ",
+            "text": "book.anticlimacticlagacy.entry.etherium_scythe.page.2"
+        },
+		{
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.etherium_scythe.page.3"
+        },
+		{
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.etherium_scythe.page.4"
+        }
+    ]
+}

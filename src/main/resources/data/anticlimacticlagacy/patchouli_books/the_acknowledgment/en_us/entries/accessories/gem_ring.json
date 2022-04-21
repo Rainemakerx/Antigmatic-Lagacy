@@ -1,0 +1,22 @@
+{
+    "name": "book.anticlimacticlagacy.entry.gem_ring.name",
+    "icon": "anticlimacticlagacy:gem_ring",
+    "category": "anticlimacticlagacy:accessories",
+    "advancement": "anticlimacticlagacy:book/accessories/gem_ring",
+    "secret": false,
+    "priority": false,
+    "read_by_default": false,
+    "sortnum": 5,
+    "pages": [
+        {
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.gem_ring.page.1"
+        },
+		{
+            "type": "crafting",
+			"recipe": "anticlimacticlagacy:gem_ring",
+            "title": " ",
+            "text": "book.anticlimacticlagacy.entry.gem_ring.page.2"
+        }
+    ]
+}

@@ -1,0 +1,31 @@
+{
+    "name": "book.anticlimacticlagacy.entry.earth_heart.name",
+    "icon": "anticlimacticlagacy:earth_heart",
+    "category": "anticlimacticlagacy:materials",
+	"advancement": "anticlimacticlagacy:book/materials/earth_heart",
+    "secret": false,
+    "priority": false,
+    "read_by_default": false,
+    "sortnum": 60,
+    "pages": [
+        {
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.earth_heart.page.1"
+        },
+		{
+            "type": "spotlight",
+			"item": "anticlimacticlagacy:earth_heart",
+			"link_recipe": true,
+            "title": "book.anticlimacticlagacy.entry.earth_heart.heading.1",
+            "text": "book.anticlimacticlagacy.entry.earth_heart.page.2"
+        },
+		{
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.earth_heart.page.3"
+        },
+		{
+            "type": "empty",
+            "draw_filler": false
+        }
+    ]
+}

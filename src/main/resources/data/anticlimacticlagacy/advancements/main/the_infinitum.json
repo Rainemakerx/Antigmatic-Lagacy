@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "item": "anticlimacticlagacy:the_infinitum"
+    },
+    "title": {
+      "translate": "advancement.anticlimacticlagacy:theInfinitum"
+    },
+    "description": {
+      "translate": "advancement.anticlimacticlagacy:theInfinitum.desc"
+    },
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "anticlimacticlagacy:main/abyssal_heart",
+  "criteria": {
+    "infinitum": {
+      "trigger": "anticlimacticlagacy:cursed_inventory_changed",
+      "conditions": {
+        "items": [
+          {
+             "items": ["anticlimacticlagacy:the_infinitum"]
+          }
+        ]
+      }
+    }
+  }
+}

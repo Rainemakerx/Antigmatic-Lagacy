@@ -1,0 +1,22 @@
+{
+    "name": "book.anticlimacticlagacy.entry.mending_mixture.name",
+    "icon": "anticlimacticlagacy:mending_mixture",
+    "category": "anticlimacticlagacy:misc",
+	"advancement": "anticlimacticlagacy:book/misc/mending_mixture",
+    "secret": false,
+    "priority": false,
+    "read_by_default": false,
+    "sortnum": 30,
+    "pages": [
+        {
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.mending_mixture.page.1"
+        },
+		{
+            "type": "crafting",
+			"recipe": "anticlimacticlagacy:mending_mixture",
+			"title": " ",
+            "text": "book.anticlimacticlagacy.entry.mending_mixture.page.2"
+        }
+    ]
+}

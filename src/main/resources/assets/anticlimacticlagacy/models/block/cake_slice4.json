@@ -1,0 +1,22 @@
+{
+    "textures": {
+        "particle": "anticlimacticlagacy:blocks/cake_side",
+        "bottom": "anticlimacticlagacy:blocks/cake_bottom",
+        "top": "anticlimacticlagacy:blocks/cake_top",
+        "side": "anticlimacticlagacy:blocks/cake_side",
+        "inside": "anticlimacticlagacy:blocks/cake_inner"
+    },
+    "elements": [
+        {   "from": [ 9, 0, 1 ],
+            "to": [ 15, 8, 15 ],
+            "faces": {
+                "down":  { "texture": "#bottom", "cullface": "down" },
+                "up":    { "texture": "#top" },
+                "north": { "texture": "#side" },
+                "south": { "texture": "#side" },
+                "west":  { "texture": "#inside" },
+                "east":  { "texture": "#side" }
+            }
+        }
+    ]
+}

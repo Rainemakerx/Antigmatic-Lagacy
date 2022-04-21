@@ -1,0 +1,31 @@
+{
+    "name": "book.anticlimacticlagacy.entry.etherium_ore.name",
+    "icon": "anticlimacticlagacy:etherium_ore",
+    "category": "anticlimacticlagacy:materials",
+	"advancement": "anticlimacticlagacy:book/materials/etherium_ore",
+    "secret": false,
+    "priority": false,
+    "read_by_default": false,
+    "sortnum": 20,
+    "pages": [
+        {
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.etherium_ore.page.1"
+        },
+		{
+            "type": "spotlight",
+			"item": "anticlimacticlagacy:etherium_ore",
+			"link_recipe": true,
+            "title": "book.anticlimacticlagacy.entry.etherium_ore.heading.1",
+            "text": "book.anticlimacticlagacy.entry.etherium_ore.page.2"
+        },
+		{
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.etherium_ore.page.3"
+        },
+		{
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.etherium_ore.page.4"
+        }
+    ]
+}

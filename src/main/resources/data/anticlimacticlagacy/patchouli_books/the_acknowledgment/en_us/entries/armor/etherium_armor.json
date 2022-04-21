@@ -1,0 +1,51 @@
+{
+    "name": "book.anticlimacticlagacy.entry.etherium_armor.name",
+    "icon": "anticlimacticlagacy:etherium_helmet",
+    "category": "anticlimacticlagacy:armor",
+	"advancement": "anticlimacticlagacy:book/armor/etherium_armor",
+    "secret": false,
+    "priority": false,
+    "read_by_default": false,
+    "sortnum": 0,
+    "pages": [
+        {
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.etherium_armor.page.1"
+        },
+		{
+            "type": "anticlimacticlagacy:armor_showcase",
+			"heading": "book.anticlimacticlagacy.entry.etherium_armor.heading.1",
+			"input1": "anticlimacticlagacy:etherium_helmet#1{forceDisplaySetBonus:true}",
+			"input2": "anticlimacticlagacy:etherium_chestplate#1{forceDisplaySetBonus:true}",
+			"input3": "anticlimacticlagacy:etherium_leggings#1{forceDisplaySetBonus:true}",
+			"input4": "anticlimacticlagacy:etherium_boots#1{forceDisplaySetBonus:true}",
+			"text": "book.anticlimacticlagacy.entry.etherium_armor.page.2"
+        },
+		{
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.etherium_armor.page.3"
+        },
+		{
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.etherium_armor.page.4"
+        },
+		{
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.etherium_armor.page.5"
+        },
+		{
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.etherium_armor.page.6"
+        },
+		{
+            "type": "crafting",
+            "recipe": "anticlimacticlagacy:etherium_helmet",
+			"recipe2": "anticlimacticlagacy:etherium_chestplate"
+        },
+		{
+            "type": "crafting",
+            "recipe": "anticlimacticlagacy:etherium_leggings",
+			"recipe2": "anticlimacticlagacy:etherium_boots"
+        }
+    ]
+}

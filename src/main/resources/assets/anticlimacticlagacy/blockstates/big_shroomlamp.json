@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "hanging=false": {
+      "model": "anticlimacticlagacy:block/the_lamp/big_shroomlamp"
+    },
+    "hanging=true": {
+      "model": "anticlimacticlagacy:block/the_lamp/big_hanging_shroomlamp"
+    }
+  }
+}

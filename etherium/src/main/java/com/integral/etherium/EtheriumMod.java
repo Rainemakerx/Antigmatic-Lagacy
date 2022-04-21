@@ -3,9 +3,9 @@ package com.integral.etherium;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import com.integral.enigmaticlegacy.api.materials.EnigmaticArmorMaterials;
-import com.integral.enigmaticlegacy.api.materials.EnigmaticMaterials;
-import com.integral.enigmaticlegacy.packets.clients.PacketPlayerMotion;
+import com.integral.anticlimacticlagacy.api.materials.AnticlimacticArmorMaterials;
+import com.integral.anticlimacticlagacy.api.materials.AnticlimacticMaterials;
+import com.integral.anticlimacticlagacy.packets.clients.PacketPlayerMotion;
 import com.integral.etherium.blocks.BlockEtherium;
 import com.integral.etherium.core.EtheriumConfig;
 import com.integral.etherium.core.EtheriumEventHandler;
@@ -84,8 +84,8 @@ public class EtheriumMod {
 	public EtheriumMod() {
 		etheriumConfig = new EtheriumConfig();
 
-		EnigmaticMaterials.setEtheriumConfig(etheriumConfig);
-		EnigmaticArmorMaterials.setEtheriumConfig(etheriumConfig);
+		AnticlimacticMaterials.setEtheriumConfig(etheriumConfig);
+		AnticlimacticArmorMaterials.setEtheriumConfig(etheriumConfig);
 		
 		FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
 		FMLJavaModLoadingContext.get().getModEventBus().addListener(this::onLoadComplete);

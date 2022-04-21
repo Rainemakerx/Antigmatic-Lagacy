@@ -1,0 +1,9 @@
+{
+  "parent": "anticlimacticlagacy:block/big_lamp_template",
+  "textures": {
+		"lantern": "block/lantern",
+		"metalplate": "anticlimacticlagacy:blocks/plate",
+		"lampcore": "anticlimacticlagacy:blocks/the_lamp",
+		"particle": "anticlimacticlagacy:blocks/plate"
+	}
+}

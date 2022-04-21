@@ -29,7 +29,7 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 
 @OnlyIn(Dist.CLIENT)
 public class ShieldAuraLayer extends RenderLayer<AbstractClientPlayer, PlayerModel<AbstractClientPlayer>> {
-	private static final ResourceLocation WITHER_ARMOR = new ResourceLocation("enigmaticlegacy", "textures/models/misc/ultimate_wither_armor.png");
+	private static final ResourceLocation WITHER_ARMOR = new ResourceLocation("anticlimacticlagacy", "textures/models/misc/ultimate_wither_armor.png");
 	private final PlayerModel<AbstractClientPlayer> witherModel;
 
 	public ShieldAuraLayer(LivingEntityRenderer<AbstractClientPlayer, PlayerModel<AbstractClientPlayer>> renderer, EntityModelSet modelSet) {

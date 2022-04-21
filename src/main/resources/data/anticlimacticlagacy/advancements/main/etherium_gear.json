@@ -1,0 +1,47 @@
+{
+  "parent": "anticlimacticlagacy:main/smelt_etherium",
+  "display": {
+    "icon": {
+      "item": "anticlimacticlagacy:etherium_helmet"
+    },
+    "title": {
+      "translate": "advancement.anticlimacticlagacy:etheriumGear"
+    },
+    "description": {
+      "translate": "advancement.anticlimacticlagacy:etheriumGear.desc"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "rewards": {
+    "experience": 250
+  },
+  "criteria": {
+    "etherium_armor": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["anticlimacticlagacy:etherium_helmet"]
+          },
+		  {
+            "items": ["anticlimacticlagacy:etherium_chestplate"]
+          },
+		  {
+            "items": ["anticlimacticlagacy:etherium_leggings"]
+          },
+		  {
+            "items": ["anticlimacticlagacy:etherium_boots"]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "etherium_armor"
+    ]
+  ]
+}

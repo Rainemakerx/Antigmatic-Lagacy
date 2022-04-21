@@ -1,0 +1,22 @@
+{
+    "name": "book.anticlimacticlagacy.entry.ender_rod.name",
+    "icon": "anticlimacticlagacy:ender_rod",
+    "category": "anticlimacticlagacy:materials",
+	"advancement": "anticlimacticlagacy:book/materials/ender_rod",
+    "secret": false,
+    "priority": false,
+    "read_by_default": false,
+    "sortnum": 50,
+    "pages": [
+        {
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.ender_rod.page.1"
+        },
+		{
+            "type": "crafting",
+			"recipe": "anticlimacticlagacy:ender_rod",
+			"title": " ",
+            "text": "book.anticlimacticlagacy.entry.ender_rod.page.2"
+        }
+    ]
+}

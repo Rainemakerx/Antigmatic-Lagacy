@@ -1,0 +1,34 @@
+{
+    "name": "book.anticlimacticlagacy.entry.recall_potion.name",
+    "icon": "anticlimacticlagacy:recall_potion",
+    "category": "anticlimacticlagacy:brewing",
+	"advancement": "anticlimacticlagacy:book/brewing/recall_potion",
+    "secret": false,
+    "priority": false,
+    "read_by_default": false,
+    "sortnum": 20,
+	"extra_recipe_mappings": {
+			"anticlimacticlagacy:recall_potion": 1
+		},
+    "pages": [
+        {
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.recall_potion.page.1"
+        },
+		{
+            "type": "anticlimacticlagacy:brewing",
+			"recipe": "anticlimacticlagacy:recall_potion",
+			"index": 0,
+            "heading": "book.anticlimacticlagacy.entry.recall_potion.heading.1",
+            "text": "book.anticlimacticlagacy.entry.recall_potion.page.2"
+        },
+		{
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.recall_potion.page.3"
+        },
+		{
+            "type": "empty",
+            "draw_filler": false
+        }
+    ]
+}

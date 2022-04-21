@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "conditions": [
+    {
+      "type": "anticlimacticlagacy:is_enabled",
+      "item": "anticlimacticlagacy:astral_breaker"
+    }
+  ],
+  "pattern": [
+    "aWa",
+    "PXS",
+    "aba"
+  ],
+  "key": {
+	"X": {
+      "item": "minecraft:ender_eye"
+    },
+	"b": {
+      "item": "minecraft:dragon_breath"
+    },
+	"a": {
+      "item": "anticlimacticlagacy:astral_dust"
+    },
+	"P": {
+      "item": "anticlimacticlagacy:etherium_pickaxe"
+    },
+	"W": {
+      "item": "anticlimacticlagacy:etherium_axe"
+    },
+	"S": {
+      "item": "anticlimacticlagacy:etherium_shovel"
+    }
+  },
+  "result": {
+    "item": "anticlimacticlagacy:astral_breaker"
+  }
+}

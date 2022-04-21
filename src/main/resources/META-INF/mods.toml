@@ -1,13 +1,13 @@
 license="no_license"
 modLoader="javafml"
 loaderVersion="[31,)"
-issueTrackerURL="https://github.com/Extegral"
+issueTrackerURL="https://github.com/Rainemakerx"
 [[mods]]
-modId="enigmaticlegacy"
+modId="anticlimacticlagacy"
 version="1.0.0"
-displayName="Enigmatic Legacy"
+displayName="Anticlimactic Lagacy"
 displayURL="https://www.curseforge.com/minecraft/mc-mods"
-logoFile="EL_logo.png"
+logoFile="AL_logo.png"
 credits="no_credits"
 description='''
 Dummy mods.toml specification; required for Eclipse runs to work properly.

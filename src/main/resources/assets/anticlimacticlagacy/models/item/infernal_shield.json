@@ -1,0 +1,11 @@
+{
+  "parent": "anticlimacticlagacy:item/infernal_shield_unknown",
+  "overrides": [
+    {
+      "predicate": {
+        "blocking": 1
+      },
+      "model": "anticlimacticlagacy:item/infernal_shield_blocking"
+    }
+  ]
+}

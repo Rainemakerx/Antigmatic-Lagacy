@@ -9,8 +9,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Consumer;
 
-import com.integral.enigmaticlegacy.EnigmaticLegacy;
-import com.integral.enigmaticlegacy.handlers.SuperpositionHandler;
+import com.integral.anticlimacticlagacy.AnticlimacticLagacy;
+import com.integral.anticlimacticlagacy.handlers.SuperpositionHandler;
 import com.integral.omniconfig.Configuration;
 import com.integral.omniconfig.packets.PacketSyncOptions;
 import com.integral.omniconfig.wrappers.Omniconfig.BooleanParameter;
@@ -215,9 +215,9 @@ public class OmniconfigWrapper {
 					boolean worked = syncWrapperToPlayer(this, player);
 
 					if (worked) {
-						EnigmaticLegacy.logger.info("Successfully resynchronized file " + config.getConfigFile().getName() + " to " + player.getGameProfile().getName());
+						AnticlimacticLagacy.logger.info("Successfully resynchronized file " + config.getConfigFile().getName() + " to " + player.getGameProfile().getName());
 					} else {
-						EnigmaticLegacy.logger.info("File " + config.getConfigFile().getName() + " was not resynchronized to " + player.getGameProfile().getName() + ", since this integrated server is hosted by them.");
+						AnticlimacticLagacy.logger.info("File " + config.getConfigFile().getName() + " was not resynchronized to " + player.getGameProfile().getName() + ", since this integrated server is hosted by them.");
 					}
 				}
 			});
@@ -455,7 +455,7 @@ public class OmniconfigWrapper {
 
 	public static boolean syncAllToPlayer(ServerPlayer player) {
 		if (SuperpositionHandler.areWeRemoteServer(player)) {
-			EnigmaticLegacy.logger.info("Synchronizing omniconfig files to " + player.getGameProfile().getName() + "...");
+			AnticlimacticLagacy.logger.info("Synchronizing omniconfig files to " + player.getGameProfile().getName() + "...");
 
 			for (OmniconfigWrapper wrapper : wrapperRegistry.values()) {
 				if (!wrapper.config.getSidedType().isSided()) {
@@ -470,8 +470,8 @@ public class OmniconfigWrapper {
 
 	public static boolean syncWrapperToPlayer(OmniconfigWrapper wrapper, ServerPlayer player) {
 		if (SuperpositionHandler.areWeRemoteServer(player)) {
-			EnigmaticLegacy.logger.info("Sending data for " + wrapper.config.getConfigFile().getName());
-			EnigmaticLegacy.packetInstance.send(PacketDistributor.PLAYER.with(() -> player), new PacketSyncOptions(wrapper));
+			AnticlimacticLagacy.logger.info("Sending data for " + wrapper.config.getConfigFile().getName());
+			AnticlimacticLagacy.packetInstance.send(PacketDistributor.PLAYER.with(() -> player), new PacketSyncOptions(wrapper));
 			return true;
 		} else
 			return false;

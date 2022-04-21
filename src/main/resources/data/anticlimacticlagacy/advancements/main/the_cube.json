@@ -1,0 +1,30 @@
+{
+  "display": {
+    "icon": {
+      "item": "anticlimacticlagacy:the_cube"
+    },
+    "title": {
+      "translate": "advancement.anticlimacticlagacy:theCube"
+    },
+    "description": {
+      "translate": "advancement.anticlimacticlagacy:theCube.desc"
+    },
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true,
+    "frame": "goal"
+  },
+  "parent": "anticlimacticlagacy:main/all_spellstones",
+  "criteria": {
+    "spellstone": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+             "items": ["anticlimacticlagacy:the_cube"]
+          }
+        ]
+      }
+    }
+  }
+}

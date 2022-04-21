@@ -1,0 +1,46 @@
+{
+  "parent": "anticlimacticlagacy:recipes/root",
+  "rewards": {
+    "recipes": [
+      "anticlimacticlagacy:wool/black_wool",
+      "anticlimacticlagacy:wool/red_wool",
+      "anticlimacticlagacy:wool/yellow_wool",
+      "anticlimacticlagacy:wool/cyan_wool",
+      "anticlimacticlagacy:wool/blue_wool",
+      "anticlimacticlagacy:wool/light_blue_wool",
+      "anticlimacticlagacy:wool/gray_wool",
+      "anticlimacticlagacy:wool/light_gray_wool",
+      "anticlimacticlagacy:wool/purple_wool",
+      "anticlimacticlagacy:wool/magenta_wool",
+      "anticlimacticlagacy:wool/green_wool",
+      "anticlimacticlagacy:wool/lime_wool",
+      "anticlimacticlagacy:wool/brown_wool",
+      "anticlimacticlagacy:wool/orange_wool",
+      "anticlimacticlagacy:wool/pink_wool"
+    ]
+  },
+  "criteria": {
+    "has_white_wool": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["minecraft:white_wool"]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "anticlimacticlagacy:wool/black_wool"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_white_wool",
+      "has_the_recipe"
+    ]
+  ]
+}

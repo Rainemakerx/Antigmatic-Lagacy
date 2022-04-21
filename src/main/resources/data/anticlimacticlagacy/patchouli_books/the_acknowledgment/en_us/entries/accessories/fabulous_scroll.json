@@ -1,0 +1,30 @@
+{
+    "name": "book.anticlimacticlagacy.entry.fabulous_scroll.name",
+    "icon": "anticlimacticlagacy:fabulous_scroll",
+    "category": "anticlimacticlagacy:accessories",
+	"advancement": "anticlimacticlagacy:book/accessories/fabulous_scroll",
+    "secret": false,
+    "priority": false,
+    "read_by_default": false,
+    "sortnum": 80,
+    "pages": [
+        {
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.fabulous_scroll.page.1"
+        },
+		{
+            "type": "crafting",
+			"recipe": "anticlimacticlagacy:fabulous_scroll",
+            "title": " ",
+            "text": "book.anticlimacticlagacy.entry.fabulous_scroll.page.2"
+        },
+		{
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.fabulous_scroll.page.3"
+        },
+		{
+            "type": "empty",
+			"draw_filler": false
+		}
+    ]
+}

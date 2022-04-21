@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "item": "anticlimacticlagacy:heaven_scroll"
+    },
+    "title": {
+      "translate": "advancement.anticlimacticlagacy:heavenScroll"
+    },
+    "description": {
+      "translate": "advancement.anticlimacticlagacy:heavenScroll.desc"
+    },
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "parent": "anticlimacticlagacy:main/discover_scroll",
+  "criteria": {
+    "spellstone": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+             "items": ["anticlimacticlagacy:heaven_scroll"]
+          }
+        ]
+      }
+    }
+  }
+}

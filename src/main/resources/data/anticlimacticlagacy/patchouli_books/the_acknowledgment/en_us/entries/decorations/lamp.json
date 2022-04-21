@@ -1,0 +1,29 @@
+{
+    "name": "book.anticlimacticlagacy.entry.lamp.name",
+    "icon": "anticlimacticlagacy:massive_lamp",
+    "category": "anticlimacticlagacy:decorations",
+	"advancement": "anticlimacticlagacy:book/decorations/lamp",
+    "secret": false,
+    "priority": false,
+    "read_by_default": false,
+    "sortnum": 0,
+    "pages": [
+        {
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.lamp.page.1"
+        },
+		{
+            "type": "crafting",
+			"recipe": "anticlimacticlagacy:lamps/big_lamp",
+			"recipe2": "anticlimacticlagacy:lamps/massive_lamp"
+        },
+		{
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.lamp.page.2"
+        },
+		{
+            "type": "empty",
+            "draw_filler": false
+        }
+    ]
+}

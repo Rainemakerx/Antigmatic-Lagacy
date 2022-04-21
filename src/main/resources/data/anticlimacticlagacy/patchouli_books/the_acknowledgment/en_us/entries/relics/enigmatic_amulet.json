@@ -1,0 +1,39 @@
+{
+    "name": "book.anticlimacticlagacy.entry.anticlimactic_amulet.name",
+    "icon": "anticlimacticlagacy:anticlimactic_amulet",
+    "category": "anticlimacticlagacy:relics",
+	"advancement": "anticlimacticlagacy:book/relics/anticlimactic_amulet",
+    "secret": false,
+    "priority": false,
+    "read_by_default": false,
+    "sortnum": 0,
+    "pages": [
+        {
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.anticlimactic_amulet.page.1"
+        },
+		{
+            "type": "spotlight",
+			"item": "anticlimacticlagacy:anticlimactic_amulet",
+			"link_recipe": true,
+			"title": "book.anticlimacticlagacy.entry.anticlimactic_amulet.heading.1",
+            "text": "book.anticlimacticlagacy.entry.anticlimactic_amulet.page.2"
+        },
+		{
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.anticlimactic_amulet.page.3"
+        },
+		{
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.anticlimactic_amulet.page.4"
+        },
+		{
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.anticlimactic_amulet.page.5"
+        },
+		{
+            "type": "empty",
+            "draw_filler": false
+        }
+    ]
+}
