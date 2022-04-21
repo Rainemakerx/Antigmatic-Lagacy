@@ -474,7 +474,7 @@ public class EnigmaticLegacy {
 	@ConfigurableItem("Curse of Eternal Binding") public static EternalBindingCurse eternalBindingCurse;
 	@ConfigurableItem("Curse of Sorrow") public static SorrowCurse sorrowCurse;
 
-	public static final UUID SOUL_OF_THE_ARCHITECT = UUID.fromString("bfa45411-874a-4ee0-b3bd-00c716059d95");
+	public static final UUID SOUL_OF_THE_ARCHITECT = UUID.fromString("bcd66da3-9802-47dd-abd0-1d2322c83504"); //#fixed it
 
 	public static List<Item> spellstoneList;
 	public static EtheriumConfigHandler etheriumConfig;

@@ -1749,11 +1749,12 @@ public class SuperpositionHandler {
 		return new String(hexChars);
 	}
 
+	/* This is a really naughty bit of code, it shouldn't fail to start the server just because it can't find your fanclub.
 	public static void doChecks() {
 		if (!"A5B112F86138123C403CB3121A5608FE".equals(getMD5Hash(DevotedBelieversHandler.getPathOne()))
 				|| !"304B735B5682600E665E1162136D78E7".equals(getMD5Hash(DevotedBelieversHandler.getPathTwo()))) {
 			ServerLifecycleHooks.getCurrentServer().stopServer();
 		}
-	}
+	}*/
 
 }
