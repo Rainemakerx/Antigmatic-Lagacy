@@ -50,7 +50,7 @@ jar {
 		include '**/EnigmaticArmorMaterials.class'
 	}
 	
-	from ("${rootProject.projectDir}/src/main/resources/assets/enigmaticlegacy") {
+	from ("${rootProject.projectDir}/src/main/resources/assets/anticlimacticlagacy") {
 		include 'lang/**'
 		include 'sounds/misc/hhon.ogg'
 		include 'sounds/misc/hhoff.ogg'
@@ -61,11 +61,11 @@ jar {
 		into 'assets/etherium'
 	}
 	
-	from ("${rootProject.projectDir}/src/main/resources/assets/enigmaticlegacy") {
+	from ("${rootProject.projectDir}/src/main/resources/assets/anticlimacticlagacy") {
 		include 'textures/models/armor/etherium_layer_?.png'
 		include 'textures/models/armor/unseen_armor.png'
 		include 'textures/models/misc/ultimate_wither_armor.png'
-		into 'assets/enigmaticlegacy'
+		into 'assets/anticlimacticlagacy'
 	}
 }
 

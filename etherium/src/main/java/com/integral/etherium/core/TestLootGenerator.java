@@ -7,7 +7,7 @@ import java.util.Random;
 
 import javax.annotation.Nullable;
 
-import com.integral.enigmaticlegacy.helpers.ItemLoreHelper;
+import com.integral.anticlimacticlagacy.helpers.ItemLoreHelper;
 import com.integral.etherium.EtheriumMod;
 
 import net.minecraft.client.gui.screens.Screen;
@@ -100,22 +100,22 @@ public class TestLootGenerator extends Item implements Vanishable {
 	@OnlyIn(Dist.CLIENT)
 	public void appendHoverText(ItemStack stack, @Nullable Level worldIn, List<Component> list, TooltipFlag flagIn) {
 		if (Screen.hasShiftDown()) {
-			ItemLoreHelper.addLocalizedString(list, "tooltip.enigmaticlegacy.lootGenerator1");
-			ItemLoreHelper.addLocalizedString(list, "tooltip.enigmaticlegacy.lootGenerator2");
-			ItemLoreHelper.addLocalizedString(list, "tooltip.enigmaticlegacy.void");
-			ItemLoreHelper.addLocalizedString(list, "tooltip.enigmaticlegacy.lootGenerator3");
-			ItemLoreHelper.addLocalizedString(list, "tooltip.enigmaticlegacy.lootGenerator4");
-			ItemLoreHelper.addLocalizedString(list, "tooltip.enigmaticlegacy.lootGenerator5");
-			ItemLoreHelper.addLocalizedString(list, "tooltip.enigmaticlegacy.lootGenerator6");
-			ItemLoreHelper.addLocalizedString(list, "tooltip.enigmaticlegacy.lootGenerator7");
-			ItemLoreHelper.addLocalizedString(list, "tooltip.enigmaticlegacy.lootGenerator8");
-			ItemLoreHelper.addLocalizedString(list, "tooltip.enigmaticlegacy.lootGenerator9");
+			ItemLoreHelper.addLocalizedString(list, "tooltip.anticlimacticlagacy.lootGenerator1");
+			ItemLoreHelper.addLocalizedString(list, "tooltip.anticlimacticlagacy.lootGenerator2");
+			ItemLoreHelper.addLocalizedString(list, "tooltip.anticlimacticlagacy.void");
+			ItemLoreHelper.addLocalizedString(list, "tooltip.anticlimacticlagacy.lootGenerator3");
+			ItemLoreHelper.addLocalizedString(list, "tooltip.anticlimacticlagacy.lootGenerator4");
+			ItemLoreHelper.addLocalizedString(list, "tooltip.anticlimacticlagacy.lootGenerator5");
+			ItemLoreHelper.addLocalizedString(list, "tooltip.anticlimacticlagacy.lootGenerator6");
+			ItemLoreHelper.addLocalizedString(list, "tooltip.anticlimacticlagacy.lootGenerator7");
+			ItemLoreHelper.addLocalizedString(list, "tooltip.anticlimacticlagacy.lootGenerator8");
+			ItemLoreHelper.addLocalizedString(list, "tooltip.anticlimacticlagacy.lootGenerator9");
 		} else {
-			ItemLoreHelper.addLocalizedString(list, "tooltip.enigmaticlegacy.holdShift");
+			ItemLoreHelper.addLocalizedString(list, "tooltip.anticlimacticlagacy.holdShift");
 		}
 
-		ItemLoreHelper.addLocalizedString(list, "tooltip.enigmaticlegacy.void");
-		ItemLoreHelper.addLocalizedString(list, "tooltip.enigmaticlegacy.lootGeneratorCurrent");
+		ItemLoreHelper.addLocalizedString(list, "tooltip.anticlimacticlagacy.void");
+		ItemLoreHelper.addLocalizedString(list, "tooltip.anticlimacticlagacy.lootGeneratorCurrent");
 
 		list.add(new TextComponent("" + this.lootList.get(stack.getDamageValue())).withStyle(ChatFormatting.GOLD));
 	}
@@ -198,7 +198,7 @@ public class TestLootGenerator extends Item implements Vanishable {
 						EtheriumMod.logger.info("Item: " + theItem.getName(new ItemStack(theItem)).getString() + ", Amount: " + lootMap.get(theItem));
 					}
 
-					player.sendMessage(new TranslatableComponent("message.enigmaticlegacy.gen_sim_complete").withStyle(ChatFormatting.DARK_PURPLE), player.getUUID());
+					player.sendMessage(new TranslatableComponent("message.anticlimacticlagacy.gen_sim_complete").withStyle(ChatFormatting.DARK_PURPLE), player.getUUID());
 
 				} else {
 					chest.clearContent();
