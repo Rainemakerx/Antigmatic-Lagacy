@@ -1,7 +1,7 @@
 package com.integral.etherium.core;
 
-import com.integral.anticlimacticlagacy.api.materials.EnigmaticArmorMaterials;
-import com.integral.anticlimacticlagacy.api.materials.EnigmaticMaterials;
+import com.integral.anticlimacticlagacy.api.materials.AnticlimacticArmorMaterials;
+import com.integral.anticlimacticlagacy.api.materials.AnticlimacticMaterials;
 import com.integral.anticlimacticlagacy.config.EtheriumConfigHandler;
 import com.integral.anticlimacticlagacy.objects.Perhaps;
 import com.integral.anticlimacticlagacy.packets.clients.PacketPlayerMotion;
@@ -100,12 +100,12 @@ public class EtheriumConfig implements IEtheriumConfig {
 
 	@Override
 	public ArmorMaterial getArmorMaterial() {
-		return EnigmaticArmorMaterials.ETHERIUM;
+		return AnticlimacticArmorMaterials.ETHERIUM;
 	}
 
 	@Override
 	public Tier getToolMaterial() {
-		return EnigmaticMaterials.ETHERIUM;
+		return AnticlimacticMaterials.ETHERIUM;
 	}
 
 	@Override
