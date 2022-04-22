@@ -39,7 +39,7 @@ public class UltimatePotionBase extends ItemBase implements IAdvancedPotionItem 
 	public PotionType potionType;
 
 	public UltimatePotionBase(Rarity rarity, PotionType type) {
-		super(ItemBase.getDefaultProperties().rarity(rarity).stacksTo(1).tab(anticlimacticlagacy.anticlimacticPotionTab));
+		super(ItemBase.getDefaultProperties().rarity(rarity).stacksTo(1).tab(AnticlimacticLagacy.anticlimacticPotionTab));
 
 		this.potionType = type;
 	}
@@ -54,7 +54,7 @@ public class UltimatePotionBase extends ItemBase implements IAdvancedPotionItem 
 	@OnlyIn(Dist.CLIENT)
 	public ItemStack getDefaultInstance() {
 		ItemStack stack = super.getDefaultInstance().copy();
-		PotionHelper.setAdvancedPotion(stack, anticlimacticlagacy.EMPTY);
+		PotionHelper.setAdvancedPotion(stack, AnticlimacticLagacy.EMPTY);
 		return stack.copy();
 	}
 
@@ -74,13 +74,13 @@ public class UltimatePotionBase extends ItemBase implements IAdvancedPotionItem 
 		if (this.allowdedIn(group)) {
 
 			if (this.potionType == PotionType.COMMON) {
-				for (AdvancedPotion potion : anticlimacticlagacy.commonPotionTypes) {
+				for (AdvancedPotion potion : AnticlimacticLagacy.commonPotionTypes) {
 					ItemStack stack = new ItemStack(this);
 					ItemNBTHelper.setString(stack, "AnticlimacticPotion", potion.getId());
 					items.add(stack);
 				}
 			} else {
-				for (AdvancedPotion potion : anticlimacticlagacy.ultimatePotionTypes) {
+				for (AdvancedPotion potion : AnticlimacticLagacy.ultimatePotionTypes) {
 					ItemStack stack = new ItemStack(this);
 					ItemNBTHelper.setString(stack, "AnticlimacticPotion", potion.getId());
 					items.add(stack);

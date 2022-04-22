@@ -58,7 +58,7 @@ public class PotionHelper {
 		if (PotionHelper.isAdvancedPotion(stack))
 			return PotionHelper.getAdvancedPotion(ItemNBTHelper.getString(stack, "AnticlimacticPotion", "nothing"));
 
-		return anticlimacticlagacy.EMPTY;
+		return AnticlimacticLagacy.EMPTY;
 	}
 
 	public static ItemStack setAdvancedPotion(ItemStack stack, AdvancedPotion potion) {
@@ -73,18 +73,18 @@ public class PotionHelper {
 
 	public static AdvancedPotion getAdvancedPotion(String identifier) {
 
-		for (AdvancedPotion potion : anticlimacticlagacy.ultimatePotionTypes) {
+		for (AdvancedPotion potion : AnticlimacticLagacy.ultimatePotionTypes) {
 			if (potion.getId().equals(identifier))
 				return potion;
 		}
 
-		for (AdvancedPotion potion : anticlimacticlagacy.commonPotionTypes) {
+		for (AdvancedPotion potion : AnticlimacticLagacy.commonPotionTypes) {
 			if (potion.getId().equals(identifier))
 				return potion;
 		}
 
 
-		return anticlimacticlagacy.EMPTY;
+		return AnticlimacticLagacy.EMPTY;
 	}
 
 	public static HashMap<Ingredient, Ingredient> constructIngredientMap(Ingredient... ingredients) {
@@ -116,25 +116,25 @@ public class PotionHelper {
 								Ingredient.of(PotionHelper.createVanillaPotion(Items.POTION, Potions.AWKWARD)),
 								Ingredient.of(Items.QUARTZ)
 								),
-						PotionHelper.createAdvancedPotion(anticlimacticlagacy.commonPotionBase, anticlimacticlagacy.HASTE)
+						PotionHelper.createAdvancedPotion(AnticlimacticLagacy.commonPotionBase, AnticlimacticLagacy.HASTE)
 						));
 
 		BrewingRecipeRegistry.addRecipe(
 				new ComplexBrewingRecipe(
 						PotionHelper.constructIngredientMap(
-								Ingredient.of(PotionHelper.createAdvancedPotion(anticlimacticlagacy.commonPotionBase, anticlimacticlagacy.HASTE)),
+								Ingredient.of(PotionHelper.createAdvancedPotion(AnticlimacticLagacy.commonPotionBase, AnticlimacticLagacy.HASTE)),
 								Ingredient.of(Items.REDSTONE)
 								),
-						PotionHelper.createAdvancedPotion(anticlimacticlagacy.commonPotionBase, anticlimacticlagacy.LONG_HASTE)
+						PotionHelper.createAdvancedPotion(AnticlimacticLagacy.commonPotionBase, AnticlimacticLagacy.LONG_HASTE)
 						));
 
 		BrewingRecipeRegistry.addRecipe(
 				new ComplexBrewingRecipe(
 						PotionHelper.constructIngredientMap(
-								Ingredient.of(PotionHelper.createAdvancedPotion(anticlimacticlagacy.commonPotionBase, anticlimacticlagacy.HASTE)),
+								Ingredient.of(PotionHelper.createAdvancedPotion(AnticlimacticLagacy.commonPotionBase, AnticlimacticLagacy.HASTE)),
 								Ingredient.of(Items.GLOWSTONE_DUST)
 								),
-						PotionHelper.createAdvancedPotion(anticlimacticlagacy.commonPotionBase, anticlimacticlagacy.STRONG_HASTE)
+						PotionHelper.createAdvancedPotion(AnticlimacticLagacy.commonPotionBase, AnticlimacticLagacy.STRONG_HASTE)
 						));
 
 		BrewingRecipeRegistry.addRecipe(
@@ -142,32 +142,32 @@ public class PotionHelper {
 						PotionHelper.constructIngredientMap(
 								Ingredient.of(PotionHelper.createVanillaPotion(Items.SPLASH_POTION, Potions.AWKWARD)),
 								Ingredient.of(Items.QUARTZ),
-								Ingredient.of(PotionHelper.createAdvancedPotion(anticlimacticlagacy.commonPotionBase, anticlimacticlagacy.HASTE)),
+								Ingredient.of(PotionHelper.createAdvancedPotion(AnticlimacticLagacy.commonPotionBase, AnticlimacticLagacy.HASTE)),
 								Ingredient.of(Items.GUNPOWDER)
 								),
-						PotionHelper.createAdvancedPotion(anticlimacticlagacy.commonPotionSplash, anticlimacticlagacy.HASTE)
+						PotionHelper.createAdvancedPotion(AnticlimacticLagacy.commonPotionSplash, AnticlimacticLagacy.HASTE)
 						));
 
 		BrewingRecipeRegistry.addRecipe(
 				new ComplexBrewingRecipe(
 						PotionHelper.constructIngredientMap(
-								Ingredient.of(PotionHelper.createAdvancedPotion(anticlimacticlagacy.commonPotionSplash, anticlimacticlagacy.HASTE)),
+								Ingredient.of(PotionHelper.createAdvancedPotion(AnticlimacticLagacy.commonPotionSplash, AnticlimacticLagacy.HASTE)),
 								Ingredient.of(Items.REDSTONE),
-								Ingredient.of(PotionHelper.createAdvancedPotion(anticlimacticlagacy.commonPotionBase, anticlimacticlagacy.LONG_HASTE)),
+								Ingredient.of(PotionHelper.createAdvancedPotion(AnticlimacticLagacy.commonPotionBase, AnticlimacticLagacy.LONG_HASTE)),
 								Ingredient.of(Items.GUNPOWDER)
 								),
-						PotionHelper.createAdvancedPotion(anticlimacticlagacy.commonPotionSplash, anticlimacticlagacy.LONG_HASTE)
+						PotionHelper.createAdvancedPotion(AnticlimacticLagacy.commonPotionSplash, AnticlimacticLagacy.LONG_HASTE)
 						));
 
 		BrewingRecipeRegistry.addRecipe(
 				new ComplexBrewingRecipe(
 						PotionHelper.constructIngredientMap(
-								Ingredient.of(PotionHelper.createAdvancedPotion(anticlimacticlagacy.commonPotionSplash, anticlimacticlagacy.HASTE)),
+								Ingredient.of(PotionHelper.createAdvancedPotion(AnticlimacticLagacy.commonPotionSplash, AnticlimacticLagacy.HASTE)),
 								Ingredient.of(Items.GLOWSTONE_DUST),
-								Ingredient.of(PotionHelper.createAdvancedPotion(anticlimacticlagacy.commonPotionBase, anticlimacticlagacy.STRONG_HASTE)),
+								Ingredient.of(PotionHelper.createAdvancedPotion(AnticlimacticLagacy.commonPotionBase, AnticlimacticLagacy.STRONG_HASTE)),
 								Ingredient.of(Items.GUNPOWDER)
 								),
-						PotionHelper.createAdvancedPotion(anticlimacticlagacy.commonPotionSplash, anticlimacticlagacy.STRONG_HASTE)
+						PotionHelper.createAdvancedPotion(AnticlimacticLagacy.commonPotionSplash, AnticlimacticLagacy.STRONG_HASTE)
 						));
 
 
@@ -177,32 +177,32 @@ public class PotionHelper {
 						PotionHelper.constructIngredientMap(
 								Ingredient.of(PotionHelper.createVanillaPotion(Items.LINGERING_POTION, Potions.AWKWARD)),
 								Ingredient.of(Items.QUARTZ),
-								Ingredient.of(PotionHelper.createAdvancedPotion(anticlimacticlagacy.commonPotionSplash, anticlimacticlagacy.HASTE)),
+								Ingredient.of(PotionHelper.createAdvancedPotion(AnticlimacticLagacy.commonPotionSplash, AnticlimacticLagacy.HASTE)),
 								Ingredient.of(Items.DRAGON_BREATH)
 								),
-						PotionHelper.createAdvancedPotion(anticlimacticlagacy.commonPotionLingering, anticlimacticlagacy.HASTE)
+						PotionHelper.createAdvancedPotion(AnticlimacticLagacy.commonPotionLingering, AnticlimacticLagacy.HASTE)
 						));
 
 		BrewingRecipeRegistry.addRecipe(
 				new ComplexBrewingRecipe(
 						PotionHelper.constructIngredientMap(
-								Ingredient.of(PotionHelper.createAdvancedPotion(anticlimacticlagacy.commonPotionLingering, anticlimacticlagacy.HASTE)),
+								Ingredient.of(PotionHelper.createAdvancedPotion(AnticlimacticLagacy.commonPotionLingering, AnticlimacticLagacy.HASTE)),
 								Ingredient.of(Items.REDSTONE),
-								Ingredient.of(PotionHelper.createAdvancedPotion(anticlimacticlagacy.commonPotionSplash, anticlimacticlagacy.LONG_HASTE)),
+								Ingredient.of(PotionHelper.createAdvancedPotion(AnticlimacticLagacy.commonPotionSplash, AnticlimacticLagacy.LONG_HASTE)),
 								Ingredient.of(Items.DRAGON_BREATH)
 								),
-						PotionHelper.createAdvancedPotion(anticlimacticlagacy.commonPotionLingering, anticlimacticlagacy.LONG_HASTE)
+						PotionHelper.createAdvancedPotion(AnticlimacticLagacy.commonPotionLingering, AnticlimacticLagacy.LONG_HASTE)
 						));
 
 		BrewingRecipeRegistry.addRecipe(
 				new ComplexBrewingRecipe(
 						PotionHelper.constructIngredientMap(
-								Ingredient.of(PotionHelper.createAdvancedPotion(anticlimacticlagacy.commonPotionLingering, anticlimacticlagacy.HASTE)),
+								Ingredient.of(PotionHelper.createAdvancedPotion(AnticlimacticLagacy.commonPotionLingering, AnticlimacticLagacy.HASTE)),
 								Ingredient.of(Items.GLOWSTONE_DUST),
-								Ingredient.of(PotionHelper.createAdvancedPotion(anticlimacticlagacy.commonPotionSplash, anticlimacticlagacy.STRONG_HASTE)),
+								Ingredient.of(PotionHelper.createAdvancedPotion(AnticlimacticLagacy.commonPotionSplash, AnticlimacticLagacy.STRONG_HASTE)),
 								Ingredient.of(Items.DRAGON_BREATH)
 								),
-						PotionHelper.createAdvancedPotion(anticlimacticlagacy.commonPotionLingering, anticlimacticlagacy.STRONG_HASTE)
+						PotionHelper.createAdvancedPotion(AnticlimacticLagacy.commonPotionLingering, AnticlimacticLagacy.STRONG_HASTE)
 						));
 
 		BrewingRecipeRegistry.addRecipe(
@@ -211,16 +211,16 @@ public class PotionHelper {
 								Ingredient.of(PotionHelper.createVanillaPotion(Items.POTION, Potions.MUNDANE)),
 								Ingredient.of(Items.BLAZE_ROD)
 								),
-						PotionHelper.createAdvancedPotion(anticlimacticlagacy.commonPotionBase, anticlimacticlagacy.MOLTEN_HEART)
+						PotionHelper.createAdvancedPotion(AnticlimacticLagacy.commonPotionBase, AnticlimacticLagacy.MOLTEN_HEART)
 						));
 
 		BrewingRecipeRegistry.addRecipe(
 				new ComplexBrewingRecipe(
 						PotionHelper.constructIngredientMap(
-								Ingredient.of(PotionHelper.createAdvancedPotion(anticlimacticlagacy.commonPotionBase, anticlimacticlagacy.MOLTEN_HEART)),
+								Ingredient.of(PotionHelper.createAdvancedPotion(AnticlimacticLagacy.commonPotionBase, AnticlimacticLagacy.MOLTEN_HEART)),
 								Ingredient.of(Items.REDSTONE)
 								),
-						PotionHelper.createAdvancedPotion(anticlimacticlagacy.commonPotionBase, anticlimacticlagacy.LONG_MOLTEN_HEART)
+						PotionHelper.createAdvancedPotion(AnticlimacticLagacy.commonPotionBase, AnticlimacticLagacy.LONG_MOLTEN_HEART)
 						));
 
 		BrewingRecipeRegistry.addRecipe(
@@ -228,21 +228,21 @@ public class PotionHelper {
 						PotionHelper.constructIngredientMap(
 								Ingredient.of(PotionHelper.createVanillaPotion(Items.SPLASH_POTION, Potions.MUNDANE)),
 								Ingredient.of(Items.BLAZE_ROD),
-								Ingredient.of(PotionHelper.createAdvancedPotion(anticlimacticlagacy.commonPotionBase, anticlimacticlagacy.MOLTEN_HEART)),
+								Ingredient.of(PotionHelper.createAdvancedPotion(AnticlimacticLagacy.commonPotionBase, AnticlimacticLagacy.MOLTEN_HEART)),
 								Ingredient.of(Items.GUNPOWDER)
 								),
-						PotionHelper.createAdvancedPotion(anticlimacticlagacy.commonPotionSplash, anticlimacticlagacy.MOLTEN_HEART)
+						PotionHelper.createAdvancedPotion(AnticlimacticLagacy.commonPotionSplash, AnticlimacticLagacy.MOLTEN_HEART)
 						));
 
 		BrewingRecipeRegistry.addRecipe(
 				new ComplexBrewingRecipe(
 						PotionHelper.constructIngredientMap(
-								Ingredient.of(PotionHelper.createAdvancedPotion(anticlimacticlagacy.commonPotionSplash, anticlimacticlagacy.MOLTEN_HEART)),
+								Ingredient.of(PotionHelper.createAdvancedPotion(AnticlimacticLagacy.commonPotionSplash, AnticlimacticLagacy.MOLTEN_HEART)),
 								Ingredient.of(Items.REDSTONE),
-								Ingredient.of(PotionHelper.createAdvancedPotion(anticlimacticlagacy.commonPotionBase, anticlimacticlagacy.LONG_MOLTEN_HEART)),
+								Ingredient.of(PotionHelper.createAdvancedPotion(AnticlimacticLagacy.commonPotionBase, AnticlimacticLagacy.LONG_MOLTEN_HEART)),
 								Ingredient.of(Items.GUNPOWDER)
 								),
-						PotionHelper.createAdvancedPotion(anticlimacticlagacy.commonPotionSplash, anticlimacticlagacy.LONG_MOLTEN_HEART)
+						PotionHelper.createAdvancedPotion(AnticlimacticLagacy.commonPotionSplash, AnticlimacticLagacy.LONG_MOLTEN_HEART)
 						));
 
 		BrewingRecipeRegistry.addRecipe(
@@ -250,21 +250,21 @@ public class PotionHelper {
 						PotionHelper.constructIngredientMap(
 								Ingredient.of(PotionHelper.createVanillaPotion(Items.LINGERING_POTION, Potions.MUNDANE)),
 								Ingredient.of(Items.BLAZE_ROD),
-								Ingredient.of(PotionHelper.createAdvancedPotion(anticlimacticlagacy.commonPotionSplash, anticlimacticlagacy.MOLTEN_HEART)),
+								Ingredient.of(PotionHelper.createAdvancedPotion(AnticlimacticLagacy.commonPotionSplash, AnticlimacticLagacy.MOLTEN_HEART)),
 								Ingredient.of(Items.DRAGON_BREATH)
 								),
-						PotionHelper.createAdvancedPotion(anticlimacticlagacy.commonPotionLingering, anticlimacticlagacy.MOLTEN_HEART)
+						PotionHelper.createAdvancedPotion(AnticlimacticLagacy.commonPotionLingering, AnticlimacticLagacy.MOLTEN_HEART)
 						));
 
 		BrewingRecipeRegistry.addRecipe(
 				new ComplexBrewingRecipe(
 						PotionHelper.constructIngredientMap(
-								Ingredient.of(PotionHelper.createAdvancedPotion(anticlimacticlagacy.commonPotionLingering, anticlimacticlagacy.MOLTEN_HEART)),
+								Ingredient.of(PotionHelper.createAdvancedPotion(AnticlimacticLagacy.commonPotionLingering, AnticlimacticLagacy.MOLTEN_HEART)),
 								Ingredient.of(Items.REDSTONE),
-								Ingredient.of(PotionHelper.createAdvancedPotion(anticlimacticlagacy.commonPotionSplash, anticlimacticlagacy.LONG_MOLTEN_HEART)),
+								Ingredient.of(PotionHelper.createAdvancedPotion(AnticlimacticLagacy.commonPotionSplash, AnticlimacticLagacy.LONG_MOLTEN_HEART)),
 								Ingredient.of(Items.DRAGON_BREATH)
 								),
-						PotionHelper.createAdvancedPotion(anticlimacticlagacy.commonPotionLingering, anticlimacticlagacy.LONG_MOLTEN_HEART)
+						PotionHelper.createAdvancedPotion(AnticlimacticLagacy.commonPotionLingering, AnticlimacticLagacy.LONG_MOLTEN_HEART)
 						));
 	}
 
@@ -274,72 +274,72 @@ public class PotionHelper {
 				new ComplexBrewingRecipe(
 						PotionHelper.constructIngredientMap(
 								Ingredient.of(PotionHelper.createVanillaPotion(Items.POTION, Potions.LONG_NIGHT_VISION)),
-								Ingredient.of(anticlimacticlagacy.astralDust)
+								Ingredient.of(AnticlimacticLagacy.astralDust)
 								),
-						PotionHelper.createAdvancedPotion(anticlimacticlagacy.ultimatePotionBase, anticlimacticlagacy.ULTIMATE_NIGHT_VISION)
+						PotionHelper.createAdvancedPotion(AnticlimacticLagacy.ultimatePotionBase, AnticlimacticLagacy.ULTIMATE_NIGHT_VISION)
 						));
 
 		BrewingRecipeRegistry.addRecipe(
 				new ComplexBrewingRecipe(
 						PotionHelper.constructIngredientMap(
 								Ingredient.of(PotionHelper.createVanillaPotion(Items.POTION, Potions.LONG_INVISIBILITY)),
-								Ingredient.of(anticlimacticlagacy.astralDust)
+								Ingredient.of(AnticlimacticLagacy.astralDust)
 								),
-						PotionHelper.createAdvancedPotion(anticlimacticlagacy.ultimatePotionBase, anticlimacticlagacy.ULTIMATE_INVISIBILITY)
+						PotionHelper.createAdvancedPotion(AnticlimacticLagacy.ultimatePotionBase, AnticlimacticLagacy.ULTIMATE_INVISIBILITY)
 						));
 
 		BrewingRecipeRegistry.addRecipe(
 				new ComplexBrewingRecipe(
 						PotionHelper.constructIngredientMap(
 								Ingredient.of(PotionHelper.createVanillaPotion(Items.POTION, Potions.LONG_FIRE_RESISTANCE)),
-								Ingredient.of(anticlimacticlagacy.astralDust)
+								Ingredient.of(AnticlimacticLagacy.astralDust)
 								),
-						PotionHelper.createAdvancedPotion(anticlimacticlagacy.ultimatePotionBase, anticlimacticlagacy.ULTIMATE_FIRE_RESISTANCE)
+						PotionHelper.createAdvancedPotion(AnticlimacticLagacy.ultimatePotionBase, AnticlimacticLagacy.ULTIMATE_FIRE_RESISTANCE)
 						));
 
 		BrewingRecipeRegistry.addRecipe(
 				new ComplexBrewingRecipe(
 						PotionHelper.constructIngredientMap(
 								Ingredient.of(PotionHelper.createVanillaPotion(Items.POTION, Potions.STRONG_HEALING)),
-								Ingredient.of(anticlimacticlagacy.astralDust)
+								Ingredient.of(AnticlimacticLagacy.astralDust)
 								),
-						PotionHelper.createAdvancedPotion(anticlimacticlagacy.ultimatePotionBase, anticlimacticlagacy.ULTIMATE_HEALING)
+						PotionHelper.createAdvancedPotion(AnticlimacticLagacy.ultimatePotionBase, AnticlimacticLagacy.ULTIMATE_HEALING)
 						));
 
 		BrewingRecipeRegistry.addRecipe(
 				new ComplexBrewingRecipe(
 						PotionHelper.constructIngredientMap(
 								Ingredient.of(PotionHelper.createVanillaPotion(Items.POTION, Potions.STRONG_HARMING)),
-								Ingredient.of(anticlimacticlagacy.astralDust)
+								Ingredient.of(AnticlimacticLagacy.astralDust)
 								),
-						PotionHelper.createAdvancedPotion(anticlimacticlagacy.ultimatePotionBase, anticlimacticlagacy.ULTIMATE_HARMING)
+						PotionHelper.createAdvancedPotion(AnticlimacticLagacy.ultimatePotionBase, AnticlimacticLagacy.ULTIMATE_HARMING)
 						));
 
 		BrewingRecipeRegistry.addRecipe(
 				new ComplexBrewingRecipe(
 						PotionHelper.constructIngredientMap(
 								Ingredient.of(PotionHelper.createVanillaPotion(Items.POTION, Potions.LONG_SLOW_FALLING)),
-								Ingredient.of(anticlimacticlagacy.astralDust)
+								Ingredient.of(AnticlimacticLagacy.astralDust)
 								),
-						PotionHelper.createAdvancedPotion(anticlimacticlagacy.ultimatePotionBase, anticlimacticlagacy.ULTIMATE_SLOW_FALLING)
+						PotionHelper.createAdvancedPotion(AnticlimacticLagacy.ultimatePotionBase, AnticlimacticLagacy.ULTIMATE_SLOW_FALLING)
 						));
 
 		BrewingRecipeRegistry.addRecipe(
 				new ComplexBrewingRecipe(
 						PotionHelper.constructIngredientMap(
 								Ingredient.of(PotionHelper.createVanillaPotion(Items.POTION, Potions.LONG_WEAKNESS)),
-								Ingredient.of(anticlimacticlagacy.astralDust)
+								Ingredient.of(AnticlimacticLagacy.astralDust)
 								),
-						PotionHelper.createAdvancedPotion(anticlimacticlagacy.ultimatePotionBase, anticlimacticlagacy.ULTIMATE_WEAKNESS)
+						PotionHelper.createAdvancedPotion(AnticlimacticLagacy.ultimatePotionBase, AnticlimacticLagacy.ULTIMATE_WEAKNESS)
 						));
 
 		BrewingRecipeRegistry.addRecipe(
 				new ComplexBrewingRecipe(
 						PotionHelper.constructIngredientMap(
 								Ingredient.of(PotionHelper.createVanillaPotion(Items.POTION, Potions.LONG_WATER_BREATHING)),
-								Ingredient.of(anticlimacticlagacy.astralDust)
+								Ingredient.of(AnticlimacticLagacy.astralDust)
 								),
-						PotionHelper.createAdvancedPotion(anticlimacticlagacy.ultimatePotionBase, anticlimacticlagacy.ULTIMATE_WATER_BREATHING)
+						PotionHelper.createAdvancedPotion(AnticlimacticLagacy.ultimatePotionBase, AnticlimacticLagacy.ULTIMATE_WATER_BREATHING)
 						));
 
 
@@ -347,97 +347,97 @@ public class PotionHelper {
 				new ComplexBrewingRecipe(
 						PotionHelper.constructIngredientMap(
 								Ingredient.of(PotionHelper.createVanillaPotion(Items.POTION, Potions.LONG_STRENGTH)),
-								Ingredient.of(anticlimacticlagacy.astralDust),
+								Ingredient.of(AnticlimacticLagacy.astralDust),
 								Ingredient.of(PotionHelper.createVanillaPotion(Items.POTION, Potions.STRONG_STRENGTH)),
-								Ingredient.of(anticlimacticlagacy.astralDust)
+								Ingredient.of(AnticlimacticLagacy.astralDust)
 								),
-						PotionHelper.createAdvancedPotion(anticlimacticlagacy.ultimatePotionBase, anticlimacticlagacy.ULTIMATE_STRENGTH)
+						PotionHelper.createAdvancedPotion(AnticlimacticLagacy.ultimatePotionBase, AnticlimacticLagacy.ULTIMATE_STRENGTH)
 						));
 
 		BrewingRecipeRegistry.addRecipe(
 				new ComplexBrewingRecipe(
 						PotionHelper.constructIngredientMap(
 								Ingredient.of(PotionHelper.createVanillaPotion(Items.POTION, Potions.LONG_LEAPING)),
-								Ingredient.of(anticlimacticlagacy.astralDust),
+								Ingredient.of(AnticlimacticLagacy.astralDust),
 								Ingredient.of(PotionHelper.createVanillaPotion(Items.POTION, Potions.STRONG_LEAPING)),
-								Ingredient.of(anticlimacticlagacy.astralDust)
+								Ingredient.of(AnticlimacticLagacy.astralDust)
 								),
-						PotionHelper.createAdvancedPotion(anticlimacticlagacy.ultimatePotionBase, anticlimacticlagacy.ULTIMATE_LEAPING)
+						PotionHelper.createAdvancedPotion(AnticlimacticLagacy.ultimatePotionBase, AnticlimacticLagacy.ULTIMATE_LEAPING)
 						));
 
 		BrewingRecipeRegistry.addRecipe(
 				new ComplexBrewingRecipe(
 						PotionHelper.constructIngredientMap(
 								Ingredient.of(PotionHelper.createVanillaPotion(Items.POTION, Potions.LONG_SWIFTNESS)),
-								Ingredient.of(anticlimacticlagacy.astralDust),
+								Ingredient.of(AnticlimacticLagacy.astralDust),
 								Ingredient.of(PotionHelper.createVanillaPotion(Items.POTION, Potions.STRONG_SWIFTNESS)),
-								Ingredient.of(anticlimacticlagacy.astralDust)
+								Ingredient.of(AnticlimacticLagacy.astralDust)
 								),
-						PotionHelper.createAdvancedPotion(anticlimacticlagacy.ultimatePotionBase, anticlimacticlagacy.ULTIMATE_SWIFTNESS)
+						PotionHelper.createAdvancedPotion(AnticlimacticLagacy.ultimatePotionBase, AnticlimacticLagacy.ULTIMATE_SWIFTNESS)
 						));
 
 		BrewingRecipeRegistry.addRecipe(
 				new ComplexBrewingRecipe(
 						PotionHelper.constructIngredientMap(
 								Ingredient.of(PotionHelper.createVanillaPotion(Items.POTION, Potions.LONG_SLOWNESS)),
-								Ingredient.of(anticlimacticlagacy.astralDust),
+								Ingredient.of(AnticlimacticLagacy.astralDust),
 								Ingredient.of(PotionHelper.createVanillaPotion(Items.POTION, Potions.STRONG_SLOWNESS)),
-								Ingredient.of(anticlimacticlagacy.astralDust)
+								Ingredient.of(AnticlimacticLagacy.astralDust)
 								),
-						PotionHelper.createAdvancedPotion(anticlimacticlagacy.ultimatePotionBase, anticlimacticlagacy.ULTIMATE_SLOWNESS)
+						PotionHelper.createAdvancedPotion(AnticlimacticLagacy.ultimatePotionBase, AnticlimacticLagacy.ULTIMATE_SLOWNESS)
 						));
 
 		BrewingRecipeRegistry.addRecipe(
 				new ComplexBrewingRecipe(
 						PotionHelper.constructIngredientMap(
 								Ingredient.of(PotionHelper.createVanillaPotion(Items.POTION, Potions.LONG_TURTLE_MASTER)),
-								Ingredient.of(anticlimacticlagacy.astralDust),
+								Ingredient.of(AnticlimacticLagacy.astralDust),
 								Ingredient.of(PotionHelper.createVanillaPotion(Items.POTION, Potions.STRONG_TURTLE_MASTER)),
-								Ingredient.of(anticlimacticlagacy.astralDust)
+								Ingredient.of(AnticlimacticLagacy.astralDust)
 								),
-						PotionHelper.createAdvancedPotion(anticlimacticlagacy.ultimatePotionBase, anticlimacticlagacy.ULTIMATE_TURTLE_MASTER)
+						PotionHelper.createAdvancedPotion(AnticlimacticLagacy.ultimatePotionBase, AnticlimacticLagacy.ULTIMATE_TURTLE_MASTER)
 						));
 
 		BrewingRecipeRegistry.addRecipe(
 				new ComplexBrewingRecipe(
 						PotionHelper.constructIngredientMap(
 								Ingredient.of(PotionHelper.createVanillaPotion(Items.POTION, Potions.LONG_POISON)),
-								Ingredient.of(anticlimacticlagacy.astralDust),
+								Ingredient.of(AnticlimacticLagacy.astralDust),
 								Ingredient.of(PotionHelper.createVanillaPotion(Items.POTION, Potions.STRONG_POISON)),
-								Ingredient.of(anticlimacticlagacy.astralDust)
+								Ingredient.of(AnticlimacticLagacy.astralDust)
 								),
-						PotionHelper.createAdvancedPotion(anticlimacticlagacy.ultimatePotionBase, anticlimacticlagacy.ULTIMATE_POISON)
+						PotionHelper.createAdvancedPotion(AnticlimacticLagacy.ultimatePotionBase, AnticlimacticLagacy.ULTIMATE_POISON)
 						));
 
 		BrewingRecipeRegistry.addRecipe(
 				new ComplexBrewingRecipe(
 						PotionHelper.constructIngredientMap(
 								Ingredient.of(PotionHelper.createVanillaPotion(Items.POTION, Potions.LONG_REGENERATION)),
-								Ingredient.of(anticlimacticlagacy.astralDust),
+								Ingredient.of(AnticlimacticLagacy.astralDust),
 								Ingredient.of(PotionHelper.createVanillaPotion(Items.POTION, Potions.STRONG_REGENERATION)),
-								Ingredient.of(anticlimacticlagacy.astralDust)
+								Ingredient.of(AnticlimacticLagacy.astralDust)
 								),
-						PotionHelper.createAdvancedPotion(anticlimacticlagacy.ultimatePotionBase, anticlimacticlagacy.ULTIMATE_REGENERATION)
+						PotionHelper.createAdvancedPotion(AnticlimacticLagacy.ultimatePotionBase, AnticlimacticLagacy.ULTIMATE_REGENERATION)
 						));
 
 		BrewingRecipeRegistry.addRecipe(
 				new ComplexBrewingRecipe(
 						PotionHelper.constructIngredientMap(
-								Ingredient.of(PotionHelper.createAdvancedPotion(anticlimacticlagacy.commonPotionBase, anticlimacticlagacy.LONG_HASTE)),
-								Ingredient.of(anticlimacticlagacy.astralDust),
-								Ingredient.of(PotionHelper.createAdvancedPotion(anticlimacticlagacy.commonPotionBase, anticlimacticlagacy.STRONG_HASTE)),
-								Ingredient.of(anticlimacticlagacy.astralDust)
+								Ingredient.of(PotionHelper.createAdvancedPotion(AnticlimacticLagacy.commonPotionBase, AnticlimacticLagacy.LONG_HASTE)),
+								Ingredient.of(AnticlimacticLagacy.astralDust),
+								Ingredient.of(PotionHelper.createAdvancedPotion(AnticlimacticLagacy.commonPotionBase, AnticlimacticLagacy.STRONG_HASTE)),
+								Ingredient.of(AnticlimacticLagacy.astralDust)
 								),
-						PotionHelper.createAdvancedPotion(anticlimacticlagacy.ultimatePotionBase, anticlimacticlagacy.ULTIMATE_HASTE)
+						PotionHelper.createAdvancedPotion(AnticlimacticLagacy.ultimatePotionBase, AnticlimacticLagacy.ULTIMATE_HASTE)
 						));
 
 		BrewingRecipeRegistry.addRecipe(
 				new ComplexBrewingRecipe(
 						PotionHelper.constructIngredientMap(
-								Ingredient.of(PotionHelper.createAdvancedPotion(anticlimacticlagacy.commonPotionBase, anticlimacticlagacy.LONG_MOLTEN_HEART)),
-								Ingredient.of(anticlimacticlagacy.astralDust)
+								Ingredient.of(PotionHelper.createAdvancedPotion(AnticlimacticLagacy.commonPotionBase, AnticlimacticLagacy.LONG_MOLTEN_HEART)),
+								Ingredient.of(AnticlimacticLagacy.astralDust)
 								),
-						PotionHelper.createAdvancedPotion(anticlimacticlagacy.ultimatePotionBase, anticlimacticlagacy.ULTIMATE_MOLTEN_HEART)
+						PotionHelper.createAdvancedPotion(AnticlimacticLagacy.ultimatePotionBase, AnticlimacticLagacy.ULTIMATE_MOLTEN_HEART)
 						));
 	}
 
@@ -448,88 +448,88 @@ public class PotionHelper {
 				new ComplexBrewingRecipe(
 						PotionHelper.constructIngredientMap(
 								Ingredient.of(PotionHelper.createVanillaPotion(Items.SPLASH_POTION, Potions.LONG_NIGHT_VISION)),
-								Ingredient.of(anticlimacticlagacy.astralDust),
-								Ingredient.of(PotionHelper.createAdvancedPotion(anticlimacticlagacy.ultimatePotionBase, anticlimacticlagacy.ULTIMATE_NIGHT_VISION)),
+								Ingredient.of(AnticlimacticLagacy.astralDust),
+								Ingredient.of(PotionHelper.createAdvancedPotion(AnticlimacticLagacy.ultimatePotionBase, AnticlimacticLagacy.ULTIMATE_NIGHT_VISION)),
 								Ingredient.of(Items.GUNPOWDER)
 								),
-						PotionHelper.createAdvancedPotion(anticlimacticlagacy.ultimatePotionSplash, anticlimacticlagacy.ULTIMATE_NIGHT_VISION)
+						PotionHelper.createAdvancedPotion(AnticlimacticLagacy.ultimatePotionSplash, AnticlimacticLagacy.ULTIMATE_NIGHT_VISION)
 						));
 
 		BrewingRecipeRegistry.addRecipe(
 				new ComplexBrewingRecipe(
 						PotionHelper.constructIngredientMap(
 								Ingredient.of(PotionHelper.createVanillaPotion(Items.SPLASH_POTION, Potions.LONG_INVISIBILITY)),
-								Ingredient.of(anticlimacticlagacy.astralDust),
-								Ingredient.of(PotionHelper.createAdvancedPotion(anticlimacticlagacy.ultimatePotionBase, anticlimacticlagacy.ULTIMATE_INVISIBILITY)),
+								Ingredient.of(AnticlimacticLagacy.astralDust),
+								Ingredient.of(PotionHelper.createAdvancedPotion(AnticlimacticLagacy.ultimatePotionBase, AnticlimacticLagacy.ULTIMATE_INVISIBILITY)),
 								Ingredient.of(Items.GUNPOWDER)
 								),
-						PotionHelper.createAdvancedPotion(anticlimacticlagacy.ultimatePotionSplash, anticlimacticlagacy.ULTIMATE_INVISIBILITY)
+						PotionHelper.createAdvancedPotion(AnticlimacticLagacy.ultimatePotionSplash, AnticlimacticLagacy.ULTIMATE_INVISIBILITY)
 						));
 
 		BrewingRecipeRegistry.addRecipe(
 				new ComplexBrewingRecipe(
 						PotionHelper.constructIngredientMap(
 								Ingredient.of(PotionHelper.createVanillaPotion(Items.SPLASH_POTION, Potions.LONG_FIRE_RESISTANCE)),
-								Ingredient.of(anticlimacticlagacy.astralDust),
-								Ingredient.of(PotionHelper.createAdvancedPotion(anticlimacticlagacy.ultimatePotionBase, anticlimacticlagacy.ULTIMATE_FIRE_RESISTANCE)),
+								Ingredient.of(AnticlimacticLagacy.astralDust),
+								Ingredient.of(PotionHelper.createAdvancedPotion(AnticlimacticLagacy.ultimatePotionBase, AnticlimacticLagacy.ULTIMATE_FIRE_RESISTANCE)),
 								Ingredient.of(Items.GUNPOWDER)
 								),
-						PotionHelper.createAdvancedPotion(anticlimacticlagacy.ultimatePotionSplash, anticlimacticlagacy.ULTIMATE_FIRE_RESISTANCE)
+						PotionHelper.createAdvancedPotion(AnticlimacticLagacy.ultimatePotionSplash, AnticlimacticLagacy.ULTIMATE_FIRE_RESISTANCE)
 						));
 
 		BrewingRecipeRegistry.addRecipe(
 				new ComplexBrewingRecipe(
 						PotionHelper.constructIngredientMap(
 								Ingredient.of(PotionHelper.createVanillaPotion(Items.SPLASH_POTION, Potions.STRONG_HEALING)),
-								Ingredient.of(anticlimacticlagacy.astralDust),
-								Ingredient.of(PotionHelper.createAdvancedPotion(anticlimacticlagacy.ultimatePotionBase, anticlimacticlagacy.ULTIMATE_HEALING)),
+								Ingredient.of(AnticlimacticLagacy.astralDust),
+								Ingredient.of(PotionHelper.createAdvancedPotion(AnticlimacticLagacy.ultimatePotionBase, AnticlimacticLagacy.ULTIMATE_HEALING)),
 								Ingredient.of(Items.GUNPOWDER)
 								),
-						PotionHelper.createAdvancedPotion(anticlimacticlagacy.ultimatePotionSplash, anticlimacticlagacy.ULTIMATE_HEALING)
+						PotionHelper.createAdvancedPotion(AnticlimacticLagacy.ultimatePotionSplash, AnticlimacticLagacy.ULTIMATE_HEALING)
 						));
 
 		BrewingRecipeRegistry.addRecipe(
 				new ComplexBrewingRecipe(
 						PotionHelper.constructIngredientMap(
 								Ingredient.of(PotionHelper.createVanillaPotion(Items.SPLASH_POTION, Potions.STRONG_HARMING)),
-								Ingredient.of(anticlimacticlagacy.astralDust),
-								Ingredient.of(PotionHelper.createAdvancedPotion(anticlimacticlagacy.ultimatePotionBase, anticlimacticlagacy.ULTIMATE_HARMING)),
+								Ingredient.of(AnticlimacticLagacy.astralDust),
+								Ingredient.of(PotionHelper.createAdvancedPotion(AnticlimacticLagacy.ultimatePotionBase, AnticlimacticLagacy.ULTIMATE_HARMING)),
 								Ingredient.of(Items.GUNPOWDER)
 								),
-						PotionHelper.createAdvancedPotion(anticlimacticlagacy.ultimatePotionSplash, anticlimacticlagacy.ULTIMATE_HARMING)
+						PotionHelper.createAdvancedPotion(AnticlimacticLagacy.ultimatePotionSplash, AnticlimacticLagacy.ULTIMATE_HARMING)
 						));
 
 		BrewingRecipeRegistry.addRecipe(
 				new ComplexBrewingRecipe(
 						PotionHelper.constructIngredientMap(
 								Ingredient.of(PotionHelper.createVanillaPotion(Items.SPLASH_POTION, Potions.LONG_SLOW_FALLING)),
-								Ingredient.of(anticlimacticlagacy.astralDust),
-								Ingredient.of(PotionHelper.createAdvancedPotion(anticlimacticlagacy.ultimatePotionBase, anticlimacticlagacy.ULTIMATE_SLOW_FALLING)),
+								Ingredient.of(AnticlimacticLagacy.astralDust),
+								Ingredient.of(PotionHelper.createAdvancedPotion(AnticlimacticLagacy.ultimatePotionBase, AnticlimacticLagacy.ULTIMATE_SLOW_FALLING)),
 								Ingredient.of(Items.GUNPOWDER)
 								),
-						PotionHelper.createAdvancedPotion(anticlimacticlagacy.ultimatePotionSplash, anticlimacticlagacy.ULTIMATE_SLOW_FALLING)
+						PotionHelper.createAdvancedPotion(AnticlimacticLagacy.ultimatePotionSplash, AnticlimacticLagacy.ULTIMATE_SLOW_FALLING)
 						));
 
 		BrewingRecipeRegistry.addRecipe(
 				new ComplexBrewingRecipe(
 						PotionHelper.constructIngredientMap(
 								Ingredient.of(PotionHelper.createVanillaPotion(Items.SPLASH_POTION, Potions.LONG_WEAKNESS)),
-								Ingredient.of(anticlimacticlagacy.astralDust),
-								Ingredient.of(PotionHelper.createAdvancedPotion(anticlimacticlagacy.ultimatePotionBase, anticlimacticlagacy.ULTIMATE_WEAKNESS)),
+								Ingredient.of(AnticlimacticLagacy.astralDust),
+								Ingredient.of(PotionHelper.createAdvancedPotion(AnticlimacticLagacy.ultimatePotionBase, AnticlimacticLagacy.ULTIMATE_WEAKNESS)),
 								Ingredient.of(Items.GUNPOWDER)
 								),
-						PotionHelper.createAdvancedPotion(anticlimacticlagacy.ultimatePotionSplash, anticlimacticlagacy.ULTIMATE_WEAKNESS)
+						PotionHelper.createAdvancedPotion(AnticlimacticLagacy.ultimatePotionSplash, AnticlimacticLagacy.ULTIMATE_WEAKNESS)
 						));
 
 		BrewingRecipeRegistry.addRecipe(
 				new ComplexBrewingRecipe(
 						PotionHelper.constructIngredientMap(
 								Ingredient.of(PotionHelper.createVanillaPotion(Items.SPLASH_POTION, Potions.LONG_WATER_BREATHING)),
-								Ingredient.of(anticlimacticlagacy.astralDust),
-								Ingredient.of(PotionHelper.createAdvancedPotion(anticlimacticlagacy.ultimatePotionBase, anticlimacticlagacy.ULTIMATE_WATER_BREATHING)),
+								Ingredient.of(AnticlimacticLagacy.astralDust),
+								Ingredient.of(PotionHelper.createAdvancedPotion(AnticlimacticLagacy.ultimatePotionBase, AnticlimacticLagacy.ULTIMATE_WATER_BREATHING)),
 								Ingredient.of(Items.GUNPOWDER)
 								),
-						PotionHelper.createAdvancedPotion(anticlimacticlagacy.ultimatePotionSplash, anticlimacticlagacy.ULTIMATE_WATER_BREATHING)
+						PotionHelper.createAdvancedPotion(AnticlimacticLagacy.ultimatePotionSplash, AnticlimacticLagacy.ULTIMATE_WATER_BREATHING)
 						));
 
 
@@ -539,115 +539,115 @@ public class PotionHelper {
 				new ComplexBrewingRecipe(
 						PotionHelper.constructIngredientMap(
 								Ingredient.of(PotionHelper.createVanillaPotion(Items.SPLASH_POTION, Potions.LONG_STRENGTH)),
-								Ingredient.of(anticlimacticlagacy.astralDust),
+								Ingredient.of(AnticlimacticLagacy.astralDust),
 								Ingredient.of(PotionHelper.createVanillaPotion(Items.SPLASH_POTION, Potions.STRONG_STRENGTH)),
-								Ingredient.of(anticlimacticlagacy.astralDust),
-								Ingredient.of(PotionHelper.createAdvancedPotion(anticlimacticlagacy.ultimatePotionBase, anticlimacticlagacy.ULTIMATE_STRENGTH)),
+								Ingredient.of(AnticlimacticLagacy.astralDust),
+								Ingredient.of(PotionHelper.createAdvancedPotion(AnticlimacticLagacy.ultimatePotionBase, AnticlimacticLagacy.ULTIMATE_STRENGTH)),
 								Ingredient.of(Items.GUNPOWDER)
 								),
-						PotionHelper.createAdvancedPotion(anticlimacticlagacy.ultimatePotionSplash, anticlimacticlagacy.ULTIMATE_STRENGTH)
+						PotionHelper.createAdvancedPotion(AnticlimacticLagacy.ultimatePotionSplash, AnticlimacticLagacy.ULTIMATE_STRENGTH)
 						));
 
 		BrewingRecipeRegistry.addRecipe(
 				new ComplexBrewingRecipe(
 						PotionHelper.constructIngredientMap(
 								Ingredient.of(PotionHelper.createVanillaPotion(Items.SPLASH_POTION, Potions.LONG_LEAPING)),
-								Ingredient.of(anticlimacticlagacy.astralDust),
+								Ingredient.of(AnticlimacticLagacy.astralDust),
 								Ingredient.of(PotionHelper.createVanillaPotion(Items.SPLASH_POTION, Potions.STRONG_LEAPING)),
-								Ingredient.of(anticlimacticlagacy.astralDust),
-								Ingredient.of(PotionHelper.createAdvancedPotion(anticlimacticlagacy.ultimatePotionBase, anticlimacticlagacy.ULTIMATE_LEAPING)),
+								Ingredient.of(AnticlimacticLagacy.astralDust),
+								Ingredient.of(PotionHelper.createAdvancedPotion(AnticlimacticLagacy.ultimatePotionBase, AnticlimacticLagacy.ULTIMATE_LEAPING)),
 								Ingredient.of(Items.GUNPOWDER)
 								),
-						PotionHelper.createAdvancedPotion(anticlimacticlagacy.ultimatePotionSplash, anticlimacticlagacy.ULTIMATE_LEAPING)
+						PotionHelper.createAdvancedPotion(AnticlimacticLagacy.ultimatePotionSplash, AnticlimacticLagacy.ULTIMATE_LEAPING)
 						));
 
 		BrewingRecipeRegistry.addRecipe(
 				new ComplexBrewingRecipe(
 						PotionHelper.constructIngredientMap(
 								Ingredient.of(PotionHelper.createVanillaPotion(Items.SPLASH_POTION, Potions.LONG_SWIFTNESS)),
-								Ingredient.of(anticlimacticlagacy.astralDust),
+								Ingredient.of(AnticlimacticLagacy.astralDust),
 								Ingredient.of(PotionHelper.createVanillaPotion(Items.SPLASH_POTION, Potions.STRONG_SWIFTNESS)),
-								Ingredient.of(anticlimacticlagacy.astralDust),
-								Ingredient.of(PotionHelper.createAdvancedPotion(anticlimacticlagacy.ultimatePotionBase, anticlimacticlagacy.ULTIMATE_SWIFTNESS)),
+								Ingredient.of(AnticlimacticLagacy.astralDust),
+								Ingredient.of(PotionHelper.createAdvancedPotion(AnticlimacticLagacy.ultimatePotionBase, AnticlimacticLagacy.ULTIMATE_SWIFTNESS)),
 								Ingredient.of(Items.GUNPOWDER)
 								),
-						PotionHelper.createAdvancedPotion(anticlimacticlagacy.ultimatePotionSplash, anticlimacticlagacy.ULTIMATE_SWIFTNESS)
+						PotionHelper.createAdvancedPotion(AnticlimacticLagacy.ultimatePotionSplash, AnticlimacticLagacy.ULTIMATE_SWIFTNESS)
 						));
 
 		BrewingRecipeRegistry.addRecipe(
 				new ComplexBrewingRecipe(
 						PotionHelper.constructIngredientMap(
 								Ingredient.of(PotionHelper.createVanillaPotion(Items.SPLASH_POTION, Potions.LONG_SLOWNESS)),
-								Ingredient.of(anticlimacticlagacy.astralDust),
+								Ingredient.of(AnticlimacticLagacy.astralDust),
 								Ingredient.of(PotionHelper.createVanillaPotion(Items.SPLASH_POTION, Potions.STRONG_SLOWNESS)),
-								Ingredient.of(anticlimacticlagacy.astralDust),
-								Ingredient.of(PotionHelper.createAdvancedPotion(anticlimacticlagacy.ultimatePotionBase, anticlimacticlagacy.ULTIMATE_SLOWNESS)),
+								Ingredient.of(AnticlimacticLagacy.astralDust),
+								Ingredient.of(PotionHelper.createAdvancedPotion(AnticlimacticLagacy.ultimatePotionBase, AnticlimacticLagacy.ULTIMATE_SLOWNESS)),
 								Ingredient.of(Items.GUNPOWDER)
 								),
-						PotionHelper.createAdvancedPotion(anticlimacticlagacy.ultimatePotionSplash, anticlimacticlagacy.ULTIMATE_SLOWNESS)
+						PotionHelper.createAdvancedPotion(AnticlimacticLagacy.ultimatePotionSplash, AnticlimacticLagacy.ULTIMATE_SLOWNESS)
 						));
 
 		BrewingRecipeRegistry.addRecipe(
 				new ComplexBrewingRecipe(
 						PotionHelper.constructIngredientMap(
 								Ingredient.of(PotionHelper.createVanillaPotion(Items.SPLASH_POTION, Potions.LONG_TURTLE_MASTER)),
-								Ingredient.of(anticlimacticlagacy.astralDust),
+								Ingredient.of(AnticlimacticLagacy.astralDust),
 								Ingredient.of(PotionHelper.createVanillaPotion(Items.SPLASH_POTION, Potions.STRONG_TURTLE_MASTER)),
-								Ingredient.of(anticlimacticlagacy.astralDust),
-								Ingredient.of(PotionHelper.createAdvancedPotion(anticlimacticlagacy.ultimatePotionBase, anticlimacticlagacy.ULTIMATE_TURTLE_MASTER)),
+								Ingredient.of(AnticlimacticLagacy.astralDust),
+								Ingredient.of(PotionHelper.createAdvancedPotion(AnticlimacticLagacy.ultimatePotionBase, AnticlimacticLagacy.ULTIMATE_TURTLE_MASTER)),
 								Ingredient.of(Items.GUNPOWDER)
 								),
-						PotionHelper.createAdvancedPotion(anticlimacticlagacy.ultimatePotionSplash, anticlimacticlagacy.ULTIMATE_TURTLE_MASTER)
+						PotionHelper.createAdvancedPotion(AnticlimacticLagacy.ultimatePotionSplash, AnticlimacticLagacy.ULTIMATE_TURTLE_MASTER)
 						));
 
 		BrewingRecipeRegistry.addRecipe(
 				new ComplexBrewingRecipe(
 						PotionHelper.constructIngredientMap(
 								Ingredient.of(PotionHelper.createVanillaPotion(Items.SPLASH_POTION, Potions.LONG_POISON)),
-								Ingredient.of(anticlimacticlagacy.astralDust),
+								Ingredient.of(AnticlimacticLagacy.astralDust),
 								Ingredient.of(PotionHelper.createVanillaPotion(Items.SPLASH_POTION, Potions.STRONG_POISON)),
-								Ingredient.of(anticlimacticlagacy.astralDust),
-								Ingredient.of(PotionHelper.createAdvancedPotion(anticlimacticlagacy.ultimatePotionBase, anticlimacticlagacy.ULTIMATE_POISON)),
+								Ingredient.of(AnticlimacticLagacy.astralDust),
+								Ingredient.of(PotionHelper.createAdvancedPotion(AnticlimacticLagacy.ultimatePotionBase, AnticlimacticLagacy.ULTIMATE_POISON)),
 								Ingredient.of(Items.GUNPOWDER)
 								),
-						PotionHelper.createAdvancedPotion(anticlimacticlagacy.ultimatePotionSplash, anticlimacticlagacy.ULTIMATE_POISON)
+						PotionHelper.createAdvancedPotion(AnticlimacticLagacy.ultimatePotionSplash, AnticlimacticLagacy.ULTIMATE_POISON)
 						));
 
 		BrewingRecipeRegistry.addRecipe(
 				new ComplexBrewingRecipe(
 						PotionHelper.constructIngredientMap(
 								Ingredient.of(PotionHelper.createVanillaPotion(Items.SPLASH_POTION, Potions.LONG_REGENERATION)),
-								Ingredient.of(anticlimacticlagacy.astralDust),
+								Ingredient.of(AnticlimacticLagacy.astralDust),
 								Ingredient.of(PotionHelper.createVanillaPotion(Items.SPLASH_POTION, Potions.STRONG_REGENERATION)),
-								Ingredient.of(anticlimacticlagacy.astralDust),
-								Ingredient.of(PotionHelper.createAdvancedPotion(anticlimacticlagacy.ultimatePotionBase, anticlimacticlagacy.ULTIMATE_REGENERATION)),
+								Ingredient.of(AnticlimacticLagacy.astralDust),
+								Ingredient.of(PotionHelper.createAdvancedPotion(AnticlimacticLagacy.ultimatePotionBase, AnticlimacticLagacy.ULTIMATE_REGENERATION)),
 								Ingredient.of(Items.GUNPOWDER)
 								),
-						PotionHelper.createAdvancedPotion(anticlimacticlagacy.ultimatePotionSplash, anticlimacticlagacy.ULTIMATE_REGENERATION)
+						PotionHelper.createAdvancedPotion(AnticlimacticLagacy.ultimatePotionSplash, AnticlimacticLagacy.ULTIMATE_REGENERATION)
 						));
 
 		BrewingRecipeRegistry.addRecipe(
 				new ComplexBrewingRecipe(
 						PotionHelper.constructIngredientMap(
-								Ingredient.of(PotionHelper.createAdvancedPotion(anticlimacticlagacy.commonPotionSplash, anticlimacticlagacy.LONG_HASTE)),
-								Ingredient.of(anticlimacticlagacy.astralDust),
-								Ingredient.of(PotionHelper.createAdvancedPotion(anticlimacticlagacy.commonPotionSplash, anticlimacticlagacy.STRONG_HASTE)),
-								Ingredient.of(anticlimacticlagacy.astralDust),
-								Ingredient.of(PotionHelper.createAdvancedPotion(anticlimacticlagacy.ultimatePotionBase, anticlimacticlagacy.ULTIMATE_HASTE)),
+								Ingredient.of(PotionHelper.createAdvancedPotion(AnticlimacticLagacy.commonPotionSplash, AnticlimacticLagacy.LONG_HASTE)),
+								Ingredient.of(AnticlimacticLagacy.astralDust),
+								Ingredient.of(PotionHelper.createAdvancedPotion(AnticlimacticLagacy.commonPotionSplash, AnticlimacticLagacy.STRONG_HASTE)),
+								Ingredient.of(AnticlimacticLagacy.astralDust),
+								Ingredient.of(PotionHelper.createAdvancedPotion(AnticlimacticLagacy.ultimatePotionBase, AnticlimacticLagacy.ULTIMATE_HASTE)),
 								Ingredient.of(Items.GUNPOWDER)
 								),
-						PotionHelper.createAdvancedPotion(anticlimacticlagacy.ultimatePotionSplash, anticlimacticlagacy.ULTIMATE_HASTE)
+						PotionHelper.createAdvancedPotion(AnticlimacticLagacy.ultimatePotionSplash, AnticlimacticLagacy.ULTIMATE_HASTE)
 						));
 
 		BrewingRecipeRegistry.addRecipe(
 				new ComplexBrewingRecipe(
 						PotionHelper.constructIngredientMap(
-								Ingredient.of(PotionHelper.createAdvancedPotion(anticlimacticlagacy.commonPotionSplash, anticlimacticlagacy.LONG_MOLTEN_HEART)),
-								Ingredient.of(anticlimacticlagacy.astralDust),
-								Ingredient.of(PotionHelper.createAdvancedPotion(anticlimacticlagacy.ultimatePotionBase, anticlimacticlagacy.ULTIMATE_MOLTEN_HEART)),
+								Ingredient.of(PotionHelper.createAdvancedPotion(AnticlimacticLagacy.commonPotionSplash, AnticlimacticLagacy.LONG_MOLTEN_HEART)),
+								Ingredient.of(AnticlimacticLagacy.astralDust),
+								Ingredient.of(PotionHelper.createAdvancedPotion(AnticlimacticLagacy.ultimatePotionBase, AnticlimacticLagacy.ULTIMATE_MOLTEN_HEART)),
 								Ingredient.of(Items.GUNPOWDER)
 								),
-						PotionHelper.createAdvancedPotion(anticlimacticlagacy.ultimatePotionSplash, anticlimacticlagacy.ULTIMATE_MOLTEN_HEART)
+						PotionHelper.createAdvancedPotion(AnticlimacticLagacy.ultimatePotionSplash, AnticlimacticLagacy.ULTIMATE_MOLTEN_HEART)
 						));
 	}
 
@@ -658,88 +658,88 @@ public class PotionHelper {
 				new ComplexBrewingRecipe(
 						PotionHelper.constructIngredientMap(
 								Ingredient.of(PotionHelper.createVanillaPotion(Items.LINGERING_POTION, Potions.LONG_NIGHT_VISION)),
-								Ingredient.of(anticlimacticlagacy.astralDust),
-								Ingredient.of(PotionHelper.createAdvancedPotion(anticlimacticlagacy.ultimatePotionSplash, anticlimacticlagacy.ULTIMATE_NIGHT_VISION)),
+								Ingredient.of(AnticlimacticLagacy.astralDust),
+								Ingredient.of(PotionHelper.createAdvancedPotion(AnticlimacticLagacy.ultimatePotionSplash, AnticlimacticLagacy.ULTIMATE_NIGHT_VISION)),
 								Ingredient.of(Items.DRAGON_BREATH)
 								),
-						PotionHelper.createAdvancedPotion(anticlimacticlagacy.ultimatePotionLingering, anticlimacticlagacy.ULTIMATE_NIGHT_VISION)
+						PotionHelper.createAdvancedPotion(AnticlimacticLagacy.ultimatePotionLingering, AnticlimacticLagacy.ULTIMATE_NIGHT_VISION)
 						));
 
 		BrewingRecipeRegistry.addRecipe(
 				new ComplexBrewingRecipe(
 						PotionHelper.constructIngredientMap(
 								Ingredient.of(PotionHelper.createVanillaPotion(Items.LINGERING_POTION, Potions.LONG_INVISIBILITY)),
-								Ingredient.of(anticlimacticlagacy.astralDust),
-								Ingredient.of(PotionHelper.createAdvancedPotion(anticlimacticlagacy.ultimatePotionSplash, anticlimacticlagacy.ULTIMATE_INVISIBILITY)),
+								Ingredient.of(AnticlimacticLagacy.astralDust),
+								Ingredient.of(PotionHelper.createAdvancedPotion(AnticlimacticLagacy.ultimatePotionSplash, AnticlimacticLagacy.ULTIMATE_INVISIBILITY)),
 								Ingredient.of(Items.DRAGON_BREATH)
 								),
-						PotionHelper.createAdvancedPotion(anticlimacticlagacy.ultimatePotionLingering, anticlimacticlagacy.ULTIMATE_INVISIBILITY)
+						PotionHelper.createAdvancedPotion(AnticlimacticLagacy.ultimatePotionLingering, AnticlimacticLagacy.ULTIMATE_INVISIBILITY)
 						));
 
 		BrewingRecipeRegistry.addRecipe(
 				new ComplexBrewingRecipe(
 						PotionHelper.constructIngredientMap(
 								Ingredient.of(PotionHelper.createVanillaPotion(Items.LINGERING_POTION, Potions.LONG_FIRE_RESISTANCE)),
-								Ingredient.of(anticlimacticlagacy.astralDust),
-								Ingredient.of(PotionHelper.createAdvancedPotion(anticlimacticlagacy.ultimatePotionSplash, anticlimacticlagacy.ULTIMATE_FIRE_RESISTANCE)),
+								Ingredient.of(AnticlimacticLagacy.astralDust),
+								Ingredient.of(PotionHelper.createAdvancedPotion(AnticlimacticLagacy.ultimatePotionSplash, AnticlimacticLagacy.ULTIMATE_FIRE_RESISTANCE)),
 								Ingredient.of(Items.DRAGON_BREATH)
 								),
-						PotionHelper.createAdvancedPotion(anticlimacticlagacy.ultimatePotionLingering, anticlimacticlagacy.ULTIMATE_FIRE_RESISTANCE)
+						PotionHelper.createAdvancedPotion(AnticlimacticLagacy.ultimatePotionLingering, AnticlimacticLagacy.ULTIMATE_FIRE_RESISTANCE)
 						));
 
 		BrewingRecipeRegistry.addRecipe(
 				new ComplexBrewingRecipe(
 						PotionHelper.constructIngredientMap(
 								Ingredient.of(PotionHelper.createVanillaPotion(Items.LINGERING_POTION, Potions.STRONG_HEALING)),
-								Ingredient.of(anticlimacticlagacy.astralDust),
-								Ingredient.of(PotionHelper.createAdvancedPotion(anticlimacticlagacy.ultimatePotionSplash, anticlimacticlagacy.ULTIMATE_HEALING)),
+								Ingredient.of(AnticlimacticLagacy.astralDust),
+								Ingredient.of(PotionHelper.createAdvancedPotion(AnticlimacticLagacy.ultimatePotionSplash, AnticlimacticLagacy.ULTIMATE_HEALING)),
 								Ingredient.of(Items.DRAGON_BREATH)
 								),
-						PotionHelper.createAdvancedPotion(anticlimacticlagacy.ultimatePotionLingering, anticlimacticlagacy.ULTIMATE_HEALING)
+						PotionHelper.createAdvancedPotion(AnticlimacticLagacy.ultimatePotionLingering, AnticlimacticLagacy.ULTIMATE_HEALING)
 						));
 
 		BrewingRecipeRegistry.addRecipe(
 				new ComplexBrewingRecipe(
 						PotionHelper.constructIngredientMap(
 								Ingredient.of(PotionHelper.createVanillaPotion(Items.LINGERING_POTION, Potions.STRONG_HARMING)),
-								Ingredient.of(anticlimacticlagacy.astralDust),
-								Ingredient.of(PotionHelper.createAdvancedPotion(anticlimacticlagacy.ultimatePotionSplash, anticlimacticlagacy.ULTIMATE_HARMING)),
+								Ingredient.of(AnticlimacticLagacy.astralDust),
+								Ingredient.of(PotionHelper.createAdvancedPotion(AnticlimacticLagacy.ultimatePotionSplash, AnticlimacticLagacy.ULTIMATE_HARMING)),
 								Ingredient.of(Items.DRAGON_BREATH)
 								),
-						PotionHelper.createAdvancedPotion(anticlimacticlagacy.ultimatePotionLingering, anticlimacticlagacy.ULTIMATE_HARMING)
+						PotionHelper.createAdvancedPotion(AnticlimacticLagacy.ultimatePotionLingering, AnticlimacticLagacy.ULTIMATE_HARMING)
 						));
 
 		BrewingRecipeRegistry.addRecipe(
 				new ComplexBrewingRecipe(
 						PotionHelper.constructIngredientMap(
 								Ingredient.of(PotionHelper.createVanillaPotion(Items.LINGERING_POTION, Potions.LONG_SLOW_FALLING)),
-								Ingredient.of(anticlimacticlagacy.astralDust),
-								Ingredient.of(PotionHelper.createAdvancedPotion(anticlimacticlagacy.ultimatePotionSplash, anticlimacticlagacy.ULTIMATE_SLOW_FALLING)),
+								Ingredient.of(AnticlimacticLagacy.astralDust),
+								Ingredient.of(PotionHelper.createAdvancedPotion(AnticlimacticLagacy.ultimatePotionSplash, AnticlimacticLagacy.ULTIMATE_SLOW_FALLING)),
 								Ingredient.of(Items.DRAGON_BREATH)
 								),
-						PotionHelper.createAdvancedPotion(anticlimacticlagacy.ultimatePotionLingering, anticlimacticlagacy.ULTIMATE_SLOW_FALLING)
+						PotionHelper.createAdvancedPotion(AnticlimacticLagacy.ultimatePotionLingering, AnticlimacticLagacy.ULTIMATE_SLOW_FALLING)
 						));
 
 		BrewingRecipeRegistry.addRecipe(
 				new ComplexBrewingRecipe(
 						PotionHelper.constructIngredientMap(
 								Ingredient.of(PotionHelper.createVanillaPotion(Items.LINGERING_POTION, Potions.LONG_WEAKNESS)),
-								Ingredient.of(anticlimacticlagacy.astralDust),
-								Ingredient.of(PotionHelper.createAdvancedPotion(anticlimacticlagacy.ultimatePotionSplash, anticlimacticlagacy.ULTIMATE_WEAKNESS)),
+								Ingredient.of(AnticlimacticLagacy.astralDust),
+								Ingredient.of(PotionHelper.createAdvancedPotion(AnticlimacticLagacy.ultimatePotionSplash, AnticlimacticLagacy.ULTIMATE_WEAKNESS)),
 								Ingredient.of(Items.DRAGON_BREATH)
 								),
-						PotionHelper.createAdvancedPotion(anticlimacticlagacy.ultimatePotionLingering, anticlimacticlagacy.ULTIMATE_WEAKNESS)
+						PotionHelper.createAdvancedPotion(AnticlimacticLagacy.ultimatePotionLingering, AnticlimacticLagacy.ULTIMATE_WEAKNESS)
 						));
 
 		BrewingRecipeRegistry.addRecipe(
 				new ComplexBrewingRecipe(
 						PotionHelper.constructIngredientMap(
 								Ingredient.of(PotionHelper.createVanillaPotion(Items.LINGERING_POTION, Potions.LONG_WATER_BREATHING)),
-								Ingredient.of(anticlimacticlagacy.astralDust),
-								Ingredient.of(PotionHelper.createAdvancedPotion(anticlimacticlagacy.ultimatePotionSplash, anticlimacticlagacy.ULTIMATE_WATER_BREATHING)),
+								Ingredient.of(AnticlimacticLagacy.astralDust),
+								Ingredient.of(PotionHelper.createAdvancedPotion(AnticlimacticLagacy.ultimatePotionSplash, AnticlimacticLagacy.ULTIMATE_WATER_BREATHING)),
 								Ingredient.of(Items.DRAGON_BREATH)
 								),
-						PotionHelper.createAdvancedPotion(anticlimacticlagacy.ultimatePotionLingering, anticlimacticlagacy.ULTIMATE_WATER_BREATHING)
+						PotionHelper.createAdvancedPotion(AnticlimacticLagacy.ultimatePotionLingering, AnticlimacticLagacy.ULTIMATE_WATER_BREATHING)
 						));
 
 
@@ -749,115 +749,115 @@ public class PotionHelper {
 				new ComplexBrewingRecipe(
 						PotionHelper.constructIngredientMap(
 								Ingredient.of(PotionHelper.createVanillaPotion(Items.LINGERING_POTION, Potions.LONG_STRENGTH)),
-								Ingredient.of(anticlimacticlagacy.astralDust),
+								Ingredient.of(AnticlimacticLagacy.astralDust),
 								Ingredient.of(PotionHelper.createVanillaPotion(Items.LINGERING_POTION, Potions.STRONG_STRENGTH)),
-								Ingredient.of(anticlimacticlagacy.astralDust),
-								Ingredient.of(PotionHelper.createAdvancedPotion(anticlimacticlagacy.ultimatePotionSplash, anticlimacticlagacy.ULTIMATE_STRENGTH)),
+								Ingredient.of(AnticlimacticLagacy.astralDust),
+								Ingredient.of(PotionHelper.createAdvancedPotion(AnticlimacticLagacy.ultimatePotionSplash, AnticlimacticLagacy.ULTIMATE_STRENGTH)),
 								Ingredient.of(Items.DRAGON_BREATH)
 								),
-						PotionHelper.createAdvancedPotion(anticlimacticlagacy.ultimatePotionLingering, anticlimacticlagacy.ULTIMATE_STRENGTH)
+						PotionHelper.createAdvancedPotion(AnticlimacticLagacy.ultimatePotionLingering, AnticlimacticLagacy.ULTIMATE_STRENGTH)
 						));
 
 		BrewingRecipeRegistry.addRecipe(
 				new ComplexBrewingRecipe(
 						PotionHelper.constructIngredientMap(
 								Ingredient.of(PotionHelper.createVanillaPotion(Items.LINGERING_POTION, Potions.LONG_LEAPING)),
-								Ingredient.of(anticlimacticlagacy.astralDust),
+								Ingredient.of(AnticlimacticLagacy.astralDust),
 								Ingredient.of(PotionHelper.createVanillaPotion(Items.LINGERING_POTION, Potions.STRONG_LEAPING)),
-								Ingredient.of(anticlimacticlagacy.astralDust),
-								Ingredient.of(PotionHelper.createAdvancedPotion(anticlimacticlagacy.ultimatePotionSplash, anticlimacticlagacy.ULTIMATE_LEAPING)),
+								Ingredient.of(AnticlimacticLagacy.astralDust),
+								Ingredient.of(PotionHelper.createAdvancedPotion(AnticlimacticLagacy.ultimatePotionSplash, AnticlimacticLagacy.ULTIMATE_LEAPING)),
 								Ingredient.of(Items.DRAGON_BREATH)
 								),
-						PotionHelper.createAdvancedPotion(anticlimacticlagacy.ultimatePotionLingering, anticlimacticlagacy.ULTIMATE_LEAPING)
+						PotionHelper.createAdvancedPotion(AnticlimacticLagacy.ultimatePotionLingering, AnticlimacticLagacy.ULTIMATE_LEAPING)
 						));
 
 		BrewingRecipeRegistry.addRecipe(
 				new ComplexBrewingRecipe(
 						PotionHelper.constructIngredientMap(
 								Ingredient.of(PotionHelper.createVanillaPotion(Items.LINGERING_POTION, Potions.LONG_SWIFTNESS)),
-								Ingredient.of(anticlimacticlagacy.astralDust),
+								Ingredient.of(AnticlimacticLagacy.astralDust),
 								Ingredient.of(PotionHelper.createVanillaPotion(Items.LINGERING_POTION, Potions.STRONG_SWIFTNESS)),
-								Ingredient.of(anticlimacticlagacy.astralDust),
-								Ingredient.of(PotionHelper.createAdvancedPotion(anticlimacticlagacy.ultimatePotionSplash, anticlimacticlagacy.ULTIMATE_SWIFTNESS)),
+								Ingredient.of(AnticlimacticLagacy.astralDust),
+								Ingredient.of(PotionHelper.createAdvancedPotion(AnticlimacticLagacy.ultimatePotionSplash, AnticlimacticLagacy.ULTIMATE_SWIFTNESS)),
 								Ingredient.of(Items.DRAGON_BREATH)
 								),
-						PotionHelper.createAdvancedPotion(anticlimacticlagacy.ultimatePotionLingering, anticlimacticlagacy.ULTIMATE_SWIFTNESS)
+						PotionHelper.createAdvancedPotion(AnticlimacticLagacy.ultimatePotionLingering, AnticlimacticLagacy.ULTIMATE_SWIFTNESS)
 						));
 
 		BrewingRecipeRegistry.addRecipe(
 				new ComplexBrewingRecipe(
 						PotionHelper.constructIngredientMap(
 								Ingredient.of(PotionHelper.createVanillaPotion(Items.LINGERING_POTION, Potions.LONG_SLOWNESS)),
-								Ingredient.of(anticlimacticlagacy.astralDust),
+								Ingredient.of(AnticlimacticLagacy.astralDust),
 								Ingredient.of(PotionHelper.createVanillaPotion(Items.LINGERING_POTION, Potions.STRONG_SLOWNESS)),
-								Ingredient.of(anticlimacticlagacy.astralDust),
-								Ingredient.of(PotionHelper.createAdvancedPotion(anticlimacticlagacy.ultimatePotionSplash, anticlimacticlagacy.ULTIMATE_SLOWNESS)),
+								Ingredient.of(AnticlimacticLagacy.astralDust),
+								Ingredient.of(PotionHelper.createAdvancedPotion(AnticlimacticLagacy.ultimatePotionSplash, AnticlimacticLagacy.ULTIMATE_SLOWNESS)),
 								Ingredient.of(Items.DRAGON_BREATH)
 								),
-						PotionHelper.createAdvancedPotion(anticlimacticlagacy.ultimatePotionLingering, anticlimacticlagacy.ULTIMATE_SLOWNESS)
+						PotionHelper.createAdvancedPotion(AnticlimacticLagacy.ultimatePotionLingering, AnticlimacticLagacy.ULTIMATE_SLOWNESS)
 						));
 
 		BrewingRecipeRegistry.addRecipe(
 				new ComplexBrewingRecipe(
 						PotionHelper.constructIngredientMap(
 								Ingredient.of(PotionHelper.createVanillaPotion(Items.LINGERING_POTION, Potions.LONG_TURTLE_MASTER)),
-								Ingredient.of(anticlimacticlagacy.astralDust),
+								Ingredient.of(AnticlimacticLagacy.astralDust),
 								Ingredient.of(PotionHelper.createVanillaPotion(Items.LINGERING_POTION, Potions.STRONG_TURTLE_MASTER)),
-								Ingredient.of(anticlimacticlagacy.astralDust),
-								Ingredient.of(PotionHelper.createAdvancedPotion(anticlimacticlagacy.ultimatePotionSplash, anticlimacticlagacy.ULTIMATE_TURTLE_MASTER)),
+								Ingredient.of(AnticlimacticLagacy.astralDust),
+								Ingredient.of(PotionHelper.createAdvancedPotion(AnticlimacticLagacy.ultimatePotionSplash, AnticlimacticLagacy.ULTIMATE_TURTLE_MASTER)),
 								Ingredient.of(Items.DRAGON_BREATH)
 								),
-						PotionHelper.createAdvancedPotion(anticlimacticlagacy.ultimatePotionLingering, anticlimacticlagacy.ULTIMATE_TURTLE_MASTER)
+						PotionHelper.createAdvancedPotion(AnticlimacticLagacy.ultimatePotionLingering, AnticlimacticLagacy.ULTIMATE_TURTLE_MASTER)
 						));
 
 		BrewingRecipeRegistry.addRecipe(
 				new ComplexBrewingRecipe(
 						PotionHelper.constructIngredientMap(
 								Ingredient.of(PotionHelper.createVanillaPotion(Items.LINGERING_POTION, Potions.LONG_POISON)),
-								Ingredient.of(anticlimacticlagacy.astralDust),
+								Ingredient.of(AnticlimacticLagacy.astralDust),
 								Ingredient.of(PotionHelper.createVanillaPotion(Items.LINGERING_POTION, Potions.STRONG_POISON)),
-								Ingredient.of(anticlimacticlagacy.astralDust),
-								Ingredient.of(PotionHelper.createAdvancedPotion(anticlimacticlagacy.ultimatePotionSplash, anticlimacticlagacy.ULTIMATE_POISON)),
+								Ingredient.of(AnticlimacticLagacy.astralDust),
+								Ingredient.of(PotionHelper.createAdvancedPotion(AnticlimacticLagacy.ultimatePotionSplash, AnticlimacticLagacy.ULTIMATE_POISON)),
 								Ingredient.of(Items.DRAGON_BREATH)
 								),
-						PotionHelper.createAdvancedPotion(anticlimacticlagacy.ultimatePotionLingering, anticlimacticlagacy.ULTIMATE_POISON)
+						PotionHelper.createAdvancedPotion(AnticlimacticLagacy.ultimatePotionLingering, AnticlimacticLagacy.ULTIMATE_POISON)
 						));
 
 		BrewingRecipeRegistry.addRecipe(
 				new ComplexBrewingRecipe(
 						PotionHelper.constructIngredientMap(
 								Ingredient.of(PotionHelper.createVanillaPotion(Items.LINGERING_POTION, Potions.LONG_REGENERATION)),
-								Ingredient.of(anticlimacticlagacy.astralDust),
+								Ingredient.of(AnticlimacticLagacy.astralDust),
 								Ingredient.of(PotionHelper.createVanillaPotion(Items.LINGERING_POTION, Potions.STRONG_REGENERATION)),
-								Ingredient.of(anticlimacticlagacy.astralDust),
-								Ingredient.of(PotionHelper.createAdvancedPotion(anticlimacticlagacy.ultimatePotionSplash, anticlimacticlagacy.ULTIMATE_REGENERATION)),
+								Ingredient.of(AnticlimacticLagacy.astralDust),
+								Ingredient.of(PotionHelper.createAdvancedPotion(AnticlimacticLagacy.ultimatePotionSplash, AnticlimacticLagacy.ULTIMATE_REGENERATION)),
 								Ingredient.of(Items.DRAGON_BREATH)
 								),
-						PotionHelper.createAdvancedPotion(anticlimacticlagacy.ultimatePotionLingering, anticlimacticlagacy.ULTIMATE_REGENERATION)
+						PotionHelper.createAdvancedPotion(AnticlimacticLagacy.ultimatePotionLingering, AnticlimacticLagacy.ULTIMATE_REGENERATION)
 						));
 
 		BrewingRecipeRegistry.addRecipe(
 				new ComplexBrewingRecipe(
 						PotionHelper.constructIngredientMap(
-								Ingredient.of(PotionHelper.createAdvancedPotion(anticlimacticlagacy.commonPotionLingering, anticlimacticlagacy.LONG_HASTE)),
-								Ingredient.of(anticlimacticlagacy.astralDust),
-								Ingredient.of(PotionHelper.createAdvancedPotion(anticlimacticlagacy.commonPotionLingering, anticlimacticlagacy.STRONG_HASTE)),
-								Ingredient.of(anticlimacticlagacy.astralDust),
-								Ingredient.of(PotionHelper.createAdvancedPotion(anticlimacticlagacy.ultimatePotionSplash, anticlimacticlagacy.ULTIMATE_HASTE)),
+								Ingredient.of(PotionHelper.createAdvancedPotion(AnticlimacticLagacy.commonPotionLingering, AnticlimacticLagacy.LONG_HASTE)),
+								Ingredient.of(AnticlimacticLagacy.astralDust),
+								Ingredient.of(PotionHelper.createAdvancedPotion(AnticlimacticLagacy.commonPotionLingering, AnticlimacticLagacy.STRONG_HASTE)),
+								Ingredient.of(AnticlimacticLagacy.astralDust),
+								Ingredient.of(PotionHelper.createAdvancedPotion(AnticlimacticLagacy.ultimatePotionSplash, AnticlimacticLagacy.ULTIMATE_HASTE)),
 								Ingredient.of(Items.DRAGON_BREATH)
 								),
-						PotionHelper.createAdvancedPotion(anticlimacticlagacy.ultimatePotionLingering, anticlimacticlagacy.ULTIMATE_HASTE)
+						PotionHelper.createAdvancedPotion(AnticlimacticLagacy.ultimatePotionLingering, AnticlimacticLagacy.ULTIMATE_HASTE)
 						));
 
 		BrewingRecipeRegistry.addRecipe(
 				new ComplexBrewingRecipe(
 						PotionHelper.constructIngredientMap(
-								Ingredient.of(PotionHelper.createAdvancedPotion(anticlimacticlagacy.commonPotionLingering, anticlimacticlagacy.LONG_MOLTEN_HEART)),
-								Ingredient.of(anticlimacticlagacy.astralDust),
-								Ingredient.of(PotionHelper.createAdvancedPotion(anticlimacticlagacy.ultimatePotionSplash, anticlimacticlagacy.ULTIMATE_MOLTEN_HEART)),
+								Ingredient.of(PotionHelper.createAdvancedPotion(AnticlimacticLagacy.commonPotionLingering, AnticlimacticLagacy.LONG_MOLTEN_HEART)),
+								Ingredient.of(AnticlimacticLagacy.astralDust),
+								Ingredient.of(PotionHelper.createAdvancedPotion(AnticlimacticLagacy.ultimatePotionSplash, AnticlimacticLagacy.ULTIMATE_MOLTEN_HEART)),
 								Ingredient.of(Items.DRAGON_BREATH)
 								),
-						PotionHelper.createAdvancedPotion(anticlimacticlagacy.ultimatePotionLingering, anticlimacticlagacy.ULTIMATE_MOLTEN_HEART)
+						PotionHelper.createAdvancedPotion(AnticlimacticLagacy.ultimatePotionLingering, AnticlimacticLagacy.ULTIMATE_MOLTEN_HEART)
 						));
 	}
 

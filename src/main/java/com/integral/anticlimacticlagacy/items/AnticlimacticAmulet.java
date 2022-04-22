@@ -131,9 +131,9 @@ public class AnticlimacticAmulet extends ItemBaseCurio {
 	}
 
 	public boolean ifHasColor(Player player, AmuletColor color) {
-		ItemStack anticlimacticAmulet = SuperpositionHandler.getCurioStack(player, anticlimacticlagacy.anticlimacticAmulet);
+		ItemStack anticlimacticAmulet = SuperpositionHandler.getCurioStack(player, AnticlimacticLagacy.anticlimacticAmulet);
 
-		if ((anticlimacticAmulet != null) && (anticlimacticlagacy.anticlimacticAmulet.getColor(anticlimacticAmulet) == color))
+		if ((anticlimacticAmulet != null) && (AnticlimacticLagacy.anticlimacticAmulet.getColor(anticlimacticAmulet) == color))
 			return true;
 		else
 			return false;
@@ -195,7 +195,7 @@ public class AnticlimacticAmulet extends ItemBaseCurio {
 
 	@Override
 	public void fillItemCategory(CreativeModeTab group, NonNullList<ItemStack> items) {
-		if (group == anticlimacticlagacy.anticlimacticTab) {
+		if (group == AnticlimacticLagacy.anticlimacticTab) {
 			for (AmuletColor color : AmuletColor.values()) {
 				items.add(this.setColor(new ItemStack(this), color));
 			}

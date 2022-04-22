@@ -31,29 +31,29 @@ public class MixinForgeHooks {
 		LootTable returnedTable = info.getReturnValue();
 
 		if (custom && returnedTable != null) {
-			anticlimacticlagacy.logger.debug("Caught custom LootTable loading: " + name);
+			AnticlimacticLagacy.logger.debug("Caught custom LootTable loading: " + name);
 
 			try {
-				anticlimacticlagacy.logger.debug("Unfreezing " + name + "...");
+				AnticlimacticLagacy.logger.debug("Unfreezing " + name + "...");
 				LootTableHelper.unfreezePlease(returnedTable);
 			} catch (Exception ex) {
-				anticlimacticlagacy.logger.fatal("FAILED TO PROCESS LOOT TABLE: " + name);
+				AnticlimacticLagacy.logger.fatal("FAILED TO PROCESS LOOT TABLE: " + name);
 				throw new RuntimeException(ex);
 			}
 
-			anticlimacticlagacy.logger.debug("Force dispatching LootTableLoadEvent for " + name + "...");
+			AnticlimacticLagacy.logger.debug("Force dispatching LootTableLoadEvent for " + name + "...");
 
 			LootTableLoadEvent event = new LootTableLoadEvent(name, returnedTable, lootTableManager);
-			anticlimacticlagacy.anticlimacticHandler.onLootTablesLoaded(event);
+			AnticlimacticLagacy.anticlimacticHandler.onLootTablesLoaded(event);
 
 			if (event.isCanceled()) {
 				returnedTable = LootTable.EMPTY;
 			}
 
-			anticlimacticlagacy.logger.debug("Freezing " + name + " back...");
+			AnticlimacticLagacy.logger.debug("Freezing " + name + " back...");
 			returnedTable.freeze();
 
-			anticlimacticlagacy.logger.debug("Returning " + name + " to Forge handler...");
+			AnticlimacticLagacy.logger.debug("Returning " + name + " to Forge handler...");
 			info.setReturnValue(returnedTable);
 		}
 	}

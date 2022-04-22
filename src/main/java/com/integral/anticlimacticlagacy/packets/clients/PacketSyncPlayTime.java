@@ -36,7 +36,7 @@ public class PacketSyncPlayTime {
 
 	public static void handle(PacketSyncPlayTime msg, Supplier<NetworkEvent.Context> ctx) {
 		ctx.get().enqueueWork(() -> {
-			anticlimacticlagacy.proxy.cacheStats(msg.playerID, msg.timeWithoutCurses, msg.timeWithCurses);
+			AnticlimacticLagacy.proxy.cacheStats(msg.playerID, msg.timeWithoutCurses, msg.timeWithCurses);
 		});
 
 		ctx.get().setPacketHandled(true);

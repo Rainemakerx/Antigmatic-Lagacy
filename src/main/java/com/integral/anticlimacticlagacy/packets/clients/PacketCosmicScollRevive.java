@@ -35,7 +35,7 @@ public class PacketCosmicScollRevive {
 
 	public static void handle(PacketCosmicScollRevive msg, Supplier<NetworkEvent.Context> ctx) {
 		ctx.get().enqueueWork(() -> {
-			Player player = anticlimacticlagacy.proxy.getClientPlayer();
+			Player player = AnticlimacticLagacy.proxy.getClientPlayer();
 			Entity entity = player.level.getEntity(msg.entityID);
 
 			if (entity != null) {
@@ -51,10 +51,10 @@ public class PacketCosmicScollRevive {
 				player.level.playLocalSound(entity.getX(), entity.getY(), entity.getZ(), SoundEvents.TOTEM_USE, entity.getSoundSource(), 1.0F, 1.0F, false);
 
 				if (entity == player) {
-					ItemStack stack = SuperpositionHandler.getCurioStack(player, anticlimacticlagacy.cosmicScroll);
+					ItemStack stack = SuperpositionHandler.getCurioStack(player, AnticlimacticLagacy.cosmicScroll);
 
 					if (stack == null) {
-						stack = new ItemStack(anticlimacticlagacy.cosmicScroll, 1);
+						stack = new ItemStack(AnticlimacticLagacy.cosmicScroll, 1);
 					}
 
 					Minecraft.getInstance().gameRenderer.displayItemActivation(stack);

@@ -73,24 +73,24 @@ public class AnticlimacticKeybindHandler {
 
 		if (this.enderRingKey.consumeClick()) {
 			if (Minecraft.getInstance().isWindowActive()) {
-				anticlimacticlagacy.packetInstance.send(PacketDistributor.SERVER.noArg(), new PacketEnderRingKey(true));
+				AnticlimacticLagacy.packetInstance.send(PacketDistributor.SERVER.noArg(), new PacketEnderRingKey(true));
 			}
 		}
 
 		if (this.xpScrollKey.consumeClick()) {
-			anticlimacticlagacy.packetInstance.send(PacketDistributor.SERVER.noArg(), new PacketXPScrollKey(true));
+			AnticlimacticLagacy.packetInstance.send(PacketDistributor.SERVER.noArg(), new PacketXPScrollKey(true));
 		}
 
-		if (this.spellstoneAbilityKey.isDown() && SuperpositionHandler.hasCurio(Minecraft.getInstance().player, anticlimacticlagacy.anticlimacticItem)) {
-			anticlimacticlagacy.packetInstance.send(PacketDistributor.SERVER.noArg(), new PacketSpellstoneKey(true));
+		if (this.spellstoneAbilityKey.isDown() && SuperpositionHandler.hasCurio(Minecraft.getInstance().player, AnticlimacticLagacy.anticlimacticItem)) {
+			AnticlimacticLagacy.packetInstance.send(PacketDistributor.SERVER.noArg(), new PacketSpellstoneKey(true));
 		} else if (this.spellstoneAbilityKey.consumeClick() && SuperpositionHandler.hasSpellstone(Minecraft.getInstance().player)) {
-			anticlimacticlagacy.packetInstance.send(PacketDistributor.SERVER.noArg(), new PacketSpellstoneKey(true));
+			AnticlimacticLagacy.packetInstance.send(PacketDistributor.SERVER.noArg(), new PacketSpellstoneKey(true));
 		} else if (jumpClicked) {
 			LocalPlayer player = Minecraft.getInstance().player;
 
 			if (!player.isInWater() && !player.isOnGround() && !player.isCreative() && !player.isSpectator()
-					&& SuperpositionHandler.hasCurio(player, anticlimacticlagacy.angelBlessing)) {
-				anticlimacticlagacy.packetInstance.send(PacketDistributor.SERVER.noArg(), new PacketSpellstoneKey(true));
+					&& SuperpositionHandler.hasCurio(player, AnticlimacticLagacy.angelBlessing)) {
+				AnticlimacticLagacy.packetInstance.send(PacketDistributor.SERVER.noArg(), new PacketSpellstoneKey(true));
 			}
 		}
 	}

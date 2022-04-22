@@ -98,7 +98,7 @@ public class SuperMagnetRing extends MagnetRing {
 				}
 
 				/*
-				anticlimacticlagacy.packetInstance.send(PacketDistributor.NEAR.with(() -> new PacketDistributor.TargetPoint(item.getPosX(), item.getPosY(), item.getPosZ(), 24, item.world.getDimensionKey())), new PacketPortalParticles(item.getPosX(), item.getPosY() + (item.getHeight() / 2), item.getPosZ(), 24, 0.75D, true));
+				AnticlimacticLagacy.packetInstance.send(PacketDistributor.NEAR.with(() -> new PacketDistributor.TargetPoint(item.getPosX(), item.getPosY(), item.getPosZ(), 24, item.world.getDimensionKey())), new PacketPortalParticles(item.getPosX(), item.getPosY() + (item.getHeight() / 2), item.getPosZ(), 24, 0.75D, true));
 
 				if (ConfigHandler.SUPER_MAGNET_RING_SOUND.getValue())
 					item.world.playSound(null, item.getPosition(), SoundEvents.ENTITY_ENDERMAN_TELEPORT, SoundSource.PLAYERS, 1.0F, (float) (0.8F + (Math.random() * 0.2D)));
@@ -114,7 +114,7 @@ public class SuperMagnetRing extends MagnetRing {
 
 	@Override
 	public boolean canEquip(SlotContext context, ItemStack stack) {
-		return super.canEquip(context, stack) && !SuperpositionHandler.hasCurio(context.entity(), anticlimacticlagacy.magnetRing);
+		return super.canEquip(context, stack) && !SuperpositionHandler.hasCurio(context.entity(), AnticlimacticLagacy.magnetRing);
 	}
 
 	@Override

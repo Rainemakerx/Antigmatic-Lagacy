@@ -33,7 +33,7 @@ public class PacketHandleItemPickup {
 
 	public static void handle(PacketHandleItemPickup msg, Supplier<NetworkEvent.Context> ctx) {
 		ctx.get().enqueueWork(() -> {
-			anticlimacticlagacy.proxy.handleItemPickup(msg.pickuper_id, msg.item_id);
+			AnticlimacticLagacy.proxy.handleItemPickup(msg.pickuper_id, msg.item_id);
 		});
 
 		ctx.get().setPacketHandled(true);

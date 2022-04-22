@@ -38,9 +38,9 @@ public class PacketXPScrollKey {
 		ctx.get().enqueueWork(() -> {
 			ServerPlayer playerServ = ctx.get().getSender();
 
-			if (SuperpositionHandler.hasCurio(playerServ, anticlimacticlagacy.xpScroll)) {
-				ItemStack scroll = SuperpositionHandler.getCurioStack(playerServ, anticlimacticlagacy.xpScroll);
-				anticlimacticlagacy.xpScroll.trigger(playerServ.level, scroll, playerServ, InteractionHand.MAIN_HAND, false);
+			if (SuperpositionHandler.hasCurio(playerServ, AnticlimacticLagacy.xpScroll)) {
+				ItemStack scroll = SuperpositionHandler.getCurioStack(playerServ, AnticlimacticLagacy.xpScroll);
+				AnticlimacticLagacy.xpScroll.trigger(playerServ.level, scroll, playerServ, InteractionHand.MAIN_HAND, false);
 			}
 
 		});

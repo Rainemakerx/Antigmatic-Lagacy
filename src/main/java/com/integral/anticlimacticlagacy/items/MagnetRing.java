@@ -146,7 +146,7 @@ public class MagnetRing extends ItemBaseCurio {
 
 	@Override
 	public boolean canEquip(SlotContext context, ItemStack stack) {
-		return super.canEquip(context, stack) && !SuperpositionHandler.hasCurio(context.entity(), anticlimacticlagacy.superMagnetRing);
+		return super.canEquip(context, stack) && !SuperpositionHandler.hasCurio(context.entity(), AnticlimacticLagacy.superMagnetRing);
 	}
 
 	public boolean hasMagnetEffectsDisabled(Player player) {

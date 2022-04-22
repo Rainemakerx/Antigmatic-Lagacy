@@ -159,7 +159,7 @@ public class GuardianHeart extends ItemBase implements ICursed, Vanishable {
 
 						if (player instanceof ServerPlayer) {
 							ServerPlayer serverPlayer = (ServerPlayer) player;
-							anticlimacticlagacy.packetInstance.send(PacketDistributor.NEAR.with(() -> new PacketDistributor.TargetPoint(theOne.getX(), theOne.getY(), theOne.getZ(), 64, theOne.level.dimension())), new PacketGenericParticleEffect(theOne.getX(), theOne.getEyeY(), theOne.getZ(), 0, false, Effect.GUARDIAN_CURSE));
+							AnticlimacticLagacy.packetInstance.send(PacketDistributor.NEAR.with(() -> new PacketDistributor.TargetPoint(theOne.getX(), theOne.getY(), theOne.getZ(), 64, theOne.level.dimension())), new PacketGenericParticleEffect(theOne.getX(), theOne.getEyeY(), theOne.getZ(), 0, false, Effect.GUARDIAN_CURSE));
 						}
 
 						player.getCooldowns().addCooldown(this, abilityCooldown.getValue());

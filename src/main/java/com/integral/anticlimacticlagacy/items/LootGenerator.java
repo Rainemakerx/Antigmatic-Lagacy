@@ -197,9 +197,9 @@ public class LootGenerator extends ItemBase implements Vanishable {
 						chest.clearContent();
 					}
 
-					anticlimacticlagacy.logger.info("Estimated generation complete in 32768 instances, results:");
+					AnticlimacticLagacy.logger.info("Estimated generation complete in 32768 instances, results:");
 					for (Item theItem : lootMap.keySet()) {
-						anticlimacticlagacy.logger.info("Item: " + theItem.getName(new ItemStack(theItem)).getString() + ", Amount: " + lootMap.get(theItem));
+						AnticlimacticLagacy.logger.info("Item: " + theItem.getName(new ItemStack(theItem)).getString() + ", Amount: " + lootMap.get(theItem));
 					}
 
 					player.sendMessage(new TranslatableComponent("message.anticlimacticlagacy.gen_sim_complete").withStyle(ChatFormatting.DARK_PURPLE), player.getUUID());

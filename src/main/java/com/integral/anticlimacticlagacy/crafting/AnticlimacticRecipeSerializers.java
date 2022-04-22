@@ -20,7 +20,7 @@ public class AnticlimacticRecipeSerializers {
 
 	@SubscribeEvent
 	public void onRegisterSerializers(RegistryEvent.Register<RecipeSerializer<?>> event) {
-		anticlimacticlagacy.logger.info("Initializing recipe serializers registration...");
+		AnticlimacticLagacy.logger.info("Initializing recipe serializers registration...");
 		CraftingHelper.register(EnabledCondition.Serializer.INSTANCE);
 
 		event.getRegistry().register(CRAFTING_MENDING_MIXTURE_REPAIR.setRegistryName(new ResourceLocation(AnticlimacticLagacy.MODID, "mending_mixture_repair")));
@@ -30,6 +30,6 @@ public class AnticlimacticRecipeSerializers {
 		event.getRegistry().register(BIND_TO_PLAYER.setRegistryName(new ResourceLocation(AnticlimacticLagacy.MODID, "bind_to_player")));
 		event.getRegistry().register(CURSED_SHAPED.setRegistryName(new ResourceLocation(AnticlimacticLagacy.MODID, "crafting_shaped_cursed")));
 		event.getRegistry().register(BLESSED_SHAPED.setRegistryName(new ResourceLocation(AnticlimacticLagacy.MODID, "crafting_shaped_blessed")));
-		anticlimacticlagacy.logger.info("Recipe serializers registered successfully.");
+		AnticlimacticLagacy.logger.info("Recipe serializers registered successfully.");
 	}
 }

@@ -44,7 +44,7 @@ public class SoulCrystal extends ItemBase implements IPermanentCrystal, Vanishab
 	public Map<Player, Multimap<Attribute, AttributeModifier>> attributeDispatcher = new WeakHashMap<>();
 
 	public SoulCrystal() {
-		super(ItemBase.getDefaultProperties().rarity(Rarity.EPIC).stacksTo(1).fireResistant().tab(anticlimacticlagacy.anticlimacticTab));
+		super(ItemBase.getDefaultProperties().rarity(Rarity.EPIC).stacksTo(1).fireResistant().tab(AnticlimacticLagacy.anticlimacticTab));
 		this.setRegistryName(new ResourceLocation(AnticlimacticLagacy.MODID, "soul_crystal"));
 	}
 
@@ -134,7 +134,7 @@ public class SoulCrystal extends ItemBase implements IPermanentCrystal, Vanishab
 		if (this.retrieveSoulFromCrystal(player, stack)) {
 			Vector3 playerCenter = Vector3.fromEntityCenter(player);
 			if (!player.level.isClientSide) {
-				anticlimacticlagacy.packetInstance.send(PacketDistributor.NEAR.with(() -> new PacketDistributor.TargetPoint(playerCenter.x, playerCenter.y, playerCenter.z, 64, player.level.dimension())), new PacketRecallParticles(playerCenter.x, playerCenter.y, playerCenter.z, 48, false));
+				AnticlimacticLagacy.packetInstance.send(PacketDistributor.NEAR.with(() -> new PacketDistributor.TargetPoint(playerCenter.x, playerCenter.y, playerCenter.z, 64, player.level.dimension())), new PacketRecallParticles(playerCenter.x, playerCenter.y, playerCenter.z, 48, false));
 			}
 
 			player.swing(hand);

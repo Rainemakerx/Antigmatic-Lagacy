@@ -32,7 +32,7 @@ public class MixinPiglinTasks {
 	private static final String AVARICE_SCROLL_TAG = AnticlimacticLagacy.MODID + ":avarice_scroll_effect";
 
 	private static void markPiglinWithCondition(Piglin piglin, Player player) {
-		if (player != null && piglin != null && SuperpositionHandler.hasCurio(player, anticlimacticlagacy.avariceScroll))
+		if (player != null && piglin != null && SuperpositionHandler.hasCurio(player, AnticlimacticLagacy.avariceScroll))
 			if (!piglin.getTags().contains(AVARICE_SCROLL_TAG)) {
 				piglin.addTag(AVARICE_SCROLL_TAG);
 			}
@@ -51,7 +51,7 @@ public class MixinPiglinTasks {
 	@Inject(at = @At("RETURN"), method = "isWearingGold", cancellable = true)
 	private static void onWearingGoldCheck(LivingEntity entity, CallbackInfoReturnable<Boolean> info) {
 		if (entity instanceof Player player) {
-			if (SuperpositionHandler.hasCurio(player, anticlimacticlagacy.gemRing) || SuperpositionHandler.hasCurio(player, anticlimacticlagacy.avariceScroll)) {
+			if (SuperpositionHandler.hasCurio(player, AnticlimacticLagacy.gemRing) || SuperpositionHandler.hasCurio(player, AnticlimacticLagacy.avariceScroll)) {
 				info.setReturnValue(true);
 			}
 		}

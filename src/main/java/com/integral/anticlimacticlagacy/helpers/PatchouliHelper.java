@@ -17,7 +17,7 @@ public class PatchouliHelper {
 	}
 
 	public static Book getAknowledgment() {
-		return PatchouliHelper.getBook(Registry.ITEM.getKey(anticlimacticlagacy.theAcknowledgment));
+		return PatchouliHelper.getBook(Registry.ITEM.getKey(AnticlimacticLagacy.theAcknowledgment));
 	}
 
 	private static void setEntryState(ResourceLocation entryLocation, boolean read) {

@@ -44,7 +44,7 @@ import com.integral.anticlimacticlagacy.entities.UltimateWitherSkullEntity;
 import com.integral.anticlimacticlagacy.gui.containers.LoreInscriberContainer;
 import com.integral.anticlimacticlagacy.gui.containers.LoreInscriberScreen;
 import com.integral.anticlimacticlagacy.gui.containers.PortableCrafterContainer;
-import com.integral.anticlimacticlagacy.handlers.DevotedBelieversHandler;
+//import com.integral.anticlimacticlagacy.handlers.DevotedBelieversHandler;
 import com.integral.anticlimacticlagacy.handlers.AnticlimacticEventHandler;
 import com.integral.anticlimacticlagacy.handlers.AnticlimacticKeybindHandler;
 import com.integral.anticlimacticlagacy.handlers.AnticlimacticUpdateHandler;
@@ -260,7 +260,7 @@ public class AnticlimacticLagacy {
 
 	public static final int howCoolAmI = Integer.MAX_VALUE;
 
-	public static AnticlimacticEventHandler enigmaticHandler;
+	public static AnticlimacticEventHandler anticlimacticHandler;
 	public static AnticlimacticKeybindHandler keybindHandler;
 	public static final OneSpecialHandler butImAsGuiltyAsThe = new OneSpecialHandler();
 	public static List<String> damageTypesFire = new ArrayList<String>();
@@ -281,9 +281,9 @@ public class AnticlimacticLagacy {
 	public static BlockMassiveLamp massiveRedstonelamp;
 	public static BlockBigLamp bigRedstonelamp;
 
-	@ConfigurableItem("") public static AnticlimacticItem enigmaticItem;
+	@ConfigurableItem("") public static AnticlimacticItem anticlimacticItem;
 	@ConfigurableItem("Scroll of Ageless Wisdom") public static XPScroll xpScroll;
-	@ConfigurableItem("Anticlimactic Amulet") public static AnticlimacticAmulet enigmaticAmulet;
+	@ConfigurableItem("Anticlimactic Amulet") public static AnticlimacticAmulet anticlimacticAmulet;
 	@ConfigurableItem("Magnet Ring") public static MagnetRing magnetRing;
 	@ConfigurableItem("Extradimensional Eye") public static ExtradimensionalEye extradimensionalEye;
 	@ConfigurableItem("") public static RelicOfTesting relicOfTesting;
@@ -449,7 +449,7 @@ public class AnticlimacticLagacy {
 
 	public static final MenuType<PortableCrafterContainer> PORTABLE_CRAFTER = new MenuType<>((syncId, playerInv) -> new PortableCrafterContainer(syncId, playerInv, ContainerLevelAccess.create(playerInv.player.level, playerInv.player.blockPosition())));
 
-	@ObjectHolder(MODID + ":enigmatic_repair_container")
+	@ObjectHolder(MODID + ":anticlimactic_repair_container")
 	public static final MenuType<LoreInscriberContainer> LORE_INSCRIBER_CONTAINER = null;
 
 	private static final String PTC_VERSION = "1";
@@ -469,7 +469,7 @@ public class AnticlimacticLagacy {
 		AnticlimacticMaterials.setEtheriumConfig(etheriumConfig);
 		AnticlimacticArmorMaterials.setEtheriumConfig(etheriumConfig);
 
-		enigmaticHandler = new AnticlimacticEventHandler();
+		anticlimacticHandler = new AnticlimacticEventHandler();
 		keybindHandler = new AnticlimacticKeybindHandler();
 
 		massiveLamp = new BlockMassiveLamp(BlockBehaviour.Properties.copy(Blocks.LANTERN), "massive_lamp");
@@ -479,9 +479,9 @@ public class AnticlimacticLagacy {
 		massiveRedstonelamp = new BlockMassiveLamp(BlockBehaviour.Properties.copy(Blocks.LANTERN), "massive_redstonelamp");
 		bigRedstonelamp = new BlockBigLamp(BlockBehaviour.Properties.copy(Blocks.LANTERN), "big_redstonelamp");
 
-		enigmaticItem = new AnticlimacticItem();
+		anticlimacticItem = new AnticlimacticItem();
 		xpScroll = new XPScroll();
-		enigmaticAmulet = new AnticlimacticAmulet();
+		anticlimacticAmulet = new AnticlimacticAmulet();
 		magnetRing = new MagnetRing();
 		extradimensionalEye = new ExtradimensionalEye();
 		relicOfTesting = new RelicOfTesting();
@@ -619,7 +619,7 @@ public class AnticlimacticLagacy {
 				oceanStone,
 				eyeOfNebula,
 				voidPearl,
-				enigmaticItem
+				anticlimacticItem
 				);
 
 		FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
@@ -632,15 +632,15 @@ public class AnticlimacticLagacy {
 
 		MinecraftForge.EVENT_BUS.register(this);
 		MinecraftForge.EVENT_BUS.register(proxy);
-		MinecraftForge.EVENT_BUS.register(enigmaticHandler);
+		MinecraftForge.EVENT_BUS.register(anticlimacticHandler);
 		MinecraftForge.EVENT_BUS.register(keybindHandler);
 		MinecraftForge.EVENT_BUS.register(new AnticlimacticUpdateHandler());
 		MinecraftForge.EVENT_BUS.register(new EtheriumEventHandler(etheriumConfig, etheriumOre));
 		MinecraftForge.EVENT_BUS.addListener(this::onServerStart);
 
-		DevotedBelieversHandler.getDevotedBelievers().entrySet().forEach(entry -> {
+		/*DevotedBelieversHandler.getDevotedBelievers().entrySet().forEach(entry -> {
 			logger.getInternal().info("Believer: {}, UUID: {}", entry.getKey(), entry.getValue());
-		});
+		});*/
 
 		logger.info("Mod instance constructed successfully.");
 	}
@@ -737,7 +737,7 @@ public class AnticlimacticLagacy {
 	private void clientRegistries(final FMLClientSetupEvent event) {
 		logger.info("Initializing client setup phase...");
 		keybindHandler.registerKeybinds();
-		enigmaticAmulet.registerVariants();
+		anticlimacticAmulet.registerVariants();
 
 		for (final Block theBlock : cutoutBlockRegistry) {
 			ItemBlockRenderTypes.setRenderLayer(theBlock, RenderType.cutout());
@@ -780,7 +780,7 @@ public class AnticlimacticLagacy {
 		AnticlimacticEventHandler.knockbackThatBastard.clear();
 		AnticlimacticEventHandler.deferredToast.clear();
 		soulCrystal.attributeDispatcher.clear();
-		enigmaticItem.flightMap.clear();
+		anticlimacticItem.flightMap.clear();
 		heavenScroll.flyMap.clear();
 		RegisteredMeleeAttack.clearRegistry();
 	}
@@ -805,7 +805,7 @@ public class AnticlimacticLagacy {
 
 			registry.registerAll(
 					PORTABLE_CRAFTER.setRegistryName(MODID, "portable_crafter"),
-					IForgeMenuType.create(LoreInscriberContainer::new).setRegistryName(MODID, "enigmatic_repair_container")
+					IForgeMenuType.create(LoreInscriberContainer::new).setRegistryName(MODID, "anticlimactic_repair_container")
 					);
 		}
 
@@ -840,7 +840,7 @@ public class AnticlimacticLagacy {
 			IForgeRegistry<Item> registry = event.getRegistry();
 
 			event.getRegistry().registerAll(
-					enigmaticItem,
+					anticlimacticItem,
 					golemHeart,
 					angelBlessing,
 					oceanStone,
@@ -848,7 +848,7 @@ public class AnticlimacticLagacy {
 					eyeOfNebula,
 					voidPearl,
 					ironRing,
-					enigmaticAmulet,
+					anticlimacticAmulet,
 					thiccScroll,
 					xpScroll,
 					escapeScroll,
@@ -1069,7 +1069,7 @@ public class AnticlimacticLagacy {
 
 			event.getRegistry().register(EntityType.Builder.<PermanentItemEntity>of(PermanentItemEntity::new, MobCategory.MISC).sized(0.25F, 0.25F).setTrackingRange(64).setCustomClientFactory((spawnEntity, world) -> new PermanentItemEntity(PermanentItemEntity.TYPE, world)).setUpdateInterval(2).setShouldReceiveVelocityUpdates(true).build(MODID+":permanent_item_entity").setRegistryName(new ResourceLocation(MODID, "permanent_item_entity")));
 
-			event.getRegistry().register(EntityType.Builder.<AnticlimacticPotionEntity>of(AnticlimacticPotionEntity::new, MobCategory.MISC).sized(0.25F, 0.25F).setTrackingRange(64).setCustomClientFactory((spawnEntity, world) -> new AnticlimacticPotionEntity(AnticlimacticPotionEntity.TYPE, world)).setUpdateInterval(10).setShouldReceiveVelocityUpdates(true).build(MODID+":enigmatic_potion_entity").setRegistryName(new ResourceLocation(MODID, "enigmatic_potion_entity")));
+			event.getRegistry().register(EntityType.Builder.<AnticlimacticPotionEntity>of(AnticlimacticPotionEntity::new, MobCategory.MISC).sized(0.25F, 0.25F).setTrackingRange(64).setCustomClientFactory((spawnEntity, world) -> new AnticlimacticPotionEntity(AnticlimacticPotionEntity.TYPE, world)).setUpdateInterval(10).setShouldReceiveVelocityUpdates(true).build(MODID+":anticlimactic_potion_entity").setRegistryName(new ResourceLocation(MODID, "anticlimactic_potion_entity")));
 
 			event.getRegistry().register(EntityType.Builder.<UltimateWitherSkullEntity>of(UltimateWitherSkullEntity::new, MobCategory.MISC).sized(0.25F, 0.25F).setTrackingRange(64).setCustomClientFactory((spawnEntity, world) -> new UltimateWitherSkullEntity(UltimateWitherSkullEntity.TYPE, world))
 					//.setUpdateInterval(1)
@@ -1096,15 +1096,15 @@ public class AnticlimacticLagacy {
 		logger.info("Colors registered successfully.");
 	}
 
-	public static final CreativeModeTab enigmaticTab = new CreativeModeTab("enigmaticCreativeTab") {
+	public static final CreativeModeTab anticlimacticTab = new CreativeModeTab("anticlimacticCreativeTab") {
 		@Override
 		@OnlyIn(Dist.CLIENT)
 		public ItemStack makeIcon() {
-			return new ItemStack(enigmaticItem);
+			return new ItemStack(anticlimacticItem);
 		}
 	};
 
-	public static final CreativeModeTab enigmaticPotionTab = new CreativeModeTab("enigmaticPotionCreativeTab") {
+	public static final CreativeModeTab anticlimacticPotionTab = new CreativeModeTab("anticlimacticPotionCreativeTab") {
 		@Override
 		@OnlyIn(Dist.CLIENT)
 		public ItemStack makeIcon() {

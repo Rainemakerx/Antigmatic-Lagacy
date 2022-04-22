@@ -40,13 +40,13 @@ public class PacketSlotUnlocked {
 		      ItemStack stack;
 		      
 		      if (msg.type.equals("ring"))
-		    	  stack = new ItemStack(anticlimacticlagacy.ironRing);
+		    	  stack = new ItemStack(AnticlimacticLagacy.ironRing);
 		      else if (msg.type.equals("scroll"))
-		    	  stack = new ItemStack(anticlimacticlagacy.thiccScroll);
+		    	  stack = new ItemStack(AnticlimacticLagacy.thiccScroll);
 		      else if (msg.type.equals("spellstone"))
-		    	  stack = new ItemStack(anticlimacticlagacy.voidPearl);
+		    	  stack = new ItemStack(AnticlimacticLagacy.voidPearl);
 		      else
-		    	  stack = new ItemStack(anticlimacticlagacy.ironRing);
+		    	  stack = new ItemStack(AnticlimacticLagacy.ironRing);
 		      
 		      Toast toast = new SlotUnlockedToast(stack, msg.type);
 		      AnticlimacticEventHandler.scheduledToasts.add(toast);

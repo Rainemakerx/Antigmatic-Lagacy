@@ -93,7 +93,7 @@ public class EnderSlayer extends SwordItem implements ICursed {
 			if (target instanceof ServerPlayer targetPlayer) {
 				targetPlayer.getCooldowns().addCooldown(Items.ENDER_PEARL, 400);
 
-				if (SuperpositionHandler.hasCurio(targetPlayer, anticlimacticlagacy.eyeOfNebula)) {
+				if (SuperpositionHandler.hasCurio(targetPlayer, AnticlimacticLagacy.eyeOfNebula)) {
 					SuperpositionHandler.setSpellstoneCooldown(targetPlayer, 400);
 				}
 			}

@@ -8,7 +8,7 @@ import net.minecraft.world.item.ItemStack;
 public class AnticlimacticEnchantmentHelper {
 
 	public static boolean hasCustomCrossbowEnchantments(ItemStack crossbowStack) {
-		return (EnchantmentHelper.getItemEnchantmentLevel(anticlimacticlagacy.ceaselessEnchantment, crossbowStack) > 0 || EnchantmentHelper.getItemEnchantmentLevel(anticlimacticlagacy.sharpshooterEnchantment, crossbowStack) > 0);
+		return (EnchantmentHelper.getItemEnchantmentLevel(AnticlimacticLagacy.ceaselessEnchantment, crossbowStack) > 0 || EnchantmentHelper.getItemEnchantmentLevel(AnticlimacticLagacy.sharpshooterEnchantment, crossbowStack) > 0);
 	}
 
 	public static boolean hasSharpshooterEnchantment(ItemStack stack) {
@@ -24,14 +24,14 @@ public class AnticlimacticEnchantmentHelper {
 	}
 
 	public static int getSharpshooterLevel(ItemStack stack) {
-		return EnchantmentHelper.getItemEnchantmentLevel(anticlimacticlagacy.sharpshooterEnchantment, stack);
+		return EnchantmentHelper.getItemEnchantmentLevel(AnticlimacticLagacy.sharpshooterEnchantment, stack);
 	}
 
 	public static int getCeaselessLevel(ItemStack stack) {
-		return EnchantmentHelper.getItemEnchantmentLevel(anticlimacticlagacy.ceaselessEnchantment, stack);
+		return EnchantmentHelper.getItemEnchantmentLevel(AnticlimacticLagacy.ceaselessEnchantment, stack);
 	}
 
 	public static int getNemesisCurseLevel(ItemStack stack) {
-		return EnchantmentHelper.getItemEnchantmentLevel(anticlimacticlagacy.nemesisCurse, stack);
+		return EnchantmentHelper.getItemEnchantmentLevel(AnticlimacticLagacy.nemesisCurse, stack);
 	}
 }

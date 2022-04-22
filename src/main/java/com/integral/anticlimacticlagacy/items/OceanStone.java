@@ -165,7 +165,7 @@ public class OceanStone extends ItemSpellstoneCurio implements ISpellstone {
 
 				/*
 				 * ItemStack scroll = SuperpositionHandler.getCurioStack(player,
-				 * anticlimacticlagacy.xpScroll);
+				 * AnticlimacticLagacy.xpScroll);
 				 *
 				 * if (scroll != null && ItemNBTHelper.getInt(scroll, "XPStored", 0) >=
 				 * xpCostBase*2) { ItemNBTHelper.setInt(scroll, "XPStored",
@@ -207,7 +207,7 @@ public class OceanStone extends ItemSpellstoneCurio implements ISpellstone {
 	@Override
 	public void onUnequip(SlotContext context, ItemStack newStack, ItemStack stack) {
 		if (context.entity() instanceof Player player) {
-			anticlimacticlagacy.miningCharm.removeNightVisionEffect(player, this.nightVisionDuration);
+			AnticlimacticLagacy.miningCharm.removeNightVisionEffect(player, this.nightVisionDuration);
 			player.getAttributes().removeAttributeModifiers(this.createAttributeMap(player));
 		}
 	}
@@ -215,12 +215,12 @@ public class OceanStone extends ItemSpellstoneCurio implements ISpellstone {
 	@Override
 	public void curioTick(SlotContext context, ItemStack stack) {
 		if (context.entity() instanceof Player player && !player.level.isClientSide)
-			if (SuperpositionHandler.hasCurio(player, anticlimacticlagacy.oceanStone)) {
+			if (SuperpositionHandler.hasCurio(player, AnticlimacticLagacy.oceanStone)) {
 				if (player.isEyeInFluid(FluidTags.WATER)) {
 					player.addEffect(new MobEffectInstance(MobEffects.NIGHT_VISION, this.nightVisionDuration, 0, true, false));
 					player.setAirSupply(300);
 				} else {
-					anticlimacticlagacy.miningCharm.removeNightVisionEffect(player, this.nightVisionDuration);
+					AnticlimacticLagacy.miningCharm.removeNightVisionEffect(player, this.nightVisionDuration);
 				}
 
 				player.getAttributes().addTransientAttributeModifiers(this.createAttributeMap(player));

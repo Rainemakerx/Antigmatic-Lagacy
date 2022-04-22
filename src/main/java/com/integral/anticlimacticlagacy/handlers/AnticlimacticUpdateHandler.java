@@ -44,7 +44,7 @@ public class AnticlimacticUpdateHandler {
 		}
 	}
 
-	private static String currentVersion = anticlimacticlagacy.VERSION + " " + anticlimacticlagacy.RELEASE_TYPE;
+	private static String currentVersion = AnticlimacticLagacy.VERSION + " " + AnticlimacticLagacy.RELEASE_TYPE;
 	private static String newestVersion;
 	public static TranslatableComponent updateStatus = null;
 	public static boolean show = false;
@@ -54,7 +54,7 @@ public class AnticlimacticUpdateHandler {
 	public void onPlayerLogin(PlayerEvent.PlayerLoggedInEvent event) {
 
 		if (event.getPlayer() instanceof ServerPlayer) {
-			anticlimacticlagacy.packetInstance.send(PacketDistributor.PLAYER.with(() -> ((ServerPlayer)event.getPlayer())), new PacketUpdateNotification());
+			AnticlimacticLagacy.packetInstance.send(PacketDistributor.PLAYER.with(() -> ((ServerPlayer)event.getPlayer())), new PacketUpdateNotification());
 		}
 	}
 

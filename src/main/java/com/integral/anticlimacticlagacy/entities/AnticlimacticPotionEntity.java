@@ -186,7 +186,7 @@ public class AnticlimacticPotionEntity extends ThrowableItemProjectile implement
 	}
 
 	private boolean isLingering() {
-		return this.getItem().getItem() == anticlimacticlagacy.ultimatePotionLingering;
+		return this.getItem().getItem() == AnticlimacticLagacy.ultimatePotionLingering;
 	}
 
 	/**

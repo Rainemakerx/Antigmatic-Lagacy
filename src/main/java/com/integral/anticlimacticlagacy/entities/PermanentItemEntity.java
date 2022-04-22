@@ -173,7 +173,7 @@ public class PermanentItemEntity extends Entity {
 			return false;
 
 		if (source.isBypassMagic()) {
-			anticlimacticlagacy.logger.warn("[WARN] Attacked permanent item entity with absolute DamageSource: " + source);
+			AnticlimacticLagacy.logger.warn("[WARN] Attacked permanent item entity with absolute DamageSource: " + source);
 			this.kill();
 			return true;
 		} else
@@ -183,7 +183,7 @@ public class PermanentItemEntity extends Entity {
 
 	@Override
 	public void remove(Entity.RemovalReason reason) {
-		anticlimacticlagacy.logger.warn("[WARN] Removing Permanent Item Entity: " + this);
+		AnticlimacticLagacy.logger.warn("[WARN] Removing Permanent Item Entity: " + this);
 		super.remove(reason);
 	}
 
@@ -243,7 +243,7 @@ public class PermanentItemEntity extends Entity {
 			boolean isPlayerOwner = player.getUUID().equals(this.getOwnerId());
 			boolean allowPickUp = false;
 
-			if (item instanceof StorageCrystal && (isPlayerOwner || !anticlimacticlagacy.anticlimacticAmulet.isVesselOwnerOnly())) {
+			if (item instanceof StorageCrystal && (isPlayerOwner || !AnticlimacticLagacy.anticlimacticAmulet.isVesselOwnerOnly())) {
 				allowPickUp = true;
 			} else if (item instanceof SoulCrystal && isPlayerOwner) {
 				allowPickUp = true;
@@ -258,7 +258,7 @@ public class PermanentItemEntity extends Entity {
 					if (!isPlayerOwner && embeddedSoul != null)
 						return;
 
-					anticlimacticlagacy.storageCrystal.retrieveDropsFromCrystal(itemstack, player, embeddedSoul);
+					AnticlimacticLagacy.storageCrystal.retrieveDropsFromCrystal(itemstack, player, embeddedSoul);
 					/*
 					if (!isPlayerOwner && embeddedSoul != null) {
 						PermanentItemEntity droppedSoulCrystal = new PermanentItemEntity(this.world, this.getPosX(), this.getPosY(), this.getPosZ(), embeddedSoul);
@@ -268,16 +268,16 @@ public class PermanentItemEntity extends Entity {
 					 */
 
 				} else if (item instanceof SoulCrystal) {
-					if (!anticlimacticlagacy.soulCrystal.retrieveSoulFromCrystal(player, itemstack))
+					if (!AnticlimacticLagacy.soulCrystal.retrieveSoulFromCrystal(player, itemstack))
 						return;
 				}
 
-				anticlimacticlagacy.packetInstance.send(PacketDistributor.NEAR.with(() -> new PacketDistributor.TargetPoint(this.getX(), this.getY() + (this.getBbHeight() / 2), this.getZ(), 64, player.level.dimension())), new PacketRecallParticles(this.getX(), this.getY() + (this.getBbHeight() / 2), this.getZ(), 48, false));
+				AnticlimacticLagacy.packetInstance.send(PacketDistributor.NEAR.with(() -> new PacketDistributor.TargetPoint(this.getX(), this.getY() + (this.getBbHeight() / 2), this.getZ(), 64, player.level.dimension())), new PacketRecallParticles(this.getX(), this.getY() + (this.getBbHeight() / 2), this.getZ(), 48, false));
 
 				player.take(this, i);
-				anticlimacticlagacy.packetInstance.send(PacketDistributor.NEAR.with(() -> new PacketDistributor.TargetPoint(this.getX(), this.getY(), this.getZ(), 64, this.level.dimension())), new PacketHandleItemPickup(player.getId(), this.getId()));
+				AnticlimacticLagacy.packetInstance.send(PacketDistributor.NEAR.with(() -> new PacketDistributor.TargetPoint(this.getX(), this.getY(), this.getZ(), 64, this.level.dimension())), new PacketHandleItemPickup(player.getId(), this.getId()));
 
-				anticlimacticlagacy.logger.info("Player " + player.getGameProfile().getName() + " picking up: " + this);
+				AnticlimacticLagacy.logger.info("Player " + player.getGameProfile().getName() + " picking up: " + this);
 				this.discard();
 				itemstack.setCount(0);
 			} else if (this.pickupDelay == 0 && (this.owner == null || this.owner.equals(player.getUUID())) && (i <= 0 || player.getInventory().add(itemstack))) {
@@ -285,9 +285,9 @@ public class PermanentItemEntity extends Entity {
 				if (itemstack.isEmpty()) {
 					player.take(this, i);
 
-					anticlimacticlagacy.packetInstance.send(PacketDistributor.NEAR.with(() -> new PacketDistributor.TargetPoint(this.getX(), this.getY(), this.getZ(), 64, this.level.dimension())), new PacketHandleItemPickup(player.getId(), this.getId()));
+					AnticlimacticLagacy.packetInstance.send(PacketDistributor.NEAR.with(() -> new PacketDistributor.TargetPoint(this.getX(), this.getY(), this.getZ(), 64, this.level.dimension())), new PacketHandleItemPickup(player.getId(), this.getId()));
 
-					anticlimacticlagacy.logger.info("Player " + player.getGameProfile().getName() + " picking up: " + this);
+					AnticlimacticLagacy.logger.info("Player " + player.getGameProfile().getName() + " picking up: " + this);
 					this.discard();
 					itemstack.setCount(i);
 				}

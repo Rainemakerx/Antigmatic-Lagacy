@@ -47,7 +47,7 @@ public class MixinApotheosisEnchantmentContainer extends EnchantmentMenu {
 
 	@Inject(at = @At("HEAD"), method = "clickMenuButton(Lnet/minecraft/world/entity/player/Player;I)Z", cancellable = true)
 	private void onEnchantedItem(Player player, int id, CallbackInfoReturnable<Boolean> info) {
-		if (anticlimacticlagacy.enchanterPearl.isPresent(player)) {
+		if (AnticlimacticLagacy.enchanterPearl.isPresent(player)) {
 			int level = this.costs[id];
 			ItemStack toEnchant = this.enchantSlots.getItem(0);
 			int i = id + 1;

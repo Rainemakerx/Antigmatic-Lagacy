@@ -118,7 +118,7 @@ public class EnderRing extends ItemBaseCurio {
 	 *
 	 * }
 	 *
-	 * anticlimacticlagacy.anticlimacticLogger.info("Item used: " +
+	 * AnticlimacticLagacy.anticlimacticLogger.info("Item used: " +
 	 * CuriosAPI.getCurioTags(itemstack.getItem()));
 	 *
 	 * return new InteractionResultHolder<>(InteractionResult.SUCCESS, itemstack);

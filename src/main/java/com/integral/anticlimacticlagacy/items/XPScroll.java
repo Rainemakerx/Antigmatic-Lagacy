@@ -130,10 +130,10 @@ public class XPScroll extends ItemBaseCurio {
 
 			if (ItemNBTHelper.getBoolean(stack, "IsActive", false)) {
 				ItemNBTHelper.setBoolean(stack, "IsActive", false);
-				world.playSound(null, player.blockPosition(), anticlimacticlagacy.HHOFF, SoundSource.PLAYERS, (float) (0.8F + (Math.random() * 0.2F)), (float) (0.8F + (Math.random() * 0.2F)));
+				world.playSound(null, player.blockPosition(), AnticlimacticLagacy.HHOFF, SoundSource.PLAYERS, (float) (0.8F + (Math.random() * 0.2F)), (float) (0.8F + (Math.random() * 0.2F)));
 			} else {
 				ItemNBTHelper.setBoolean(stack, "IsActive", true);
-				world.playSound(null, player.blockPosition(), anticlimacticlagacy.HHON, SoundSource.PLAYERS, (float) (0.8F + (Math.random() * 0.2F)), (float) (0.8F + (Math.random() * 0.2F)));
+				world.playSound(null, player.blockPosition(), AnticlimacticLagacy.HHON, SoundSource.PLAYERS, (float) (0.8F + (Math.random() * 0.2F)), (float) (0.8F + (Math.random() * 0.2F)));
 			}
 		}
 
@@ -151,7 +151,7 @@ public class XPScroll extends ItemBaseCurio {
 
 	@Override
 	public void curioTick(SlotContext context, ItemStack stack) {
-		ItemStack itemstack = SuperpositionHandler.getCurioStack(context.entity(), anticlimacticlagacy.xpScroll);
+		ItemStack itemstack = SuperpositionHandler.getCurioStack(context.entity(), AnticlimacticLagacy.xpScroll);
 
 		if (!(context.entity() instanceof Player) || context.entity().level.isClientSide || !ItemNBTHelper.getBoolean(itemstack, "IsActive", false))
 			return;

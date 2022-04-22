@@ -43,12 +43,12 @@ public class AntiforbiddenPotion extends ItemBasePotion {
 
 	@Override
 	public void onConsumed(Level worldIn, Player player, ItemStack potion) {
-		anticlimacticlagacy.forbiddenFruit.defineConsumedFruit(player, false);
+		AnticlimacticLagacy.forbiddenFruit.defineConsumedFruit(player, false);
 	}
 
 	@Override
 	public boolean canDrink(Level world, Player player, ItemStack potion) {
-		return anticlimacticlagacy.forbiddenFruit.haveConsumedFruit(player);
+		return AnticlimacticLagacy.forbiddenFruit.haveConsumedFruit(player);
 	}
 
 

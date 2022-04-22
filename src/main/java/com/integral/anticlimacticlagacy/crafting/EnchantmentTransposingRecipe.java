@@ -43,7 +43,7 @@ public class EnchantmentTransposingRecipe extends CustomRecipe {
 			ItemStack checkedItemStack = inv.getItem(i);
 
 			if (!checkedItemStack.isEmpty()) {
-				if (checkedItemStack.getItem() == anticlimacticlagacy.enchantmentTransposer) {
+				if (checkedItemStack.getItem() == AnticlimacticLagacy.enchantmentTransposer) {
 					if (transposer == null) {
 						transposer = checkedItemStack.copy();
 					} else
@@ -78,7 +78,7 @@ public class EnchantmentTransposingRecipe extends CustomRecipe {
 			ItemStack checkedItemStack = inv.getItem(i);
 
 			if (!checkedItemStack.isEmpty()) {
-				if (checkedItemStack.getItem() == anticlimacticlagacy.enchantmentTransposer) {
+				if (checkedItemStack.getItem() == AnticlimacticLagacy.enchantmentTransposer) {
 					if (transposer == null) {
 						transposer = checkedItemStack.copy();
 					} else
@@ -103,7 +103,7 @@ public class EnchantmentTransposingRecipe extends CustomRecipe {
 
 		for(int i = 0; i < nonnulllist.size(); ++i) {
 			ItemStack item = inv.getItem(i);
-			if (item.getItem() != anticlimacticlagacy.enchantmentTransposer && item.isEnchanted()) {
+			if (item.getItem() != AnticlimacticLagacy.enchantmentTransposer && item.isEnchanted()) {
 				ItemStack returned = item.copy();
 				CompoundTag nbt = returned.getOrCreateTag();
 

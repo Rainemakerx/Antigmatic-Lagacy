@@ -17,7 +17,7 @@ public class MixinEnchantmentHelper {
 	@Inject(method = "hasBindingCurse", at = @At("RETURN"), cancellable = true, require = 1)
 	private static void onBindingCurseCheck(ItemStack stack, CallbackInfoReturnable<Boolean> info) {
 		if (!info.getReturnValue()) {
-			if (EnchantmentHelper.getItemEnchantmentLevel(anticlimacticlagacy.eternalBindingCurse, stack) > 0) {
+			if (EnchantmentHelper.getItemEnchantmentLevel(AnticlimacticLagacy.eternalBindingCurse, stack) > 0) {
 				info.setReturnValue(true);
 			}
 		}

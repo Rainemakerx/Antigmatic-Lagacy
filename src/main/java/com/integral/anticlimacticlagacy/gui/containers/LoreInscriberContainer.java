@@ -50,7 +50,7 @@ public class LoreInscriberContainer extends AbstractContainerMenu {
 	}
 
 	private LoreInscriberContainer(int id, Inventory Inventory, ContainerLevelAccess worldPosCallable) {
-		this(anticlimacticlagacy.LORE_INSCRIBER_CONTAINER, id, Inventory, worldPosCallable);
+		this(AnticlimacticLagacy.LORE_INSCRIBER_CONTAINER, id, Inventory, worldPosCallable);
 	}
 
 	private LoreInscriberContainer(@Nullable MenuType<?> p_i231587_1_, int p_i231587_2_, Inventory playerInv, ContainerLevelAccess p_i231587_4_) {
@@ -209,7 +209,7 @@ public class LoreInscriberContainer extends AbstractContainerMenu {
 		this.craftSlotsInv.setItem(0, ItemStack.EMPTY);
 
 		if (!player.level.isClientSide) {
-			player.level.playSound(null, player.blockPosition(), anticlimacticlagacy.WRITE, SoundSource.PLAYERS, 1.0F, (float) (0.9F + (Math.random() * 0.1F)));
+			player.level.playSound(null, player.blockPosition(), AnticlimacticLagacy.WRITE, SoundSource.PLAYERS, 1.0F, (float) (0.9F + (Math.random() * 0.1F)));
 		}
 
 		return stack;

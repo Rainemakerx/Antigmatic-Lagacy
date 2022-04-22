@@ -60,7 +60,7 @@ public class RelicOfTesting extends ItemBase {
 
 		SuperpositionHandler.setSpellstoneCooldown(playerIn, 0);
 
-		SuperpositionHandler.setPersistentInteger(playerIn, anticlimacticlagacy.overworldRevelationTome.persistantPointsTag, 0);
+		SuperpositionHandler.setPersistentInteger(playerIn, AnticlimacticLagacy.overworldRevelationTome.persistantPointsTag, 0);
 
 		ItemStack checkTag = playerIn.getInventory().offhand.get(0);
 
@@ -102,7 +102,7 @@ public class RelicOfTesting extends ItemBase {
 
 		for (Creeper creeper : list) {
 			creeper.goalSelector.addGoal(1, new AvoidEntityGoal<>(creeper, Player.class, (arg) -> {
-				return arg instanceof Player ? SuperpositionHandler.hasCurio(arg, anticlimacticlagacy.anticlimacticAmulet) : false;
+				return arg instanceof Player ? SuperpositionHandler.hasCurio(arg, AnticlimacticLagacy.anticlimacticAmulet) : false;
 			}, 6.0F, 1.0D, 1.2D, EntitySelector.NO_CREATIVE_OR_SPECTATOR::test));
 
 			if (creeper.getTarget() == entity) {

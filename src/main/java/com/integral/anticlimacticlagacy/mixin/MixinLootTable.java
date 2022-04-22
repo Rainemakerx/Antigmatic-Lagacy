@@ -35,7 +35,7 @@ public class MixinLootTable {
 			NullPointerException ex = new NullPointerException("I'm fucking done with this");
 			ex.fillInStackTrace();
 
-			anticlimacticlagacy.exceptionList.add(Triple.of(forgottenObject instanceof LootTable ? (LootTable)forgottenObject : null, pool, ex));
+			AnticlimacticLagacy.exceptionList.add(Triple.of(forgottenObject instanceof LootTable ? (LootTable)forgottenObject : null, pool, ex));
 		}
 
 	}

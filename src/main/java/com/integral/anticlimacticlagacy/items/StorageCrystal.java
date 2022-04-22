@@ -81,7 +81,7 @@ public class StorageCrystal extends ItemBase implements IPermanentCrystal, Vanis
 		ExperienceHelper.addPlayerXP(player, exp);
 
 		if (retrieveSoul != null) {
-			anticlimacticlagacy.soulCrystal.retrieveSoulFromCrystal(player, retrieveSoul);
+			AnticlimacticLagacy.soulCrystal.retrieveSoulFromCrystal(player, retrieveSoul);
 		} else {
 			player.level.playSound(null, new BlockPos(player.position()), SoundEvents.BEACON_ACTIVATE, SoundSource.PLAYERS, 1.0f, 1.0f);
 		}

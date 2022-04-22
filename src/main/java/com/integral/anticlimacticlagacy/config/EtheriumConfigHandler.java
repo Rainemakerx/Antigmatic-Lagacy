@@ -123,7 +123,7 @@ public class EtheriumConfigHandler implements IEtheriumConfig {
 
 	@Override
 	public Ingredient getRepairMaterial() {
-		return Ingredient.of(anticlimacticlagacy.etheriumIngot);
+		return Ingredient.of(AnticlimacticLagacy.etheriumIngot);
 	}
 
 	@Override
@@ -132,13 +132,13 @@ public class EtheriumConfigHandler implements IEtheriumConfig {
 		Vec3 vec3d = new Vec3(0D, 0D, 0D);
 		Vec3 vec3d1 = (new Vec3(xRatio, 0.0D, zRatio)).normalize().scale(strength);
 
-		anticlimacticlagacy.packetInstance.send(PacketDistributor.PLAYER.with(() -> (ServerPlayer) entityIn), new PacketPlayerMotion(vec3d.x / 2.0D - vec3d1.x, entityIn.isOnGround() ? Math.min(0.4D, vec3d.y / 2.0D + strength) : vec3d.y, vec3d.z / 2.0D - vec3d1.z));
+		AnticlimacticLagacy.packetInstance.send(PacketDistributor.PLAYER.with(() -> (ServerPlayer) entityIn), new PacketPlayerMotion(vec3d.x / 2.0D - vec3d1.x, entityIn.isOnGround() ? Math.min(0.4D, vec3d.y / 2.0D + strength) : vec3d.y, vec3d.z / 2.0D - vec3d1.z));
 		entityIn.setDeltaMovement(vec3d.x / 2.0D - vec3d1.x, entityIn.isOnGround() ? Math.min(0.4D, vec3d.y / 2.0D + strength) : vec3d.y, vec3d.z / 2.0D - vec3d1.z);
 	}
 
 	@Override
 	public CreativeModeTab getCreativeTab() {
-		return anticlimacticlagacy.anticlimacticTab;
+		return AnticlimacticLagacy.anticlimacticTab;
 	}
 
 	@Override
@@ -171,12 +171,12 @@ public class EtheriumConfigHandler implements IEtheriumConfig {
 
 	@Override
 	public SoundEvent getAOESoundOff() {
-		return anticlimacticlagacy.HHOFF;
+		return AnticlimacticLagacy.HHOFF;
 	}
 
 	@Override
 	public SoundEvent getAOESoundOn() {
-		return anticlimacticlagacy.HHON;
+		return AnticlimacticLagacy.HHON;
 	}
 
 	@Override
@@ -221,7 +221,7 @@ public class EtheriumConfigHandler implements IEtheriumConfig {
 
 	@Override
 	public SoundEvent getShieldTriggerSound() {
-		return anticlimacticlagacy.SHIELD_TRIGGER;
+		return AnticlimacticLagacy.SHIELD_TRIGGER;
 	}
 
 	@Override

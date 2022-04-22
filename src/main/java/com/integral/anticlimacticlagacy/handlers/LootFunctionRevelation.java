@@ -23,12 +23,12 @@ public class LootFunctionRevelation implements LootItemFunction {
 	@Override
 	public LootItemFunctionType getType() {
 		//return LootFunctionManager.ENCHANT_WITH_LEVELS;
-		anticlimacticlagacy.logger.info("Substituting LootFunctionType with null...");
+		AnticlimacticLagacy.logger.info("Substituting LootFunctionType with null...");
 
 		try {
 			return null;
 		} catch (NullPointerException ex) {
-			anticlimacticlagacy.logger.fatal("I must assume that non-serializable LootFuction thing haven't played out well.");
+			AnticlimacticLagacy.logger.fatal("I must assume that non-serializable LootFuction thing haven't played out well.");
 			throw ex;
 		}
 	}

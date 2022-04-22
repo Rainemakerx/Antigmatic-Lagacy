@@ -28,7 +28,7 @@ public class EnderChestInventoryButton extends PlayerInventoryButton {
 
 	@Override
 	protected boolean beforeRender(PoseStack poseStack, int mouseX, int mouseY, float partialTicks) {
-		boolean hasRing = SuperpositionHandler.hasCurio(Minecraft.getInstance().player, anticlimacticlagacy.enderRing) || SuperpositionHandler.hasCurio(Minecraft.getInstance().player, anticlimacticlagacy.cursedRing);
+		boolean hasRing = SuperpositionHandler.hasCurio(Minecraft.getInstance().player, AnticlimacticLagacy.enderRing) || SuperpositionHandler.hasCurio(Minecraft.getInstance().player, AnticlimacticLagacy.cursedRing);
 
 		if (!hasRing || !EnderRing.inventoryButtonEnabled.getValue()) {
 			this.active = false;

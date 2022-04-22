@@ -23,7 +23,7 @@ public class BlockMassiveLamp extends Block {
 		super(properties.sound(SoundType.GLASS).noOcclusion());
 
 		this.setRegistryName(new ResourceLocation(AnticlimacticLagacy.MODID, registryName));
-		anticlimacticlagacy.cutoutBlockRegistry.add(this);
+		AnticlimacticLagacy.cutoutBlockRegistry.add(this);
 	}
 
 	@Override

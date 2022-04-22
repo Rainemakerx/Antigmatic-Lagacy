@@ -19,7 +19,7 @@ public class MixinItemRenderer {
 			+ "IILnet/minecraft/client/resources/model/BakedModel;)V", at = @At(value = "INVOKE", target =
 			"Lnet/minecraft/world/item/ItemStack;is(Lnet/minecraft/world/item/Item;)Z", ordinal = 3), require = 1)
 	private boolean redirectCompassCheck(ItemStack stack, Item item) {
-		boolean result = stack.is(anticlimacticlagacy.theInfinitum) || stack.is(item);
+		boolean result = stack.is(AnticlimacticLagacy.theInfinitum) || stack.is(item);
 		return result;
 	}
 

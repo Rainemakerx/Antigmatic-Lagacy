@@ -9,7 +9,7 @@ import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
 import com.integral.anticlimacticlagacy.AnticlimacticLagacy;
 import com.integral.anticlimacticlagacy.api.generic.SubscribeConfig;
-import com.integral.anticlimacticlagacy.handlers.DevotedBelieversHandler;
+//import com.integral.anticlimacticlagacy.handlers.DevotedBelieversHandler;
 import com.integral.anticlimacticlagacy.handlers.SuperpositionHandler;
 import com.integral.anticlimacticlagacy.helpers.ItemLoreHelper;
 import com.integral.anticlimacticlagacy.helpers.ItemNBTHelper;
@@ -178,7 +178,7 @@ public class CosmicScroll extends ItemBaseCurio {
 
 	@Override
 	public void onEquip(SlotContext context, ItemStack prevStack, ItemStack stack) {
-		if (context.entity() instanceof ServerPlayer player && DevotedBelieversHandler.isDevotedBeliever(player)) {
+		if (context.entity() instanceof ServerPlayer player) {
 			if (!SuperpositionHandler.hasAdvancement(player, ADVANCEMENT)) {
 				SuperpositionHandler.grantAdvancement(player, ADVANCEMENT);
 			}

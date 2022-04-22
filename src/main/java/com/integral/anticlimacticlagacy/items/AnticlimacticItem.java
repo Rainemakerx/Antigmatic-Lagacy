@@ -126,7 +126,7 @@ public class AnticlimacticItem extends ItemSpellstoneCurio implements ISpellston
 
 	public void handleAnticlimacticFlight(final Player player) {
 		try {
-			if (SuperpositionHandler.hasCurio(player, anticlimacticlagacy.anticlimacticItem)) {
+			if (SuperpositionHandler.hasCurio(player, AnticlimacticLagacy.anticlimacticItem)) {
 				this.flightMap.put(player, true);
 				if (!player.getAbilities().mayfly) {
 					player.getAbilities().mayfly = true;
@@ -195,7 +195,7 @@ public class AnticlimacticItem extends ItemSpellstoneCurio implements ISpellston
 
 		world.addFreshEntity(witherskullentity);
 
-		anticlimacticlagacy.packetInstance.send(PacketDistributor.NEAR.with(() -> new PacketDistributor.TargetPoint(witherskullentity.getX(), witherskullentity.getY(), witherskullentity.getZ(), 64, witherskullentity.level.dimension())), new PacketWitherParticles(witherskullentity.getX(), witherskullentity.getY() + (witherskullentity.getBbHeight() / 2), witherskullentity.getZ(), 8, false));
+		AnticlimacticLagacy.packetInstance.send(PacketDistributor.NEAR.with(() -> new PacketDistributor.TargetPoint(witherskullentity.getX(), witherskullentity.getY(), witherskullentity.getZ(), 64, witherskullentity.level.dimension())), new PacketWitherParticles(witherskullentity.getX(), witherskullentity.getY() + (witherskullentity.getBbHeight() / 2), witherskullentity.getZ(), 8, false));
 
 	}
 

@@ -104,7 +104,7 @@ public class ClientProxy extends CommonProxy {
 			Minecraft.getInstance().level.playLocalSound(pickuper.getX(), pickuper.getY(), pickuper.getZ(), SoundEvents.ITEM_PICKUP, SoundSource.PLAYERS, 0.2F, (ClientProxy.random.nextFloat() - ClientProxy.random.nextFloat()) * 1.4F + 2.0F, false);
 		} catch (Throwable ex) {
 			Exception log = new Exception("Unknown error when rendering permanent item pickup", ex);
-			anticlimacticlagacy.logger.catching(log);
+			AnticlimacticLagacy.logger.catching(log);
 		}
 	}
 
@@ -127,11 +127,11 @@ public class ClientProxy extends CommonProxy {
 
 	@OnlyIn(Dist.CLIENT)
 	public void onClientSetup(FMLClientSetupEvent event) {
-		ItemProperties.register(anticlimacticlagacy.infernalShield, new ResourceLocation("blocking"),
+		ItemProperties.register(AnticlimacticLagacy.infernalShield, new ResourceLocation("blocking"),
 				(stack, world, entity, seed) -> entity != null && entity.isUsingItem()
 				&& entity.getUseItem() == stack ? 1 : 0);
 
-		ItemProperties.register(anticlimacticlagacy.theInfinitum, new ResourceLocation(AnticlimacticLagacy.MODID, "the_infinitum_open"), (stack, world, entity, seed) -> {
+		ItemProperties.register(AnticlimacticLagacy.theInfinitum, new ResourceLocation(AnticlimacticLagacy.MODID, "the_infinitum_open"), (stack, world, entity, seed) -> {
 			if (entity instanceof Player player) {
 				for (InfinitumCounterEntry entry : this.theInfinitumHoldTicks) {
 					if (entry.getPlayer() == player && entry.getStack() == stack)

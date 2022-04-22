@@ -550,15 +550,15 @@ public class AnticlimacticEventHandler {
 	@SubscribeEvent
 	public void serverStarted(ServerStartedEvent event) {
 		if (!exceptionList.isEmpty()) {
-			anticlimacticlagacy.logger.fatal("Some stupid mods once again attempted to add unnamed LootPools to loot tables!");
+			AnticlimacticLagacy.logger.fatal("Some stupid mods once again attempted to add unnamed LootPools to loot tables!");
 			for (Triple<LootTable, LootPool, Exception> triple : exceptionList) {
 				LootTable table = triple.getLeft();
 				LootPool pool = triple.getMiddle();
 				Exception ex = triple.getRight();
 
-				anticlimacticlagacy.logger.fatal("Loot table in question: " + table);
-				anticlimacticlagacy.logger.fatal("LootPool in question: " + pool);
-				anticlimacticlagacy.logger.fatal("Examine the stacktrace below to see what mod have caused this.");
+				AnticlimacticLagacy.logger.fatal("Loot table in question: " + table);
+				AnticlimacticLagacy.logger.fatal("LootPool in question: " + pool);
+				AnticlimacticLagacy.logger.fatal("Examine the stacktrace below to see what mod have caused this.");
 				ex.printStackTrace();
 			}
 
@@ -648,7 +648,7 @@ public class AnticlimacticEventHandler {
 		if (event.getOverlay() == ForgeIngameGui.EXPERIENCE_BAR_ELEMENT) {
 			TransientPlayerData data = TransientPlayerData.get(mc.player);
 
-			if (data.getFireImmunityTimer() <= 0 || !SuperpositionHandler.hasCurio(mc.player, anticlimacticlagacy.magmaHeart))
+			if (data.getFireImmunityTimer() <= 0 || !SuperpositionHandler.hasCurio(mc.player, AnticlimacticLagacy.magmaHeart))
 				return;
 
 			float partialTick = event.getPartialTicks();
@@ -703,13 +703,13 @@ public class AnticlimacticEventHandler {
 			}
 
 		} else if (event.getOverlay() == ForgeIngameGui.AIR_LEVEL_ELEMENT) {
-			if (SuperpositionHandler.hasCurio(mc.player, anticlimacticlagacy.oceanStone) || SuperpositionHandler.hasCurio(mc.player, anticlimacticlagacy.voidPearl)) {
+			if (SuperpositionHandler.hasCurio(mc.player, AnticlimacticLagacy.oceanStone) || SuperpositionHandler.hasCurio(mc.player, AnticlimacticLagacy.voidPearl)) {
 				if (OceanStone.preventOxygenBarRender.getValue()) {
 					event.setCanceled(true);
 				}
 			}
 		} else if (event.getOverlay() == ForgeIngameGui.FOOD_LEVEL_ELEMENT) {
-			if (anticlimacticlagacy.forbiddenFruit.haveConsumedFruit(mc.player)) {
+			if (AnticlimacticLagacy.forbiddenFruit.haveConsumedFruit(mc.player)) {
 				if (!ForbiddenFruit.renderHungerBar.getValue()) {
 					event.setCanceled(true);
 					return;
@@ -788,7 +788,7 @@ public class AnticlimacticEventHandler {
 		List<Player> players = event.getWorld().getEntitiesOfClass(Player.class, new AABB(where.offset(-radius, -radius, -radius), where.offset(radius, radius, radius)));
 
 		for (Player player : players)
-			if (SuperpositionHandler.hasCurio(player, anticlimacticlagacy.cursedRing)) {
+			if (SuperpositionHandler.hasCurio(player, AnticlimacticLagacy.cursedRing)) {
 				shouldBoost = true;
 			}
 
@@ -823,7 +823,7 @@ public class AnticlimacticEventHandler {
 			EnderChestInventoryButton enderButton = new EnderChestInventoryButton(gui, 0, 0, 20, 18, 0, 0, 19,
 					new ResourceLocation(
 							"anticlimacticlagacy:textures/gui/ender_chest_button.png"),(input) -> {
-								anticlimacticlagacy.packetInstance.send(PacketDistributor.SERVER.noArg(), new PacketEnderRingKey(true));
+								AnticlimacticLagacy.packetInstance.send(PacketDistributor.SERVER.noArg(), new PacketEnderRingKey(true));
 							});
 
 			Tuple<Integer, Integer> enderOffsets = enderButton.getOffsets(isCreative);
@@ -838,7 +838,7 @@ public class AnticlimacticEventHandler {
 			ToggleMagnetEffectsButton magnetButton = new ToggleMagnetEffectsButton(gui, 0, 0, 20, 18, 21, 0, 19,
 					new ResourceLocation(
 							"anticlimacticlagacy:textures/gui/ender_chest_button.png"),(input) -> {
-								anticlimacticlagacy.packetInstance.send(PacketDistributor.SERVER.noArg(), new PacketToggleMagnetEffects());
+								AnticlimacticLagacy.packetInstance.send(PacketDistributor.SERVER.noArg(), new PacketToggleMagnetEffects());
 							});
 
 			Tuple<Integer, Integer> magnetOffsets = magnetButton.getOffsets(isCreative);
@@ -864,10 +864,10 @@ public class AnticlimacticEventHandler {
 	@OnlyIn(Dist.CLIENT)
 	public void onFogRender(EntityViewRenderEvent.RenderFogEvent event) {
 		if (event.getCamera().getFluidInCamera() == FogType.LAVA) {
-			if (Minecraft.getInstance().player.hasEffect(anticlimacticlagacy.moltenHeartEffect)) {
+			if (Minecraft.getInstance().player.hasEffect(AnticlimacticLagacy.moltenHeartEffect)) {
 				RenderSystem.setShaderFogStart(0.0F);
 				RenderSystem.setShaderFogEnd((float) MoltenHeartEffect.lavafogDensity.getValue());
-			} else if (SuperpositionHandler.hasCurio(Minecraft.getInstance().player, anticlimacticlagacy.magmaHeart)) {
+			} else if (SuperpositionHandler.hasCurio(Minecraft.getInstance().player, AnticlimacticLagacy.magmaHeart)) {
 				RenderSystem.setShaderFogStart(0.0F);
 				RenderSystem.setShaderFogEnd((float) MagmaHeart.lavafogDensity.getValue());
 			}
@@ -884,7 +884,7 @@ public class AnticlimacticEventHandler {
 				if (player != null) {
 					if (this.clientWorldTicks != player.level.getGameTime()) {
 						this.clientWorldTicks = player.level.getGameTime();
-						anticlimacticlagacy.proxy.updateInfinitumCounters();
+						AnticlimacticLagacy.proxy.updateInfinitumCounters();
 					}
 				}
 
@@ -904,14 +904,14 @@ public class AnticlimacticEventHandler {
 
 						for (OmniconfigWrapper wrapper : OmniconfigWrapper.wrapperRegistry.values()) {
 
-							anticlimacticlagacy.logger.info("Dismissing values of " + wrapper.config.getConfigFile().getName() + " in favor of local config...");
+							AnticlimacticLagacy.logger.info("Dismissing values of " + wrapper.config.getConfigFile().getName() + " in favor of local config...");
 
 							for (Omniconfig.GenericParameter param : wrapper.retrieveInvocationList()) {
 								if (param.isSynchronized()) {
 									String oldValue = param.valueToString();
 									param.invoke(wrapper.config);
 
-									anticlimacticlagacy.logger.info("Value of '" + param.getId() + "' was restored to '" + param.valueToString() + "'; former server-forced value: " + oldValue);
+									AnticlimacticLagacy.logger.info("Value of '" + param.getId() + "' was restored to '" + param.valueToString() + "'; former server-forced value: " + oldValue);
 								}
 							}
 						}
@@ -967,31 +967,31 @@ public class AnticlimacticEventHandler {
 		float correctedSpeed = originalSpeed;
 
 		float miningBoost = 1.0F;
-		if (SuperpositionHandler.hasCurio(event.getPlayer(), anticlimacticlagacy.miningCharm)) {
+		if (SuperpositionHandler.hasCurio(event.getPlayer(), AnticlimacticLagacy.miningCharm)) {
 			miningBoost += MiningCharm.breakSpeedBonus.getValue().asModifier();
 		}
 
-		if (SuperpositionHandler.hasCurio(event.getPlayer(), anticlimacticlagacy.cursedScroll)) {
+		if (SuperpositionHandler.hasCurio(event.getPlayer(), AnticlimacticLagacy.cursedScroll)) {
 			miningBoost += CursedScroll.miningBoost.getValue().asModifier()*SuperpositionHandler.getCurseAmount(event.getPlayer());
 		}
 
-		if (anticlimacticlagacy.anticlimacticAmulet.ifHasColor(event.getPlayer(), AmuletColor.GREEN)) {
+		if (AnticlimacticLagacy.anticlimacticAmulet.ifHasColor(event.getPlayer(), AmuletColor.GREEN)) {
 			miningBoost += 0.25F;
 		}
 
 		if (!event.getPlayer().isOnGround())
-			if (SuperpositionHandler.hasCurio(event.getPlayer(), anticlimacticlagacy.heavenScroll) || SuperpositionHandler.hasCurio(event.getPlayer(), anticlimacticlagacy.fabulousScroll) || SuperpositionHandler.hasCurio(event.getPlayer(), anticlimacticlagacy.anticlimacticItem)) {
+			if (SuperpositionHandler.hasCurio(event.getPlayer(), AnticlimacticLagacy.heavenScroll) || SuperpositionHandler.hasCurio(event.getPlayer(), AnticlimacticLagacy.fabulousScroll) || SuperpositionHandler.hasCurio(event.getPlayer(), AnticlimacticLagacy.anticlimacticItem)) {
 				correctedSpeed *= 5F;
 			}
 
 		if (event.getPlayer().isEyeInFluid(FluidTags.WATER) && !EnchantmentHelper.hasAquaAffinity(event.getPlayer())) {
-			if (SuperpositionHandler.hasCurio(event.getPlayer(), anticlimacticlagacy.oceanStone)) {
+			if (SuperpositionHandler.hasCurio(event.getPlayer(), AnticlimacticLagacy.oceanStone)) {
 				correctedSpeed *= 5F;
 			}
 		}
 
 		/*
-		if (SuperpositionHandler.hasCurio(event.getPlayer(), anticlimacticlagacy.cursedRing) && event.getPlayer().inventory.getDestroySpeed(event.getState()) == 1.0F) {
+		if (SuperpositionHandler.hasCurio(event.getPlayer(), AnticlimacticLagacy.cursedRing) && event.getPlayer().inventory.getDestroySpeed(event.getState()) == 1.0F) {
 			correctedSpeed += 3.0F;
 		}
 		 */
@@ -1005,7 +1005,7 @@ public class AnticlimacticEventHandler {
 	@SubscribeEvent
 	public void onHarvestCheck(PlayerEvent.HarvestCheck event) {
 		if (event.getEntityLiving() instanceof Player)
-			if (!event.canHarvest() && SuperpositionHandler.hasCurio(event.getEntityLiving(), anticlimacticlagacy.cursedRing)) {
+			if (!event.canHarvest() && SuperpositionHandler.hasCurio(event.getEntityLiving(), AnticlimacticLagacy.cursedRing)) {
 				//event.setCanHarvest(event.getTargetBlock().getHarvestLevel() <= 2);
 			}
 	}
@@ -1018,18 +1018,18 @@ public class AnticlimacticEventHandler {
 			knockbackThatBastard.remove(event.getEntityLiving());
 		}
 
-		if (event.getEntityLiving() instanceof Player && SuperpositionHandler.hasCurio(event.getEntityLiving(), anticlimacticlagacy.cursedRing)) {
+		if (event.getEntityLiving() instanceof Player && SuperpositionHandler.hasCurio(event.getEntityLiving(), AnticlimacticLagacy.cursedRing)) {
 			event.setStrength(event.getStrength()*CursedRing.knockbackDebuff.getValue().asModifier());
 		}
 	}
 
 	private void syncPlayTime(Player player) {
 		if (!player.level.isClientSide) {
-			int withCurses = anticlimacticlagacy.proxy.getStats(player, timeWithCursesStat);
-			int withoutCurses = anticlimacticlagacy.proxy.getStats(player, timeWithoutCursesStat);
+			int withCurses = AnticlimacticLagacy.proxy.getStats(player, timeWithCursesStat);
+			int withoutCurses = AnticlimacticLagacy.proxy.getStats(player, timeWithoutCursesStat);
 
-			anticlimacticlagacy.proxy.cacheStats(player.getUUID(), withoutCurses, withCurses);
-			anticlimacticlagacy.packetInstance.send(PacketDistributor.NEAR.with(() -> new PacketDistributor.TargetPoint(player.getX(), player.getY(), player.getZ(), 64, player.level.dimension())),
+			AnticlimacticLagacy.proxy.cacheStats(player.getUUID(), withoutCurses, withCurses);
+			AnticlimacticLagacy.packetInstance.send(PacketDistributor.NEAR.with(() -> new PacketDistributor.TargetPoint(player.getX(), player.getY(), player.getZ(), 64, player.level.dimension())),
 					new PacketSyncPlayTime(player.getUUID(), withCurses, withoutCurses));
 		}
 	}
@@ -1076,7 +1076,7 @@ public class AnticlimacticEventHandler {
 				player.setAbsorptionAmount(0F);
 			}
 
-			if (anticlimacticlagacy.forbiddenFruit.haveConsumedFruit(player)) {
+			if (AnticlimacticLagacy.forbiddenFruit.haveConsumedFruit(player)) {
 				FoodData foodStats = player.getFoodData();
 				foodStats.setFoodLevel(20);
 				foodStats.saturationLevel = 0F;
@@ -1086,11 +1086,11 @@ public class AnticlimacticEventHandler {
 				}
 			}
 
-			if (player.isSleeping() && player.getSleepTimer() > 90 && SuperpositionHandler.hasCurio(player, anticlimacticlagacy.cursedRing)) {
+			if (player.isSleeping() && player.getSleepTimer() > 90 && SuperpositionHandler.hasCurio(player, AnticlimacticLagacy.cursedRing)) {
 				player.sleepCounter = 90;
 			}
 
-			if (player.isOnFire() && SuperpositionHandler.hasCurio(player, anticlimacticlagacy.cursedRing)) {
+			if (player.isOnFire() && SuperpositionHandler.hasCurio(player, AnticlimacticLagacy.cursedRing)) {
 				player.setRemainingFireTicks(player.getRemainingFireTicks()+2);
 			}
 
@@ -1098,7 +1098,7 @@ public class AnticlimacticEventHandler {
 			 * Handler for faster effect ticking, if player is bearing Blazing Core.
 			 */
 
-			if (SuperpositionHandler.hasCurio(player, anticlimacticlagacy.magmaHeart))
+			if (SuperpositionHandler.hasCurio(player, AnticlimacticLagacy.magmaHeart))
 				if (!player.getActiveEffects().isEmpty()) {
 					Collection<MobEffectInstance> effects = new ArrayList<>();
 					effects.addAll(player.getActiveEffects());
@@ -1121,7 +1121,7 @@ public class AnticlimacticEventHandler {
 			 */
 
 			/*
-			if (anticlimacticlagacy.etheriumChestplate.hasShield(player))
+			if (AnticlimacticLagacy.etheriumChestplate.hasShield(player))
 				if (!player.getActivePotionEffects().isEmpty()) {
 					List<MobEffectInstance> effects = new ArrayList<MobEffectInstance>(player.getActivePotionEffects());
 
@@ -1193,8 +1193,8 @@ public class AnticlimacticEventHandler {
 		if (event.getEntityLiving() instanceof ServerPlayer) {
 			ServerPlayer player = (ServerPlayer) event.getEntityLiving();
 
-			if (SuperpositionHandler.hasCurio(player, anticlimacticlagacy.cursedRing)) {
-				postmortalPossession.put(player, anticlimacticlagacy.cursedRing);
+			if (SuperpositionHandler.hasCurio(player, AnticlimacticLagacy.cursedRing)) {
+				postmortalPossession.put(player, AnticlimacticLagacy.cursedRing);
 			}
 		}
 	}
@@ -1213,8 +1213,8 @@ public class AnticlimacticEventHandler {
 				return;
 			}
 
-			if (SuperpositionHandler.hasCurio(player, anticlimacticlagacy.anticlimacticAmulet) || SuperpositionHandler.hasItem(player, anticlimacticlagacy.anticlimacticAmulet)) {
-				postmortalPossession.put(player, anticlimacticlagacy.anticlimacticAmulet);
+			if (SuperpositionHandler.hasCurio(player, AnticlimacticLagacy.anticlimacticAmulet) || SuperpositionHandler.hasItem(player, AnticlimacticLagacy.anticlimacticAmulet)) {
+				postmortalPossession.put(player, AnticlimacticLagacy.anticlimacticAmulet);
 			}
 
 			if (SuperpositionHandler.hasItem(player, cursedStone)) {
@@ -1229,11 +1229,11 @@ public class AnticlimacticEventHandler {
 				}
 			}
 
-			if (SuperpositionHandler.hasCurio(player, anticlimacticlagacy.escapeScroll)) {
-				postmortalPossession.put(player, anticlimacticlagacy.escapeScroll);
+			if (SuperpositionHandler.hasCurio(player, AnticlimacticLagacy.escapeScroll)) {
+				postmortalPossession.put(player, AnticlimacticLagacy.escapeScroll);
 
 				if (!player.level.isClientSide) {
-					ItemStack tomeStack = SuperpositionHandler.getCurioStack(player, anticlimacticlagacy.escapeScroll);
+					ItemStack tomeStack = SuperpositionHandler.getCurioStack(player, AnticlimacticLagacy.escapeScroll);
 					PermanentItemEntity droppedTomeStack = new PermanentItemEntity(player.level, player.getX(), player.getY() + (player.getBbHeight() / 2), player.getZ(), tomeStack.copy());
 					droppedTomeStack.setPickupDelay(10);
 					player.level.addFreshEntity(droppedTomeStack);
@@ -1327,10 +1327,10 @@ public class AnticlimacticEventHandler {
 			 * Immortality handler for Heart of Creation and Pearl of the Void.
 			 */
 
-			if (SuperpositionHandler.hasCurio(player, anticlimacticlagacy.anticlimacticItem) || player.getInventory().contains(new ItemStack(anticlimacticlagacy.anticlimacticItem)) || event.getSource() instanceof DamageSourceNemesisCurse) {
+			if (SuperpositionHandler.hasCurio(player, AnticlimacticLagacy.anticlimacticItem) || player.getInventory().contains(new ItemStack(AnticlimacticLagacy.anticlimacticItem)) || event.getSource() instanceof DamageSourceNemesisCurse) {
 				event.setCanceled(true);
 				player.setHealth(1);
-			} else if (SuperpositionHandler.hasCurio(player, anticlimacticlagacy.voidPearl) && Math.random() <= VoidPearl.undeadProbability.getValue().asMultiplier(false)) {
+			} else if (SuperpositionHandler.hasCurio(player, AnticlimacticLagacy.voidPearl) && Math.random() <= VoidPearl.undeadProbability.getValue().asMultiplier(false)) {
 				event.setCanceled(true);
 				player.setHealth(1);
 			} else {
@@ -1367,7 +1367,7 @@ public class AnticlimacticEventHandler {
 
 						cosmicScroll.setCooldown(scroll, CosmicScroll.deathProtectionCooldown.getValue() * 20);
 
-						anticlimacticlagacy.packetInstance.send(PacketDistributor.NEAR.with(() -> new PacketDistributor.TargetPoint(player.getX(), player.getY(), player.getZ(), 128, player.level.dimension())),
+						AnticlimacticLagacy.packetInstance.send(PacketDistributor.NEAR.with(() -> new PacketDistributor.TargetPoint(player.getX(), player.getY(), player.getZ(), 128, player.level.dimension())),
 								new PacketCosmicScollRevive(player.getId()));
 					}
 				}
@@ -1386,7 +1386,7 @@ public class AnticlimacticEventHandler {
 			 * Regeneration slowdown handler for Pearl of the Void.
 			 * Removed as of Release 2.5.0.
 
-			if (SuperpositionHandler.hasCurio(player, anticlimacticlagacy.voidPearl)) {
+			if (SuperpositionHandler.hasCurio(player, AnticlimacticLagacy.voidPearl)) {
 				if (event.getAmount() <= 1.0F) {
 					event.setAmount((float) (event.getAmount() / (1.5F * ConfigHandler.VOID_PEARL_REGENERATION_MODIFIER.getValue())));
 				}
@@ -1398,7 +1398,7 @@ public class AnticlimacticEventHandler {
 					event.setAmount(event.getAmount()*ForbiddenFruit.regenerationSubtraction.getValue().asModifierInverted());
 				}
 
-			if (SuperpositionHandler.hasCurio(player, anticlimacticlagacy.cursedScroll)) {
+			if (SuperpositionHandler.hasCurio(player, AnticlimacticLagacy.cursedScroll)) {
 				event.setAmount(event.getAmount() + (event.getAmount()*(CursedScroll.regenBoost.getValue().asModifier()*SuperpositionHandler.getCurseAmount(player))));
 			}
 		}
@@ -1439,12 +1439,12 @@ public class AnticlimacticEventHandler {
 					boolean trigger = false;
 					double chance = 0.0D;
 
-					if (SuperpositionHandler.hasCurio(player, anticlimacticlagacy.angelBlessing)) {
+					if (SuperpositionHandler.hasCurio(player, AnticlimacticLagacy.angelBlessing)) {
 						trigger = true;
 						chance += AngelBlessing.deflectChance.getValue().asModifier(false);
 					}
 
-					if (anticlimacticlagacy.anticlimacticAmulet.ifHasColor(player, AmuletColor.VIOLET)) {
+					if (AnticlimacticLagacy.anticlimacticAmulet.ifHasColor(player, AmuletColor.VIOLET)) {
 						trigger = true;
 						chance += 0.15;
 					}
@@ -1473,8 +1473,8 @@ public class AnticlimacticEventHandler {
 						arrow.getTags().removeIf(tag -> tag.startsWith("AB_DEFLECTED"));
 						arrow.addTag("AB_DEFLECTED:" + arrow.tickCount);
 
-						anticlimacticlagacy.packetInstance.send(PacketDistributor.NEAR.with(() -> new PacketDistributor.TargetPoint(player.getX(), player.getY(), player.getZ(), 64.0D, player.level.dimension())), new PacketForceArrowRotations(arrow.getId(), arrow.getYRot(), arrow.getXRot(), arrow.getDeltaMovement().x, arrow.getDeltaMovement().y, arrow.getDeltaMovement().z, arrow.getX(), arrow.getY(), arrow.getZ()));
-						player.level.playSound(null, player.blockPosition(), anticlimacticlagacy.DEFLECT, SoundSource.PLAYERS, 1.0F, 0.95F + (float) (Math.random() * 0.1D));
+						AnticlimacticLagacy.packetInstance.send(PacketDistributor.NEAR.with(() -> new PacketDistributor.TargetPoint(player.getX(), player.getY(), player.getZ(), 64.0D, player.level.dimension())), new PacketForceArrowRotations(arrow.getId(), arrow.getYRot(), arrow.getXRot(), arrow.getDeltaMovement().x, arrow.getDeltaMovement().y, arrow.getDeltaMovement().z, arrow.getX(), arrow.getY(), arrow.getZ()));
+						player.level.playSound(null, player.blockPosition(), AnticlimacticLagacy.DEFLECT, SoundSource.PLAYERS, 1.0F, 0.95F + (float) (Math.random() * 0.1D));
 					}
 				} /*else {
 					if (event.getEntity().getTags().contains("anticlimacticlagacy.redirected")) {
@@ -1502,7 +1502,7 @@ public class AnticlimacticEventHandler {
 			}
 
 			if (event.getSource().getDirectEntity() instanceof AbstractHurtingProjectile || event.getSource().getDirectEntity() instanceof AbstractArrow) {
-				/*if (SuperpositionHandler.hasCurio(player, anticlimacticlagacy.angelBlessing) && Math.random() <= ConfigHandler.ANGEL_BLESSING_DEFLECT_CHANCE.getValue().asModifier(false)) {
+				/*if (SuperpositionHandler.hasCurio(player, AnticlimacticLagacy.angelBlessing) && Math.random() <= ConfigHandler.ANGEL_BLESSING_DEFLECT_CHANCE.getValue().asModifier(false)) {
 					event.setCanceled(true);
 					Entity arrow = event.getSource().getImmediateSource();
 
@@ -1530,10 +1530,10 @@ public class AnticlimacticEventHandler {
 						arrow.remove();
 						arrow.forceSetPosition(0, 0, 0);
 
-						anticlimacticlagacy.packetInstance.send(PacketDistributor.NEAR.with(() -> new PacketDistributor.TargetPoint(player.getPosX(), player.getPosY(), player.getPosZ(), 64.0D, player.world.getDimensionKey())), new PacketForceArrowRotations(arrow.getEntityId(), arrow.rotationYaw, arrow.rotationPitch, arrow.getMotion().x, arrow.getMotion().y, arrow.getMotion().z));
+						AnticlimacticLagacy.packetInstance.send(PacketDistributor.NEAR.with(() -> new PacketDistributor.TargetPoint(player.getPosX(), player.getPosY(), player.getPosZ(), 64.0D, player.world.getDimensionKey())), new PacketForceArrowRotations(arrow.getEntityId(), arrow.rotationYaw, arrow.rotationPitch, arrow.getMotion().x, arrow.getMotion().y, arrow.getMotion().z));
 
 						//player.world.playSound(null, player.getPosition(), SoundEvents.ENTITY_ENDER_PEARL_THROW, SoundSource.PLAYERS, 1.0F, 0.95F + (float) (Math.random() * 0.1D));
-						player.world.playSound(null, player.getPosition(), anticlimacticlagacy.DEFLECT, SoundSource.PLAYERS, 1.0F, 0.95F + (float) (Math.random() * 0.1D));
+						player.world.playSound(null, player.getPosition(), AnticlimacticLagacy.DEFLECT, SoundSource.PLAYERS, 1.0F, 0.95F + (float) (Math.random() * 0.1D));
 
 						player.world.addEntity(entity);
 					}
@@ -1542,7 +1542,7 @@ public class AnticlimacticEventHandler {
 			}
 
 			if (event.getSource().msgId == DamageSource.FALL.msgId) {
-				if (anticlimacticlagacy.anticlimacticAmulet.ifHasColor(player, AmuletColor.MAGENTA) && event.getAmount() <= 2.0f) {
+				if (AnticlimacticLagacy.anticlimacticAmulet.ifHasColor(player, AmuletColor.MAGENTA) && event.getAmount() <= 2.0f) {
 					event.setCanceled(true);
 				}
 			}
@@ -1562,7 +1562,7 @@ public class AnticlimacticEventHandler {
 					 */
 
 					/*
-					if (advancedCurio == anticlimacticlagacy.voidPearl && anticlimacticlagacy.voidPearl.healList.contains(event.getSource().damageType)) {
+					if (advancedCurio == AnticlimacticLagacy.voidPearl && AnticlimacticLagacy.voidPearl.healList.contains(event.getSource().damageType)) {
 						player.heal(event.getAmount());
 						event.setCanceled(true);
 					}
@@ -1574,7 +1574,7 @@ public class AnticlimacticEventHandler {
 			 * Handler for Eye of the Nebula dodge effect.
 			 */
 
-			if (SuperpositionHandler.hasCurio(player, anticlimacticlagacy.eyeOfNebula) && !event.isCanceled()) {
+			if (SuperpositionHandler.hasCurio(player, AnticlimacticLagacy.eyeOfNebula) && !event.isCanceled()) {
 				if (EyeOfNebula.dodgeProbability.getValue().roll() && player.invulnerableTime <= 10 && event.getSource().getEntity() instanceof LivingEntity) {
 
 					for (int counter = 0; counter <= 32; counter++) {
@@ -1589,7 +1589,7 @@ public class AnticlimacticEventHandler {
 			}
 
 			if (!player.getAbilities().invulnerable && player.getEffect(MobEffects.FIRE_RESISTANCE) == null)
-				if (SuperpositionHandler.hasCurio(player, anticlimacticlagacy.magmaHeart) && !event.isCanceled() && event.getSource().msgId.equals(DamageSource.LAVA.msgId)) {
+				if (SuperpositionHandler.hasCurio(player, AnticlimacticLagacy.magmaHeart) && !event.isCanceled() && event.getSource().msgId.equals(DamageSource.LAVA.msgId)) {
 					TransientPlayerData data = TransientPlayerData.get(player);
 
 					if (data.getFireImmunityTimer() < data.getFireImmunityTimerCap()) {
@@ -1599,7 +1599,7 @@ public class AnticlimacticEventHandler {
 
 						if (data.getFireImmunityTimer() == 0 && !player.level.isClientSide) {
 							player.level.playSound(null, player.blockPosition(), SoundEvents.LAVA_EXTINGUISH, SoundSource.PLAYERS, 1.0F, 0.5F + (theySeeMeRollin.nextFloat() * 0.5F));
-							anticlimacticlagacy.packetInstance.send(PacketDistributor.NEAR.with(() -> new PacketDistributor.TargetPoint(player.getX(), player.getY(), player.getZ(), 32, player.level.dimension())), new PacketWitherParticles(player.getX(), player.getY(0.25D), player.getZ(), 8, false, 1));
+							AnticlimacticLagacy.packetInstance.send(PacketDistributor.NEAR.with(() -> new PacketDistributor.TargetPoint(player.getX(), player.getY(), player.getZ(), 32, player.level.dimension())), new PacketWitherParticles(player.getX(), player.getY(0.25D), player.getZ(), 8, false, 1));
 						}
 
 						data.setFireImmunityTimer(data.getFireImmunityTimer()+200);
@@ -1615,19 +1615,19 @@ public class AnticlimacticEventHandler {
 			 * main hand.
 			 */
 
-			if (player.getMainHandItem() != null && player.getMainHandItem().getItem() == anticlimacticlagacy.extradimensionalEye)
+			if (player.getMainHandItem() != null && player.getMainHandItem().getItem() == AnticlimacticLagacy.extradimensionalEye)
 				if (ItemNBTHelper.verifyExistance(player.getMainHandItem(), "BoundDimension"))
 					if (ItemNBTHelper.getString(player.getMainHandItem(), "BoundDimension", "minecraft:overworld").equals(event.getEntityLiving().level.dimension().location().toString())) {
 						event.setCanceled(true);
 						ItemStack stack = player.getMainHandItem();
 
-						anticlimacticlagacy.packetInstance.send(PacketDistributor.NEAR.with(() -> new PacketDistributor.TargetPoint(event.getEntityLiving().getX(), event.getEntityLiving().getY(), event.getEntityLiving().getZ(), 128, event.getEntityLiving().level.dimension())), new PacketPortalParticles(event.getEntityLiving().getX(), event.getEntityLiving().getY() + (event.getEntityLiving().getBbHeight() / 2), event.getEntityLiving().getZ(), 96, 1.5D, false));
+						AnticlimacticLagacy.packetInstance.send(PacketDistributor.NEAR.with(() -> new PacketDistributor.TargetPoint(event.getEntityLiving().getX(), event.getEntityLiving().getY(), event.getEntityLiving().getZ(), 128, event.getEntityLiving().level.dimension())), new PacketPortalParticles(event.getEntityLiving().getX(), event.getEntityLiving().getY() + (event.getEntityLiving().getBbHeight() / 2), event.getEntityLiving().getZ(), 96, 1.5D, false));
 
 						event.getEntityLiving().level.playSound(null, event.getEntityLiving().blockPosition(), SoundEvents.ENDERMAN_TELEPORT, SoundSource.PLAYERS, 1.0F, (float) (0.8F + (Math.random() * 0.2)));
 						event.getEntityLiving().teleportTo(ItemNBTHelper.getDouble(stack, "BoundX", 0D), ItemNBTHelper.getDouble(stack, "BoundY", 0D), ItemNBTHelper.getDouble(stack, "BoundZ", 0D));
 						event.getEntityLiving().level.playSound(null, event.getEntityLiving().blockPosition(), SoundEvents.ENDERMAN_TELEPORT, SoundSource.PLAYERS, 1.0F, (float) (0.8F + (Math.random() * 0.2)));
 
-						anticlimacticlagacy.packetInstance.send(PacketDistributor.NEAR.with(() -> new PacketDistributor.TargetPoint(event.getEntityLiving().getX(), event.getEntityLiving().getY(), event.getEntityLiving().getZ(), 128, event.getEntityLiving().level.dimension())), new PacketRecallParticles(event.getEntityLiving().getX(), event.getEntityLiving().getY() + (event.getEntityLiving().getBbHeight() / 2), event.getEntityLiving().getZ(), 48, false));
+						AnticlimacticLagacy.packetInstance.send(PacketDistributor.NEAR.with(() -> new PacketDistributor.TargetPoint(event.getEntityLiving().getX(), event.getEntityLiving().getY(), event.getEntityLiving().getZ(), 128, event.getEntityLiving().level.dimension())), new PacketRecallParticles(event.getEntityLiving().getX(), event.getEntityLiving().getY() + (event.getEntityLiving().getBbHeight() / 2), event.getEntityLiving().getZ(), 48, false));
 
 						if (!player.getAbilities().instabuild) {
 							stack.shrink(1);
@@ -1696,7 +1696,7 @@ public class AnticlimacticEventHandler {
 		if (event.getSource().getDirectEntity() instanceof Player && !event.getSource().getDirectEntity().level.isClientSide) {
 			Player player = (Player) event.getSource().getDirectEntity();
 
-			if (anticlimacticlagacy.anticlimacticAmulet.ifHasColor(player, AmuletColor.BLACK)) {
+			if (AnticlimacticLagacy.anticlimacticAmulet.ifHasColor(player, AmuletColor.BLACK)) {
 				player.heal(event.getAmount() * 0.1F);
 			}
 
@@ -1722,8 +1722,8 @@ public class AnticlimacticEventHandler {
 			 * Handler for stripping away Blazing Strength.
 			 */
 
-			if (player.hasEffect(anticlimacticlagacy.blazingStrengthEffect)) {
-				player.removeEffect(anticlimacticlagacy.blazingStrengthEffect);
+			if (player.hasEffect(AnticlimacticLagacy.blazingStrengthEffect)) {
+				player.removeEffect(AnticlimacticLagacy.blazingStrengthEffect);
 			}
 		}
 	}
@@ -1791,7 +1791,7 @@ public class AnticlimacticEventHandler {
 			 * Handler for applying Withering to victims of bearer of the Void Pearl.
 			 */
 
-			if (SuperpositionHandler.hasCurio(player, anticlimacticlagacy.voidPearl)) {
+			if (SuperpositionHandler.hasCurio(player, AnticlimacticLagacy.voidPearl)) {
 				event.getEntityLiving().addEffect(new MobEffectInstance(MobEffects.WITHER, VoidPearl.witheringTime.getValue(), VoidPearl.witheringLevel.getValue(), false, true));
 			}
 
@@ -1884,7 +1884,7 @@ public class AnticlimacticEventHandler {
 					ItemSpellstoneCurio advancedCurio = (ItemSpellstoneCurio) advancedCurioStack.getItem();
 					Mob trueSource = event.getSource().getEntity() instanceof Mob ? (Mob)event.getSource().getEntity() : null;
 
-					if (event.getSource().msgId.startsWith("explosion") && advancedCurio == anticlimacticlagacy.golemHeart && SuperpositionHandler.hasAnyArmor(player)) {
+					if (event.getSource().msgId.startsWith("explosion") && advancedCurio == AnticlimacticLagacy.golemHeart && SuperpositionHandler.hasAnyArmor(player)) {
 						continue;
 					} else if (advancedCurio == magmaHeart && trueSource != null && (trueSource.getMobType() == MobType.WATER || trueSource instanceof Drowned)) {
 						event.setAmount(event.getAmount() * 2F);
@@ -1901,7 +1901,7 @@ public class AnticlimacticEventHandler {
 			}
 
 			if (event.getSource().msgId == DamageSource.FALL.msgId) {
-				if (anticlimacticlagacy.anticlimacticAmulet.ifHasColor(player, AmuletColor.MAGENTA)) {
+				if (AnticlimacticLagacy.anticlimacticAmulet.ifHasColor(player, AmuletColor.MAGENTA)) {
 					event.setAmount(event.getAmount() - 2.0f);
 				}
 			}
@@ -1910,8 +1910,8 @@ public class AnticlimacticEventHandler {
 			 * Handler for damaging feedback of Blazing Core.
 			 */
 
-			if (SuperpositionHandler.hasCurio(player, anticlimacticlagacy.magmaHeart)) {
-				if (event.getSource().getEntity() instanceof LivingEntity && anticlimacticlagacy.magmaHeart.nemesisList.contains(event.getSource().msgId)) {
+			if (SuperpositionHandler.hasCurio(player, AnticlimacticLagacy.magmaHeart)) {
+				if (event.getSource().getEntity() instanceof LivingEntity && AnticlimacticLagacy.magmaHeart.nemesisList.contains(event.getSource().msgId)) {
 					LivingEntity attacker = (LivingEntity) event.getSource().getEntity();
 					if (!attacker.fireImmune()) {
 						attacker.hurt(new EntityDamageSource(DamageSource.ON_FIRE.msgId, player), (float) MagmaHeart.damageFeedback.getValue());
@@ -1921,7 +1921,7 @@ public class AnticlimacticEventHandler {
 
 			}
 
-			if (SuperpositionHandler.hasCurio(player, anticlimacticlagacy.berserkEmblem)) {
+			if (SuperpositionHandler.hasCurio(player, AnticlimacticLagacy.berserkEmblem)) {
 				event.setAmount(event.getAmount() * (1.0F - (SuperpositionHandler.getMissingHealthPool(player)*(float)BerserkEmblem.damageResistance.getValue())));
 			}
 
@@ -1929,7 +1929,7 @@ public class AnticlimacticEventHandler {
 			 * Handler for doubling damage on bearers of Ring of the Seven Curses.
 			 */
 
-			if (SuperpositionHandler.hasCurio(player, anticlimacticlagacy.cursedRing)) {
+			if (SuperpositionHandler.hasCurio(player, AnticlimacticLagacy.cursedRing)) {
 				event.setAmount(event.getAmount()*CursedRing.painMultiplier.getValue().asModifier());
 			}
 
@@ -1960,7 +1960,7 @@ public class AnticlimacticEventHandler {
 				 * Handler for damage bonuses of Charm of Monster Slayer.
 				 */
 
-				if (SuperpositionHandler.hasCurio(player, anticlimacticlagacy.monsterCharm)) {
+				if (SuperpositionHandler.hasCurio(player, AnticlimacticLagacy.monsterCharm)) {
 					if (monster.isInvertedHealAndHarm()) {
 						event.setAmount(event.getAmount() * MonsterCharm.undeadDamageBonus.getValue().asModifier(true));
 					} else if (monster.isAggressive() || monster instanceof Creeper) {
@@ -2000,11 +2000,11 @@ public class AnticlimacticEventHandler {
 
 			float damageBoost = 0F;
 
-			if (SuperpositionHandler.hasCurio(player, anticlimacticlagacy.berserkEmblem)) {
+			if (SuperpositionHandler.hasCurio(player, AnticlimacticLagacy.berserkEmblem)) {
 				damageBoost += event.getAmount()*(SuperpositionHandler.getMissingHealthPool(player)*(float)BerserkEmblem.attackDamage.getValue());
 			}
 
-			if (SuperpositionHandler.hasCurio(player, anticlimacticlagacy.cursedScroll)) {
+			if (SuperpositionHandler.hasCurio(player, AnticlimacticLagacy.cursedScroll)) {
 				damageBoost += event.getAmount()*(CursedScroll.damageBoost.getValue().asModifier()*SuperpositionHandler.getCurseAmount(player));
 			}
 
@@ -2028,10 +2028,10 @@ public class AnticlimacticEventHandler {
 			if (pet.isTame()) {
 				LivingEntity owner = pet.getOwner();
 
-				if (owner instanceof Player && SuperpositionHandler.hasItem((Player)owner, anticlimacticlagacy.hunterGuide)) {
+				if (owner instanceof Player && SuperpositionHandler.hasItem((Player)owner, AnticlimacticLagacy.hunterGuide)) {
 					if (owner.level == pet.level && owner.distanceTo(pet) <= HunterGuide.effectiveDistance.getValue()) {
 						event.setCanceled(true);
-						owner.hurt(event.getSource(), SuperpositionHandler.hasItem((Player)owner, anticlimacticlagacy.animalGuide) ? (event.getAmount()*HunterGuide.synergyDamageReduction.getValue().asModifierInverted()) : event.getAmount());
+						owner.hurt(event.getSource(), SuperpositionHandler.hasItem((Player)owner, AnticlimacticLagacy.animalGuide) ? (event.getAmount()*HunterGuide.synergyDamageReduction.getValue().asModifierInverted()) : event.getAmount());
 					}
 				}
 			}
@@ -2075,7 +2075,7 @@ public class AnticlimacticEventHandler {
 		 */
 
 		/*
-		if (SuperpositionHandler.hasCurio(player, anticlimacticlagacy.cursedRing) & !player.world.isRemote) {
+		if (SuperpositionHandler.hasCurio(player, AnticlimacticLagacy.cursedRing) & !player.world.isRemote) {
 			List<ItemStack> bigInventoryList = new ArrayList<>();
 
 			for (int i = 0; i < 3; i++) {
@@ -2131,7 +2131,7 @@ public class AnticlimacticEventHandler {
 
 		 */
 
-		anticlimacticlagacy.soulCrystal.updatePlayerSoulMap(newPlayer);
+		AnticlimacticLagacy.soulCrystal.updatePlayerSoulMap(newPlayer);
 	}
 	@SubscribeEvent
 	public void entityJoinWorld(EntityJoinWorldEvent event) {
@@ -2139,7 +2139,7 @@ public class AnticlimacticEventHandler {
 
 		if (entity instanceof ServerPlayer) {
 			ServerPlayer player = (ServerPlayer) entity;
-			anticlimacticlagacy.soulCrystal.updatePlayerSoulMap(player);
+			AnticlimacticLagacy.soulCrystal.updatePlayerSoulMap(player);
 			TransientPlayerData.get(player).syncToPlayer();
 		}
 
@@ -2167,12 +2167,12 @@ public class AnticlimacticEventHandler {
 				event.setCanceled(true);
 			}
 		} else if (event.getEntityLiving() instanceof Monster) {
-			if (player != null && SuperpositionHandler.hasCurio(player, anticlimacticlagacy.monsterCharm)) {
-				bonusExp += event.getOriginalExperience() * (anticlimacticlagacy.monsterCharm.bonusXPModifier-1.0F);
+			if (player != null && SuperpositionHandler.hasCurio(player, AnticlimacticLagacy.monsterCharm)) {
+				bonusExp += event.getOriginalExperience() * (AnticlimacticLagacy.monsterCharm.bonusXPModifier-1.0F);
 			}
 		}
 
-		if (player != null && SuperpositionHandler.hasCurio(player, anticlimacticlagacy.cursedRing)) {
+		if (player != null && SuperpositionHandler.hasCurio(player, AnticlimacticLagacy.cursedRing)) {
 			bonusExp += event.getOriginalExperience() * CursedRing.experienceBonus.getValue().asMultiplier();
 		}
 
@@ -2201,7 +2201,7 @@ public class AnticlimacticEventHandler {
 
 			if (hadEscapeScroll) {
 				player.level.playSound(null, player.blockPosition(), SoundEvents.ENDERMAN_TELEPORT, SoundSource.PLAYERS, 1.0F, (float) (0.8F + (Math.random() * 0.2)));
-				anticlimacticlagacy.packetInstance.send(PacketDistributor.NEAR.with(() -> new PacketDistributor.TargetPoint(player.getX(), player.getY(), player.getZ(), 128, player.level.dimension())), new PacketPortalParticles(player.getX(), player.getY() + (player.getBbHeight() / 2), player.getZ(), 100, 1.25F, false));
+				AnticlimacticLagacy.packetInstance.send(PacketDistributor.NEAR.with(() -> new PacketDistributor.TargetPoint(player.getX(), player.getY(), player.getZ(), 128, player.level.dimension())), new PacketPortalParticles(player.getX(), player.getY() + (player.getBbHeight() / 2), player.getZ(), 100, 1.25F, false));
 
 				for (ItemEntity dropIt : event.getDrops()) {
 					ItemEntity alternativeDrop = new ItemEntity(dimPoint.world, dimPoint.posX, dimPoint.posY, dimPoint.posZ, dropIt.getItem());
@@ -2214,16 +2214,16 @@ public class AnticlimacticEventHandler {
 				event.getDrops().clear();
 
 				dimPoint.world.playSound(null, new BlockPos(dimPoint.posX, dimPoint.posY, dimPoint.posZ), SoundEvents.ENDERMAN_TELEPORT, SoundSource.PLAYERS, 1.0F, (float) (0.8F + (Math.random() * 0.2)));
-				anticlimacticlagacy.packetInstance.send(PacketDistributor.NEAR.with(() -> new PacketDistributor.TargetPoint(dimPoint.posX, dimPoint.posY, dimPoint.posZ, 128, dimPoint.world.dimension())), new PacketRecallParticles(dimPoint.posX, dimPoint.posY, dimPoint.posZ, 48, false));
+				AnticlimacticLagacy.packetInstance.send(PacketDistributor.NEAR.with(() -> new PacketDistributor.TargetPoint(dimPoint.posX, dimPoint.posY, dimPoint.posZ, 128, dimPoint.world.dimension())), new PacketRecallParticles(dimPoint.posX, dimPoint.posY, dimPoint.posZ, 48, false));
 			}
 
-			if (this.hadAnticlimacticAmulet(player) && !event.getDrops().isEmpty() && anticlimacticlagacy.anticlimacticAmulet.isVesselEnabled()) {
-				ItemStack soulCrystal = SuperpositionHandler.shouldPlayerDropSoulCrystal(player, this.hadCursedRing(player)) ? anticlimacticlagacy.soulCrystal.createCrystalFrom(player) : null;
-				ItemStack storageCrystal = anticlimacticlagacy.storageCrystal.storeDropsOnCrystal(event.getDrops(), player, soulCrystal);
+			if (this.hadAnticlimacticAmulet(player) && !event.getDrops().isEmpty() && AnticlimacticLagacy.anticlimacticAmulet.isVesselEnabled()) {
+				ItemStack soulCrystal = SuperpositionHandler.shouldPlayerDropSoulCrystal(player, this.hadCursedRing(player)) ? AnticlimacticLagacy.soulCrystal.createCrystalFrom(player) : null;
+				ItemStack storageCrystal = AnticlimacticLagacy.storageCrystal.storeDropsOnCrystal(event.getDrops(), player, soulCrystal);
 				PermanentItemEntity droppedStorageCrystal = new PermanentItemEntity(dimPoint.world, dimPoint.getPosX(), dimPoint.getPosY() + 1.5, dimPoint.getPosZ(), storageCrystal);
 				droppedStorageCrystal.setOwnerId(player.getUUID());
 				dimPoint.world.addFreshEntity(droppedStorageCrystal);
-				anticlimacticlagacy.logger.info("Summoned Extradimensional Storage Crystal for " + player.getGameProfile().getName() + " at X: " + dimPoint.getPosX() + ", Y: " + dimPoint.getPosY() + ", Z: " + dimPoint.getPosZ());
+				AnticlimacticLagacy.logger.info("Summoned Extradimensional Storage Crystal for " + player.getGameProfile().getName() + " at X: " + dimPoint.getPosX() + ", Y: " + dimPoint.getPosY() + ", Z: " + dimPoint.getPosZ());
 				event.getDrops().clear();
 
 				if (soulCrystal != null) {
@@ -2231,11 +2231,11 @@ public class AnticlimacticEventHandler {
 				}
 
 			} else if (SuperpositionHandler.shouldPlayerDropSoulCrystal(player, this.hadCursedRing(player))) {
-				ItemStack soulCrystal = anticlimacticlagacy.soulCrystal.createCrystalFrom(player);
+				ItemStack soulCrystal = AnticlimacticLagacy.soulCrystal.createCrystalFrom(player);
 				PermanentItemEntity droppedSoulCrystal = new PermanentItemEntity(dimPoint.world, dimPoint.getPosX(), dimPoint.getPosY() + 1.5, dimPoint.getPosZ(), soulCrystal);
 				droppedSoulCrystal.setOwnerId(player.getUUID());
 				dimPoint.world.addFreshEntity(droppedSoulCrystal);
-				anticlimacticlagacy.logger.info("Teared Soul Crystal from " + player.getGameProfile().getName() + " at X: " + dimPoint.getPosX() + ", Y: " + dimPoint.getPosY() + ", Z: " + dimPoint.getPosZ());
+				AnticlimacticLagacy.logger.info("Teared Soul Crystal from " + player.getGameProfile().getName() + " at X: " + dimPoint.getPosX() + ", Y: " + dimPoint.getPosY() + ", Z: " + dimPoint.getPosZ());
 
 				droppedCrystal = true;
 			}
@@ -2260,7 +2260,7 @@ public class AnticlimacticEventHandler {
 
 		if (event.getEntityLiving().getClass() == Skeleton.class && event.isRecentlyHit() && event.getSource().getEntity() != null && event.getSource().getEntity() instanceof Player) {
 			ItemStack weap = ((Player) event.getSource().getEntity()).getMainHandItem();
-			if (weap != null && weap.getItem() == anticlimacticlagacy.forbiddenAxe && !SuperpositionHandler.ifDroplistContainsItem(event.getDrops(), Items.SKELETON_SKULL) && this.theySeeMeRollin(event.getLootingLevel())) {
+			if (weap != null && weap.getItem() == AnticlimacticLagacy.forbiddenAxe && !SuperpositionHandler.ifDroplistContainsItem(event.getDrops(), Items.SKELETON_SKULL) && this.theySeeMeRollin(event.getLootingLevel())) {
 				this.addDrop(event, new ItemStack(Items.SKELETON_SKULL, 1));
 
 				if (event.getSource().getEntity() instanceof ServerPlayer) {
@@ -2269,7 +2269,7 @@ public class AnticlimacticEventHandler {
 			}
 		} else if (event.getEntityLiving().getClass() == WitherSkeleton.class && event.isRecentlyHit() && event.getSource().getEntity() != null && event.getSource().getEntity() instanceof Player) {
 			ItemStack weap = ((Player) event.getSource().getEntity()).getMainHandItem();
-			if (weap != null && weap.getItem() == anticlimacticlagacy.forbiddenAxe) {
+			if (weap != null && weap.getItem() == AnticlimacticLagacy.forbiddenAxe) {
 
 				if (!SuperpositionHandler.ifDroplistContainsItem(event.getDrops(), Items.WITHER_SKELETON_SKULL) && this.theySeeMeRollin(event.getLootingLevel())) {
 					this.addDrop(event, new ItemStack(Items.WITHER_SKELETON_SKULL, 1));
@@ -2281,7 +2281,7 @@ public class AnticlimacticEventHandler {
 			}
 		} else if (event.getEntityLiving().getClass() == Zombie.class && event.isRecentlyHit() && event.getSource().getEntity() != null && event.getSource().getEntity() instanceof Player) {
 			ItemStack weap = ((Player) event.getSource().getEntity()).getMainHandItem();
-			if (weap != null && weap.getItem() == anticlimacticlagacy.forbiddenAxe && !SuperpositionHandler.ifDroplistContainsItem(event.getDrops(), Items.ZOMBIE_HEAD) && this.theySeeMeRollin(event.getLootingLevel())) {
+			if (weap != null && weap.getItem() == AnticlimacticLagacy.forbiddenAxe && !SuperpositionHandler.ifDroplistContainsItem(event.getDrops(), Items.ZOMBIE_HEAD) && this.theySeeMeRollin(event.getLootingLevel())) {
 				this.addDrop(event, new ItemStack(Items.ZOMBIE_HEAD, 1));
 
 				if (event.getSource().getEntity() instanceof ServerPlayer) {
@@ -2290,7 +2290,7 @@ public class AnticlimacticEventHandler {
 			}
 		} else if (event.getEntityLiving().getClass() == Creeper.class && event.isRecentlyHit() && event.getSource().getEntity() != null && event.getSource().getEntity() instanceof Player) {
 			ItemStack weap = ((Player) event.getSource().getEntity()).getMainHandItem();
-			if (weap != null && weap.getItem() == anticlimacticlagacy.forbiddenAxe && !SuperpositionHandler.ifDroplistContainsItem(event.getDrops(), Items.CREEPER_HEAD) && this.theySeeMeRollin(event.getLootingLevel())) {
+			if (weap != null && weap.getItem() == AnticlimacticLagacy.forbiddenAxe && !SuperpositionHandler.ifDroplistContainsItem(event.getDrops(), Items.CREEPER_HEAD) && this.theySeeMeRollin(event.getLootingLevel())) {
 				this.addDrop(event, new ItemStack(Items.CREEPER_HEAD, 1));
 
 				if (event.getSource().getEntity() instanceof ServerPlayer) {
@@ -2299,7 +2299,7 @@ public class AnticlimacticEventHandler {
 			}
 		} else if (event.getEntityLiving().getClass() == EnderDragon.class && event.isRecentlyHit() && event.getSource().getEntity() != null && event.getSource().getEntity() instanceof Player) {
 			ItemStack weap = ((Player) event.getSource().getEntity()).getMainHandItem();
-			if (weap != null && weap.getItem() == anticlimacticlagacy.forbiddenAxe && !SuperpositionHandler.ifDroplistContainsItem(event.getDrops(), Items.DRAGON_HEAD) && this.theySeeMeRollin(event.getLootingLevel())) {
+			if (weap != null && weap.getItem() == AnticlimacticLagacy.forbiddenAxe && !SuperpositionHandler.ifDroplistContainsItem(event.getDrops(), Items.DRAGON_HEAD) && this.theySeeMeRollin(event.getLootingLevel())) {
 				this.addDrop(event, new ItemStack(Items.DRAGON_HEAD, 1));
 
 				if (event.getSource().getEntity() instanceof ServerPlayer) {
@@ -2324,7 +2324,7 @@ public class AnticlimacticEventHandler {
 				return;
 
 			if (killed.getClass() == Shulker.class) {
-				this.addDropWithChance(event, new ItemStack(anticlimacticlagacy.astralDust, 1), 20);
+				this.addDropWithChance(event, new ItemStack(AnticlimacticLagacy.astralDust, 1), 20);
 			} else if (killed.getClass() == Skeleton.class || killed.getClass() == Stray.class) {
 				this.addDrop(event, this.getRandomSizeStack(Items.ARROW, 3, 15));
 			} else if (killed.getClass() == Zombie.class || killed.getClass() == Husk.class) {
@@ -2347,7 +2347,7 @@ public class AnticlimacticEventHandler {
 				this.addDropWithChance(event, this.getRandomSizeStack(Items.ENDER_EYE, 1, 2), 40);
 			} else if (killed.getClass() == Blaze.class) {
 				this.addDrop(event, this.getRandomSizeStack(Items.BLAZE_POWDER, 0, 5));
-				//this.addDropWithChance(event, new ItemStack(anticlimacticlagacy.livingFlame, 1), 15);
+				//this.addDropWithChance(event, new ItemStack(AnticlimacticLagacy.livingFlame, 1), 15);
 			} else if (killed.getClass() == ZombifiedPiglin.class) {
 				this.addDropWithChance(event, this.getRandomSizeStack(Items.GOLD_INGOT, 1, 3), 40);
 				this.addDropWithChance(event, this.getRandomSizeStack(Items.GLOWSTONE_DUST, 1, 7), 30);
@@ -2447,65 +2447,65 @@ public class AnticlimacticEventHandler {
 		underwaterRuins.add(BuiltInLootTables.UNDERWATER_RUIN_BIG);
 		underwaterRuins.add(BuiltInLootTables.UNDERWATER_RUIN_SMALL);
 
-		LootPool overworldLiterature = !OmniconfigHandler.isItemEnabled(anticlimacticlagacy.overworldRevelationTome) ? null :
+		LootPool overworldLiterature = !OmniconfigHandler.isItemEnabled(AnticlimacticLagacy.overworldRevelationTome) ? null :
 			SuperpositionHandler.constructLootPool("overworldLiterature", -7F, 2F,
-					SuperpositionHandler.createOptionalLootEntry(anticlimacticlagacy.overworldRevelationTome, 100).apply(LootFunctionRevelation.of(UniformGenerator.between(1, 3), UniformGenerator.between(50, 500))));
+					SuperpositionHandler.createOptionalLootEntry(AnticlimacticLagacy.overworldRevelationTome, 100).apply(LootFunctionRevelation.of(UniformGenerator.between(1, 3), UniformGenerator.between(50, 500))));
 
-		LootPool netherLiterature = !OmniconfigHandler.isItemEnabled(anticlimacticlagacy.netherRevelationTome) ? null :
+		LootPool netherLiterature = !OmniconfigHandler.isItemEnabled(AnticlimacticLagacy.netherRevelationTome) ? null :
 			SuperpositionHandler.constructLootPool("netherLiterature", -7F, 2F,
-					SuperpositionHandler.createOptionalLootEntry(anticlimacticlagacy.netherRevelationTome, 100).apply(LootFunctionRevelation.of(UniformGenerator.between(1, 3), UniformGenerator.between(100, 700))));
+					SuperpositionHandler.createOptionalLootEntry(AnticlimacticLagacy.netherRevelationTome, 100).apply(LootFunctionRevelation.of(UniformGenerator.between(1, 3), UniformGenerator.between(100, 700))));
 
-		LootPool endLiterature = !OmniconfigHandler.isItemEnabled(anticlimacticlagacy.endRevelationTome) ? null :
+		LootPool endLiterature = !OmniconfigHandler.isItemEnabled(AnticlimacticLagacy.endRevelationTome) ? null :
 			SuperpositionHandler.constructLootPool("endLiterature", -7F, 2F,
-					SuperpositionHandler.createOptionalLootEntry(anticlimacticlagacy.endRevelationTome, 100).apply(LootFunctionRevelation.of(UniformGenerator.between(1, 4), UniformGenerator.between(200, 1000))));
+					SuperpositionHandler.createOptionalLootEntry(AnticlimacticLagacy.endRevelationTome, 100).apply(LootFunctionRevelation.of(UniformGenerator.between(1, 4), UniformGenerator.between(200, 1000))));
 
 		/*
 		 * Handlers for adding spellstones to dungeon loot.
 		 */
 
 		if (SuperpositionHandler.getMergedAir$EarthenDungeons().contains(event.getName())) {
-			LootPool poolSpellstones = SuperpositionHandler.constructLootPool("spellstones", -12F, 1F, SuperpositionHandler.createOptionalLootEntry(anticlimacticlagacy.golemHeart, 35), SuperpositionHandler.createOptionalLootEntry(anticlimacticlagacy.angelBlessing, 65));
+			LootPool poolSpellstones = SuperpositionHandler.constructLootPool("spellstones", -12F, 1F, SuperpositionHandler.createOptionalLootEntry(AnticlimacticLagacy.golemHeart, 35), SuperpositionHandler.createOptionalLootEntry(AnticlimacticLagacy.angelBlessing, 65));
 
 			LootTable modified = event.getTable();
 			modified.addPool(poolSpellstones);
 			event.setTable(modified);
 		} else if (SuperpositionHandler.getMergedEnder$EarthenDungeons().contains(event.getName())) {
-			LootPool poolSpellstones = SuperpositionHandler.constructLootPool("spellstones", -10F, 1F, SuperpositionHandler.createOptionalLootEntry(anticlimacticlagacy.eyeOfNebula, 35), SuperpositionHandler.createOptionalLootEntry(anticlimacticlagacy.golemHeart, 65));
+			LootPool poolSpellstones = SuperpositionHandler.constructLootPool("spellstones", -10F, 1F, SuperpositionHandler.createOptionalLootEntry(AnticlimacticLagacy.eyeOfNebula, 35), SuperpositionHandler.createOptionalLootEntry(AnticlimacticLagacy.golemHeart, 65));
 
 			LootTable modified = event.getTable();
 			modified.addPool(poolSpellstones);
 			event.setTable(modified);
 
 		} else if (SuperpositionHandler.getAirDungeons().contains(event.getName())) {
-			LootPool poolSpellstones = SuperpositionHandler.constructLootPool("spellstones", -10F, 1F, SuperpositionHandler.createOptionalLootEntry(anticlimacticlagacy.angelBlessing, 100));
+			LootPool poolSpellstones = SuperpositionHandler.constructLootPool("spellstones", -10F, 1F, SuperpositionHandler.createOptionalLootEntry(AnticlimacticLagacy.angelBlessing, 100));
 
 			LootTable modified = event.getTable();
 			modified.addPool(poolSpellstones);
 			event.setTable(modified);
 
 		} else if (SuperpositionHandler.getEarthenDungeons().contains(event.getName())) {
-			LootPool poolSpellstones = SuperpositionHandler.constructLootPool("spellstones", -20F, 1F, SuperpositionHandler.createOptionalLootEntry(anticlimacticlagacy.golemHeart, 100));
+			LootPool poolSpellstones = SuperpositionHandler.constructLootPool("spellstones", -20F, 1F, SuperpositionHandler.createOptionalLootEntry(AnticlimacticLagacy.golemHeart, 100));
 
 			LootTable modified = event.getTable();
 			modified.addPool(poolSpellstones);
 			event.setTable(modified);
 
 		} else if (SuperpositionHandler.getNetherDungeons().contains(event.getName())) {
-			LootPool poolSpellstones = SuperpositionHandler.constructLootPool("spellstones", -24F, 1F, SuperpositionHandler.createOptionalLootEntry(anticlimacticlagacy.magmaHeart, 100));
+			LootPool poolSpellstones = SuperpositionHandler.constructLootPool("spellstones", -24F, 1F, SuperpositionHandler.createOptionalLootEntry(AnticlimacticLagacy.magmaHeart, 100));
 
 			LootTable modified = event.getTable();
 			modified.addPool(poolSpellstones);
 			event.setTable(modified);
 
 		} else if (SuperpositionHandler.getWaterDungeons().contains(event.getName())) {
-			LootPool poolSpellstones = SuperpositionHandler.constructLootPool("spellstones", -20F, 1F, SuperpositionHandler.createOptionalLootEntry(anticlimacticlagacy.oceanStone, 100));
+			LootPool poolSpellstones = SuperpositionHandler.constructLootPool("spellstones", -20F, 1F, SuperpositionHandler.createOptionalLootEntry(AnticlimacticLagacy.oceanStone, 100));
 
 			LootTable modified = event.getTable();
 			modified.addPool(poolSpellstones);
 			event.setTable(modified);
 
 		} else if (SuperpositionHandler.getEnderDungeons().contains(event.getName())) {
-			LootPool poolSpellstones = SuperpositionHandler.constructLootPool("spellstones", -12F, 1F, SuperpositionHandler.createOptionalLootEntry(anticlimacticlagacy.eyeOfNebula, 90), SuperpositionHandler.createOptionalLootEntry(anticlimacticlagacy.voidPearl, 10));
+			LootPool poolSpellstones = SuperpositionHandler.constructLootPool("spellstones", -12F, 1F, SuperpositionHandler.createOptionalLootEntry(AnticlimacticLagacy.eyeOfNebula, 90), SuperpositionHandler.createOptionalLootEntry(AnticlimacticLagacy.voidPearl, 10));
 
 			LootTable modified = event.getTable();
 			modified.addPool(poolSpellstones);
@@ -2524,20 +2524,20 @@ public class AnticlimacticEventHandler {
 					SuperpositionHandler.itemEntryBuilderED(Items.IRON_SWORD, 10, 20F, 30F, 1.0F, 0.8F),
 					SuperpositionHandler.itemEntryBuilderED(Items.IRON_SHOVEL, 10, 20F, 30F, 1.0F, 0.8F),
 					SuperpositionHandler.itemEntryBuilderED(Items.BOW, 10, 20F, 30F, 1.0F, 0.8F),
-					SuperpositionHandler.createOptionalLootEntry(anticlimacticlagacy.ironRing, 20),
-					LootItem.lootTableItem(anticlimacticlagacy.commonPotionBase).setWeight(20).apply(SetNbtFunction.setTag(PotionHelper.createAdvancedPotion(anticlimacticlagacy.commonPotionBase, anticlimacticlagacy.HASTE).getTag())),
-					SuperpositionHandler.createOptionalLootEntry(anticlimacticlagacy.magnetRing, 8),
-					SuperpositionHandler.createOptionalLootEntry(anticlimacticlagacy.unholyGrail, 1),
-					SuperpositionHandler.createOptionalLootEntry(anticlimacticlagacy.loreInscriber, 5),
+					SuperpositionHandler.createOptionalLootEntry(AnticlimacticLagacy.ironRing, 20),
+					LootItem.lootTableItem(AnticlimacticLagacy.commonPotionBase).setWeight(20).apply(SetNbtFunction.setTag(PotionHelper.createAdvancedPotion(AnticlimacticLagacy.commonPotionBase, AnticlimacticLagacy.HASTE).getTag())),
+					SuperpositionHandler.createOptionalLootEntry(AnticlimacticLagacy.magnetRing, 8),
+					SuperpositionHandler.createOptionalLootEntry(AnticlimacticLagacy.unholyGrail, 1),
+					SuperpositionHandler.createOptionalLootEntry(AnticlimacticLagacy.loreInscriber, 5),
 					// TODO Maybe reconsider
-					// SuperpositionHandler.createOptionalLootEntry(anticlimacticlagacy.oblivionStone, 4),
+					// SuperpositionHandler.createOptionalLootEntry(AnticlimacticLagacy.oblivionStone, 4),
 					LootItem.lootTableItem(Items.CLOCK).setWeight(10),
 					LootItem.lootTableItem(Items.COMPASS).setWeight(10),
 					LootItem.lootTableItem(Items.EMERALD).setWeight(20).apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0F, 4F))),
 					LootItem.lootTableItem(Items.SLIME_BALL).setWeight(20).apply(SetItemCountFunction.setCount(UniformGenerator.between(2.0F, 10F))),
 					LootItem.lootTableItem(Items.LEATHER).setWeight(35).apply(SetItemCountFunction.setCount(UniformGenerator.between(3.0F, 8F))),
 					LootItem.lootTableItem(Items.PUMPKIN_PIE).setWeight(25).apply(SetItemCountFunction.setCount(UniformGenerator.between(4.0F, 16F))),
-					SuperpositionHandler.getWaterDungeons().contains(event.getName()) || event.getName().equals(BuiltInLootTables.PILLAGER_OUTPOST) ? null : SuperpositionHandler.createOptionalLootEntry(anticlimacticlagacy.earthHeart, 7)
+					SuperpositionHandler.getWaterDungeons().contains(event.getName()) || event.getName().equals(BuiltInLootTables.PILLAGER_OUTPOST) ? null : SuperpositionHandler.createOptionalLootEntry(AnticlimacticLagacy.earthHeart, 7)
 					);
 
 			LootTable modified = event.getTable();
@@ -2560,7 +2560,7 @@ public class AnticlimacticEventHandler {
 					SuperpositionHandler.itemEntryBuilderED(Items.GOLDEN_AXE, 10, 25F, 30F, 1.0F, 1.0F),
 					SuperpositionHandler.itemEntryBuilderED(Items.GOLDEN_SWORD, 10, 25F, 30F, 1.0F, 1.0F),
 					SuperpositionHandler.itemEntryBuilderED(Items.GOLDEN_SHOVEL, 10, 25F, 30F, 1.0F, 1.0F),
-					SuperpositionHandler.createOptionalLootEntry(anticlimacticlagacy.oblivionStone, 8),
+					SuperpositionHandler.createOptionalLootEntry(AnticlimacticLagacy.oblivionStone, 8),
 					LootItem.lootTableItem(Items.EMERALD).setWeight(30).apply(SetItemCountFunction.setCount(UniformGenerator.between(2.0F, 7F))),
 					LootItem.lootTableItem(Items.WITHER_ROSE).setWeight(25).apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0F, 4F))),
 					LootItem.lootTableItem(Items.GHAST_TEAR).setWeight(10).apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0F, 2F))),
@@ -2575,7 +2575,7 @@ public class AnticlimacticEventHandler {
 				modified.addPool(epic);
 			} else {
 				LootPool scroll = SuperpositionHandler.constructLootPool("darkest_scroll", 0F, 1F,
-						LootItem.lootTableItem(anticlimacticlagacy.darkestScroll).setWeight(100).apply(SetItemCountFunction.setCount(UniformGenerator.between(1F, 1F)))
+						LootItem.lootTableItem(AnticlimacticLagacy.darkestScroll).setWeight(100).apply(SetItemCountFunction.setCount(UniformGenerator.between(1F, 1F)))
 						);
 
 				modified.addPool(scroll);
@@ -2596,12 +2596,12 @@ public class AnticlimacticEventHandler {
 					LootItem.lootTableItem(Items.ENCHANTING_TABLE).setWeight(10),
 					LootItem.lootTableItem(Items.CAKE).setWeight(15),
 					LootItem.lootTableItem(Items.END_CRYSTAL).setWeight(7),
-					SuperpositionHandler.createOptionalLootEntry(anticlimacticlagacy.loreInscriber, 10),
-					SuperpositionHandler.createOptionalLootEntry(anticlimacticlagacy.recallPotion, 15),
-					SuperpositionHandler.createOptionalLootEntry(anticlimacticlagacy.mendingMixture, 40),
-					SuperpositionHandler.createOptionalLootEntry(anticlimacticlagacy.astralDust, 85, 1F, 4F),
-					SuperpositionHandler.createOptionalLootEntry(anticlimacticlagacy.etheriumOre, 60, 1F, 2F),
-					SuperpositionHandler.createOptionalLootEntry(anticlimacticlagacy.extradimensionalEye, 20)
+					SuperpositionHandler.createOptionalLootEntry(AnticlimacticLagacy.loreInscriber, 10),
+					SuperpositionHandler.createOptionalLootEntry(AnticlimacticLagacy.recallPotion, 15),
+					SuperpositionHandler.createOptionalLootEntry(AnticlimacticLagacy.mendingMixture, 40),
+					SuperpositionHandler.createOptionalLootEntry(AnticlimacticLagacy.astralDust, 85, 1F, 4F),
+					SuperpositionHandler.createOptionalLootEntry(AnticlimacticLagacy.etheriumOre, 60, 1F, 2F),
+					SuperpositionHandler.createOptionalLootEntry(AnticlimacticLagacy.extradimensionalEye, 20)
 					);
 
 
@@ -2619,8 +2619,8 @@ public class AnticlimacticEventHandler {
 
 		if (SuperpositionHandler.getLibraries().contains(event.getName())) {
 			LootPool special = SuperpositionHandler.constructLootPool("el_special", 2F, 3F,
-					LootItem.lootTableItem(anticlimacticlagacy.thiccScroll).setWeight(20).apply(SetItemCountFunction.setCount(UniformGenerator.between(2F, 6F))),
-					LootItem.lootTableItem(anticlimacticlagacy.loreFragment).setWeight(10).apply(SetItemCountFunction.setCount(UniformGenerator.between(1F, 2F))));
+					LootItem.lootTableItem(AnticlimacticLagacy.thiccScroll).setWeight(20).apply(SetItemCountFunction.setCount(UniformGenerator.between(2F, 6F))),
+					LootItem.lootTableItem(AnticlimacticLagacy.loreFragment).setWeight(10).apply(SetItemCountFunction.setCount(UniformGenerator.between(1F, 2F))));
 
 
 			LootTable modified = event.getTable();
@@ -2628,7 +2628,7 @@ public class AnticlimacticEventHandler {
 
 			if (OmniconfigHandler.isItemEnabled(overworldRevelationTome)) {
 				LootPool literature = SuperpositionHandler.constructLootPool("literature", -4F, 3F,
-						SuperpositionHandler.createOptionalLootEntry(anticlimacticlagacy.overworldRevelationTome, 100).apply(LootFunctionRevelation.of(UniformGenerator.between(1, 3), UniformGenerator.between(50, 500))));
+						SuperpositionHandler.createOptionalLootEntry(AnticlimacticLagacy.overworldRevelationTome, 100).apply(LootFunctionRevelation.of(UniformGenerator.between(1, 3), UniformGenerator.between(50, 500))));
 
 				modified.addPool(literature);
 			}
@@ -2656,7 +2656,7 @@ public class AnticlimacticEventHandler {
 
 		if (!OmniconfigWrapper.syncAllToPlayer((ServerPlayer) event.getPlayer())) {
 			OmniconfigWrapper.onRemoteServer = false;
-			anticlimacticlagacy.logger.info("Logging in to local integrated server; no synchronization is required.");
+			AnticlimacticLagacy.logger.info("Logging in to local integrated server; no synchronization is required.");
 		}
 
 		try {
@@ -2700,7 +2700,7 @@ public class AnticlimacticEventHandler {
 				}
 			}
 		} catch (Exception ex) {
-			anticlimacticlagacy.logger.error("Failed to check player's advancements upon joining the world!");
+			AnticlimacticLagacy.logger.error("Failed to check player's advancements upon joining the world!");
 			ex.printStackTrace();
 		}
 
@@ -2713,7 +2713,7 @@ public class AnticlimacticEventHandler {
 		Player player = event.getPlayer();
 
 		if (player instanceof ServerPlayer && id.startsWith(AnticlimacticLagacy.MODID+":book/")) {
-			anticlimacticlagacy.packetInstance.send(PacketDistributor.PLAYER.with(() -> (ServerPlayer)player) , new PacketSetEntryState(false, id.replace("book/", "")));
+			AnticlimacticLagacy.packetInstance.send(PacketDistributor.PLAYER.with(() -> (ServerPlayer)player) , new PacketSetEntryState(false, id.replace("book/", "")));
 		}
 
 		/*
@@ -2723,14 +2723,14 @@ public class AnticlimacticEventHandler {
 
 		if (id.equals(AnticlimacticLagacy.MODID + ":main/discover_spellstone")) {
 			//if (SuperpositionHandler.isSlotLocked("spellstone", player)) {
-			anticlimacticlagacy.packetInstance.send(PacketDistributor.PLAYER.with(() -> (ServerPlayer) event.getPlayer()), new PacketSlotUnlocked("spellstone"));
+			AnticlimacticLagacy.packetInstance.send(PacketDistributor.PLAYER.with(() -> (ServerPlayer) event.getPlayer()), new PacketSlotUnlocked("spellstone"));
 			//}
 
 			SuperpositionHandler.unlockSpecialSlot("spellstone", player);
 			SuperpositionHandler.setPersistentBoolean(player, AnticlimacticEventHandler.NBT_KEY_ENABLESPELLSTONE, true);
 		} else if (id.equals(AnticlimacticLagacy.MODID + ":main/discover_scroll")) {
 			//if (SuperpositionHandler.isSlotLocked("scroll", player)) {
-			anticlimacticlagacy.packetInstance.send(PacketDistributor.PLAYER.with(() -> (ServerPlayer) event.getPlayer()), new PacketSlotUnlocked("scroll"));
+			AnticlimacticLagacy.packetInstance.send(PacketDistributor.PLAYER.with(() -> (ServerPlayer) event.getPlayer()), new PacketSlotUnlocked("scroll"));
 			//}
 
 			SuperpositionHandler.unlockSpecialSlot("scroll", player);
@@ -2770,7 +2770,7 @@ public class AnticlimacticEventHandler {
 
 			AnvilScreen screen = (AnvilScreen) event.getScreen();
 
-			anticlimacticlagacy.packetInstance.send(PacketDistributor.SERVER.noArg(), new PacketAnvilField(""));
+			AnticlimacticLagacy.packetInstance.send(PacketDistributor.SERVER.noArg(), new PacketAnvilField(""));
 
 			try {
 				for (Field f : screen.getClass().getDeclaredFields()) {
@@ -2801,7 +2801,7 @@ public class AnticlimacticEventHandler {
 	public void onAnvilUpdate(AnvilUpdateEvent event) {
 
 		if (event.getLeft().getCount() == 1)
-			if (event.getRight().getItem().equals(anticlimacticlagacy.loreFragment) && event.getRight().getTagElement("display") != null) {
+			if (event.getRight().getItem().equals(AnticlimacticLagacy.loreFragment) && event.getRight().getTagElement("display") != null) {
 				event.setCost(4);
 				event.setMaterialCost(1);
 				event.setOutput(ItemLoreHelper.mergeDisplayData(event.getRight(), event.getLeft().copy()));
@@ -2812,7 +2812,7 @@ public class AnticlimacticEventHandler {
 	public void onItemCrafted(PlayerEvent.ItemCraftedEvent event) {
 
 		if (event.getPlayer() != null && !event.getPlayer().level.isClientSide) {
-			if (event.getInventory().countItem(anticlimacticlagacy.enchantmentTransposer) == 1 && event.getCrafting().getItem() == Items.ENCHANTED_BOOK) {
+			if (event.getInventory().countItem(AnticlimacticLagacy.enchantmentTransposer) == 1 && event.getCrafting().getItem() == Items.ENCHANTED_BOOK) {
 				event.getPlayer().level.playSound(null, event.getPlayer().blockPosition(), SoundEvents.ENCHANTMENT_TABLE_USE, SoundSource.PLAYERS, 1.0F, (float) (0.9F + (Math.random() * 0.1F)));
 			} else if (event.getCrafting().getItem() == cursedStone) {
 				event.getPlayer().level.playSound(null, event.getPlayer().blockPosition(), SoundEvents.BEACON_ACTIVATE, SoundSource.PLAYERS, 1.0F, (float) (0.9F + (Math.random() * 0.1F)));
@@ -2836,7 +2836,7 @@ public class AnticlimacticEventHandler {
 					}
 
 				if (insect instanceof Guardian && insect.getClass() != ElderGuardian.class) {
-					if (SuperpositionHandler.hasItem(player, anticlimacticlagacy.guardianHeart) && SuperpositionHandler.isTheCursedOne(player)) {
+					if (SuperpositionHandler.hasItem(player, AnticlimacticLagacy.guardianHeart) && SuperpositionHandler.isTheCursedOne(player)) {
 						boolean isBlacklisted = angeredGuardians.containsEntry(player, insect);
 
 						if (insect.getLastHurtByMob() != player && !isBlacklisted) {
@@ -2883,14 +2883,14 @@ public class AnticlimacticEventHandler {
 	}
 
 	public static void grantStarterGear(ServerPlayer player) {
-		anticlimacticlagacy.logger.info("Granting starter gear to " + player.getGameProfile().getName());
+		AnticlimacticLagacy.logger.info("Granting starter gear to " + player.getGameProfile().getName());
 
 		/*
 		 * Eh, annoying defaults.
 		 */
 
 		if (!SuperpositionHandler.hasPersistentTag(player, NBT_KEY_PATCHOULIFORCE)) {
-			anticlimacticlagacy.packetInstance.send(PacketDistributor.PLAYER.with(() -> player), new PacketPatchouliForce());
+			AnticlimacticLagacy.packetInstance.send(PacketDistributor.PLAYER.with(() -> player), new PacketPatchouliForce());
 			SuperpositionHandler.setPersistentBoolean(player, AnticlimacticEventHandler.NBT_KEY_PATCHOULIFORCE, true);
 		}
 
@@ -2899,10 +2899,10 @@ public class AnticlimacticEventHandler {
 		 * the world.
 		 */
 
-		if (OmniconfigHandler.isItemEnabled(anticlimacticlagacy.anticlimacticAmulet))
+		if (OmniconfigHandler.isItemEnabled(AnticlimacticLagacy.anticlimacticAmulet))
 			if (!SuperpositionHandler.hasPersistentTag(player, AnticlimacticEventHandler.NBT_KEY_ENIGMATICGIFT)) {
 
-				ItemStack amuletStack = new ItemStack(anticlimacticlagacy.anticlimacticAmulet);
+				ItemStack amuletStack = new ItemStack(AnticlimacticLagacy.anticlimacticAmulet);
 				anticlimacticAmulet.setInscription(amuletStack, player.getGameProfile().getName());
 				anticlimacticAmulet.setProperlyGranted(amuletStack);
 
@@ -2928,9 +2928,9 @@ public class AnticlimacticEventHandler {
 		 * Another one for Ring of the Seven Curses.
 		 */
 
-		if (OmniconfigHandler.isItemEnabled(anticlimacticlagacy.cursedRing))
+		if (OmniconfigHandler.isItemEnabled(AnticlimacticLagacy.cursedRing))
 			if (!SuperpositionHandler.hasPersistentTag(player, AnticlimacticEventHandler.NBT_KEY_CURSEDGIFT)) {
-				ItemStack cursedRingStack = new ItemStack(anticlimacticlagacy.cursedRing);
+				ItemStack cursedRingStack = new ItemStack(AnticlimacticLagacy.cursedRing);
 
 				if (!CursedRing.ultraHardcore.getValue()) {
 					if (player.getInventory().getItem(7).isEmpty()) {
@@ -2988,19 +2988,19 @@ public class AnticlimacticEventHandler {
 	}
 
 	private boolean hadAnticlimacticAmulet(Player player) {
-		return AnticlimacticEventHandler.postmortalPossession.containsKey(player) ? AnticlimacticEventHandler.postmortalPossession.containsEntry(player, anticlimacticlagacy.anticlimacticAmulet) : false;
+		return AnticlimacticEventHandler.postmortalPossession.containsKey(player) ? AnticlimacticEventHandler.postmortalPossession.containsEntry(player, AnticlimacticLagacy.anticlimacticAmulet) : false;
 	}
 
 	private boolean hadEscapeScroll(Player player) {
-		return AnticlimacticEventHandler.postmortalPossession.containsKey(player) ? AnticlimacticEventHandler.postmortalPossession.containsEntry(player, anticlimacticlagacy.escapeScroll) : false;
+		return AnticlimacticEventHandler.postmortalPossession.containsKey(player) ? AnticlimacticEventHandler.postmortalPossession.containsEntry(player, AnticlimacticLagacy.escapeScroll) : false;
 	}
 
 	private boolean hadUnholyStone(Player player) {
-		return AnticlimacticEventHandler.postmortalPossession.containsKey(player) ? AnticlimacticEventHandler.postmortalPossession.containsEntry(player, anticlimacticlagacy.cursedStone) : false;
+		return AnticlimacticEventHandler.postmortalPossession.containsKey(player) ? AnticlimacticEventHandler.postmortalPossession.containsEntry(player, AnticlimacticLagacy.cursedStone) : false;
 	}
 
 	private boolean hadCursedRing(Player player) {
-		return AnticlimacticEventHandler.postmortalPossession.containsKey(player) ? AnticlimacticEventHandler.postmortalPossession.containsEntry(player, anticlimacticlagacy.cursedRing) : false;
+		return AnticlimacticEventHandler.postmortalPossession.containsKey(player) ? AnticlimacticEventHandler.postmortalPossession.containsEntry(player, AnticlimacticLagacy.cursedRing) : false;
 	}
 
 

@@ -280,7 +280,7 @@ public class CursedRing extends ItemBaseCurio {
 	}
 
 	public boolean isItemDeathPersistent(ItemStack stack) {
-		return stack.getItem().equals(this) || stack.getItem().equals(anticlimacticlagacy.anticlimacticAmulet);
+		return stack.getItem().equals(this) || stack.getItem().equals(AnticlimacticLagacy.anticlimacticAmulet);
 	}
 
 	@Override
@@ -317,7 +317,7 @@ public class CursedRing extends ItemBaseCurio {
 				continue;
 			}
 
-			if (checkedEntity instanceof Piglin && !SuperpositionHandler.hasCurio(player, anticlimacticlagacy.avariceScroll)) {
+			if (checkedEntity instanceof Piglin && !SuperpositionHandler.hasCurio(player, AnticlimacticLagacy.avariceScroll)) {
 				Piglin piglin = (Piglin) checkedEntity;
 
 				if (piglin.getTarget() == null || !piglin.getTarget().isAlive()) {
@@ -337,14 +337,14 @@ public class CursedRing extends ItemBaseCurio {
 
 				if (neutral instanceof TamableAnimal tamable && tamable.isTame()) {
 					continue;
-				} else if (SuperpositionHandler.hasItem(player, anticlimacticlagacy.animalGuide)) {
-					if (anticlimacticlagacy.animalGuide.isTamableAnimal(checkedEntity)) {
+				} else if (SuperpositionHandler.hasItem(player, AnticlimacticLagacy.animalGuide)) {
+					if (AnticlimacticLagacy.animalGuide.isTamableAnimal(checkedEntity)) {
 						continue;
 					}
 				} else if (neutral instanceof IronGolem golem && golem.isPlayerCreated()) {
 					continue;
 				} else if (neutral instanceof Bee) {
-					if (saveTheBees.getValue() || SuperpositionHandler.hasItem(player, anticlimacticlagacy.animalGuide)) {
+					if (saveTheBees.getValue() || SuperpositionHandler.hasItem(player, AnticlimacticLagacy.animalGuide)) {
 						continue;
 					}
 				}

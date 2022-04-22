@@ -112,7 +112,7 @@ public class MiningCharm extends ItemBaseCurio {
 	@Override
 	public void curioTick(SlotContext context, ItemStack stack) {
 		if (context.entity() instanceof Player player && !context.entity().level.isClientSide)
-			if (SuperpositionHandler.hasCurio(player, anticlimacticlagacy.miningCharm)) {
+			if (SuperpositionHandler.hasCurio(player, AnticlimacticLagacy.miningCharm)) {
 				if (ItemNBTHelper.getBoolean(stack, "nightVisionEnabled", true)
 						&& player.getY() < 50
 						&& !player.level.dimension().equals(Level.NETHER)
@@ -135,10 +135,10 @@ public class MiningCharm extends ItemBaseCurio {
 
 		if (ItemNBTHelper.getBoolean(stack, "nightVisionEnabled", true)) {
 			ItemNBTHelper.setBoolean(stack, "nightVisionEnabled", false);
-			world.playSound(null, player.blockPosition(), anticlimacticlagacy.HHOFF, SoundSource.PLAYERS, (float) (0.8F + (Math.random() * 0.2F)), (float) (0.8F + (Math.random() * 0.2F)));
+			world.playSound(null, player.blockPosition(), AnticlimacticLagacy.HHOFF, SoundSource.PLAYERS, (float) (0.8F + (Math.random() * 0.2F)), (float) (0.8F + (Math.random() * 0.2F)));
 		} else {
 			ItemNBTHelper.setBoolean(stack, "nightVisionEnabled", true);
-			world.playSound(null, player.blockPosition(), anticlimacticlagacy.HHON, SoundSource.PLAYERS, (float) (0.8F + (Math.random() * 0.2F)), (float) (0.8F + (Math.random() * 0.2F)));
+			world.playSound(null, player.blockPosition(), AnticlimacticLagacy.HHON, SoundSource.PLAYERS, (float) (0.8F + (Math.random() * 0.2F)), (float) (0.8F + (Math.random() * 0.2F)));
 		}
 
 		player.swing(handIn);

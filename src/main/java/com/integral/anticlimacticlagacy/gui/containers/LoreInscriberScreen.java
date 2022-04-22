@@ -115,7 +115,7 @@ public class LoreInscriberScreen extends AbstractContainerScreen<LoreInscriberCo
 			}
 
 			this.menu.updateItemName(s);
-			anticlimacticlagacy.packetInstance.sendToServer(new PacketInkwellField(s));
+			AnticlimacticLagacy.packetInstance.sendToServer(new PacketInkwellField(s));
 		}
 	}
 

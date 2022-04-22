@@ -27,7 +27,7 @@ public interface IMultiblockMiningTool {
 			ItemNBTHelper.setBoolean(stack, "MultiblockEffectsEnabled", true);
 
 			if (!player.level.isClientSide) {
-				player.level.playSound(null, player.blockPosition(), anticlimacticlagacy.HHON, SoundSource.PLAYERS, 1.0F, (float) (0.8F + (Math.random() * 0.2F)));
+				player.level.playSound(null, player.blockPosition(), AnticlimacticLagacy.HHON, SoundSource.PLAYERS, 1.0F, (float) (0.8F + (Math.random() * 0.2F)));
 			}
 		}
 
@@ -38,7 +38,7 @@ public interface IMultiblockMiningTool {
 			ItemNBTHelper.setBoolean(stack, "MultiblockEffectsEnabled", false);
 
 			if (!player.level.isClientSide) {
-				player.level.playSound(null, player.blockPosition(), anticlimacticlagacy.HHOFF, SoundSource.PLAYERS, 1.0F, (float) (0.8F + (Math.random() * 0.2F)));
+				player.level.playSound(null, player.blockPosition(), AnticlimacticLagacy.HHOFF, SoundSource.PLAYERS, 1.0F, (float) (0.8F + (Math.random() * 0.2F)));
 			}
 		}
 	}

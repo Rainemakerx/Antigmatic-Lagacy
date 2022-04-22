@@ -46,7 +46,7 @@ public abstract class MixinEnchantmentContainer extends AbstractContainerMenu {
 			// so we need to forget our own class to avoid alerting the compiler
 			EnchantmentMenu container = (EnchantmentMenu) (Object) this;
 
-			if (anticlimacticlagacy.enchanterPearl.isPresent(player)) {
+			if (AnticlimacticLagacy.enchanterPearl.isPresent(player)) {
 				ItemStack inputItem = container.enchantSlots.getItem(0);
 				int levelsRequired = clickedID + 1;
 
@@ -123,7 +123,7 @@ public abstract class MixinEnchantmentContainer extends AbstractContainerMenu {
 			}
 
 			if (containerUser != null) {
-				if (anticlimacticlagacy.enchanterPearl.isPresent(containerUser)) {
+				if (AnticlimacticLagacy.enchanterPearl.isPresent(containerUser)) {
 					info.setReturnValue(64);
 					return;
 				}

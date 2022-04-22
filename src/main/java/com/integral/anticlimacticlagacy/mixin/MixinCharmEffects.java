@@ -19,7 +19,7 @@ public class MixinCharmEffects {
 
 	@Inject(method = "applySleepCharmEffect", at = @At("HEAD"), cancellable = true, require = 0)
 	private static void onApplySleepCharmEffect(Entity user, ItemStack item, CallbackInfo info) {
-		if (user instanceof Player && SuperpositionHandler.hasCurio((Player) user, anticlimacticlagacy.cursedRing)) {
+		if (user instanceof Player && SuperpositionHandler.hasCurio((Player) user, AnticlimacticLagacy.cursedRing)) {
 			info.cancel();
 		}
 	}

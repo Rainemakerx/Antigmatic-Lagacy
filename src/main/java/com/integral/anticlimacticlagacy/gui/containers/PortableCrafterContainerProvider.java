@@ -17,7 +17,7 @@ public class PortableCrafterContainerProvider implements MenuProvider {
 
 	@Override
 	public AbstractContainerMenu createMenu(int syncId, Inventory playerInv, Player player) {
-		return anticlimacticlagacy.PORTABLE_CRAFTER.create(syncId, playerInv);
+		return AnticlimacticLagacy.PORTABLE_CRAFTER.create(syncId, playerInv);
 	}
 
 	@Override

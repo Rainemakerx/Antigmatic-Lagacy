@@ -64,7 +64,7 @@ public abstract class ItemBaseTool extends DiggerItem {
 	public static Properties getDefaultProperties() {
 		Properties props = new Item.Properties();
 
-		props.tab(anticlimacticlagacy.anticlimacticTab);
+		props.tab(AnticlimacticLagacy.anticlimacticTab);
 		props.stacksTo(1);
 		props.rarity(Rarity.COMMON);
 

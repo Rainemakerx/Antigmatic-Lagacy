@@ -94,9 +94,9 @@ public class AstralBreaker extends ItemBaseTool implements IMultiblockMiningTool
 		this.toolActions.add(ToolActions.PICKAXE_DIG);
 		this.toolActions.add(ToolActions.SHOVEL_DIG);
 
-		this.effectiveMaterials.addAll(anticlimacticlagacy.etheriumPickaxe.effectiveMaterials);
-		this.effectiveMaterials.addAll(anticlimacticlagacy.etheriumAxe.effectiveMaterials);
-		this.effectiveMaterials.addAll(anticlimacticlagacy.etheriumShovel.effectiveMaterials);
+		this.effectiveMaterials.addAll(AnticlimacticLagacy.etheriumPickaxe.effectiveMaterials);
+		this.effectiveMaterials.addAll(AnticlimacticLagacy.etheriumAxe.effectiveMaterials);
+		this.effectiveMaterials.addAll(AnticlimacticLagacy.etheriumShovel.effectiveMaterials);
 	}
 
 	@Override
@@ -120,7 +120,7 @@ public class AstralBreaker extends ItemBaseTool implements IMultiblockMiningTool
 	}
 
 	public void spawnFlameParticles(Level world, BlockPos pos) {
-		anticlimacticlagacy.packetInstance.send(PacketDistributor.NEAR.with(() -> new PacketDistributor.TargetPoint(pos.getX(), pos.getY(), pos.getZ(), 128, world.dimension())), new PacketFlameParticles(pos.getX() + 0.5D, pos.getY() + 0.5D, pos.getZ() + 0.5D, 18, true));
+		AnticlimacticLagacy.packetInstance.send(PacketDistributor.NEAR.with(() -> new PacketDistributor.TargetPoint(pos.getX(), pos.getY(), pos.getZ(), 128, world.dimension())), new PacketFlameParticles(pos.getX() + 0.5D, pos.getY() + 0.5D, pos.getZ() + 0.5D, 18, true));
 	}
 
 	@Override

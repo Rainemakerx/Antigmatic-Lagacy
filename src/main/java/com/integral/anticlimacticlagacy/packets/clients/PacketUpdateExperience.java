@@ -30,7 +30,7 @@ public class PacketUpdateExperience {
 	public static void handle(PacketUpdateExperience msg, Supplier<NetworkEvent.Context> ctx) {
 
 		ctx.get().enqueueWork(() -> {
-			Player player = anticlimacticlagacy.proxy.getClientPlayer();
+			Player player = AnticlimacticLagacy.proxy.getClientPlayer();
 
 			int diff = msg.experience - ExperienceHelper.getPlayerXP(player);
 			ExperienceHelper.addPlayerXP(player, diff);

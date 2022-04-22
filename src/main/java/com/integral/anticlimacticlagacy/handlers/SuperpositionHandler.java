@@ -466,7 +466,7 @@ public class SuperpositionHandler {
 
 					world.playSound(null, entity.blockPosition(), SoundEvents.ENDERMAN_TELEPORT, SoundSource.HOSTILE, 1.0F, (float) (0.8F + (Math.random() * 0.2D)));
 
-					anticlimacticlagacy.packetInstance.send(PacketDistributor.NEAR.with(() -> new PacketDistributor.TargetPoint(entity.getX(), entity.getY(), entity.getZ(), 128, entity.level.dimension())), new PacketPortalParticles(entity.getX(), entity.getY() + (entity.getBbHeight() / 2), entity.getZ(), 72, 1.0F, false));
+					AnticlimacticLagacy.packetInstance.send(PacketDistributor.NEAR.with(() -> new PacketDistributor.TargetPoint(entity.getX(), entity.getY(), entity.getZ(), 128, entity.level.dimension())), new PacketPortalParticles(entity.getX(), entity.getY() + (entity.getBbHeight() / 2), entity.getZ(), 72, 1.0F, false));
 
 					if (entity instanceof ServerPlayer) {
 						ServerPlayer player = (ServerPlayer) entity;
@@ -477,7 +477,7 @@ public class SuperpositionHandler {
 
 					world.playSound(null, entity.blockPosition(), SoundEvents.ENDERMAN_TELEPORT, SoundSource.HOSTILE, 1.0F, (float) (0.8F + (Math.random() * 0.2D)));
 
-					anticlimacticlagacy.packetInstance.send(PacketDistributor.NEAR.with(() -> new PacketDistributor.TargetPoint(entity.getX(), entity.getY(), entity.getZ(), 128, entity.level.dimension())), new PacketRecallParticles(entity.getX(), entity.getY() + (entity.getBbHeight() / 2), entity.getZ(), 48, false));
+					AnticlimacticLagacy.packetInstance.send(PacketDistributor.NEAR.with(() -> new PacketDistributor.TargetPoint(entity.getX(), entity.getY(), entity.getZ(), 128, entity.level.dimension())), new PacketRecallParticles(entity.getX(), entity.getY() + (entity.getBbHeight() / 2), entity.getZ(), 48, false));
 
 					return true;
 				}
@@ -491,7 +491,7 @@ public class SuperpositionHandler {
 				if (!world.isEmptyBlock(new BlockPos(x, y - counter - 1, z)) & world.getBlockState(new BlockPos(x, y - counter - 1, z)).canOcclude() & world.isEmptyBlock(new BlockPos(x, y - counter, z)) & world.isEmptyBlock(new BlockPos(x, y - counter + 1, z))) {
 
 					world.playSound(null, entity.blockPosition(), SoundEvents.ENDERMAN_TELEPORT, SoundSource.HOSTILE, 1.0F, (float) (0.8F + (Math.random() * 0.2D)));
-					anticlimacticlagacy.packetInstance.send(PacketDistributor.NEAR.with(() -> new PacketDistributor.TargetPoint(entity.getX(), entity.getY(), entity.getZ(), 128, entity.level.dimension())), new PacketRecallParticles(entity.getX(), entity.getY() + (entity.getBbHeight() / 2), entity.getZ(), 48, false));
+					AnticlimacticLagacy.packetInstance.send(PacketDistributor.NEAR.with(() -> new PacketDistributor.TargetPoint(entity.getX(), entity.getY(), entity.getZ(), 128, entity.level.dimension())), new PacketRecallParticles(entity.getX(), entity.getY() + (entity.getBbHeight() / 2), entity.getZ(), 48, false));
 
 					if (entity instanceof ServerPlayer) {
 						ServerPlayer player = (ServerPlayer) entity;
@@ -501,7 +501,7 @@ public class SuperpositionHandler {
 					}
 
 					world.playSound(null, entity.blockPosition(), SoundEvents.ENDERMAN_TELEPORT, SoundSource.HOSTILE, 1.0F, (float) (0.8F + (Math.random() * 0.2D)));
-					anticlimacticlagacy.packetInstance.send(PacketDistributor.NEAR.with(() -> new PacketDistributor.TargetPoint(entity.getX(), entity.getY(), entity.getZ(), 128, entity.level.dimension())), new PacketRecallParticles(entity.getX(), entity.getY() + (entity.getBbHeight() / 2), entity.getZ(), 48, false));
+					AnticlimacticLagacy.packetInstance.send(PacketDistributor.NEAR.with(() -> new PacketDistributor.TargetPoint(entity.getX(), entity.getY(), entity.getZ(), 128, entity.level.dimension())), new PacketRecallParticles(entity.getX(), entity.getY() + (entity.getBbHeight() / 2), entity.getZ(), 48, false));
 
 					return true;
 				}
@@ -1078,7 +1078,7 @@ public class SuperpositionHandler {
 		int dropMode = OmniconfigHandler.soulCrystalsMode.getValue();
 		int maxCrystalLoss = OmniconfigHandler.maxSoulCrystalLoss.getValue();
 
-		boolean canDropMore = anticlimacticlagacy.soulCrystal.getLostCrystals(player) < maxCrystalLoss;
+		boolean canDropMore = AnticlimacticLagacy.soulCrystal.getLostCrystals(player) < maxCrystalLoss;
 		boolean keepInventory = player.level.getGameRules().getBoolean(GameRules.RULE_KEEPINVENTORY);
 
 		// TODO Use Enum config
@@ -1098,15 +1098,15 @@ public class SuperpositionHandler {
 	}
 
 	public static ServerLevel getOverworld() {
-		return SuperpositionHandler.getWorld(anticlimacticlagacy.proxy.getOverworldKey());
+		return SuperpositionHandler.getWorld(AnticlimacticLagacy.proxy.getOverworldKey());
 	}
 
 	public static ServerLevel getNether() {
-		return SuperpositionHandler.getWorld(anticlimacticlagacy.proxy.getNetherKey());
+		return SuperpositionHandler.getWorld(AnticlimacticLagacy.proxy.getNetherKey());
 	}
 
 	public static ServerLevel getEnd() {
-		return SuperpositionHandler.getWorld(anticlimacticlagacy.proxy.getEndKey());
+		return SuperpositionHandler.getWorld(AnticlimacticLagacy.proxy.getEndKey());
 	}
 
 	public static void sendToDimension(ServerPlayer player, ResourceKey<Level> dimension) {
@@ -1124,7 +1124,7 @@ public class SuperpositionHandler {
 
 		serverPlayer.level.playSound(null, serverPlayer.blockPosition(), SoundEvents.ENDERMAN_TELEPORT, SoundSource.PLAYERS, 1.0F, (float) (0.8F + (Math.random() * 0.2)));
 
-		anticlimacticlagacy.packetInstance.send(PacketDistributor.NEAR.with(() -> new PacketDistributor.TargetPoint(serverPlayer.getX(), serverPlayer.getY(), serverPlayer.getZ(), 128, serverPlayer.level.dimension())), new PacketPortalParticles(serverPlayer.getX(), serverPlayer.getY() + (serverPlayer.getBbHeight() / 2), serverPlayer.getZ(), 100, 1.25F, false));
+		AnticlimacticLagacy.packetInstance.send(PacketDistributor.NEAR.with(() -> new PacketDistributor.TargetPoint(serverPlayer.getX(), serverPlayer.getY(), serverPlayer.getZ(), 128, serverPlayer.level.dimension())), new PacketPortalParticles(serverPlayer.getX(), serverPlayer.getY() + (serverPlayer.getBbHeight() / 2), serverPlayer.getZ(), 100, 1.25F, false));
 
 		Optional<Vec3> vec = AdvancedSpawnLocationHelper.getValidSpawn(respawnWorld, serverPlayer);
 		Optional<Vec3> vec2;
@@ -1152,7 +1152,7 @@ public class SuperpositionHandler {
 
 		serverPlayer.level.playSound(null, serverPlayer.blockPosition(), SoundEvents.ENDERMAN_TELEPORT, SoundSource.PLAYERS, 1.0F, (float) (0.8F + (Math.random() * 0.2)));
 
-		anticlimacticlagacy.packetInstance.send(PacketDistributor.NEAR.with(() -> new PacketDistributor.TargetPoint(serverPlayer.getX(), serverPlayer.getY(), serverPlayer.getZ(), 128, serverPlayer.level.dimension())), new PacketRecallParticles(serverPlayer.getX(), serverPlayer.getY() + (serverPlayer.getBbHeight() / 2), serverPlayer.getZ(), 48, false));
+		AnticlimacticLagacy.packetInstance.send(PacketDistributor.NEAR.with(() -> new PacketDistributor.TargetPoint(serverPlayer.getX(), serverPlayer.getY(), serverPlayer.getZ(), 128, serverPlayer.level.dimension())), new PacketRecallParticles(serverPlayer.getX(), serverPlayer.getY() + (serverPlayer.getBbHeight() / 2), serverPlayer.getZ(), 48, false));
 
 		return destinationWorld;
 	}
@@ -1206,13 +1206,13 @@ public class SuperpositionHandler {
 	}
 
 	public static boolean isTheCursedOne(Player player) {
-		return SuperpositionHandler.hasCurio(player, anticlimacticlagacy.cursedRing);
+		return SuperpositionHandler.hasCurio(player, AnticlimacticLagacy.cursedRing);
 	}
 
 	public static boolean isTheWorthyOne(Player player) {
 		if (isTheCursedOne(player)) {
-			int timeWithRing = anticlimacticlagacy.proxy.getTimeWithCurses(player);
-			int timeWithoutRing = anticlimacticlagacy.proxy.getTimeWithoutCurses(player);
+			int timeWithRing = AnticlimacticLagacy.proxy.getTimeWithCurses(player);
+			int timeWithoutRing = AnticlimacticLagacy.proxy.getTimeWithoutCurses(player);
 
 			if (timeWithRing <= 0)
 				return false;
@@ -1231,15 +1231,15 @@ public class SuperpositionHandler {
 	}
 
 	public static boolean hasFoolsWrit(Player player) {
-		return isTheBlessedOne(player) && hasCurio(player, anticlimacticlagacy.cosmicScroll);
+		return isTheBlessedOne(player) && hasCurio(player, AnticlimacticLagacy.cosmicScroll);
 	}
 
 	public static String getSufferingTime(@Nullable Player player) {
 		if (player == null)
 			return "0%";
 		else {
-			int timeWithRing = anticlimacticlagacy.proxy.getTimeWithCurses(player);
-			int timeWithoutRing = anticlimacticlagacy.proxy.getTimeWithoutCurses(player);
+			int timeWithRing = AnticlimacticLagacy.proxy.getTimeWithCurses(player);
+			int timeWithoutRing = AnticlimacticLagacy.proxy.getTimeWithoutCurses(player);
 
 			if (timeWithRing <= 0)
 				return "0%";
@@ -1289,7 +1289,7 @@ public class SuperpositionHandler {
 			}
 		}
 
-		if (stack.getItem() == anticlimacticlagacy.cursedRing) {
+		if (stack.getItem() == AnticlimacticLagacy.cursedRing) {
 			totalCurses+=7;
 		}
 
@@ -1302,10 +1302,10 @@ public class SuperpositionHandler {
 
 		for (ItemStack theStack : getFullEquipment(player)) {
 			if (theStack != null) {
-				if (theStack.getItem() != anticlimacticlagacy.cursedRing || !ringCounted) {
+				if (theStack.getItem() != AnticlimacticLagacy.cursedRing || !ringCounted) {
 					count += getCurseAmount(theStack);
 
-					if (theStack.getItem() == anticlimacticlagacy.cursedRing) {
+					if (theStack.getItem() == AnticlimacticLagacy.cursedRing) {
 						ringCounted = true;
 					}
 				}
@@ -1572,7 +1572,7 @@ public class SuperpositionHandler {
 
 				map.remove(Enchantments.VANISHING_CURSE);
 				int level = map.remove(Enchantments.BINDING_CURSE);
-				map.put(anticlimacticlagacy.eternalBindingCurse, level);
+				map.put(AnticlimacticLagacy.eternalBindingCurse, level);
 				EnchantmentHelper.setEnchantments(map, stack);
 			}
 
@@ -1607,14 +1607,14 @@ public class SuperpositionHandler {
 
 							int strength = -1;
 
-							if (player.hasEffect(anticlimacticlagacy.blazingStrengthEffect)) {
-								MobEffectInstance effectInstance = player.getEffect(anticlimacticlagacy.blazingStrengthEffect);
+							if (player.hasEffect(AnticlimacticLagacy.blazingStrengthEffect)) {
+								MobEffectInstance effectInstance = player.getEffect(AnticlimacticLagacy.blazingStrengthEffect);
 								strength = effectInstance.getAmplifier();
-								player.removeEffect(anticlimacticlagacy.blazingStrengthEffect);
+								player.removeEffect(AnticlimacticLagacy.blazingStrengthEffect);
 								strength = strength > 2 ? 2 : strength;
 							}
 
-							player.addEffect(new MobEffectInstance(anticlimacticlagacy.blazingStrengthEffect, 1200, strength + 1, true, true));
+							player.addEffect(new MobEffectInstance(AnticlimacticLagacy.blazingStrengthEffect, 1200, strength + 1, true, true));
 
 							if (source.getDirectEntity() instanceof LivingEntity living && living.isAlive()) {
 								if (!living.fireImmune() && !(living instanceof Guardian)) {

@@ -209,7 +209,7 @@ public class DarkArmorModel extends GenericArmorModel {
 	public void renderToBuffer(PoseStack ms, IVertexBuilder buffer, int light, int overlay, float r, float g, float b, float a) {
 		this.setRenderingForType(this.slot);
 
-		//IVertexBuilder vertexBuilder = ItemRenderer.getBuffer(, model.getRenderType(anticlimacticlagacy.darkHelmet.TEXTURE), false, false);
+		//IVertexBuilder vertexBuilder = ItemRenderer.getBuffer(, model.getRenderType(AnticlimacticLagacy.darkHelmet.TEXTURE), false, false);
 
 		//this.helmet.showModel = this.slot == EquipmentSlot.HEAD;
 		//this.chestplate.showModel = this.slot == EquipmentSlot.HEAD;

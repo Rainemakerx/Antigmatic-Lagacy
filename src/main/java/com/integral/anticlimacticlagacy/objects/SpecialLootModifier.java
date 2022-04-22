@@ -36,7 +36,7 @@ public class SpecialLootModifier extends LootModifier {
 					SuperpositionHandler.setPersistentBoolean(player, "LootedFirstEndCityChest", true);
 
 					if (SuperpositionHandler.isTheCursedOne(player)) {
-						generatedLoot.add(new ItemStack(anticlimacticlagacy.astralFruit, 1));
+						generatedLoot.add(new ItemStack(AnticlimacticLagacy.astralFruit, 1));
 					}
 				}
 			}

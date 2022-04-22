@@ -174,7 +174,7 @@ public class VoidPearl extends ItemSpellstoneCurio implements ISpellstone {
 
 			for (MobEffectInstance effect : new ArrayList<>(player.getActiveEffects())) {
 				if (effect.getEffect() == MobEffects.NIGHT_VISION) {
-					if (effect.getDuration() >= anticlimacticlagacy.miningCharm.nightVisionDuration-10 && effect.getDuration() <= anticlimacticlagacy.miningCharm.nightVisionDuration) {
+					if (effect.getDuration() >= AnticlimacticLagacy.miningCharm.nightVisionDuration-10 && effect.getDuration() <= AnticlimacticLagacy.miningCharm.nightVisionDuration) {
 						continue;
 					}
 				} else if (effect.getEffect().getRegistryName().equals(new ResourceLocation("mana-and-artifice", "chrono-exhaustion"))) {
@@ -196,7 +196,7 @@ public class VoidPearl extends ItemSpellstoneCurio implements ISpellstone {
 
 						if (victim instanceof Player) {
 							Player playerVictim = (Player) victim;
-							if (SuperpositionHandler.hasCurio(playerVictim, anticlimacticlagacy.voidPearl)) {
+							if (SuperpositionHandler.hasCurio(playerVictim, AnticlimacticLagacy.voidPearl)) {
 								playerVictim.addEffect(new MobEffectInstance(MobEffects.WITHER, 80, 1, false, true));
 								continue;
 							}

@@ -57,7 +57,7 @@ public class RecallPotion extends ItemBasePotion {
 
 	@Override
 	public boolean canDrink(Level world, Player player, ItemStack potion) {
-		return anticlimacticlagacy.proxy.isInVanillaDimension(player);
+		return AnticlimacticLagacy.proxy.isInVanillaDimension(player);
 	}
 
 }

@@ -48,8 +48,8 @@ public class EternalBindingCurse extends Enchantment {
 
 	@Override
 	public boolean canEnchant(ItemStack stack) {
-		return OmniconfigHandler.isItemEnabled(this) && !stack.is(anticlimacticlagacy.cursedRing)
-				&& !stack.is(anticlimacticlagacy.escapeScroll) && stack.is(anticlimacticlagacy.anticlimacticAmulet)
+		return OmniconfigHandler.isItemEnabled(this) && !stack.is(AnticlimacticLagacy.cursedRing)
+				&& !stack.is(AnticlimacticLagacy.escapeScroll) && stack.is(AnticlimacticLagacy.anticlimacticAmulet)
 				&& super.canEnchant(stack);
 	}
 

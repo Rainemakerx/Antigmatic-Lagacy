@@ -25,11 +25,11 @@ public class TransientPlayerData {
 	public static TransientPlayerData get(Player player) {
 		boolean clientOnly = player.level.isClientSide;
 
-		if (anticlimacticlagacy.proxy.getTransientPlayerData(clientOnly).containsKey(player))
-			return anticlimacticlagacy.proxy.getTransientPlayerData(clientOnly).get(player);
+		if (AnticlimacticLagacy.proxy.getTransientPlayerData(clientOnly).containsKey(player))
+			return AnticlimacticLagacy.proxy.getTransientPlayerData(clientOnly).get(player);
 		else {
 			TransientPlayerData data = new TransientPlayerData(player);
-			anticlimacticlagacy.proxy.getTransientPlayerData(clientOnly).put(player, data);
+			AnticlimacticLagacy.proxy.getTransientPlayerData(clientOnly).put(player, data);
 
 			return data;
 		}
@@ -39,7 +39,7 @@ public class TransientPlayerData {
 		boolean clientOnly = player.level.isClientSide;
 
 		if (data != null) {
-			anticlimacticlagacy.proxy.getTransientPlayerData(clientOnly).put(player, data);
+			AnticlimacticLagacy.proxy.getTransientPlayerData(clientOnly).put(player, data);
 			return true;
 		} else
 			return false;
@@ -47,12 +47,12 @@ public class TransientPlayerData {
 
 	public void syncToClients(float blockRadius) {
 		Player player = this.getPlayer();
-		anticlimacticlagacy.packetInstance.send(PacketDistributor.NEAR.with(() -> new PacketDistributor.TargetPoint(player.getX(), player.getY(), player.getZ(), blockRadius, player.level.dimension())), new PacketSyncTransientData(this));
+		AnticlimacticLagacy.packetInstance.send(PacketDistributor.NEAR.with(() -> new PacketDistributor.TargetPoint(player.getX(), player.getY(), player.getZ(), blockRadius, player.level.dimension())), new PacketSyncTransientData(this));
 	}
 
 	public void syncToPlayer() {
 		if (this.getPlayer() instanceof ServerPlayer) {
-			anticlimacticlagacy.packetInstance.send(PacketDistributor.PLAYER.with(() -> (ServerPlayer) this.getPlayer()), new PacketSyncTransientData(this));
+			AnticlimacticLagacy.packetInstance.send(PacketDistributor.PLAYER.with(() -> (ServerPlayer) this.getPlayer()), new PacketSyncTransientData(this));
 		}
 	}
 
@@ -138,7 +138,7 @@ public class TransientPlayerData {
 			this.needsSync = true;
 			this.spellstoneCooldown = newValue;
 
-			for (Item spellstone : anticlimacticlagacy.spellstoneList) {
+			for (Item spellstone : AnticlimacticLagacy.spellstoneList) {
 				this.player.get().getCooldowns().addCooldown(spellstone, this.spellstoneCooldown);
 			}
 		}
@@ -195,7 +195,7 @@ public class TransientPlayerData {
 		boolean consumedForbiddenFruit = buf.readBoolean();
 		boolean disabledMagnetEffects = buf.readBoolean();
 
-		Player player = anticlimacticlagacy.proxy.getPlayer(playerID);
+		Player player = AnticlimacticLagacy.proxy.getPlayer(playerID);
 
 		if (player != null) {
 			TransientPlayerData data = new TransientPlayerData(player);
