@@ -458,7 +458,7 @@ public class AnticlimacticLagacy {
 	public static final List<Triple<LootTable, LootPool, Exception>> exceptionList = new ArrayList<>();
 
 	@SuppressWarnings("deprecation")
-	public anticlimacticlagacy() {
+	public AnticlimacticLagacy() {
 		logger.info("Constructing mod instance...");
 
 		anticlimacticlagacy = this;
