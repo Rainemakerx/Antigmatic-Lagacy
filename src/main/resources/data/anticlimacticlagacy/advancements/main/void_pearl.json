@@ -1,0 +1,30 @@
+{
+  "display": {
+    "icon": {
+      "item": "anticlimacticlagacy:void_pearl"
+    },
+    "title": {
+      "translate": "advancement.anticlimacticlagacy:voidPearl"
+    },
+    "description": {
+      "translate": "advancement.anticlimacticlagacy:voidPearl.desc"
+    },
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true,
+    "frame": "challenge"
+  },
+  "parent": "anticlimacticlagacy:main/discover_spellstone",
+  "criteria": {
+    "spellstone": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+             "items": ["anticlimacticlagacy:void_pearl"]
+          }
+        ]
+      }
+    }
+  }
+}

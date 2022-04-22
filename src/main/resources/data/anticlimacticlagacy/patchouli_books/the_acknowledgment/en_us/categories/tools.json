@@ -1,0 +1,7 @@
+{
+	"name": "book.anticlimacticlagacy.category.tools.name",
+	"description": "book.anticlimacticlagacy.category.tools.desc",
+	"icon": "anticlimacticlagacy:textures/unused/crying_pickaxe.png",
+	"sortnum": 20,
+	"secret": false
+}

@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "item": "anticlimacticlagacy:mega_sponge"
+    },
+    "title": {
+      "translate": "advancement.anticlimacticlagacy:megasponge"
+    },
+    "description": {
+      "translate": "advancement.anticlimacticlagacy:megasponge.desc"
+    },
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "parent": "anticlimacticlagacy:main/recall_potion",
+  "criteria": {
+    "spellstone": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+             "items": ["anticlimacticlagacy:mega_sponge"]
+          }
+        ]
+      }
+    }
+  }
+}

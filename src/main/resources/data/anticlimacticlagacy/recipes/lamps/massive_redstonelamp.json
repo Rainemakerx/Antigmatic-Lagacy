@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "conditions": [
+    {
+      "type": "anticlimacticlagacy:is_enabled",
+      "item": "anticlimacticlagacy:massive_redstonelamp"
+    }
+  ],
+  "ingredients": [
+    {
+      "item": "anticlimacticlagacy:big_redstonelamp"
+    },
+    {
+      "item": "minecraft:glass"
+    }
+  ],
+  "result": {
+    "item": "anticlimacticlagacy:massive_redstonelamp"
+  }
+}

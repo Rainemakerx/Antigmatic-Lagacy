@@ -1,0 +1,30 @@
+{
+    "name": "book.anticlimacticlagacy.entry.dark_mirror.name",
+    "icon": "anticlimacticlagacy:dark_mirror",
+    "category": "anticlimacticlagacy:misc",
+	"advancement": "anticlimacticlagacy:book/misc/dark_mirror",
+    "secret": false,
+    "priority": false,
+    "read_by_default": false,
+    "sortnum": 50,
+    "pages": [
+        {
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.dark_mirror.page.1"
+        },
+		{
+            "type": "crafting",
+			"recipe": "anticlimacticlagacy:dark_mirror",
+			"title": " ",
+            "text": "book.anticlimacticlagacy.entry.dark_mirror.page.2"
+        },
+		{
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.dark_mirror.page.3"
+        },
+		{
+            "type": "empty",
+            "draw_filler": false
+        }
+    ]
+}

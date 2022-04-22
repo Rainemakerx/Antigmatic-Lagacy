@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "conditions": [
+    {
+      "type": "anticlimacticlagacy:is_enabled",
+      "item": "anticlimacticlagacy:etherium_shovel"
+    }
+  ],
+  "pattern": [
+    " X ",
+    " S ",
+    " S "
+  ],
+  "key": {
+    "X": {
+      "item": "anticlimacticlagacy:etherium_ingot"
+    },
+	"S": {
+      "item": "anticlimacticlagacy:ender_rod"
+    }
+  },
+  "result": {
+    "item": "anticlimacticlagacy:etherium_shovel"
+  }
+}

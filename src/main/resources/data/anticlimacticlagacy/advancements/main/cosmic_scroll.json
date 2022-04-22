@@ -1,0 +1,26 @@
+{
+  "parent": "anticlimacticlagacy:main/astral_dust",
+  "display": {
+    "icon": {
+      "item": "anticlimacticlagacy:cosmic_scroll"
+    },
+    "title": {
+      "translate": "advancement.anticlimacticlagacy:cosmicScroll"
+    },
+    "description": {
+      "translate": "advancement.anticlimacticlagacy:cosmicScroll.desc"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "rewards": {
+    "experience": 500
+  },
+  "criteria": {
+    "incompletable": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

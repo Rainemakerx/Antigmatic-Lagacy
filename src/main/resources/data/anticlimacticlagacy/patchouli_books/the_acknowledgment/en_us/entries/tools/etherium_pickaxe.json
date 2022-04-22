@@ -1,0 +1,30 @@
+{
+    "name": "book.anticlimacticlagacy.entry.etherium_pickaxe.name",
+    "icon": "anticlimacticlagacy:etherium_pickaxe",
+    "category": "anticlimacticlagacy:tools",
+	"advancement": "anticlimacticlagacy:book/tools/etherium_pickaxe",
+    "secret": false,
+    "priority": false,
+    "read_by_default": false,
+    "sortnum": 10,
+    "pages": [
+        {
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.etherium_pickaxe.page.1"
+        },
+		{
+            "type": "crafting",
+			"recipe": "anticlimacticlagacy:etherium_pickaxe",
+            "title": " ",
+            "text": "book.anticlimacticlagacy.entry.etherium_pickaxe.page.2"
+        },
+		{
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.etherium_pickaxe.page.3"
+        },
+		{
+            "type": "empty",
+            "draw_filler": false
+        }
+    ]
+}

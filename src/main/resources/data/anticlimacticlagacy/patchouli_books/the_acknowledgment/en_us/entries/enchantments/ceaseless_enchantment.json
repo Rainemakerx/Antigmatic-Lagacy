@@ -1,0 +1,23 @@
+{
+    "name": "book.anticlimacticlagacy.entry.ceaseless_enchantment.name",
+    "icon": "minecraft:enchanted_book",
+    "category": "anticlimacticlagacy:enchantments",
+	"advancement": "anticlimacticlagacy:book/enchantments/generic",
+    "secret": false,
+    "priority": false,
+    "read_by_default": false,
+    "sortnum": 10,
+    "pages": [
+        {
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.ceaseless_enchantment.page.1"
+        },
+		{
+            "type": "spotlight",
+			"item": "minecraft:crossbow#1{Enchantments:[{lvl:1s,id:'anticlimacticlagacy:ceaseless'}]}",
+			"link_recipe": false,
+			"title": "book.anticlimacticlagacy.entry.ceaseless_enchantment.heading.1",
+            "text": "book.anticlimacticlagacy.entry.ceaseless_enchantment.page.2"
+        }
+    ]
+}

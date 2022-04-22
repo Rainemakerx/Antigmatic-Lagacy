@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "conditions": [
+    {
+      "type": "anticlimacticlagacy:is_enabled",
+      "item": "anticlimacticlagacy:the_infinitum"
+    }
+  ],
+  "pattern": [
+    "HPH",
+    "EXE",
+    "NAN"
+  ],
+  "key": {
+    "X": {
+      "item": "anticlimacticlagacy:the_twist"
+    },
+	"H": {
+      "item": "anticlimacticlagacy:cosmic_heart"
+    },
+	"E": {
+      "item": "anticlimacticlagacy:evil_essence"
+    },
+	"A": {
+      "item": "anticlimacticlagacy:abyssal_heart"
+    },
+	"P": {
+      "item": "anticlimacticlagacy:enchanter_pearl"
+    },
+	"N": {
+      "item": "minecraft:netherite_ingot"
+    }
+  },
+  "result": {
+    "item": "anticlimacticlagacy:the_infinitum"
+  }
+}

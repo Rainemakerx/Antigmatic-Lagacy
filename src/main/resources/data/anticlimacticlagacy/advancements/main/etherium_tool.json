@@ -1,0 +1,79 @@
+{
+  "display": {
+    "icon": {
+      "item": "anticlimacticlagacy:etherium_axe"
+    },
+    "title": {
+      "translate": "advancement.anticlimacticlagacy:etheriumTool"
+    },
+    "description": {
+      "translate": "advancement.anticlimacticlagacy:etheriumTool.desc"
+    },
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false,
+	"frame": "task"
+  },
+  "parent": "anticlimacticlagacy:main/smelt_etherium",
+  "criteria": {
+    "etherium_pickaxe": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+             "items": ["anticlimacticlagacy:etherium_pickaxe"]
+          }
+        ]
+      }
+    },
+	"etherium_scythe": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+             "items": ["anticlimacticlagacy:etherium_scythe"]
+          }
+        ]
+      }
+    },
+	"etherium_shovel": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+             "items": ["anticlimacticlagacy:etherium_shovel"]
+          }
+        ]
+      }
+    },
+	"etherium_axe": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+             "items": ["anticlimacticlagacy:etherium_axe"]
+          }
+        ]
+      }
+    },
+	"etherium_sword": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+             "items": ["anticlimacticlagacy:etherium_sword"]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "etherium_pickaxe",
+      "etherium_axe",
+      "etherium_shovel",
+      "etherium_scythe",
+      "etherium_sword"
+    ]
+  ]
+}

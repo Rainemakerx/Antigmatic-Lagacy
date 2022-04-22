@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "conditions": [],
+  "group": "anticlimacticlagacy_tomeuncrafting",
+  "ingredients": [
+    {
+      "item": "anticlimacticlagacy:withered_tome"
+    }
+  ],
+  "result": {
+    "item": "minecraft:paper",
+    "count": 3
+  }
+}

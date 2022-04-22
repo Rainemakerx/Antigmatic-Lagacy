@@ -1,0 +1,30 @@
+{
+    "name": "book.anticlimacticlagacy.entry.enchanter_pearl.name",
+    "icon": "anticlimacticlagacy:enchanter_pearl",
+    "category": "anticlimacticlagacy:accessories",
+    "advancement": "anticlimacticlagacy:book/accessories/enchanter_pearl",
+    "secret": false,
+    "priority": false,
+    "read_by_default": false,
+    "sortnum": 55,
+    "pages": [
+        {
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.enchanter_pearl.page.1"
+        },
+		{
+            "type": "crafting",
+			"recipe": "anticlimacticlagacy:enchanter_pearl",
+            "title": " ",
+            "text": "book.anticlimacticlagacy.entry.enchanter_pearl.page.2"
+        },
+		{
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.enchanter_pearl.page.3"
+        },
+		{
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.enchanter_pearl.page.4"
+        }
+    ]
+}

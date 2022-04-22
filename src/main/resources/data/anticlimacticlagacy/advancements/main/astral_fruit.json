@@ -1,0 +1,33 @@
+{
+  "display": {
+    "icon": {
+      "item": "anticlimacticlagacy:astral_fruit"
+    },
+    "title": {
+      "translate": "advancement.anticlimacticlagacy:astralFruit"
+    },
+    "description": {
+      "translate": "advancement.anticlimacticlagacy:astralFruit.desc"
+    },
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false,
+	"frame": "challenge"
+  },
+  "rewards": {
+    "experience": 1000
+  },
+  "parent": "anticlimacticlagacy:main/cursed_ring",
+  "criteria": {
+    "fruit": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "anticlimacticlagacy:astral_fruit"
+          ]
+        }
+      }
+    }
+  }
+}

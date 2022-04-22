@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "item": "anticlimacticlagacy:forbidden_axe"
+    },
+    "title": {
+      "translate": "advancement.anticlimacticlagacy:forbiddenAxe"
+    },
+    "description": {
+      "translate": "advancement.anticlimacticlagacy:forbiddenAxe.desc"
+    },
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true,
+	"frame": "challenge"
+  },
+  "rewards": {
+    "experience": 100
+  },
+  "parent": "anticlimacticlagacy:main/megasponge",
+  "criteria": {
+    "spellstone": {
+      "trigger": "anticlimacticlagacy:forbidden_axe_beheading"
+    }
+  }
+}

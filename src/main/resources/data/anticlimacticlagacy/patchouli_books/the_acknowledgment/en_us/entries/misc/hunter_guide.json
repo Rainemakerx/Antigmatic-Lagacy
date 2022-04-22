@@ -1,0 +1,26 @@
+{
+    "name": "book.anticlimacticlagacy.entry.hunter_guide.name",
+    "icon": "anticlimacticlagacy:hunter_guide",
+    "category": "anticlimacticlagacy:misc",
+	"advancement": "anticlimacticlagacy:book/misc/hunter_guide",
+    "secret": false,
+    "priority": false,
+    "read_by_default": false,
+    "sortnum": 70,
+    "pages": [
+        {
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.hunter_guide.page.1"
+        },
+		{
+            "type": "crafting",
+			"recipe": "anticlimacticlagacy:hunter_guide",
+			"title": " ",
+            "text": "book.anticlimacticlagacy.entry.hunter_guide.page.2"
+        },
+		{
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.hunter_guide.page.3"
+        }
+    ]
+}

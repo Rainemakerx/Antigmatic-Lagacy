@@ -1,0 +1,32 @@
+{
+  "type": "anticlimacticlagacy:shapeless_no_return_craft",
+  "conditions": [
+    {
+      "type": "anticlimacticlagacy:is_enabled",
+      "item": "anticlimacticlagacy:mending_mixture"
+    }
+  ],
+  "ingredients": [
+    {
+      "item": "minecraft:dragon_breath"
+    },
+    {
+      "item": "minecraft:glistering_melon_slice"
+    },
+    {
+      "item": "minecraft:prismarine_crystals"
+    },
+    {
+      "item": "minecraft:phantom_membrane"
+    },
+    {
+      "item": "minecraft:blaze_powder"
+    },
+	{
+      "item": "minecraft:ghast_tear"
+    }
+  ],
+  "result": {
+    "item": "anticlimacticlagacy:mending_mixture"
+  }
+}

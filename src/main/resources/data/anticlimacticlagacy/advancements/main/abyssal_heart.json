@@ -1,0 +1,33 @@
+{
+  "display": {
+    "icon": {
+      "item": "anticlimacticlagacy:abyssal_heart"
+    },
+    "title": {
+      "translate": "advancement.anticlimacticlagacy:abyssalHeart"
+    },
+    "description": {
+      "translate": "advancement.anticlimacticlagacy:abyssalHeart.desc"
+    },
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false,
+	"frame": "challenge"
+  },
+  "rewards": {
+    "experience": 2000
+  },
+  "parent": "anticlimacticlagacy:main/cursed_ring",
+  "criteria": {
+    "heart": {
+      "trigger": "anticlimacticlagacy:cursed_inventory_changed",
+      "conditions": {
+        "items": [
+          {
+             "items": ["anticlimacticlagacy:abyssal_heart"]
+          }
+        ]
+      }
+    }
+  }
+}

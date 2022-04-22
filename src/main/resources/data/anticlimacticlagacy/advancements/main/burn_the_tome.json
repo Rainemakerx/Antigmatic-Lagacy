@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "anticlimacticlagacy:withered_tome"
+    },
+    "title": {
+      "translate": "advancement.anticlimacticlagacy:burnTheTome"
+    },
+    "description": {
+      "translate": "advancement.anticlimacticlagacy:burnTheTome.desc"
+    },
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true,
+	"frame": "task"
+  },
+  "parent": "anticlimacticlagacy:main/root",
+  "criteria": {
+    "burnitdown": {
+      "trigger": "anticlimacticlagacy:revelation_tome_burnt"
+    }
+  }
+}

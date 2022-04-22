@@ -1,0 +1,21 @@
+{
+    "name": "book.anticlimacticlagacy.entry.shroomlamp.name",
+    "icon": "anticlimacticlagacy:massive_shroomlamp",
+    "category": "anticlimacticlagacy:decorations",
+	"advancement": "anticlimacticlagacy:book/decorations/shroomlamp",
+    "secret": false,
+    "priority": false,
+    "read_by_default": false,
+    "sortnum": 10,
+    "pages": [
+        {
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.shroomlamp.page.1"
+        },
+		{
+            "type": "crafting",
+			"recipe": "anticlimacticlagacy:lamps/big_shroomlamp",
+			"recipe2": "anticlimacticlagacy:lamps/massive_shroomlamp"
+        }
+    ]
+}

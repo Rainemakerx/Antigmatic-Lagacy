@@ -1,0 +1,30 @@
+{
+    "name": "book.anticlimacticlagacy.entry.netherite.name",
+    "icon": "minecraft:netherite_ingot",
+    "category": "anticlimacticlagacy:materials",
+	"advancement": "anticlimacticlagacy:book/materials/netherite",
+    "secret": false,
+    "priority": false,
+    "read_by_default": false,
+    "sortnum": 10,
+    "pages": [
+        {
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.netherite.page.1"
+        },
+		{
+            "type": "crafting",
+			"recipe": "minecraft:netherite_ingot",
+            "text": "book.anticlimacticlagacy.entry.netherite.page.2"
+        },
+		{
+            "type": "smelting",
+			"recipe": "minecraft:netherite_scrap",
+            "text": "book.anticlimacticlagacy.entry.netherite.page.3"
+        },
+		{
+			"type": "empty",
+            "draw_filler": false
+		}
+    ]
+}

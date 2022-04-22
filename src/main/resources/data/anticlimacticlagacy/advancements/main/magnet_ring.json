@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "item": "anticlimacticlagacy:magnet_ring"
+    },
+    "title": {
+      "translate": "advancement.anticlimacticlagacy:magnetRing"
+    },
+    "description": {
+      "translate": "advancement.anticlimacticlagacy:magnetRing.desc"
+    },
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "anticlimacticlagacy:main/root",
+  "criteria": {
+    "spellstone": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+             "items": ["anticlimacticlagacy:magnet_ring"]
+          }
+        ]
+      }
+    }
+  }
+}

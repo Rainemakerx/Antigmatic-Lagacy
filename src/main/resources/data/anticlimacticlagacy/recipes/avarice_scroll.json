@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "conditions": [
+    {
+      "type": "anticlimacticlagacy:is_enabled",
+      "item": "anticlimacticlagacy:avarice_scroll"
+    }
+  ],
+  "pattern": [
+    "GRG",
+    "IXF",
+    "GHG"
+  ],
+  "key": {
+    "X": {
+      "item": "anticlimacticlagacy:darkest_scroll"
+    },
+	"G": {
+      "item": "minecraft:gold_ingot"
+    },
+	"R": {
+      "item": "anticlimacticlagacy:gem_ring"
+    },
+	"H": {
+      "item": "anticlimacticlagacy:twisted_core"
+    },
+	"F": {
+      "item": "minecraft:feather"
+    },
+	"I": {
+      "item": "minecraft:ink_sac"
+    }
+  },
+  "result": {
+    "item": "anticlimacticlagacy:avarice_scroll"
+  }
+}

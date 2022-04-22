@@ -1,0 +1,31 @@
+{
+    "name": "book.anticlimacticlagacy.entry.sharpshooter_enchantment.name",
+    "icon": "minecraft:enchanted_book",
+    "category": "anticlimacticlagacy:enchantments",
+	"advancement": "anticlimacticlagacy:book/enchantments/generic",
+    "secret": false,
+    "priority": false,
+    "read_by_default": false,
+    "sortnum": 0,
+    "pages": [
+        {
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.sharpshooter_enchantment.page.1"
+        },
+		{
+            "type": "spotlight",
+			"item": "minecraft:crossbow#1{Enchantments:[{lvl:5s,id:'anticlimacticlagacy:sharpshooter'}]}",
+			"link_recipe": false,
+			"title": "book.anticlimacticlagacy.entry.sharpshooter_enchantment.heading.1",
+            "text": "book.anticlimacticlagacy.entry.sharpshooter_enchantment.page.2"
+        },
+		{
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.sharpshooter_enchantment.page.3"
+        },
+		{
+            "type": "empty",
+            "draw_filler": false
+        }
+    ]
+}

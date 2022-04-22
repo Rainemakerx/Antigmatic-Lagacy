@@ -1,0 +1,31 @@
+{
+    "name": "book.anticlimacticlagacy.entry.redstone_lantern.name",
+    "icon": "anticlimacticlagacy:massive_redstonelamp",
+    "category": "anticlimacticlagacy:decorations",
+	"advancement": "anticlimacticlagacy:book/decorations/redstone_lantern",
+    "secret": false,
+    "priority": false,
+    "read_by_default": false,
+    "sortnum": 20,
+    "pages": [
+        {
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.redstone_lantern.page.1"
+        },
+		{
+            "type": "crafting",
+			"title": "book.anticlimacticlagacy.entry.redstone_lantern.heading.1",
+			"recipe": "anticlimacticlagacy:lamps/big_redstonelamp",
+			"recipe2": "anticlimacticlagacy:lamps/massive_redstonelamp",
+            "text": " "
+        },
+        {
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.redstone_lantern.page.2"
+        },
+        {
+            "type": "empty",
+            "draw_filler": false
+        }
+    ]
+}

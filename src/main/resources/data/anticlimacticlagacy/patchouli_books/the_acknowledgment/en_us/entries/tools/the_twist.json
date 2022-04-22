@@ -1,0 +1,30 @@
+{
+    "name": "book.anticlimacticlagacy.entry.the_twist.name",
+    "icon": "anticlimacticlagacy:the_twist",
+    "category": "anticlimacticlagacy:tools",
+	"advancement": "anticlimacticlagacy:book/tools/the_twist",
+    "secret": false,
+    "priority": false,
+    "read_by_default": false,
+    "sortnum": 70,
+    "pages": [
+        {
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.the_twist.page.1"
+        },
+		{
+            "type": "crafting",
+			"recipe": "anticlimacticlagacy:the_twist",
+            "title": " ",
+            "text": "book.anticlimacticlagacy.entry.the_twist.page.2"
+        },
+		{
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.the_twist.page.3"
+        },
+		{
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.the_twist.page.4"
+        }
+    ]
+}

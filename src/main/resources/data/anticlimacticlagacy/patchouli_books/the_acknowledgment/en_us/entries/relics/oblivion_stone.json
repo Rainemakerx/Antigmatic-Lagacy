@@ -1,0 +1,31 @@
+{
+    "name": "book.anticlimacticlagacy.entry.oblivion_stone.name",
+    "icon": "anticlimacticlagacy:oblivion_stone",
+    "category": "anticlimacticlagacy:relics",
+	"advancement": "anticlimacticlagacy:book/relics/oblivion_stone",
+    "secret": false,
+    "priority": false,
+    "read_by_default": false,
+    "sortnum": 20,
+    "pages": [
+        {
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.oblivion_stone.page.1"
+        },
+		{
+            "type": "spotlight",
+			"item": "anticlimacticlagacy:oblivion_stone",
+			"link_recipe": true,
+			"title": "book.anticlimacticlagacy.entry.oblivion_stone.heading.1",
+            "text": "book.anticlimacticlagacy.entry.oblivion_stone.page.2"
+        },
+		{
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.oblivion_stone.page.3"
+        },
+		{
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.oblivion_stone.page.4"
+        }
+    ]
+}

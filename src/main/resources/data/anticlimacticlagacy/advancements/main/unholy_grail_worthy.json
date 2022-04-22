@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "item": "anticlimacticlagacy:unholy_grail"
+    },
+    "title": {
+      "translate": "advancement.anticlimacticlagacy:unholyGrailWorthy"
+    },
+    "description": {
+      "translate": "advancement.anticlimacticlagacy:unholyGrailWorthy.desc"
+    },
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false,
+	"frame": "challenge"
+  },
+  "rewards": {
+    "experience": 4000
+  },
+  "parent": "anticlimacticlagacy:main/unholy_grail",
+  "criteria": {
+    "spellstone": {
+      "trigger": "anticlimacticlagacy:unholy_grail_drink",
+	  "conditions": {
+		  "is_the_worthy_one": true
+	  }
+    }
+  }
+}

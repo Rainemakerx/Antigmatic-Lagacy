@@ -1,0 +1,29 @@
+{
+    "name": "book.anticlimacticlagacy.entry.etherium.name",
+    "icon": "anticlimacticlagacy:etherium_ingot",
+    "category": "anticlimacticlagacy:materials",
+	"advancement": "anticlimacticlagacy:book/materials/etherium",
+    "secret": false,
+    "priority": false,
+    "read_by_default": false,
+    "sortnum": 30,
+    "pages": [
+        {
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.etherium.page.1"
+        },
+		{
+            "type": "smelting",
+			"recipe": "anticlimacticlagacy:etherium_ingot",
+            "text": "book.anticlimacticlagacy.entry.etherium.page.2"
+        },
+		{
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.etherium.page.3"
+        },
+		{
+            "type": "empty",
+            "draw_filler": false
+        }
+    ]
+}

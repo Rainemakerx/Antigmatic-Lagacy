@@ -1,0 +1,29 @@
+{
+    "name": "book.anticlimacticlagacy.entry.arcane_scrolls.name",
+    "icon": "minecraft:writable_book",
+    "category": "anticlimacticlagacy:accessories",
+	"advancement": "anticlimacticlagacy:book/accessories/arcane_scrolls",
+    "secret": false,
+    "priority": false,
+    "read_by_default": false,
+    "sortnum": 60,
+    "pages": [
+        {
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.arcane_scrolls.page.1"
+        },
+		{
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.arcane_scrolls.page.2"
+        },
+		{
+            "type": "crafting",
+			"recipe": "anticlimacticlagacy:thicc_scroll",
+            "text": "book.anticlimacticlagacy.entry.arcane_scrolls.page.3"
+        },
+		{
+            "type": "empty",
+            "draw_filler": false
+        }
+    ]
+}

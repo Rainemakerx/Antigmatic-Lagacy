@@ -1,0 +1,46 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "conditions": [
+    {
+      "type": "anticlimacticlagacy:is_enabled",
+      "item": "anticlimacticlagacy:infinimeal"
+    }
+  ],
+  "pattern": [
+    "CVF",
+    "AXW",
+    "PLN"
+  ],
+  "key": {
+    "X": {
+      "item": "anticlimacticlagacy:earth_heart"
+    },
+	"C": {
+      "item": "minecraft:cocoa_beans"
+    },
+	"V": {
+      "item": "minecraft:weeping_vines"
+    },
+	"F": {
+      "item": "minecraft:warped_fungus"
+    },
+	"W": {
+      "item": "minecraft:wheat"
+    },
+	"N": {
+      "item": "minecraft:nether_wart"
+    },
+	"L": {
+      "item": "minecraft:lily_pad"
+    },
+	"P": {
+      "item": "minecraft:poppy"
+    },
+	"A": {
+      "item": "minecraft:apple"
+    }
+  },
+  "result": {
+    "item": "anticlimacticlagacy:infinimeal"
+  }
+}

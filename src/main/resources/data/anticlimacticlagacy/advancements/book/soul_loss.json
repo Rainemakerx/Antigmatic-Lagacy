@@ -1,0 +1,17 @@
+{
+  "parent": "anticlimacticlagacy:book/root",
+  "criteria": {
+    "incompletable": {
+      "trigger": "minecraft:impossible"
+    },
+    "is_cursed_one": {
+      "trigger": "anticlimacticlagacy:equip_cursed_ring"
+    }
+  },
+  "requirements": [
+    [
+      "incompletable",
+	  "is_cursed_one"
+    ]
+  ]
+}

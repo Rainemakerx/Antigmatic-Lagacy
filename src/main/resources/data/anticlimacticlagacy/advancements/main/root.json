@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "item": "anticlimacticlagacy:anticlimactic_amulet"
+    },
+    "title": {
+      "translate": "advancementTab.anticlimacticlagacy"
+    },
+    "description": {
+      "translate": "advancementTab.anticlimacticlagacy.desc"
+    },
+    "background": "minecraft:textures/block/end_stone_bricks.png",
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "criteria": {
+    "flower": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["anticlimacticlagacy:anticlimactic_amulet"]
+          }
+        ]
+      }
+    }
+  }
+}

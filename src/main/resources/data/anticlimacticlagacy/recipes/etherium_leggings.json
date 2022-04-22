@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "conditions": [
+    {
+      "type": "anticlimacticlagacy:is_enabled",
+      "item": "anticlimacticlagacy:etherium_leggings"
+    }
+  ],
+  "pattern": [
+    "XXX",
+    "X X",
+    "X X"
+  ],
+  "key": {
+    "X": {
+      "item": "anticlimacticlagacy:etherium_ingot"
+    }
+  },
+  "result": {
+    "item": "anticlimacticlagacy:etherium_leggings"
+  }
+}

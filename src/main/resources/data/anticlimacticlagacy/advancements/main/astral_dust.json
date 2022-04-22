@@ -1,0 +1,30 @@
+{
+  "display": {
+    "icon": {
+      "item": "anticlimacticlagacy:astral_dust"
+    },
+    "title": {
+      "translate": "advancement.anticlimacticlagacy:astralDust"
+    },
+    "description": {
+      "translate": "advancement.anticlimacticlagacy:astralDust.desc"
+    },
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false,
+	"frame": "goal"
+  },
+  "parent": "anticlimacticlagacy:main/root",
+  "criteria": {
+    "etherium": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+             "items": ["anticlimacticlagacy:astral_dust"]
+          }
+        ]
+      }
+    }
+  }
+}

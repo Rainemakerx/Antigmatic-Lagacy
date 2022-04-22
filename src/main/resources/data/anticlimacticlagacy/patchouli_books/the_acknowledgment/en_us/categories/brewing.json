@@ -1,0 +1,7 @@
+{
+	"name": "book.anticlimacticlagacy.category.brewing.name",
+	"description": "book.anticlimacticlagacy.category.brewing.desc",
+	"icon": "anticlimacticlagacy:recall_potion",
+	"sortnum": 70,
+	"secret": false
+}

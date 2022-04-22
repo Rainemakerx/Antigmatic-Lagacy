@@ -1,0 +1,25 @@
+{
+  "parent": "anticlimacticlagacy:book/root",
+  "rewards": {},
+  "criteria": {
+    "has_items": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["anticlimacticlagacy:cursed_ring"]
+          }
+        ]
+      }
+    },
+    "is_cursed_one": {
+      "trigger": "anticlimacticlagacy:equip_cursed_ring"
+    }
+  },
+  "requirements": [
+    [
+      "has_items",
+	  "is_cursed_one"
+    ]
+  ]
+}

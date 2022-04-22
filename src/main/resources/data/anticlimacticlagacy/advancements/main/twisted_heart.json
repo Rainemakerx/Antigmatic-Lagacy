@@ -1,0 +1,30 @@
+{
+  "display": {
+    "icon": {
+      "item": "anticlimacticlagacy:twisted_core"
+    },
+    "title": {
+      "translate": "advancement.anticlimacticlagacy:twistedHeart"
+    },
+    "description": {
+      "translate": "advancement.anticlimacticlagacy:twistedHeart.desc"
+    },
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false,
+	"frame": "goal"
+  },
+  "parent": "anticlimacticlagacy:main/cursed_ring",
+  "criteria": {
+    "core": {
+      "trigger": "anticlimacticlagacy:cursed_inventory_changed",
+      "conditions": {
+        "items": [
+          {
+             "items": ["anticlimacticlagacy:twisted_core"]
+          }
+        ]
+      }
+    }
+  }
+}

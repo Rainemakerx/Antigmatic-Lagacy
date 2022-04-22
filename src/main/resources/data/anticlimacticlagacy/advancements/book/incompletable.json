@@ -1,0 +1,13 @@
+{
+  "parent": "anticlimacticlagacy:book/root",
+  "criteria": {
+    "incompletable": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "incompletable"
+    ]
+  ]
+}

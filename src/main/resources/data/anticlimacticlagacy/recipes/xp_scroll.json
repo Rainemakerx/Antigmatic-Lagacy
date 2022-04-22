@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "conditions": [
+    {
+      "type": "anticlimacticlagacy:is_enabled",
+      "item": "anticlimacticlagacy:xp_scroll"
+    }
+  ],
+  "pattern": [
+    "BEB",
+    "IXF",
+    "BGB"
+  ],
+  "key": {
+    "X": {
+      "item": "anticlimacticlagacy:thicc_scroll"
+    },
+	"F": {
+      "item": "minecraft:feather"
+    },
+	"I": {
+      "item": "minecraft:ink_sac"
+    },
+	"B": {
+      "item": "minecraft:experience_bottle"
+    },
+	"E": {
+      "item": "minecraft:ender_eye"
+    },
+	"G": {
+      "item": "minecraft:emerald"
+    }
+  },
+  "result": {
+    "item": "anticlimacticlagacy:xp_scroll"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.integral.anticlimacticlagacy.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "anticlimacticlagacy.refmap.json",
+  "verbose": true,
+  "mixins": [
+	"MixinPiglinTasks",
+	"MixinVillagerEntity",
+	"MixinForgeHooks",
+	"MixinPhantomSpawner",
+	"MixinApotheosisEnchantmentContainer",
+	"MixinEnchantmentContainer",
+	"MixinHoglinTasks",
+	"MixinEnchantmentHelper",
+	"MixinLootTable",
+	"MixinCharmEffects",
+	"MixinStarterGear",
+	"MixinPlayer",
+	"MixinLivingEntity",
+	"MixinEnderDragon",
+	"MixinInventoryChangeTrigger",
+	"MixinShulker",
+	"AccessorAbstractArrowEntity",
+	"AccessorAdvancementCommands"
+  ],
+  "client": [
+	"MixinForgeHooksClient",
+	"MixinGuiBookLanding",
+	"MixinBookTextRenderer",
+	"MixinAttributeTooltips",
+	"MixinItemRenderer",
+	"MixinTooltipOverlayHandler"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

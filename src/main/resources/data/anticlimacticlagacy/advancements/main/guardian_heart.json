@@ -1,0 +1,33 @@
+{
+  "display": {
+    "icon": {
+      "item": "anticlimacticlagacy:guardian_heart"
+    },
+    "title": {
+      "translate": "advancement.anticlimacticlagacy:guardianHeart"
+    },
+    "description": {
+      "translate": "advancement.anticlimacticlagacy:guardianHeart.desc"
+    },
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false,
+	"frame": "challenge"
+  },
+  "rewards": {
+    "experience": 500
+  },
+  "parent": "anticlimacticlagacy:main/cursed_ring",
+  "criteria": {
+    "heart": {
+      "trigger": "anticlimacticlagacy:cursed_inventory_changed",
+      "conditions": {
+        "items": [
+          {
+             "items": ["anticlimacticlagacy:guardian_heart"]
+          }
+        ]
+      }
+    }
+  }
+}

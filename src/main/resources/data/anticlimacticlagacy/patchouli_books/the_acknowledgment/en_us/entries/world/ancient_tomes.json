@@ -1,0 +1,35 @@
+{
+    "name": "book.anticlimacticlagacy.entry.ancient_tomes.name",
+    "icon": "anticlimacticlagacy:tattered_tome",
+    "category": "anticlimacticlagacy:world",
+    "secret": false,
+    "priority": false,
+    "read_by_default": false,
+    "sortnum": 20,
+	"extra_recipe_mappings": {
+		"anticlimacticlagacy:tattered_tome": 1,
+		"anticlimacticlagacy:withered_tome": 1,
+		"anticlimacticlagacy:corrupted_tome": 1
+	},
+    "pages": [
+        {
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.ancient_tomes.page.1"
+        },
+		{
+            "type": "spotlight",
+			"item": "anticlimacticlagacy:tattered_tome",
+			"link_recipe": false,
+			"title": "book.anticlimacticlagacy.entry.ancient_tomes.heading.1",
+            "text": "book.anticlimacticlagacy.entry.ancient_tomes.page.2"
+        },
+        {
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.ancient_tomes.page.3"
+        },
+        {
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.ancient_tomes.page.4"
+        }
+    ]
+}

@@ -1,0 +1,17 @@
+{
+  "parent": "anticlimacticlagacy:book/root",
+  "rewards": {},
+  "criteria": {
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "anticlimacticlagacy:cosmic_heart"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe"
+    ]
+  ]
+}

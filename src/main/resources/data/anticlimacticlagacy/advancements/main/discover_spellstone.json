@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "item": "anticlimacticlagacy:golem_heart"
+    },
+    "title": {
+      "translate": "advancement.anticlimacticlagacy:discoverSpellstone"
+    },
+    "description": {
+      "translate": "advancement.anticlimacticlagacy:discoverSpellstone.desc"
+    },
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "parent": "anticlimacticlagacy:main/root",
+  "criteria": {
+    "spellstone": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "curios:spellstone"
+          }
+        ]
+      }
+    }
+  }
+}

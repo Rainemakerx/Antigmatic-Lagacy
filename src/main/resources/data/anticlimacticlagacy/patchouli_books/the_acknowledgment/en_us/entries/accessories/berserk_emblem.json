@@ -1,0 +1,22 @@
+{
+    "name": "book.anticlimacticlagacy.entry.berserk_emblem.name",
+    "icon": "anticlimacticlagacy:berserk_emblem",
+    "category": "anticlimacticlagacy:accessories",
+	"advancement": "anticlimacticlagacy:book/accessories/berserk_emblem",
+    "secret": false,
+    "priority": false,
+    "read_by_default": false,
+    "sortnum": 45,
+    "pages": [
+        {
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.berserk_emblem.page.1"
+        },
+		{
+            "type": "crafting",
+			"recipe": "anticlimacticlagacy:berserk_emblem",
+			"title": " ",
+            "text": "book.anticlimacticlagacy.entry.berserk_emblem.page.2"
+        }
+    ]
+}

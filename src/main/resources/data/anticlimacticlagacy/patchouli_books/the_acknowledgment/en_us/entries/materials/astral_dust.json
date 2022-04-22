@@ -1,0 +1,23 @@
+{
+    "name": "book.anticlimacticlagacy.entry.astral_dust.name",
+    "icon": "anticlimacticlagacy:astral_dust",
+    "category": "anticlimacticlagacy:materials",
+	"advancement": "anticlimacticlagacy:book/materials/astral_dust",
+    "secret": false,
+    "priority": false,
+    "read_by_default": false,
+    "sortnum": 40,
+    "pages": [
+        {
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.astral_dust.page.1"
+        },
+		{
+            "type": "spotlight",
+			"item": "anticlimacticlagacy:astral_dust",
+			"link_recipe": true,
+            "title": "book.anticlimacticlagacy.entry.astral_dust.heading.1",
+            "text": "book.anticlimacticlagacy.entry.astral_dust.page.2"
+        }
+    ]
+}

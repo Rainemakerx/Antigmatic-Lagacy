@@ -1,0 +1,30 @@
+{
+    "name": "book.anticlimacticlagacy.entry.extradimensional_eye.name",
+    "icon": "anticlimacticlagacy:extradimensional_eye",
+    "category": "anticlimacticlagacy:misc",
+	"advancement": "anticlimacticlagacy:book/misc/extradimensional_eye",
+    "secret": false,
+    "priority": false,
+    "read_by_default": false,
+    "sortnum": 10,
+    "pages": [
+        {
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.extradimensional_eye.page.1"
+        },
+		{
+            "type": "crafting",
+			"recipe": "anticlimacticlagacy:extradimensional_eye",
+			"title": " ",
+            "text": "book.anticlimacticlagacy.entry.extradimensional_eye.page.2"
+        },
+		{
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.extradimensional_eye.page.3"
+        },
+		{
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.extradimensional_eye.page.4"
+        }
+    ]
+}

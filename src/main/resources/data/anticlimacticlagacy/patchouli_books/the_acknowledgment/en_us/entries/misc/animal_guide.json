@@ -1,0 +1,22 @@
+{
+    "name": "book.anticlimacticlagacy.entry.animal_guide.name",
+    "icon": "anticlimacticlagacy:animal_guide",
+    "category": "anticlimacticlagacy:misc",
+	"advancement": "anticlimacticlagacy:book/misc/animal_guide",
+    "secret": false,
+    "priority": false,
+    "read_by_default": false,
+    "sortnum": 60,
+    "pages": [
+        {
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.animal_guide.page.1"
+        },
+		{
+            "type": "crafting",
+			"recipe": "anticlimacticlagacy:animal_guide",
+			"title": " ",
+            "text": "book.anticlimacticlagacy.entry.animal_guide.page.2"
+        }
+    ]
+}

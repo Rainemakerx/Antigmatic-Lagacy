@@ -1,0 +1,56 @@
+{
+  "misc.hhon": {
+    "sounds": [
+      {
+        "name": "anticlimacticlagacy:misc/hhon",
+        "stream": false
+      }
+    ]
+  },
+  "misc.hhoff": {
+    "sounds": [
+      {
+        "name": "anticlimacticlagacy:misc/hhoff",
+        "stream": false
+      }
+    ]
+  },
+  "misc.deflect": {
+    "sounds": [
+      {
+        "name": "anticlimacticlagacy:misc/deflect",
+        "stream": false
+      }
+    ]
+  },
+  "misc.learn": {
+    "sounds": [
+      {
+        "name": "anticlimacticlagacy:misc/learn",
+        "stream": false
+      }
+    ]
+  },
+  "misc.shield_trigger": {
+    "sounds": [
+      {
+        "name": "anticlimacticlagacy:misc/shield_hit_0",
+        "stream": false
+      }, {
+        "name": "anticlimacticlagacy:misc/shield_hit_1",
+        "stream": false
+      }
+    ]
+  },
+  "misc.write": {
+    "sounds": [
+      {
+        "name": "anticlimacticlagacy:misc/write1",
+        "stream": false
+      }, {
+        "name": "anticlimacticlagacy:misc/write2",
+        "stream": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "conditions": [
+    {
+      "type": "anticlimacticlagacy:is_enabled",
+      "item": "anticlimacticlagacy:dark_mirror"
+    }
+  ],
+  "pattern": [
+    "IPI",
+    "RXR",
+    " I "
+  ],
+  "key": {
+    "P": {
+      "item": "minecraft:glass_pane"
+    },
+	"I": {
+      "item": "minecraft:iron_ingot"
+    },
+	"R": {
+      "item": "anticlimacticlagacy:recall_potion"
+    },
+	"X": {
+      "item": "anticlimacticlagacy:twisted_core"
+    }
+  },
+  "result": {
+    "item": "anticlimacticlagacy:dark_mirror"
+  }
+}

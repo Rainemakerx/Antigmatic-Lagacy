@@ -1,0 +1,17 @@
+{
+  "parent": "anticlimacticlagacy:book/root",
+  "rewards": {},
+  "criteria": {
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "anticlimacticlagacy:lore_inscriber"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe"
+    ]
+  ]
+}

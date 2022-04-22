@@ -1,0 +1,7 @@
+{
+	"name": "book.anticlimacticlagacy.category.armor.name",
+	"description": "book.anticlimacticlagacy.category.armor.desc",
+	"icon": "minecraft:netherite_chestplate",
+	"sortnum": 30,
+	"secret": false
+}

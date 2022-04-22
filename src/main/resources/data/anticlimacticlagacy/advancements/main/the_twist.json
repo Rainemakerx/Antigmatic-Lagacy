@@ -1,0 +1,33 @@
+{
+  "display": {
+    "icon": {
+      "item": "anticlimacticlagacy:the_twist"
+    },
+    "title": {
+      "translate": "advancement.anticlimacticlagacy:theTwist"
+    },
+    "description": {
+      "translate": "advancement.anticlimacticlagacy:theTwist.desc"
+    },
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false,
+	"frame": "challenge"
+  },
+  "rewards": {
+    "experience": 300
+  },
+  "parent": "anticlimacticlagacy:main/twisted_heart",
+  "criteria": {
+    "twist": {
+      "trigger": "anticlimacticlagacy:cursed_inventory_changed",
+      "conditions": {
+        "items": [
+          {
+             "items": ["anticlimacticlagacy:the_twist"]
+          }
+        ]
+      }
+    }
+  }
+}

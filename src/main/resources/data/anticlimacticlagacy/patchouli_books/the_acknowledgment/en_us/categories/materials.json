@@ -1,0 +1,7 @@
+{
+	"name": "book.anticlimacticlagacy.category.materials.name",
+	"description": "book.anticlimacticlagacy.category.materials.desc",
+	"icon": "anticlimacticlagacy:astral_dust",
+	"sortnum": 10,
+	"secret": false
+}

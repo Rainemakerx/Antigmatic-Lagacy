@@ -1,0 +1,21 @@
+{
+  "parent": "anticlimacticlagacy:book/root",
+  "rewards": {},
+  "criteria": {
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "anticlimacticlagacy:ender_ring"
+      }
+    },
+    "is_cursed_one": {
+      "trigger": "anticlimacticlagacy:equip_cursed_ring"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+	  "is_cursed_one"
+    ]
+  ]
+}

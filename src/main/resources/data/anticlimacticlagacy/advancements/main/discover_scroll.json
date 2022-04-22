@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "item": "anticlimacticlagacy:thicc_scroll"
+    },
+    "title": {
+      "translate": "advancement.anticlimacticlagacy:discoverScroll"
+    },
+    "description": {
+      "translate": "advancement.anticlimacticlagacy:discoverScroll.desc"
+    },
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "parent": "anticlimacticlagacy:main/root",
+  "criteria": {
+    "spellstone": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "curios:scroll"
+          }
+        ]
+      }
+    }
+  }
+}

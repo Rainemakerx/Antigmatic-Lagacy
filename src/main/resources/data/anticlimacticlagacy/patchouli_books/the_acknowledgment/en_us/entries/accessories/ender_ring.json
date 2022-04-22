@@ -1,0 +1,30 @@
+{
+    "name": "book.anticlimacticlagacy.entry.ender_ring.name",
+    "icon": "anticlimacticlagacy:ender_ring",
+    "category": "anticlimacticlagacy:accessories",
+    "advancement": "anticlimacticlagacy:book/accessories/ender_ring",
+    "secret": false,
+    "priority": false,
+    "read_by_default": false,
+    "sortnum": 30,
+    "pages": [
+        {
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.ender_ring.page.1"
+        },
+		{
+            "type": "crafting",
+			"recipe": "anticlimacticlagacy:ender_ring",
+            "title": " ",
+            "text": "book.anticlimacticlagacy.entry.ender_ring.page.2"
+        },
+		{
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.ender_ring.page.3"
+        },
+		{
+            "type": "empty",
+            "draw_filler": false
+        }
+    ]
+}

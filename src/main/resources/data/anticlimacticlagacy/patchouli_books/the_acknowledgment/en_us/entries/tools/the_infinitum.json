@@ -1,0 +1,30 @@
+{
+    "name": "book.anticlimacticlagacy.entry.the_infinitum.name",
+    "icon": "anticlimacticlagacy:the_infinitum",
+    "category": "anticlimacticlagacy:tools",
+	"advancement": "anticlimacticlagacy:book/tools/the_infinitum",
+    "secret": false,
+    "priority": false,
+    "read_by_default": false,
+    "sortnum": 100,
+    "pages": [
+        {
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.the_infinitum.page.1"
+        },
+		{
+            "type": "crafting",
+			"recipe": "anticlimacticlagacy:the_infinitum",
+            "title": " ",
+            "text": "book.anticlimacticlagacy.entry.the_infinitum.page.2"
+        },
+		{
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.the_infinitum.page.3"
+        },
+		{
+            "type": "empty",
+            "draw_filler": false
+        }
+    ]
+}

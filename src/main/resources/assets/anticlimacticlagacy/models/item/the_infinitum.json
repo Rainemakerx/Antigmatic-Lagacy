@@ -1,0 +1,26 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "anticlimacticlagacy:items/the_infinitum"
+    },
+	"overrides": [
+        {
+            "predicate": {
+                "anticlimacticlagacy:the_infinitum_open": 0
+            },
+            "model": "anticlimacticlagacy:item/the_infinitum_0"
+        },
+        {
+            "predicate": {
+                "anticlimacticlagacy:the_infinitum_open": 0.5
+            },
+            "model": "anticlimacticlagacy:item/the_infinitum_1"
+        },
+        {
+            "predicate": {
+                "anticlimacticlagacy:the_infinitum_open": 1
+            },
+            "model": "anticlimacticlagacy:item/the_infinitum_2"
+        }
+	]
+}

@@ -1,0 +1,22 @@
+{
+    "name": "book.anticlimacticlagacy.entry.iron_ring.name",
+    "icon": "anticlimacticlagacy:iron_ring",
+    "category": "anticlimacticlagacy:accessories",
+    "advancement": "anticlimacticlagacy:book/accessories/iron_ring",
+    "secret": false,
+    "priority": false,
+    "read_by_default": false,
+    "sortnum": 0,
+    "pages": [
+        {
+            "type": "text",
+            "text": "book.anticlimacticlagacy.entry.iron_ring.page.1"
+        },
+		{
+            "type": "crafting",
+			"recipe": "anticlimacticlagacy:iron_ring",
+            "title": " ",
+            "text": ""
+        }
+    ]
+}

@@ -1,0 +1,30 @@
+{
+  "display": {
+    "icon": {
+      "item": "anticlimacticlagacy:lore_inscriber"
+    },
+    "title": {
+      "translate": "advancement.anticlimacticlagacy:loreInscriber"
+    },
+    "description": {
+      "translate": "advancement.anticlimacticlagacy:loreInscriber.desc"
+    },
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true,
+	"frame": "task"
+  },
+  "parent": "anticlimacticlagacy:main/astral_dust",
+  "criteria": {
+    "etherium": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+             "items": ["anticlimacticlagacy:lore_inscriber"]
+          }
+        ]
+      }
+    }
+  }
+}
