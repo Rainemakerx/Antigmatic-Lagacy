@@ -131,7 +131,7 @@ public class ClientProxy extends CommonProxy {
 				(stack, world, entity, seed) -> entity != null && entity.isUsingItem()
 				&& entity.getUseItem() == stack ? 1 : 0);
 
-		ItemProperties.register(anticlimacticlagacy.theInfinitum, new ResourceLocation(anticlimacticlagacy.MODID, "the_infinitum_open"), (stack, world, entity, seed) -> {
+		ItemProperties.register(anticlimacticlagacy.theInfinitum, new ResourceLocation(AnticlimacticLagacy.MODID, "the_infinitum_open"), (stack, world, entity, seed) -> {
 			if (entity instanceof Player player) {
 				for (InfinitumCounterEntry entry : this.theInfinitumHoldTicks) {
 					if (entry.getPlayer() == player && entry.getStack() == stack)

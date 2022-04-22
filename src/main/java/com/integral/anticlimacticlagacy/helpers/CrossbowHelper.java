@@ -25,7 +25,7 @@ import net.minecraft.world.level.Level;
 
 public class CrossbowHelper {
 
-	public static final String sharpshooterTagPrefix = anticlimacticlagacy.MODID+":sharpshot:";
+	public static final String sharpshooterTagPrefix = AnticlimacticLagacy.MODID+":sharpshot:";
 
 	public static boolean tryCharge(LivingEntity living, ItemStack crossbow, ItemStack ammo, boolean bonusCycles, boolean isCreative) {
 		if (ammo.isEmpty())

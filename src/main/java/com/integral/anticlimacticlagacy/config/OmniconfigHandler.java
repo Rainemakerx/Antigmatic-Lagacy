@@ -109,7 +109,7 @@ public class OmniconfigHandler {
 				.clientOnly()
 				.getBoolean("AngelBlessingDoubleJump", true);
 
-		SuperpositionHandler.dispatchWrapperToHolders(anticlimacticlagacy.MODID, client);
+		SuperpositionHandler.dispatchWrapperToHolders(AnticlimacticLagacy.MODID, client);
 
 		client.popCategory();
 		client.build();
@@ -158,7 +158,7 @@ public class OmniconfigHandler {
 				.comment("If true, Anticlimactic Legacy will cycle through each player's recipe book and trigger 'minecraft:recipe_unlocked' criterion trigger for everything that they have unlocked upon player joining the world.")
 				.getBoolean("RetriggerRecipeUnlocks", true);
 
-		Multimap<String, Field> accessibilityGeneratorMap = SuperpositionHandler.retainAccessibilityGeneratorMap(anticlimacticlagacy.MODID);
+		Multimap<String, Field> accessibilityGeneratorMap = SuperpositionHandler.retainAccessibilityGeneratorMap(AnticlimacticLagacy.MODID);
 		itemsOptions.clear();
 		builder.forceSynchronized(true);
 
@@ -201,7 +201,7 @@ public class OmniconfigHandler {
 
 		builder.pushCategory("Balance Options", "Various options that mostly affect individual items");
 		builder.forceSynchronized(true);
-		SuperpositionHandler.dispatchWrapperToHolders(anticlimacticlagacy.MODID, builder);
+		SuperpositionHandler.dispatchWrapperToHolders(AnticlimacticLagacy.MODID, builder);
 		builder.forceSynchronized(false);
 		builder.popCategory();
 

@@ -68,7 +68,7 @@ public class OblivionStone extends ItemBase implements Vanishable {
 
 	public OblivionStone() {
 		super(ItemBase.getDefaultProperties().stacksTo(1).rarity(Rarity.RARE).fireResistant());
-		this.setRegistryName(new ResourceLocation(anticlimacticlagacy.MODID, "oblivion_stone"));
+		this.setRegistryName(new ResourceLocation(AnticlimacticLagacy.MODID, "oblivion_stone"));
 	}
 
 	@Override

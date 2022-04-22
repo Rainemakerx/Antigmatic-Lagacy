@@ -300,7 +300,7 @@ import static com.integral.anticlimacticlagacy.config.JsonConfigHandler.*;
  * @author Integral
  */
 
-@Mod.EventBusSubscriber(modid = anticlimacticlagacy.MODID)
+@Mod.EventBusSubscriber(modid = AnticlimacticLagacy.MODID)
 public class AnticlimacticEventHandler {
 	private static final String NBT_KEY_PATCHOULIFORCE = "anticlimacticlagacy.patchouliforce";
 	private static final String NBT_KEY_ENIGMATICGIFT = "anticlimacticlagacy.firstjoin";
@@ -309,8 +309,8 @@ public class AnticlimacticEventHandler {
 	private static final String NBT_KEY_ENABLERING = "anticlimacticlagacy.rings_enabled";
 	private static final String NBT_KEY_ENABLESCROLL = "anticlimacticlagacy.scrolls_enabled";
 
-	public static final ResourceLocation FIREBAR_LOCATION = new ResourceLocation(anticlimacticlagacy.MODID, "textures/gui/firebar.png");
-	public static final ResourceLocation ICONS_LOCATION = new ResourceLocation(anticlimacticlagacy.MODID, "textures/gui/generic_icons.png");
+	public static final ResourceLocation FIREBAR_LOCATION = new ResourceLocation(AnticlimacticLagacy.MODID, "textures/gui/firebar.png");
+	public static final ResourceLocation ICONS_LOCATION = new ResourceLocation(AnticlimacticLagacy.MODID, "textures/gui/generic_icons.png");
 
 	public static final CooldownMap deferredToast = new CooldownMap();
 	public static final List<Toast> scheduledToasts = new ArrayList<>();
@@ -331,7 +331,7 @@ public class AnticlimacticEventHandler {
 		ItemStack stack = event.getItemStack();
 
 		if (stack != null && !stack.isEmpty()) { // cause I don't trust you Forge
-			if (stack.getItem().getRegistryName().getNamespace().equals(anticlimacticlagacy.MODID)) {
+			if (stack.getItem().getRegistryName().getNamespace().equals(AnticlimacticLagacy.MODID)) {
 				event.setCanceled(handlingTooltip = true);
 				int background = GuiUtils.DEFAULT_BACKGROUND_COLOR;
 				int borderStart = GuiUtils.DEFAULT_BORDER_COLOR_START;
@@ -2240,7 +2240,7 @@ public class AnticlimacticEventHandler {
 				droppedCrystal = true;
 			}
 
-			ResourceLocation soulLossAdvancement = new ResourceLocation(anticlimacticlagacy.MODID, "book/soul_loss");
+			ResourceLocation soulLossAdvancement = new ResourceLocation(AnticlimacticLagacy.MODID, "book/soul_loss");
 
 			if (droppedCrystal) {
 				SuperpositionHandler.grantAdvancement(player, soulLossAdvancement);
@@ -2681,12 +2681,12 @@ public class AnticlimacticEventHandler {
 			 * Handlers for fixing missing Curios slots upong joining the world.
 			 */
 
-			if (SuperpositionHandler.hasAdvancement(player, new ResourceLocation(anticlimacticlagacy.MODID, "main/discover_spellstone"))) {
+			if (SuperpositionHandler.hasAdvancement(player, new ResourceLocation(AnticlimacticLagacy.MODID, "main/discover_spellstone"))) {
 				SuperpositionHandler.unlockSpecialSlot("spellstone", event.getPlayer());
 				SuperpositionHandler.setPersistentBoolean(player, AnticlimacticEventHandler.NBT_KEY_ENABLESPELLSTONE, true);
 			}
 
-			if (SuperpositionHandler.hasAdvancement(player, new ResourceLocation(anticlimacticlagacy.MODID, "main/discover_scroll"))) {
+			if (SuperpositionHandler.hasAdvancement(player, new ResourceLocation(AnticlimacticLagacy.MODID, "main/discover_scroll"))) {
 				SuperpositionHandler.unlockSpecialSlot("scroll", event.getPlayer());
 				SuperpositionHandler.setPersistentBoolean(player, AnticlimacticEventHandler.NBT_KEY_ENABLESCROLL, true);
 			}
@@ -2712,7 +2712,7 @@ public class AnticlimacticEventHandler {
 		String id = event.getAdvancement().getId().toString();
 		Player player = event.getPlayer();
 
-		if (player instanceof ServerPlayer && id.startsWith(anticlimacticlagacy.MODID+":book/")) {
+		if (player instanceof ServerPlayer && id.startsWith(AnticlimacticLagacy.MODID+":book/")) {
 			anticlimacticlagacy.packetInstance.send(PacketDistributor.PLAYER.with(() -> (ServerPlayer)player) , new PacketSetEntryState(false, id.replace("book/", "")));
 		}
 
@@ -2721,14 +2721,14 @@ public class AnticlimacticEventHandler {
 		 * respective advancement.
 		 */
 
-		if (id.equals(anticlimacticlagacy.MODID + ":main/discover_spellstone")) {
+		if (id.equals(AnticlimacticLagacy.MODID + ":main/discover_spellstone")) {
 			//if (SuperpositionHandler.isSlotLocked("spellstone", player)) {
 			anticlimacticlagacy.packetInstance.send(PacketDistributor.PLAYER.with(() -> (ServerPlayer) event.getPlayer()), new PacketSlotUnlocked("spellstone"));
 			//}
 
 			SuperpositionHandler.unlockSpecialSlot("spellstone", player);
 			SuperpositionHandler.setPersistentBoolean(player, AnticlimacticEventHandler.NBT_KEY_ENABLESPELLSTONE, true);
-		} else if (id.equals(anticlimacticlagacy.MODID + ":main/discover_scroll")) {
+		} else if (id.equals(AnticlimacticLagacy.MODID + ":main/discover_scroll")) {
 			//if (SuperpositionHandler.isSlotLocked("scroll", player)) {
 			anticlimacticlagacy.packetInstance.send(PacketDistributor.PLAYER.with(() -> (ServerPlayer) event.getPlayer()), new PacketSlotUnlocked("scroll"));
 			//}

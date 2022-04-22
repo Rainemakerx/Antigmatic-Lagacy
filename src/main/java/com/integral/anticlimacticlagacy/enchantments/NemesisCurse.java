@@ -13,7 +13,7 @@ import net.minecraft.resources.ResourceLocation;
 public class NemesisCurse extends Enchantment {
 	public NemesisCurse(final EquipmentSlot... slots) {
 		super(Enchantment.Rarity.RARE, EnchantmentCategory.WEAPON, slots);
-		this.setRegistryName(new ResourceLocation(anticlimacticlagacy.MODID, "nemesis_curse"));
+		this.setRegistryName(new ResourceLocation(AnticlimacticLagacy.MODID, "nemesis_curse"));
 	}
 
 	@Override

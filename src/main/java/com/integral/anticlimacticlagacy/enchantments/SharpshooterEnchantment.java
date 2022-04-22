@@ -14,7 +14,7 @@ import net.minecraft.resources.ResourceLocation;
 public class SharpshooterEnchantment extends Enchantment {
 	public SharpshooterEnchantment(final EquipmentSlot... slots) {
 		super(Enchantment.Rarity.RARE, EnchantmentCategory.CROSSBOW, slots);
-		this.setRegistryName(new ResourceLocation(anticlimacticlagacy.MODID, "sharpshooter"));
+		this.setRegistryName(new ResourceLocation(AnticlimacticLagacy.MODID, "sharpshooter"));
 	}
 
 	@Override

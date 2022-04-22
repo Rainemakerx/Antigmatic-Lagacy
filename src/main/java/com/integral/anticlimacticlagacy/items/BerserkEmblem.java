@@ -66,7 +66,7 @@ public class BerserkEmblem extends ItemBaseCurio implements ICursed {
 
 	public BerserkEmblem() {
 		super(ItemBaseCurio.getDefaultProperties().rarity(Rarity.EPIC));
-		this.setRegistryName(new ResourceLocation(anticlimacticlagacy.MODID, "berserk_emblem"));
+		this.setRegistryName(new ResourceLocation(AnticlimacticLagacy.MODID, "berserk_emblem"));
 	}
 
 	private Multimap<Attribute, AttributeModifier> createAttributeMap(Player player) {

@@ -143,7 +143,7 @@ public class EtheriumConfigHandler implements IEtheriumConfig {
 
 	@Override
 	public String getOwnerMod() {
-		return anticlimacticlagacy.MODID;
+		return AnticlimacticLagacy.MODID;
 	}
 
 	@Override

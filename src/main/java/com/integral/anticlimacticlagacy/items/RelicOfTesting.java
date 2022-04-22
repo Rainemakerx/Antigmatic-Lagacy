@@ -37,7 +37,7 @@ public class RelicOfTesting extends ItemBase {
 
 	public RelicOfTesting() {
 		super(ItemBase.getDefaultProperties().rarity(Rarity.EPIC).stacksTo(1).tab(null));
-		this.setRegistryName(new ResourceLocation(anticlimacticlagacy.MODID, "relic_of_testing"));
+		this.setRegistryName(new ResourceLocation(AnticlimacticLagacy.MODID, "relic_of_testing"));
 	}
 
 	@Override

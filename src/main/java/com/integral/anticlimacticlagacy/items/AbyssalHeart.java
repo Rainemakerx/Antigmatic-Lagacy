@@ -30,7 +30,7 @@ public class AbyssalHeart extends ItemBase implements IEldritch {
 
 	public AbyssalHeart() {
 		super(ItemBase.getDefaultProperties().rarity(Rarity.EPIC).stacksTo(1));
-		this.setRegistryName(new ResourceLocation(anticlimacticlagacy.MODID, "abyssal_heart"));
+		this.setRegistryName(new ResourceLocation(AnticlimacticLagacy.MODID, "abyssal_heart"));
 	}
 
 	@Override

@@ -13,7 +13,7 @@ import net.minecraft.advancements.critereon.EntityPredicate;
 import net.minecraft.resources.ResourceLocation;
 
 public class ForbiddenFruitTrigger extends SimpleCriterionTrigger<ForbiddenFruitTrigger.Instance> {
-	public static final ResourceLocation ID = new ResourceLocation(anticlimacticlagacy.MODID, "consume_forbidden_fruit");
+	public static final ResourceLocation ID = new ResourceLocation(AnticlimacticLagacy.MODID, "consume_forbidden_fruit");
 	public static final ForbiddenFruitTrigger INSTANCE = new ForbiddenFruitTrigger();
 
 	private ForbiddenFruitTrigger() {}

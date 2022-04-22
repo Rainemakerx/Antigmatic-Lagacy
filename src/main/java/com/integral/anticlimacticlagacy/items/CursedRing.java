@@ -179,7 +179,7 @@ public class CursedRing extends ItemBaseCurio {
 
 	public CursedRing() {
 		super(ItemBaseCurio.getDefaultProperties().rarity(Rarity.EPIC));
-		this.setRegistryName(new ResourceLocation(anticlimacticlagacy.MODID, "cursed_ring"));
+		this.setRegistryName(new ResourceLocation(AnticlimacticLagacy.MODID, "cursed_ring"));
 	}
 
 	@Override

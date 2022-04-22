@@ -87,7 +87,7 @@ public class AstralBreaker extends ItemBaseTool implements IMultiblockMiningTool
 				.defaultDurability(4000)
 				.rarity(Rarity.EPIC)
 				.fireResistant());
-		this.setRegistryName(new ResourceLocation(anticlimacticlagacy.MODID, "astral_breaker"));
+		this.setRegistryName(new ResourceLocation(AnticlimacticLagacy.MODID, "astral_breaker"));
 		this.config = config;
 
 		this.toolActions.add(ToolActions.AXE_DIG);

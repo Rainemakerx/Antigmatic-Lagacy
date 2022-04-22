@@ -26,7 +26,7 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 @OnlyIn(Dist.CLIENT)
 public class LoreInscriberScreen extends AbstractContainerScreen<LoreInscriberContainer> implements ContainerListener {
 	private ResourceLocation guiTexture;
-	private static final ResourceLocation ANVIL_RESOURCE = new ResourceLocation(anticlimacticlagacy.MODID, "textures/gui/inkwell_gui.png");
+	private static final ResourceLocation ANVIL_RESOURCE = new ResourceLocation(AnticlimacticLagacy.MODID, "textures/gui/inkwell_gui.png");
 	private EditBox nameField;
 
 	public LoreInscriberScreen(LoreInscriberContainer container, Inventory Inventory, Component title) {

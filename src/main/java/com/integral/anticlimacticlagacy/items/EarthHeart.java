@@ -21,7 +21,7 @@ public class EarthHeart extends ItemBase implements ITaintable, Vanishable {
 
 	public EarthHeart() {
 		super(ItemBase.getDefaultProperties().rarity(Rarity.UNCOMMON).stacksTo(1));
-		this.setRegistryName(new ResourceLocation(anticlimacticlagacy.MODID, "earth_heart"));
+		this.setRegistryName(new ResourceLocation(AnticlimacticLagacy.MODID, "earth_heart"));
 	}
 
 	@Override

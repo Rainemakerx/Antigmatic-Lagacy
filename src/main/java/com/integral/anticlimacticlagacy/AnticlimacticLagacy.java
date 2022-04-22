@@ -790,7 +790,7 @@ public class AnticlimacticLagacy {
 	}
 
 	private ResourceLocation makeCustomStat(String pKey, StatFormatter pFormatter) {
-		ResourceLocation resourcelocation = new ResourceLocation(anticlimacticlagacy.MODID, pKey);
+		ResourceLocation resourcelocation = new ResourceLocation(AnticlimacticLagacy.MODID, pKey);
 		Registry.register(Registry.CUSTOM_STAT, pKey, resourcelocation);
 		Stats.CUSTOM.get(resourcelocation, pFormatter);
 		return resourcelocation;

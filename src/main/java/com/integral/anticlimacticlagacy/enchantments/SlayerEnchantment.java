@@ -23,7 +23,7 @@ import net.minecraft.resources.ResourceLocation;
 public class SlayerEnchantment extends Enchantment {
 	public SlayerEnchantment(EquipmentSlot... slots) {
 		super(Enchantment.Rarity.COMMON, EnchantmentCategory.WEAPON, slots);
-		this.setRegistryName(new ResourceLocation(anticlimacticlagacy.MODID, "slayer"));
+		this.setRegistryName(new ResourceLocation(AnticlimacticLagacy.MODID, "slayer"));
 	}
 
 	@Override

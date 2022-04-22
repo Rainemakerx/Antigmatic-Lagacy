@@ -89,7 +89,7 @@ public class AngelBlessing extends ItemSpellstoneCurio  {
 
 	public AngelBlessing() {
 		super(ItemSpellstoneCurio.getDefaultProperties().rarity(Rarity.RARE));
-		this.setRegistryName(new ResourceLocation(anticlimacticlagacy.MODID, "angel_blessing"));
+		this.setRegistryName(new ResourceLocation(AnticlimacticLagacy.MODID, "angel_blessing"));
 
 		this.immunityList.add(DamageSource.FALL.msgId);
 		this.immunityList.add(DamageSource.FLY_INTO_WALL.msgId);

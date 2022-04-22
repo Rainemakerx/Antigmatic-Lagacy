@@ -39,7 +39,7 @@ public class Infinimeal extends ItemBase implements Vanishable {
 
 	public Infinimeal() {
 		super(getDefaultProperties().stacksTo(1).rarity(Rarity.UNCOMMON));
-		this.setRegistryName(new ResourceLocation(anticlimacticlagacy.MODID, "infinimeal"));
+		this.setRegistryName(new ResourceLocation(AnticlimacticLagacy.MODID, "infinimeal"));
 	}
 
 	@Override

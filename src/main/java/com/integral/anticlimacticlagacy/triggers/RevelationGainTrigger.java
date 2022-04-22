@@ -15,7 +15,7 @@ import net.minecraft.util.GsonHelper;
 import net.minecraft.resources.ResourceLocation;
 
 public class RevelationGainTrigger extends SimpleCriterionTrigger<RevelationGainTrigger.Instance> {
-	public static final ResourceLocation ID = new ResourceLocation(anticlimacticlagacy.MODID, "embrace_revelation");
+	public static final ResourceLocation ID = new ResourceLocation(AnticlimacticLagacy.MODID, "embrace_revelation");
 	public static final RevelationGainTrigger INSTANCE = new RevelationGainTrigger();
 
 	private RevelationGainTrigger() {}

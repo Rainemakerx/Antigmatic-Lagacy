@@ -45,7 +45,7 @@ public class MixinForgeHooksClient {
 			Optional<TooltipComponent> itemComponent, int mouseX, int screenWidth, int screenHeight,
 			Font forcedFont, Font fallbackFont, CallbackInfoReturnable<List<ClientTooltipComponent>> info) {
 
-		if (stack != null && stack.getItem().getRegistryName().getNamespace().equals(anticlimacticlagacy.MODID)) {
+		if (stack != null && stack.getItem().getRegistryName().getNamespace().equals(AnticlimacticLagacy.MODID)) {
 			Font font = getTooltipFont(forcedFont, stack, fallbackFont);
 			List<Either<FormattedText, TooltipComponent>> elements = textElements.stream().map((Function<FormattedText, Either<FormattedText, TooltipComponent>>) Either::left).collect(Collectors.toCollection(ArrayList::new));
 			itemComponent.ifPresent(c -> elements.add(1, Either.right(c)));

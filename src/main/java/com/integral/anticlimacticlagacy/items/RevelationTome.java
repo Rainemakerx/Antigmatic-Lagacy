@@ -75,7 +75,7 @@ public class RevelationTome extends ItemBase implements Vanishable {
 		this.theType = type;
 		this.persistantPointsTag = "anticlimacticlagacy.revelation_points_" + this.theType.typeName;
 
-		this.setRegistryName(new ResourceLocation(anticlimacticlagacy.MODID, registryName));
+		this.setRegistryName(new ResourceLocation(AnticlimacticLagacy.MODID, registryName));
 	}
 
 	@Override

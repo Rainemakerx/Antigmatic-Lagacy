@@ -23,7 +23,7 @@ public class ComplexBrewingRecipe extends AbstractBrewingRecipe {
     @Nonnull private final ItemStack output;
 
 	public ComplexBrewingRecipe(HashMap<Ingredient, Ingredient> ingredientCompliances, ItemStack output) {
-    	this(ingredientCompliances, output, new ResourceLocation(anticlimacticlagacy.MODID, ItemNBTHelper.getString(output, "AnticlimacticPotion", "unknown")));
+    	this(ingredientCompliances, output, new ResourceLocation(AnticlimacticLagacy.MODID, ItemNBTHelper.getString(output, "AnticlimacticPotion", "unknown")));
     }
 
     public ComplexBrewingRecipe(HashMap<Ingredient, Ingredient> ingredientCompliances, ItemStack output, ResourceLocation name) {

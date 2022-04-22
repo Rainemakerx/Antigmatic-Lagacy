@@ -29,7 +29,7 @@ public class StorageCrystal extends ItemBase implements IPermanentCrystal, Vanis
 
 	public StorageCrystal() {
 		super(ItemBase.getDefaultProperties().rarity(Rarity.EPIC).stacksTo(1).fireResistant().tab(null));
-		this.setRegistryName(new ResourceLocation(anticlimacticlagacy.MODID, "storage_crystal"));
+		this.setRegistryName(new ResourceLocation(AnticlimacticLagacy.MODID, "storage_crystal"));
 	}
 
 	public ItemStack storeDropsOnCrystal(Collection<ItemEntity> drops, Player player, @Nullable ItemStack embeddedSoulCrystal) {

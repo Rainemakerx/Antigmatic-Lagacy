@@ -95,7 +95,7 @@ public class VoidPearl extends ItemSpellstoneCurio implements ISpellstone {
 
 	public VoidPearl() {
 		super(ItemSpellstoneCurio.getDefaultProperties().stacksTo(1).rarity(Rarity.EPIC).fireResistant());
-		this.setRegistryName(new ResourceLocation(anticlimacticlagacy.MODID, "void_pearl"));
+		this.setRegistryName(new ResourceLocation(AnticlimacticLagacy.MODID, "void_pearl"));
 
 		this.immunityList.add(DamageSource.DROWN.msgId);
 		this.immunityList.add(DamageSource.IN_WALL.msgId);

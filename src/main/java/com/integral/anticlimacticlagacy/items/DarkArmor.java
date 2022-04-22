@@ -17,7 +17,7 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.client.IItemRenderProperties;
 
 public class DarkArmor extends ItemBaseArmor {
-	public final String TEXTURE = anticlimacticlagacy.MODID + ":textures/models/armor/dark_armor.png";
+	public final String TEXTURE = AnticlimacticLagacy.MODID + ":textures/models/armor/dark_armor.png";
 
 	public DarkArmor(ArmorMaterial materialIn, EquipmentSlot slot) {
 		super(materialIn, slot, ItemBaseArmor.getDefaultProperties().rarity(Rarity.RARE).fireResistant().tab(null));

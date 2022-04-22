@@ -54,7 +54,7 @@ public class PermanentItemEntity extends Entity {
 	private UUID thrower;
 	private UUID owner;
 
-	@ObjectHolder(anticlimacticlagacy.MODID + ":permanent_item_entity")
+	@ObjectHolder(AnticlimacticLagacy.MODID + ":permanent_item_entity")
 	public static EntityType<PermanentItemEntity> TYPE;
 
 	public float hoverStart = (float) (Math.random() * Math.PI * 2.0D);

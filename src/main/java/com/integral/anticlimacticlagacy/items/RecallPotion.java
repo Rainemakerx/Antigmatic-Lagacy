@@ -33,7 +33,7 @@ public class RecallPotion extends ItemBasePotion {
 
 	public RecallPotion() {
 		super(getDefaultProperties().stacksTo(1).rarity(Rarity.RARE));
-		this.setRegistryName(new ResourceLocation(anticlimacticlagacy.MODID, "recall_potion"));
+		this.setRegistryName(new ResourceLocation(AnticlimacticLagacy.MODID, "recall_potion"));
 	}
 
 	@Override

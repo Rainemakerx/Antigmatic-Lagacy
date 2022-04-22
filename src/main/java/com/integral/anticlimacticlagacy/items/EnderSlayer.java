@@ -84,7 +84,7 @@ public class EnderSlayer extends SwordItem implements ICursed {
 
 	public EnderSlayer() {
 		super(AnticlimacticMaterials.ENDERSLAYER, attackDamage.getValue(), (float) attackSpeed.getValue(), ItemBaseTool.getDefaultProperties().defaultDurability(2000).rarity(Rarity.EPIC).fireResistant());
-		this.setRegistryName(new ResourceLocation(anticlimacticlagacy.MODID, "ender_slayer"));
+		this.setRegistryName(new ResourceLocation(AnticlimacticLagacy.MODID, "ender_slayer"));
 	}
 
 	@Override

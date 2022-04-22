@@ -40,7 +40,7 @@ public class AstralFruit extends ItemBaseFood implements ICursed, Vanishable {
 	public AstralFruit() {
 		super(getDefaultProperties().rarity(Rarity.EPIC).fireResistant(),
 				new FoodProperties.Builder().nutrition(5).saturationMod(20).alwaysEat().build());
-		this.setRegistryName(new ResourceLocation(anticlimacticlagacy.MODID, "astral_fruit"));
+		this.setRegistryName(new ResourceLocation(AnticlimacticLagacy.MODID, "astral_fruit"));
 	}
 
 

@@ -22,7 +22,7 @@ public class EnchantmentTransposer extends ItemBase {
 
 	public EnchantmentTransposer() {
 		super(ItemBase.getDefaultProperties().stacksTo(1).rarity(Rarity.UNCOMMON));
-		this.setRegistryName(new ResourceLocation(anticlimacticlagacy.MODID, "enchantment_transposer"));
+		this.setRegistryName(new ResourceLocation(AnticlimacticLagacy.MODID, "enchantment_transposer"));
 	}
 
 	@Override

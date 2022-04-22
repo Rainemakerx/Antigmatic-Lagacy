@@ -22,7 +22,7 @@ public class TorrentEnchantment extends Enchantment {
 	public TorrentEnchantment(EquipmentSlot... slots) {
 		super(Enchantment.Rarity.RARE, EnchantmentCategory.TRIDENT, slots);
 
-		this.setRegistryName(new ResourceLocation(anticlimacticlagacy.MODID, "torrent"));
+		this.setRegistryName(new ResourceLocation(AnticlimacticLagacy.MODID, "torrent"));
 	}
 
 	@Override

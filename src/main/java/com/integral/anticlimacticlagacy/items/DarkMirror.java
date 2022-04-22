@@ -30,7 +30,7 @@ public class DarkMirror extends ItemBase implements ICursed, Vanishable {
 
 	public DarkMirror() {
 		super(ItemBase.getDefaultProperties().rarity(Rarity.RARE).stacksTo(1));
-		this.setRegistryName(new ResourceLocation(anticlimacticlagacy.MODID, "dark_mirror"));
+		this.setRegistryName(new ResourceLocation(AnticlimacticLagacy.MODID, "dark_mirror"));
 	}
 
 	/*

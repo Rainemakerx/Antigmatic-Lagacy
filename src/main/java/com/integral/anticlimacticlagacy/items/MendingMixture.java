@@ -23,7 +23,7 @@ public class MendingMixture extends ItemBase {
 
 	public MendingMixture() {
 		super(ItemBase.getDefaultProperties().stacksTo(1).rarity(Rarity.EPIC).craftRemainder(Items.GLASS_BOTTLE));
-		this.setRegistryName(new ResourceLocation(anticlimacticlagacy.MODID, "mending_mixture"));
+		this.setRegistryName(new ResourceLocation(AnticlimacticLagacy.MODID, "mending_mixture"));
 	}
 
 	@Override

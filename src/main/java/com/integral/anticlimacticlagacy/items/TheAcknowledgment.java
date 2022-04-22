@@ -47,13 +47,13 @@ import net.minecraft.world.item.Item.Properties;
 
 public class TheAcknowledgment extends ItemBase implements Vanishable {
 	private static final ItemStack UNSUSPECTING_DIAMOND_SWORD = new ItemStack(Items.DIAMOND_SWORD);
-	private static final ResourceLocation BOOK_ID = new ResourceLocation(anticlimacticlagacy.MODID, "the_acknowledgment");
+	private static final ResourceLocation BOOK_ID = new ResourceLocation(AnticlimacticLagacy.MODID, "the_acknowledgment");
 	private final Multimap<Attribute, AttributeModifier> attributes;
 	private boolean allowAllEnchantments = false;
 
 	protected TheAcknowledgment(Properties props, String name, double attackDamage, double attackSpeed) {
 		super(props);
-		this.setRegistryName(anticlimacticlagacy.MODID, name);
+		this.setRegistryName(AnticlimacticLagacy.MODID, name);
 
 		Builder<Attribute, AttributeModifier> builder = ImmutableMultimap.builder();
 		builder.put(Attributes.ATTACK_DAMAGE, new AttributeModifier(Item.BASE_ATTACK_DAMAGE_UUID, "Weapon modifier", attackDamage, AttributeModifier.Operation.ADDITION));

@@ -19,7 +19,7 @@ import net.minecraft.resources.ResourceLocation;
  */
 
 public class UseUnholyGrailTrigger extends SimpleCriterionTrigger<UseUnholyGrailTrigger.Instance> {
-	public static final ResourceLocation ID = new ResourceLocation(anticlimacticlagacy.MODID, "unholy_grail_drink");
+	public static final ResourceLocation ID = new ResourceLocation(AnticlimacticLagacy.MODID, "unholy_grail_drink");
 	public static final UseUnholyGrailTrigger INSTANCE = new UseUnholyGrailTrigger();
 
 	private UseUnholyGrailTrigger() {}

@@ -21,7 +21,7 @@ public class MixinAttributeTooltips {
 
 	@Inject(method = "makeTooltip", at = @At("HEAD"), cancellable = true, require = 1)
 	private static void onTooltipEvent(RenderTooltipEvent.GatherComponents event, CallbackInfo info) {
-		if (event.getItemStack().getItem().getRegistryName().getNamespace().equals(anticlimacticlagacy.MODID)) {
+		if (event.getItemStack().getItem().getRegistryName().getNamespace().equals(AnticlimacticLagacy.MODID)) {
 			info.cancel();
 		}
 	}

@@ -19,7 +19,7 @@ import net.minecraftforge.registries.ForgeRegistries;
  */
 
 public class EnabledCondition implements ICondition {
-	private static final ResourceLocation ID = new ResourceLocation(anticlimacticlagacy.MODID, "is_enabled");
+	private static final ResourceLocation ID = new ResourceLocation(AnticlimacticLagacy.MODID, "is_enabled");
 	private final ResourceLocation item;
 
 	public EnabledCondition(ResourceLocation item) {
@@ -35,7 +35,7 @@ public class EnabledCondition implements ICondition {
 	public boolean test() {
 		Item item = ForgeRegistries.ITEMS.getValue(this.item);
 
-		if (this.item.toString().equals(anticlimacticlagacy.MODID + ":bonuswoolrecipes"))
+		if (this.item.toString().equals(AnticlimacticLagacy.MODID + ":bonuswoolrecipes"))
 			return OmniconfigHandler.bonusWoolRecipesEnabled.getValue();
 		else
 			return OmniconfigHandler.isItemEnabled(item);

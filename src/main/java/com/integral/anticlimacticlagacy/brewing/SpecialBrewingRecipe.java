@@ -21,7 +21,7 @@ public class SpecialBrewingRecipe extends AbstractBrewingRecipe {
 	@Nonnull private final ItemStack output;
 
 	public SpecialBrewingRecipe(Ingredient input, Ingredient ingredient, ItemStack output) {
-		this(input, ingredient, output, new ResourceLocation(anticlimacticlagacy.MODID, ItemNBTHelper.getString(output, "AnticlimacticPotion", "unknown")));
+		this(input, ingredient, output, new ResourceLocation(AnticlimacticLagacy.MODID, ItemNBTHelper.getString(output, "AnticlimacticPotion", "unknown")));
 	}
 
 	public SpecialBrewingRecipe(Ingredient input, Ingredient ingredient, ItemStack output, ResourceLocation name) {

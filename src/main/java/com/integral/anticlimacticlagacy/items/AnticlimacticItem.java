@@ -60,7 +60,7 @@ public class AnticlimacticItem extends ItemSpellstoneCurio implements ISpellston
 
 	public AnticlimacticItem() {
 		super(ItemBaseCurio.getDefaultProperties().rarity(Rarity.EPIC).fireResistant());
-		this.setRegistryName(new ResourceLocation(anticlimacticlagacy.MODID, "anticlimactic_item"));
+		this.setRegistryName(new ResourceLocation(AnticlimacticLagacy.MODID, "anticlimactic_item"));
 
 		this.immunityList.add(DamageSource.FALL.msgId);
 		this.immunityList.add(DamageSource.FLY_INTO_WALL.msgId);

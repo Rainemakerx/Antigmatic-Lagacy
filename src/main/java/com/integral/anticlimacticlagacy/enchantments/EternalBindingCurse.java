@@ -20,7 +20,7 @@ public class EternalBindingCurse extends Enchantment {
 
 	public EternalBindingCurse(EquipmentSlot... slots) {
 		super(Enchantment.Rarity.RARE, EnchantmentCategory.WEARABLE, slots);
-		this.setRegistryName(new ResourceLocation(anticlimacticlagacy.MODID, "eternal_binding_curse"));
+		this.setRegistryName(new ResourceLocation(AnticlimacticLagacy.MODID, "eternal_binding_curse"));
 
 		this.incompatibleKeywords.add("soulbound");
 		this.incompatibleKeywords.add("soulbinding");

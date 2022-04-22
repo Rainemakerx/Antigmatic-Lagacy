@@ -13,7 +13,7 @@ import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 
 public enum AnticlimacticArmorMaterials implements ArmorMaterial {
-	ETHERIUM(anticlimacticlagacy.MODID + ":etherium", 132, new int[] { 4, 7, 9, 4 }, 24,
+	ETHERIUM(AnticlimacticLagacy.MODID + ":etherium", 132, new int[] { 4, 7, 9, 4 }, 24,
 			SoundEvents.ARMOR_EQUIP_IRON, 4F, 0, () -> getEtheriumConfig().getRepairMaterial());
 
 	private static final int[] MAX_DAMAGE_ARRAY = new int[] { 13, 15, 16, 11 };

@@ -45,7 +45,7 @@ public class SoulCrystal extends ItemBase implements IPermanentCrystal, Vanishab
 
 	public SoulCrystal() {
 		super(ItemBase.getDefaultProperties().rarity(Rarity.EPIC).stacksTo(1).fireResistant().tab(anticlimacticlagacy.anticlimacticTab));
-		this.setRegistryName(new ResourceLocation(anticlimacticlagacy.MODID, "soul_crystal"));
+		this.setRegistryName(new ResourceLocation(AnticlimacticLagacy.MODID, "soul_crystal"));
 	}
 
 	@Override

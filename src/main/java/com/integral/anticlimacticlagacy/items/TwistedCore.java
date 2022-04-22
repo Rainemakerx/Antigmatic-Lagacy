@@ -19,7 +19,7 @@ public class TwistedCore extends ItemBase implements ICursed, Vanishable {
 
 	public TwistedCore() {
 		super(ItemBase.getDefaultProperties().rarity(Rarity.EPIC).stacksTo(1));
-		this.setRegistryName(new ResourceLocation(anticlimacticlagacy.MODID, "twisted_core"));
+		this.setRegistryName(new ResourceLocation(AnticlimacticLagacy.MODID, "twisted_core"));
 	}
 
 	@Override

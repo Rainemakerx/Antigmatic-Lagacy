@@ -35,7 +35,7 @@ public class UnholyGrail extends ItemBase implements Vanishable {
 
 	public UnholyGrail() {
 		super(ItemBase.getDefaultProperties().stacksTo(1).rarity(Rarity.EPIC).fireResistant());
-		this.setRegistryName(new ResourceLocation(anticlimacticlagacy.MODID, "unholy_grail"));
+		this.setRegistryName(new ResourceLocation(AnticlimacticLagacy.MODID, "unholy_grail"));
 	}
 
 	@Override

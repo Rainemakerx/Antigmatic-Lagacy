@@ -42,7 +42,7 @@ import net.minecraftforge.registries.ObjectHolder;
  */
 
 public class AnticlimacticPotionEntity extends ThrowableItemProjectile implements ItemSupplier {
-	@ObjectHolder(anticlimacticlagacy.MODID + ":anticlimactic_potion_entity")
+	@ObjectHolder(AnticlimacticLagacy.MODID + ":anticlimactic_potion_entity")
 	public static EntityType<AnticlimacticPotionEntity> TYPE;
 
 	private static final EntityDataAccessor<ItemStack> ITEM = SynchedEntityData.defineId(AnticlimacticPotionEntity.class,

@@ -22,7 +22,7 @@ public class BlockMassiveLamp extends Block {
 	public BlockMassiveLamp(Properties properties, String registryName) {
 		super(properties.sound(SoundType.GLASS).noOcclusion());
 
-		this.setRegistryName(new ResourceLocation(anticlimacticlagacy.MODID, registryName));
+		this.setRegistryName(new ResourceLocation(AnticlimacticLagacy.MODID, registryName));
 		anticlimacticlagacy.cutoutBlockRegistry.add(this);
 	}
 

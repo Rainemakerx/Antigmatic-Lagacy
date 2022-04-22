@@ -27,7 +27,7 @@ public class AntiforbiddenPotion extends ItemBasePotion {
 
 	public AntiforbiddenPotion() {
 		super(getDefaultProperties().stacksTo(1).rarity(Rarity.EPIC));
-		this.setRegistryName(new ResourceLocation(anticlimacticlagacy.MODID, "antiforbidden_potion"));
+		this.setRegistryName(new ResourceLocation(AnticlimacticLagacy.MODID, "antiforbidden_potion"));
 	}
 
 	@Override

@@ -87,7 +87,7 @@ public class MagnetRing extends ItemBaseCurio {
 
 	public MagnetRing() {
 		this(ItemBaseCurio.getDefaultProperties().rarity(Rarity.RARE));
-		this.setRegistryName(new ResourceLocation(anticlimacticlagacy.MODID, "magnet_ring"));
+		this.setRegistryName(new ResourceLocation(AnticlimacticLagacy.MODID, "magnet_ring"));
 	}
 
 	public MagnetRing(Properties properties) {

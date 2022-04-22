@@ -57,7 +57,7 @@ public class XPScroll extends ItemBaseCurio {
 
 	public XPScroll() {
 		super(ItemBaseCurio.getDefaultProperties().rarity(Rarity.UNCOMMON));
-		this.setRegistryName(new ResourceLocation(anticlimacticlagacy.MODID, "xp_scroll"));
+		this.setRegistryName(new ResourceLocation(AnticlimacticLagacy.MODID, "xp_scroll"));
 	}
 
 	@Override

@@ -54,7 +54,7 @@ public class AnimalGuide extends ItemBase implements Vanishable {
 
 	public AnimalGuide() {
 		super(getDefaultProperties().stacksTo(1).rarity(Rarity.UNCOMMON));
-		this.setRegistryName(new ResourceLocation(anticlimacticlagacy.MODID, "animal_guide"));
+		this.setRegistryName(new ResourceLocation(AnticlimacticLagacy.MODID, "animal_guide"));
 	}
 
 	@Override

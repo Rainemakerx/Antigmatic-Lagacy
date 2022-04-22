@@ -93,7 +93,7 @@ public class EyeOfNebula extends ItemSpellstoneCurio implements ISpellstone {
 
 	public EyeOfNebula() {
 		super(ItemSpellstoneCurio.getDefaultProperties().rarity(Rarity.EPIC));
-		this.setRegistryName(new ResourceLocation(anticlimacticlagacy.MODID, "eye_of_nebula"));
+		this.setRegistryName(new ResourceLocation(AnticlimacticLagacy.MODID, "eye_of_nebula"));
 
 		Supplier<Float> magicResistanceSupplier = () -> magicResistance.getValue().asModifierInverted();
 		this.resistanceList.put(DamageSource.MAGIC.getMsgId(), magicResistanceSupplier);

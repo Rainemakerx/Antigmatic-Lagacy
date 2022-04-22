@@ -29,7 +29,7 @@ public class CeaselessEnchantment extends Enchantment {
 
 	public CeaselessEnchantment(final EquipmentSlot... slots) {
 		super(Enchantment.Rarity.RARE, EnchantmentCategory.CROSSBOW, slots);
-		this.setRegistryName(new ResourceLocation(anticlimacticlagacy.MODID, "ceaseless"));
+		this.setRegistryName(new ResourceLocation(AnticlimacticLagacy.MODID, "ceaseless"));
 	}
 
 	@Override

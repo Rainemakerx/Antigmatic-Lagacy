@@ -22,7 +22,7 @@ public class CosmicHeart extends ItemBase implements IBlessable, Vanishable {
 
 	public CosmicHeart() {
 		super(ItemBase.getDefaultProperties().rarity(Rarity.EPIC).stacksTo(1));
-		this.setRegistryName(new ResourceLocation(anticlimacticlagacy.MODID, "cosmic_heart"));
+		this.setRegistryName(new ResourceLocation(AnticlimacticLagacy.MODID, "cosmic_heart"));
 	}
 
 	@Override

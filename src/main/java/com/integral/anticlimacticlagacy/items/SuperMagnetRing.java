@@ -52,7 +52,7 @@ public class SuperMagnetRing extends MagnetRing {
 
 	public SuperMagnetRing() {
 		super(ItemBaseCurio.getDefaultProperties().rarity(Rarity.EPIC));
-		this.setRegistryName(new ResourceLocation(anticlimacticlagacy.MODID, "super_magnet_ring"));
+		this.setRegistryName(new ResourceLocation(AnticlimacticLagacy.MODID, "super_magnet_ring"));
 	}
 
 	@Override

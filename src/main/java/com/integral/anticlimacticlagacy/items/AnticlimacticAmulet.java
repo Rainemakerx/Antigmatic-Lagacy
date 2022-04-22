@@ -183,12 +183,12 @@ public class AnticlimacticAmulet extends ItemBaseCurio {
 
 	public AnticlimacticAmulet() {
 		super(ItemBaseCurio.getDefaultProperties().rarity(Rarity.UNCOMMON).fireResistant());
-		this.setRegistryName(new ResourceLocation(anticlimacticlagacy.MODID, "anticlimactic_amulet"));
+		this.setRegistryName(new ResourceLocation(AnticlimacticLagacy.MODID, "anticlimactic_amulet"));
 	}
 
 	@OnlyIn(Dist.CLIENT)
 	public void registerVariants() {
-		ItemProperties.register(this, new ResourceLocation(anticlimacticlagacy.MODID, "anticlimactic_amulet_color"), (stack, world, entity, numberlol) -> {
+		ItemProperties.register(this, new ResourceLocation(AnticlimacticLagacy.MODID, "anticlimactic_amulet_color"), (stack, world, entity, numberlol) -> {
 			return ItemNBTHelper.getFloat(stack, amuletColorTag, 0F);
 		});
 	}
@@ -260,13 +260,13 @@ public class AnticlimacticAmulet extends ItemBaseCurio {
 		AmuletColor color = this.getColor(amulet);
 
 		if (color == AmuletColor.RED) {
-			atts.put(Attributes.ATTACK_DAMAGE, new AttributeModifier(UUID.fromString("f5bb82c7-0332-4adf-a414-2e4f03471983"), anticlimacticlagacy.MODID+":attack_bonus", damageBonus.getValue(), AttributeModifier.Operation.ADDITION));
+			atts.put(Attributes.ATTACK_DAMAGE, new AttributeModifier(UUID.fromString("f5bb82c7-0332-4adf-a414-2e4f03471983"), AnticlimacticLagacy.MODID+":attack_bonus", damageBonus.getValue(), AttributeModifier.Operation.ADDITION));
 		} else if (color == AmuletColor.AQUA) {
-			atts.put(Attributes.MOVEMENT_SPEED, new AttributeModifier(UUID.fromString("cde98b8a-0cfc-45dc-929f-9cce9b6fbdfa"), anticlimacticlagacy.MODID+":sprint_bonus", player.isSprinting() ? 0.15F : 0F, AttributeModifier.Operation.MULTIPLY_TOTAL));
+			atts.put(Attributes.MOVEMENT_SPEED, new AttributeModifier(UUID.fromString("cde98b8a-0cfc-45dc-929f-9cce9b6fbdfa"), AnticlimacticLagacy.MODID+":sprint_bonus", player.isSprinting() ? 0.15F : 0F, AttributeModifier.Operation.MULTIPLY_TOTAL));
 		} else if (color == AmuletColor.MAGENTA) {
-			atts.put(ForgeMod.ENTITY_GRAVITY.get(), new AttributeModifier(UUID.fromString("d1a07f6f-1079-4b17-8dbd-c74dc5e9094d"), anticlimacticlagacy.MODID+":gravity_bonus", -0.25F, AttributeModifier.Operation.MULTIPLY_TOTAL));
+			atts.put(ForgeMod.ENTITY_GRAVITY.get(), new AttributeModifier(UUID.fromString("d1a07f6f-1079-4b17-8dbd-c74dc5e9094d"), AnticlimacticLagacy.MODID+":gravity_bonus", -0.25F, AttributeModifier.Operation.MULTIPLY_TOTAL));
 		} else if (color == AmuletColor.BLUE) {
-			atts.put(ForgeMod.SWIM_SPEED.get(), new AttributeModifier(UUID.fromString("a4d4b794-a691-4757-b1cb-f5f2d5a25571"), anticlimacticlagacy.MODID+":swim_bonus", 0.25F, AttributeModifier.Operation.MULTIPLY_TOTAL));
+			atts.put(ForgeMod.SWIM_SPEED.get(), new AttributeModifier(UUID.fromString("a4d4b794-a691-4757-b1cb-f5f2d5a25571"), AnticlimacticLagacy.MODID+":swim_bonus", 0.25F, AttributeModifier.Operation.MULTIPLY_TOTAL));
 		}
 
 		return atts;
@@ -275,10 +275,10 @@ public class AnticlimacticAmulet extends ItemBaseCurio {
 	public Multimap<Attribute, AttributeModifier> getAllModifiers() {
 		Multimap<Attribute, AttributeModifier> atts = HashMultimap.create();
 
-		atts.put(Attributes.ATTACK_DAMAGE, new AttributeModifier(UUID.fromString("f5bb82c7-0332-4adf-a414-2e4f03471983"), anticlimacticlagacy.MODID+":attack_bonus", damageBonus.getValue(), AttributeModifier.Operation.ADDITION));
-		atts.put(Attributes.MOVEMENT_SPEED, new AttributeModifier(UUID.fromString("cde98b8a-0cfc-45dc-929f-9cce9b6fbdfa"), anticlimacticlagacy.MODID+":sprint_bonus", 0.15F, AttributeModifier.Operation.MULTIPLY_TOTAL));
-		atts.put(ForgeMod.ENTITY_GRAVITY.get(), new AttributeModifier(UUID.fromString("d1a07f6f-1079-4b17-8dbd-c74dc5e9094d"), anticlimacticlagacy.MODID+":gravity_bonus", -0.25F, AttributeModifier.Operation.MULTIPLY_TOTAL));
-		atts.put(ForgeMod.SWIM_SPEED.get(), new AttributeModifier(UUID.fromString("a4d4b794-a691-4757-b1cb-f5f2d5a25571"), anticlimacticlagacy.MODID+":swim_bonus", 0.25F, AttributeModifier.Operation.MULTIPLY_TOTAL));
+		atts.put(Attributes.ATTACK_DAMAGE, new AttributeModifier(UUID.fromString("f5bb82c7-0332-4adf-a414-2e4f03471983"), AnticlimacticLagacy.MODID+":attack_bonus", damageBonus.getValue(), AttributeModifier.Operation.ADDITION));
+		atts.put(Attributes.MOVEMENT_SPEED, new AttributeModifier(UUID.fromString("cde98b8a-0cfc-45dc-929f-9cce9b6fbdfa"), AnticlimacticLagacy.MODID+":sprint_bonus", 0.15F, AttributeModifier.Operation.MULTIPLY_TOTAL));
+		atts.put(ForgeMod.ENTITY_GRAVITY.get(), new AttributeModifier(UUID.fromString("d1a07f6f-1079-4b17-8dbd-c74dc5e9094d"), AnticlimacticLagacy.MODID+":gravity_bonus", -0.25F, AttributeModifier.Operation.MULTIPLY_TOTAL));
+		atts.put(ForgeMod.SWIM_SPEED.get(), new AttributeModifier(UUID.fromString("a4d4b794-a691-4757-b1cb-f5f2d5a25571"), AnticlimacticLagacy.MODID+":swim_bonus", 0.25F, AttributeModifier.Operation.MULTIPLY_TOTAL));
 
 		return atts;
 	}

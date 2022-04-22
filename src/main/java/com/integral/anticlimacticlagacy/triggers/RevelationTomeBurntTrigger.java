@@ -13,7 +13,7 @@ import net.minecraft.advancements.critereon.EntityPredicate;
 import net.minecraft.resources.ResourceLocation;
 
 public class RevelationTomeBurntTrigger extends SimpleCriterionTrigger<RevelationTomeBurntTrigger.Instance> {
-	public static final ResourceLocation ID = new ResourceLocation(anticlimacticlagacy.MODID, "revelation_tome_burnt");
+	public static final ResourceLocation ID = new ResourceLocation(AnticlimacticLagacy.MODID, "revelation_tome_burnt");
 	public static final RevelationTomeBurntTrigger INSTANCE = new RevelationTomeBurntTrigger();
 
 	private RevelationTomeBurntTrigger() {}

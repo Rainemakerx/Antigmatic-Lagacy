@@ -19,7 +19,7 @@ import net.minecraft.resources.ResourceLocation;
  */
 
 public class BeheadingTrigger extends SimpleCriterionTrigger<BeheadingTrigger.Instance> {
-	public static final ResourceLocation ID = new ResourceLocation(anticlimacticlagacy.MODID, "forbidden_axe_beheading");
+	public static final ResourceLocation ID = new ResourceLocation(AnticlimacticLagacy.MODID, "forbidden_axe_beheading");
 	public static final BeheadingTrigger INSTANCE = new BeheadingTrigger();
 
 	private BeheadingTrigger() {}

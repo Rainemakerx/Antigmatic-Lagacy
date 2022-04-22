@@ -46,7 +46,7 @@ public class HunterGuide extends ItemBase implements Vanishable {
 
 	public HunterGuide() {
 		super(getDefaultProperties().stacksTo(1).rarity(Rarity.RARE));
-		this.setRegistryName(new ResourceLocation(anticlimacticlagacy.MODID, "hunter_guide"));
+		this.setRegistryName(new ResourceLocation(AnticlimacticLagacy.MODID, "hunter_guide"));
 	}
 
 	@Override

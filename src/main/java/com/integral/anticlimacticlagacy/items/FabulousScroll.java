@@ -30,7 +30,7 @@ public class FabulousScroll extends HeavenScroll {
 
 	public FabulousScroll() {
 		super(ItemBaseCurio.getDefaultProperties().rarity(Rarity.EPIC));
-		this.setRegistryName(new ResourceLocation(anticlimacticlagacy.MODID, "fabulous_scroll"));
+		this.setRegistryName(new ResourceLocation(AnticlimacticLagacy.MODID, "fabulous_scroll"));
 	}
 
 	@Override

@@ -29,7 +29,7 @@ import net.minecraft.server.level.ServerLevel;
 
 @Mixin(PiglinAi.class)
 public class MixinPiglinTasks {
-	private static final String AVARICE_SCROLL_TAG = anticlimacticlagacy.MODID + ":avarice_scroll_effect";
+	private static final String AVARICE_SCROLL_TAG = AnticlimacticLagacy.MODID + ":avarice_scroll_effect";
 
 	private static void markPiglinWithCondition(Piglin piglin, Player player) {
 		if (player != null && piglin != null && SuperpositionHandler.hasCurio(player, anticlimacticlagacy.avariceScroll))

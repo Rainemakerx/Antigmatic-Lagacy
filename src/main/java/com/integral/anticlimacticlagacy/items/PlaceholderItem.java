@@ -14,7 +14,7 @@ public class PlaceholderItem extends ItemBase {
 
 	public PlaceholderItem(String name, Rarity rarity, int maxStackSize) {
 		super(ItemBase.getDefaultProperties().rarity(rarity).stacksTo(maxStackSize));
-		this.setRegistryName(new ResourceLocation(anticlimacticlagacy.MODID, name));
+		this.setRegistryName(new ResourceLocation(AnticlimacticLagacy.MODID, name));
 	}
 
 }

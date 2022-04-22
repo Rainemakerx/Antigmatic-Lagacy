@@ -19,7 +19,7 @@ public class EvilEssence extends ItemBase implements ICursed {
 
 	public EvilEssence() {
 		super(getDefaultProperties().rarity(Rarity.EPIC).stacksTo(8).fireResistant());
-		this.setRegistryName(new ResourceLocation(anticlimacticlagacy.MODID, "evil_essence"));
+		this.setRegistryName(new ResourceLocation(AnticlimacticLagacy.MODID, "evil_essence"));
 	}
 
 	@Override

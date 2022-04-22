@@ -42,7 +42,7 @@ import top.theillusivec4.curios.api.SlotContext;
 import top.theillusivec4.curios.api.type.capability.ICurio.SoundInfo;
 
 public class CosmicScroll extends ItemBaseCurio {
-	private static final ResourceLocation ADVANCEMENT = new ResourceLocation(anticlimacticlagacy.MODID, "main/cosmic_scroll");
+	private static final ResourceLocation ADVANCEMENT = new ResourceLocation(AnticlimacticLagacy.MODID, "main/cosmic_scroll");
 	public static Omniconfig.PerhapsParameter unchosenDamageBonus;
 	public static Omniconfig.PerhapsParameter unchosenKnockbackBonus;
 	public static Omniconfig.PerhapsParameter etheriumShieldThreshold;
@@ -73,7 +73,7 @@ public class CosmicScroll extends ItemBaseCurio {
 	}
 	public CosmicScroll() {
 		super(getDefaultProperties().rarity(Rarity.EPIC));
-		this.setRegistryName(new ResourceLocation(anticlimacticlagacy.MODID, "cosmic_scroll"));
+		this.setRegistryName(new ResourceLocation(AnticlimacticLagacy.MODID, "cosmic_scroll"));
 	}
 
 	@Override
@@ -151,7 +151,7 @@ public class CosmicScroll extends ItemBaseCurio {
 
 		attributes.put(Attributes.LUCK, new AttributeModifier(
 				UUID.fromString("290d5f76-87aa-4f7c-9c1a-9aef2fe25d05"),
-				anticlimacticlagacy.MODID+":luck_bonus", 1, AttributeModifier.Operation.ADDITION));
+				AnticlimacticLagacy.MODID+":luck_bonus", 1, AttributeModifier.Operation.ADDITION));
 
 		// ARCANE SCROLL SLOT BONUS
 		CuriosApi.getCuriosHelper().addSlotModifier(attributes, "scroll",

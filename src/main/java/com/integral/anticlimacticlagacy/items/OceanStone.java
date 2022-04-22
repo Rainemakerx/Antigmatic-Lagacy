@@ -93,7 +93,7 @@ public class OceanStone extends ItemSpellstoneCurio implements ISpellstone {
 
 	public OceanStone() {
 		super(ItemSpellstoneCurio.getDefaultProperties().rarity(Rarity.RARE));
-		this.setRegistryName(new ResourceLocation(anticlimacticlagacy.MODID, "ocean_stone"));
+		this.setRegistryName(new ResourceLocation(AnticlimacticLagacy.MODID, "ocean_stone"));
 
 		this.immunityList.add(DamageSource.DROWN.msgId);
 
@@ -115,7 +115,7 @@ public class OceanStone extends ItemSpellstoneCurio implements ISpellstone {
 	private Multimap<Attribute, AttributeModifier> createAttributeMap(Player player) {
 		Multimap<Attribute, AttributeModifier> attributesDefault = HashMultimap.create();
 
-		attributesDefault.put(ForgeMod.ENTITY_GRAVITY.get(), new AttributeModifier(UUID.fromString("79e1cc36-fb4e-4c7d-802b-583b8d90648a"), anticlimacticlagacy.MODID+":gravity_bonus", player.isEyeInFluid(FluidTags.WATER) ? -1.0F : 0F, AttributeModifier.Operation.MULTIPLY_TOTAL));
+		attributesDefault.put(ForgeMod.ENTITY_GRAVITY.get(), new AttributeModifier(UUID.fromString("79e1cc36-fb4e-4c7d-802b-583b8d90648a"), AnticlimacticLagacy.MODID+":gravity_bonus", player.isEyeInFluid(FluidTags.WATER) ? -1.0F : 0F, AttributeModifier.Operation.MULTIPLY_TOTAL));
 
 		return attributesDefault;
 	}

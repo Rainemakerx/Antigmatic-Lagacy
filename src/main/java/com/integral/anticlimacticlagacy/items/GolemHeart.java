@@ -96,7 +96,7 @@ public class GolemHeart extends ItemSpellstoneCurio implements ISpellstone {
 	}
 
 
-	//private static final ResourceLocation TEXTURE = new ResourceLocation(anticlimacticlagacy.MODID, "textures/models/armor/dark_armor.png");
+	//private static final ResourceLocation TEXTURE = new ResourceLocation(AnticlimacticLagacy.MODID, "textures/models/armor/dark_armor.png");
 	public Object model;
 
 	public Multimap<Attribute, AttributeModifier> attributesDefault = HashMultimap.create();
@@ -104,7 +104,7 @@ public class GolemHeart extends ItemSpellstoneCurio implements ISpellstone {
 
 	public GolemHeart() {
 		super(ItemSpellstoneCurio.getDefaultProperties().rarity(Rarity.UNCOMMON));
-		this.setRegistryName(new ResourceLocation(anticlimacticlagacy.MODID, "golem_heart"));
+		this.setRegistryName(new ResourceLocation(AnticlimacticLagacy.MODID, "golem_heart"));
 
 		this.immunityList.add(DamageSource.CACTUS.msgId);
 		this.immunityList.add(DamageSource.CRAMMING.msgId);

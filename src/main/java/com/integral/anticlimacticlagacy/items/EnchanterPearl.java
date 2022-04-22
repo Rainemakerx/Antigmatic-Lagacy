@@ -32,7 +32,7 @@ public class EnchanterPearl extends ItemBaseCurio implements ICursed {
 
 	public EnchanterPearl() {
 		super(getDefaultProperties().rarity(Rarity.EPIC).fireResistant().stacksTo(1));
-		this.setRegistryName(new ResourceLocation(anticlimacticlagacy.MODID, "enchanter_pearl"));
+		this.setRegistryName(new ResourceLocation(AnticlimacticLagacy.MODID, "enchanter_pearl"));
 	}
 
 	@Override

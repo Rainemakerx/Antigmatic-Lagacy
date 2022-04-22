@@ -23,13 +23,13 @@ public class AnticlimacticRecipeSerializers {
 		anticlimacticlagacy.logger.info("Initializing recipe serializers registration...");
 		CraftingHelper.register(EnabledCondition.Serializer.INSTANCE);
 
-		event.getRegistry().register(CRAFTING_MENDING_MIXTURE_REPAIR.setRegistryName(new ResourceLocation(anticlimacticlagacy.MODID, "mending_mixture_repair")));
-		event.getRegistry().register(SHAPELESS_NO_RETURN.setRegistryName(new ResourceLocation(anticlimacticlagacy.MODID, "shapeless_no_return_craft")));
-		event.getRegistry().register(OBLIVION_STONE_COMBINE.setRegistryName(new ResourceLocation(anticlimacticlagacy.MODID, "oblivion_stone_combine")));
-		event.getRegistry().register(ENCHANTMENT_TRANSPOSING.setRegistryName(new ResourceLocation(anticlimacticlagacy.MODID, "enchantment_transposing")));
-		event.getRegistry().register(BIND_TO_PLAYER.setRegistryName(new ResourceLocation(anticlimacticlagacy.MODID, "bind_to_player")));
-		event.getRegistry().register(CURSED_SHAPED.setRegistryName(new ResourceLocation(anticlimacticlagacy.MODID, "crafting_shaped_cursed")));
-		event.getRegistry().register(BLESSED_SHAPED.setRegistryName(new ResourceLocation(anticlimacticlagacy.MODID, "crafting_shaped_blessed")));
+		event.getRegistry().register(CRAFTING_MENDING_MIXTURE_REPAIR.setRegistryName(new ResourceLocation(AnticlimacticLagacy.MODID, "mending_mixture_repair")));
+		event.getRegistry().register(SHAPELESS_NO_RETURN.setRegistryName(new ResourceLocation(AnticlimacticLagacy.MODID, "shapeless_no_return_craft")));
+		event.getRegistry().register(OBLIVION_STONE_COMBINE.setRegistryName(new ResourceLocation(AnticlimacticLagacy.MODID, "oblivion_stone_combine")));
+		event.getRegistry().register(ENCHANTMENT_TRANSPOSING.setRegistryName(new ResourceLocation(AnticlimacticLagacy.MODID, "enchantment_transposing")));
+		event.getRegistry().register(BIND_TO_PLAYER.setRegistryName(new ResourceLocation(AnticlimacticLagacy.MODID, "bind_to_player")));
+		event.getRegistry().register(CURSED_SHAPED.setRegistryName(new ResourceLocation(AnticlimacticLagacy.MODID, "crafting_shaped_cursed")));
+		event.getRegistry().register(BLESSED_SHAPED.setRegistryName(new ResourceLocation(AnticlimacticLagacy.MODID, "crafting_shaped_blessed")));
 		anticlimacticlagacy.logger.info("Recipe serializers registered successfully.");
 	}
 }

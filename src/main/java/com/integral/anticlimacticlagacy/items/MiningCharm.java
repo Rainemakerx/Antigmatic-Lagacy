@@ -69,7 +69,7 @@ public class MiningCharm extends ItemBaseCurio {
 
 	public MiningCharm() {
 		super(ItemBaseCurio.getDefaultProperties().rarity(Rarity.RARE));
-		this.setRegistryName(new ResourceLocation(anticlimacticlagacy.MODID, "mining_charm"));
+		this.setRegistryName(new ResourceLocation(AnticlimacticLagacy.MODID, "mining_charm"));
 	}
 
 	@Override

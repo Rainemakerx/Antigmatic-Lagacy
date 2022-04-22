@@ -21,7 +21,7 @@ public class IronRing extends ItemBaseCurio {
 
 	public IronRing() {
 		super(ItemBaseCurio.getDefaultProperties());
-		this.setRegistryName(new ResourceLocation(anticlimacticlagacy.MODID, "iron_ring"));
+		this.setRegistryName(new ResourceLocation(AnticlimacticLagacy.MODID, "iron_ring"));
 	}
 
 	@Override

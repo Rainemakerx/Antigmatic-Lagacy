@@ -77,7 +77,7 @@ public class MagmaHeart extends ItemSpellstoneCurio implements ISpellstone {
 
 	public MagmaHeart() {
 		super(ItemSpellstoneCurio.getDefaultProperties().rarity(Rarity.UNCOMMON).fireResistant());
-		this.setRegistryName(new ResourceLocation(anticlimacticlagacy.MODID, "magma_heart"));
+		this.setRegistryName(new ResourceLocation(AnticlimacticLagacy.MODID, "magma_heart"));
 
 		//this.immunityList.add(DamageSource.LAVA.damageType);
 		this.immunityList.add(DamageSource.IN_FIRE.msgId);

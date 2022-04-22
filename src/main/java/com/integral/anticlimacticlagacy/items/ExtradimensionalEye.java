@@ -32,7 +32,7 @@ public class ExtradimensionalEye extends ItemBase implements Vanishable {
 
 	public ExtradimensionalEye() {
 		super(ItemBase.getDefaultProperties().rarity(Rarity.UNCOMMON).stacksTo(1));
-		this.setRegistryName(new ResourceLocation(anticlimacticlagacy.MODID, "extradimensional_eye"));
+		this.setRegistryName(new ResourceLocation(AnticlimacticLagacy.MODID, "extradimensional_eye"));
 	}
 
 	@Override

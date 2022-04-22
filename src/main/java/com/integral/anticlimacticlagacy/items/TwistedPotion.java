@@ -36,7 +36,7 @@ public class TwistedPotion extends ItemBasePotion implements ICursed {
 
 	public TwistedPotion() {
 		super(getDefaultProperties().stacksTo(1).rarity(Rarity.EPIC));
-		this.setRegistryName(new ResourceLocation(anticlimacticlagacy.MODID, "twisted_potion"));
+		this.setRegistryName(new ResourceLocation(AnticlimacticLagacy.MODID, "twisted_potion"));
 	}
 
 	@Override

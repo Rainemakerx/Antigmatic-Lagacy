@@ -57,7 +57,7 @@ public class ForbiddenAxe extends SwordItem {
 
 	public ForbiddenAxe() {
 		super(AnticlimacticMaterials.FORBIDDENAXE, 6, -2.4F, ItemBaseTool.getDefaultProperties().defaultDurability(2000).rarity(Rarity.EPIC).fireResistant());
-		this.setRegistryName(new ResourceLocation(anticlimacticlagacy.MODID, "forbidden_axe"));
+		this.setRegistryName(new ResourceLocation(AnticlimacticLagacy.MODID, "forbidden_axe"));
 	}
 
 	@Override

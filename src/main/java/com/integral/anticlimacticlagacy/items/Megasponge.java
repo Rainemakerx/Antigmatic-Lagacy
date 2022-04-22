@@ -63,7 +63,7 @@ public class Megasponge extends ItemBaseCurio implements Vanishable {
 
 	public Megasponge() {
 		super(ItemBaseCurio.getDefaultProperties().rarity(Rarity.UNCOMMON));
-		this.setRegistryName(new ResourceLocation(anticlimacticlagacy.MODID, "mega_sponge"));
+		this.setRegistryName(new ResourceLocation(AnticlimacticLagacy.MODID, "mega_sponge"));
 	}
 
 	@Override

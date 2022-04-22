@@ -16,7 +16,7 @@ import net.minecraft.resources.ResourceLocation;
 public class WrathEnchantment extends Enchantment {
 	public WrathEnchantment(EquipmentSlot... slots) {
 		super(Enchantment.Rarity.RARE, EnchantmentCategory.TRIDENT, slots);
-		this.setRegistryName(new ResourceLocation(anticlimacticlagacy.MODID, "wrath"));
+		this.setRegistryName(new ResourceLocation(AnticlimacticLagacy.MODID, "wrath"));
 	}
 
 	@Override

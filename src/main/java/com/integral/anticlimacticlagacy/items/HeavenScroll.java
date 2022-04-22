@@ -52,7 +52,7 @@ public class HeavenScroll extends ItemBaseCurio {
 
 	public HeavenScroll() {
 		super(ItemBaseCurio.getDefaultProperties().rarity(Rarity.EPIC));
-		this.setRegistryName(new ResourceLocation(anticlimacticlagacy.MODID, "heaven_scroll"));
+		this.setRegistryName(new ResourceLocation(AnticlimacticLagacy.MODID, "heaven_scroll"));
 	}
 
 	public HeavenScroll(Properties properties) {

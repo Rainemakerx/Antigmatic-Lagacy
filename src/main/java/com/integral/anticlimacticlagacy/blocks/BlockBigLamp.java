@@ -27,7 +27,7 @@ public class BlockBigLamp extends LanternBlock {
 	public BlockBigLamp(Properties properties, String registryName) {
 		super(properties);
 
-		this.setRegistryName(new ResourceLocation(anticlimacticlagacy.MODID, registryName));
+		this.setRegistryName(new ResourceLocation(AnticlimacticLagacy.MODID, registryName));
 		anticlimacticlagacy.cutoutBlockRegistry.add(this);
 	}
 

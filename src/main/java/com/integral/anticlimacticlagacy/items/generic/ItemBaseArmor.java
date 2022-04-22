@@ -62,7 +62,7 @@ public abstract class ItemBaseArmor extends ArmorItem {
 	@Override
 	@OnlyIn(Dist.CLIENT)
 	public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-		return anticlimacticlagacy.MODID + ":textures/models/armor/unseen_armor.png";
+		return AnticlimacticLagacy.MODID + ":textures/models/armor/unseen_armor.png";
 	}
 
 	public boolean hasFullSet(@Nonnull Player player) {

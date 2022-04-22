@@ -29,7 +29,7 @@ public class LoreInscriber extends ItemBase implements Vanishable {
 
 	public LoreInscriber() {
 		super(ItemBase.getDefaultProperties().rarity(Rarity.EPIC).stacksTo(1));
-		this.setRegistryName(new ResourceLocation(anticlimacticlagacy.MODID, "lore_inscriber"));
+		this.setRegistryName(new ResourceLocation(AnticlimacticLagacy.MODID, "lore_inscriber"));
 	}
 
 	@Override

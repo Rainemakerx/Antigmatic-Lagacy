@@ -22,7 +22,7 @@ public class SorrowCurse extends Enchantment {
 
 	public SorrowCurse(EquipmentSlot... slots) {
 		super(Enchantment.Rarity.RARE, EnchantmentCategory.ARMOR, slots);
-		this.setRegistryName(new ResourceLocation(anticlimacticlagacy.MODID, "sorrow_curse"));
+		this.setRegistryName(new ResourceLocation(AnticlimacticLagacy.MODID, "sorrow_curse"));
 
 		this.debuffList.add(MobEffects.BLINDNESS);
 		this.debuffList.add(MobEffects.CONFUSION);

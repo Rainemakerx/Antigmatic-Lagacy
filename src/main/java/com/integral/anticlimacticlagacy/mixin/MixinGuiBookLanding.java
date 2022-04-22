@@ -33,14 +33,14 @@ public abstract class MixinGuiBookLanding extends GuiBook {
 
 	@Inject(method = "init", at = @At("RETURN"), cancellable = false, require = 1, remap = true)
 	private void onInit(CallbackInfo info) {
-		if (anticlimacticlagacy.MODID.equals(this.book.getModNamespace())) {
+		if (AnticlimacticLagacy.MODID.equals(this.book.getModNamespace())) {
 			this.renderer = new AcknowlegmentNameRenderer(this, () -> this.font);
 		}
 	}
 
 	@Inject(method = "drawHeader", at = @At("HEAD"), cancellable = true, require = 1, remap = false)
 	private void onDrawHeader(PoseStack ms, CallbackInfo info) {
-		if (anticlimacticlagacy.MODID.equals(this.book.getModNamespace())) {
+		if (AnticlimacticLagacy.MODID.equals(this.book.getModNamespace())) {
 			info.cancel();
 			this.renderer.drawHeader(ms);
 		}

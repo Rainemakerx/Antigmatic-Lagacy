@@ -16,7 +16,7 @@ public class MixinTooltipOverlayHandler {
 
 	@Inject(method = "shouldShowTooltip", at = @At("HEAD"), cancellable = true)
 	private static void onItemCheck(ItemStack stack, CallbackInfoReturnable<Boolean> info) {
-		if (stack != null && stack.getItem().getRegistryName().getNamespace().equals(anticlimacticlagacy.MODID)) {
+		if (stack != null && stack.getItem().getRegistryName().getNamespace().equals(AnticlimacticLagacy.MODID)) {
 			info.setReturnValue(false);
 		}
 	}

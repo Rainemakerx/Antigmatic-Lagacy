@@ -31,7 +31,7 @@ public class MixinBookTextRenderer {
 			target = "Lvazkii/patchouli/common/base/PatchouliConfig$ConfigAccess;overflowMode()Ljava/util/function/Supplier;",
 			value = "INVOKE"), require = 1)
 	private Supplier<TextOverflowMode> redirectOverflowMode(ConfigAccess access) {
-		if (anticlimacticlagacy.MODID.equals(this.book.getModNamespace()))
+		if (AnticlimacticLagacy.MODID.equals(this.book.getModNamespace()))
 			return OmniconfigHandler.acknowledgmentOverflowMode::getValue;
 		else
 			return access.overflowMode();

@@ -13,7 +13,7 @@ import net.minecraft.advancements.critereon.EntityPredicate;
 import net.minecraft.resources.ResourceLocation;
 
 public class CursedRingEquippedTrigger extends SimpleCriterionTrigger<CursedRingEquippedTrigger.Instance> {
-	public static final ResourceLocation ID = new ResourceLocation(anticlimacticlagacy.MODID, "equip_cursed_ring");
+	public static final ResourceLocation ID = new ResourceLocation(AnticlimacticLagacy.MODID, "equip_cursed_ring");
 	public static final CursedRingEquippedTrigger INSTANCE = new CursedRingEquippedTrigger();
 
 	private CursedRingEquippedTrigger() {}

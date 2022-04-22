@@ -10,7 +10,7 @@ public class DarkestScroll extends ItemBase {
 
 	public DarkestScroll() {
 		super(ItemBase.getDefaultProperties().rarity(Rarity.UNCOMMON).stacksTo(1));
-		this.setRegistryName(new ResourceLocation(anticlimacticlagacy.MODID, "darkest_scroll"));
+		this.setRegistryName(new ResourceLocation(AnticlimacticLagacy.MODID, "darkest_scroll"));
 	}
 
 }

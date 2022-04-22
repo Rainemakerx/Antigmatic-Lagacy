@@ -9,7 +9,7 @@ public class ThiccScroll extends ItemBase {
 
 	public ThiccScroll() {
 		super(ItemBase.getDefaultProperties().stacksTo(16));
-		this.setRegistryName(new ResourceLocation(anticlimacticlagacy.MODID, "thicc_scroll"));
+		this.setRegistryName(new ResourceLocation(AnticlimacticLagacy.MODID, "thicc_scroll"));
 	}
 
 }

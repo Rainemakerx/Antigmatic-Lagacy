@@ -70,7 +70,7 @@ public class EnderRing extends ItemBaseCurio {
 
 	public EnderRing() {
 		super(ItemBaseCurio.getDefaultProperties().rarity(Rarity.UNCOMMON));
-		this.setRegistryName(new ResourceLocation(anticlimacticlagacy.MODID, "ender_ring"));
+		this.setRegistryName(new ResourceLocation(AnticlimacticLagacy.MODID, "ender_ring"));
 	}
 
 	@Override

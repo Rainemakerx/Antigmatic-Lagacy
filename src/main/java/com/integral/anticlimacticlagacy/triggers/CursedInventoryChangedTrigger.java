@@ -35,7 +35,7 @@ import net.minecraft.world.item.alchemy.Potion;
 import net.minecraft.world.level.ItemLike;
 
 public class CursedInventoryChangedTrigger extends SimpleCriterionTrigger<CursedInventoryChangedTrigger.TriggerInstance> {
-	public static final ResourceLocation ID = new ResourceLocation(anticlimacticlagacy.MODID, "cursed_inventory_changed");
+	public static final ResourceLocation ID = new ResourceLocation(AnticlimacticLagacy.MODID, "cursed_inventory_changed");
 	public static final CursedInventoryChangedTrigger INSTANCE = new CursedInventoryChangedTrigger();
 
 	@Override
