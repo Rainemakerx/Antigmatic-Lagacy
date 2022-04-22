@@ -254,7 +254,7 @@ public class AnticlimacticLagacy {
 	public static final String RELEASE_TYPE = "Release";
 	public static final String NAME = "Anticlimactic Legacy";
 
-	public static anticlimacticlagacy anticlimacticlagacy;
+	public static AnticlimacticLagacy anticlimacticlagacy;
 	public static final LoggerWrapper logger = new LoggerWrapper("Anticlimactic Legacy");
 	public static SimpleChannel packetInstance;
 
