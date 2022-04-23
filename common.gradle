@@ -106,12 +106,12 @@ curseforge {
 		addGameVersion '1.18'
 		
 		relations {
-			if (project.name.equals('EnigmaticLegacy')) {
+			if (project.name.equals('AnticlimacticLagacy')) {
 				requiredDependency 'curios'
 				requiredDependency 'patchouli'
 				embeddedLibrary 'etherium'
 			} else {
-				incompatible 'enigmatic-legacy'
+				incompatible 'anticlimactic-lagacy'
 			}
 		}
 		

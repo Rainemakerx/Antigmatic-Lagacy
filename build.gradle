@@ -45,7 +45,7 @@ subprojects {
 mixin {
 	println("Specifying refmaps for Mixin...")
 	
-    add sourceSets.main, "enigmaticlegacy.refmap.json"
+    add sourceSets.main, "anticlimacticlagacy.refmap.json"
 }
 
 minecraft {
@@ -112,7 +112,7 @@ processResources {
 		println("Specifying The Acknowledgment version in book.json...")	
 	}
 	
-	filesMatching('data/enigmaticlegacy/patchouli_books/the_acknowledgment/book.json') {
+	filesMatching('data/anticlimacticlagacy/patchouli_books/the_acknowledgment/book.json') {
         filter {
 			// Bold of you to assume I know how to inflate with Gradle
             it.replaceAll("~the_acknowledgment_edition", findProperty('the_acknowledgment_edition') ?: 'invalid_edition')

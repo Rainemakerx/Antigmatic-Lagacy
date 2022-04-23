@@ -54,6 +54,8 @@ import com.integral.anticlimacticlagacy.helpers.PotionHelper;
 import com.integral.anticlimacticlagacy.items.AbyssalHeart;
 import com.integral.anticlimacticlagacy.items.AngelBlessing;
 import com.integral.anticlimacticlagacy.items.AnimalGuide;
+import com.integral.anticlimacticlagacy.items.AnticlimacticAmulet;
+import com.integral.anticlimacticlagacy.items.AnticlimacticItem;
 import com.integral.anticlimacticlagacy.items.AntiforbiddenPotion;
 import com.integral.anticlimacticlagacy.items.AstralBreaker;
 import com.integral.anticlimacticlagacy.items.AstralDust;
@@ -175,6 +177,8 @@ import com.integral.etherium.items.EtheriumShovel;
 import com.integral.etherium.items.EtheriumSword;
 import com.integral.omniconfig.packets.PacketSyncOptions;
 
+import org.apache.commons.lang3.tuple.Triple;
+
 import net.minecraft.ChatFormatting;
 import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.world.level.block.Block;
@@ -250,7 +254,7 @@ import net.minecraftforge.registries.ObjectHolder;
 @Mod(AnticlimacticLagacy.MODID)
 public class AnticlimacticLagacy {
 	public static final String MODID = "anticlimacticlagacy";
-	public static final String VERSION = "2.17.3";
+	public static final String VERSION = "1.0.0";
 	public static final String RELEASE_TYPE = "Release";
 	public static final String NAME = "Anticlimactic Legacy";
 

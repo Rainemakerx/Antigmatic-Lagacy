@@ -6,11 +6,14 @@ import java.util.UUID;
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
 import com.integral.anticlimacticlagacy.AnticlimacticLagacy;
+import com.integral.anticlimacticlagacy.api.generic.SubscribeConfig;
 import com.integral.anticlimacticlagacy.api.items.ICursed;
 import com.integral.anticlimacticlagacy.handlers.SuperpositionHandler;
 import com.integral.anticlimacticlagacy.helpers.ItemLoreHelper;
 import com.integral.anticlimacticlagacy.items.generic.ItemBase;
 import com.integral.anticlimacticlagacy.items.generic.ItemBaseCurio;
+import com.integral.omniconfig.wrappers.Omniconfig;
+import com.integral.omniconfig.wrappers.OmniconfigWrapper;
 
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.world.item.TooltipFlag;
@@ -29,12 +32,21 @@ import top.theillusivec4.curios.api.CuriosApi;
 import top.theillusivec4.curios.api.SlotContext;
 
 public class EnchanterPearl extends ItemBaseCurio implements ICursed {
+	public static Omniconfig.BooleanParameter multiequip;
 
 	public EnchanterPearl() {
 		super(getDefaultProperties().rarity(Rarity.EPIC).fireResistant().stacksTo(1));
 		this.setRegistryName(new ResourceLocation(AnticlimacticLagacy.MODID, "enchanter_pearl"));
 	}
+	@SubscribeConfig
+	public static void onConfig(OmniconfigWrapper builder) {
+		builder.pushPrefix("Pearl Config");
 
+		multiequip = builder.comment("Whether or not it should be allowed to equip multiple Fool's Writs").getBoolean("Multiequip", true);
+
+		builder.popPrefix();
+	}
+	
 	@Override
 	public void appendHoverText(ItemStack stack, Level worldIn, List<Component> list, TooltipFlag flagIn) {
 		ItemLoreHelper.addLocalizedString(list, "tooltip.anticlimacticlagacy.void");

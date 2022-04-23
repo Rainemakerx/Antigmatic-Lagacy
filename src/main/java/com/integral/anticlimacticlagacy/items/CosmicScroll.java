@@ -47,10 +47,13 @@ public class CosmicScroll extends ItemBaseCurio {
 	public static Omniconfig.PerhapsParameter unchosenKnockbackBonus;
 	public static Omniconfig.PerhapsParameter etheriumShieldThreshold;
 	public static Omniconfig.IntParameter deathProtectionCooldown;
+	public static Omniconfig.BooleanParameter multiequip;
 
 	@SubscribeConfig
 	public static void onConfig(OmniconfigWrapper builder) {
 		builder.pushPrefix("CosmicScroll");
+
+		multiequip = builder.comment("Whether or not it should be allowed to equip multiple Fool's Writs").getBoolean("Multiequip", true);
 
 		etheriumShieldThreshold = builder
 				.comment("Alternative Etherium Shield health requirement for those who bear The Fool's Writ. Defined as percentage.")
@@ -136,7 +139,10 @@ public class CosmicScroll extends ItemBaseCurio {
 
 	@Override
 	public boolean canEquip(SlotContext context, ItemStack stack) {
-		return super.canEquip(context, stack) && context.entity() instanceof Player player && SuperpositionHandler.isTheBlessedOne(player);
+		if (multiequip.getValue())
+			return true;
+		else
+			return super.canEquip(context, stack) && context.entity() instanceof Player player && SuperpositionHandler.isTheBlessedOne(player);
 	}
 
 	@Override

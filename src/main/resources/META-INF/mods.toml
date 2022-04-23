@@ -1,14 +1,14 @@
-license="no_license"
+license="GNU General Public License v3.0"
 modLoader="javafml"
-loaderVersion="[31,)"
+loaderVersion="[39,)"
 issueTrackerURL="https://github.com/Rainemakerx"
 [[mods]]
 modId="anticlimacticlagacy"
 version="1.0.0"
 displayName="Anticlimactic Legacy"
 displayURL="https://www.curseforge.com/minecraft/mc-mods"
-logoFile="EL_logo.png"
-credits="no_credits"
+logoFile="AL_logo.png"
+credits="Azistral for the original mod, which this is a parody of."
 description='''
 Dummy mods.toml specification; required for Eclipse runs to work properly.
 '''
